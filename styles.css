@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Marion's Hand */
+@font-face {
+	font-family: 'ChiaroStd-B.otf';
+	src: url('Fonts/ChiaroStd-B.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+    color: #fff;
+    background-color: #000;
+}
+
+header{
+    background-color: #222;
+    padding: 5em 10em;
+}
+
+.titleContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 4em;
+    animation: appear 2s ease-out;
+}
+
+.wrapper{
+    animation: example-1 8s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.wrapper2{
+    animation: example-2 10s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.wrapper3{
+    animation: example-3 8s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.wrapper3 h1{
+	font-family: 'ChiaroStd-B.otf',sans-serif;
+    font-size: 6rem;
+}
+.wrapper2:nth-letter(even){
+    font-size: 99rem;
+}
+
+.wrapper h2{
+	font-family: 'ChiaroStd-B.otf',sans-serif;
+    font-size: 4rem;
+}
+
+@keyframes appear{
+    0%{
+        transform: rotateY(270deg) rotateX(90deg) scale(0);
+        opacity: 0;
+        line-height: 0em;
+    }
+    100%{
+        transform: rotateY(0deg) rotateX(0deg) scale(1);
+        opacity: 100;
+        line-height: 4em;
+    }
+}
+
+@keyframes example-1 {
+    0%{
+        color: #888;
+        transform: scale(1);
+        letter-spacing: 0;
+    }
+    25%{
+        color: #884444;
+        transform: scale(0.90);
+        letter-spacing: 1em;
+    }
+    50%{
+        color: #888;
+        transform: scale(1);
+        letter-spacing: 0;
+    }
+    75%{
+        color: #444488;
+        transform: scale(0.90);
+        letter-spacing: 1em;
+    }
+    100%{
+        color: #888;
+        transform: scale(1);
+        letter-spacing: 0;
+    }
+}
+
+@keyframes example-2 {
+    0%{
+        transform: rotate(5deg) translateY(-10px);
+    }
+    50%{
+        transform: rotate(-5deg) translateY(10px);
+    }
+    100%{
+        transform: rotate(5deg) translateY(-10px);
+    }
+}
+
+@keyframes example-3 {
+    0%{
+        color: #fff;
+        transform: scale(1);
+        letter-spacing: 0;
+    }
+    25%{
+        color: #ff8888;
+        transform: scale(0.90);
+        letter-spacing: 2em;
+    }
+    50%{
+        color: #fff;
+        transform: scale(1);
+        letter-spacing: 0;
+    }
+    75%{
+        color: #8888ff;
+        transform: scale(0.90);
+        letter-spacing: 2em;
+    }
+    100%{
+        color: #fff;
+        transform: scale(1);
+        letter-spacing: 0;
+    }
+}
