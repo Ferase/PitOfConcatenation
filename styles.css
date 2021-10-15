@@ -47,6 +47,7 @@ header{
     width: 960px;
     padding: 2em 0;
     transition: all .5s;
+    animation: appear2 2s ease-out;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -65,10 +66,11 @@ header{
 	font-family: 'Alternate',serif;
     font-size: 2rem;
     color: #FF8888;
-    padding: 12px 20px;
+    padding: 0px;
+    letter-spacing: -0.5em;
     text-decoration: none;
     display: block;
-    transition: background-color .15s linear;
+    transition: all .15s linear;
     animation: example-2 8s infinite;
 }
 
@@ -89,6 +91,8 @@ header{
 }
 .dropdown:hover .dropdown-content a{
     font-size: 3rem;
+    letter-spacing: 0em;
+    padding: 12px 20px;
 }
 
 .dropdown:hover .dropbtn p{
@@ -103,10 +107,10 @@ header{
     content: "?";
 }
 .dropdown:hover .dropbtn p:before{
-    content: "!";
+    content: "";
 }
 .dropdown:hover .dropbtn p:after{
-    content: "!";
+    content: "";
 }
 
 /* Title */
@@ -116,7 +120,7 @@ header{
     justify-content: center;
     text-align: center;
     line-height: 3em;
-    animation: appear 2s ease-out;
+    animation: appear 1s ease-out;
 }
 
 .wrapper{
@@ -165,6 +169,17 @@ header{
         transform: translateY(0px) rotateY(0deg) rotateX(0deg) scale(1);
         opacity: 100;
         letter-spacing: 0.25em;
+    }
+}
+
+@keyframes appear2{
+    0%{
+        transform: translateY(1000px) rotateY(-270deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px) rotateY(0deg);
+        opacity: 100;
     }
 }
 
