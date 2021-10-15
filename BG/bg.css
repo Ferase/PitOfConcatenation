@@ -1,15 +1,21 @@
+body{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%);
+}
+
 .light {
     position: absolute;
     width: 0px;
     opacity: .9;
     background-color: white;
-    box-shadow: #e9f1f1 0px 0px 10px 2px;
+    box-shadow: rgba(255,255,255,0.5) 0px 0px 2px 2px;
     opacity: 0;
     top: 100vh;
     bottom: 0px;
     left: 0px;
     right: 0px;
     margin: auto;
+    z-index: -1;
 }
 
 .x1{
@@ -117,6 +123,42 @@
   -o-transform: scale(0.9);
   transform: scale(0.9);
   left: 85%;
+}
+
+.x10{
+  -webkit-animation: floatUp 2.4s infinite linear;
+  -moz-animation: floatUp 2.4s infinite linear;
+  -o-animation: floatUp 2.4s infinite linear;
+  animation: floatUp 2.4s infinite linear;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 85%;
+}
+
+.x11{
+  -webkit-animation: floatUp 2.4s infinite linear;
+  -moz-animation: floatUp 2.4s infinite linear;
+  -o-animation: floatUp 2.4s infinite linear;
+  animation: floatUp 2.4s infinite linear;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 22%;
+}
+
+.x12{
+  -webkit-animation: floatUp 2.4s infinite linear;
+  -moz-animation: floatUp 2.4s infinite linear;
+  -o-animation: floatUp 2.4s infinite linear;
+  animation: floatUp 2.4s infinite linear;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 56%;
 }
 
 @-webkit-keyframes floatUp{
