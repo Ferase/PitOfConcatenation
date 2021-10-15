@@ -16,60 +16,66 @@
 body{
     color: #fff;
     background-color: #000;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 header{
     padding: 5em 10em;
 }
 
-/* Grid */
-#gridContainer{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(4,auto);
-    grid-gap: 1em;
-    margin: 2em 5em;
-    background-color: #444;
+/* Dropdown Container */
+.dropbtn{
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    padding: 2em;
+    border: none;
+    background: rgba(0,0,0,0.00);
 }
-#gridContainer > div{
-    text-align: center;
-}
-.item_01{
-    grid-column: 3/-3;
-    grid-row: 1/2;
-    padding: 1em 3em;
-    background-color: #777;
-}
-.item_01 p{
+.dropbtn p{
 	font-family: 'Alternate',serif;
     font-size: 4rem;
     transition: all .5s;
 }
-.item_01 p:hover{
-    transform: rotate(540deg) rotateY(180deg);
-}
-.item_01 p:before{
-    content: "?";
-}
-.item_01 p:after{
-    content: "?";
-}
-.item_01 p:hover:before{
-    content: "!";
-}
-.item_01 p:hover:after{
-    content: "!";
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown{
+    display: block;
+    justify-content: center;
+    transition: all .5s;
 }
 
-.item_02{
-    grid-column: 1/-1;
-    grid-row: 2/3;
-    top: -100px;
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content{
+    display: none;
+    transition: all .5s;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a{
+	font-family: 'Alternate',serif;
+    font-size: 2rem;
+    color: #FF8888;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color .15s linear;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover{
+    color: #fff;
+    background-color: rgba(255,0,0,0.25);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    transition: all .5s;
+}
+.dropdown:hover .dropbtn p{
+    transform: rotateX(180deg) rotateZ(720deg);
 }
 
 /* Title */
@@ -114,14 +120,20 @@ header{
 /* General Text Styles */
 
 /* Animation Keyframes */
+@keyframes navAppear{
+    
+}
+
 @keyframes appear{
     0%{
         transform: translateY(-1000px) rotateY(270deg) rotateX(90deg) scale(0);
         opacity: 0;
+        letter-spacing: 5em;
     }
     100%{
         transform: translateY(0px) rotateY(0deg) rotateX(0deg) scale(1);
         opacity: 100;
+        letter-spacing: 0.25em;
     }
 }
 
@@ -129,7 +141,7 @@ header{
     0%{
         color: #888;
         transform: scale(1);
-        letter-spacing: 0;
+        letter-spacing: 0.25em;
     }
     25%{
         color: #884444;
@@ -139,7 +151,7 @@ header{
     50%{
         color: #888;
         transform: scale(1);
-        letter-spacing: 0;
+        letter-spacing: 0.25em;
     }
     75%{
         color: #444488;
@@ -149,7 +161,7 @@ header{
     100%{
         color: #888;
         transform: scale(1);
-        letter-spacing: 0;
+        letter-spacing: 0.25em;
     }
 }
 
@@ -169,7 +181,7 @@ header{
     0%{
         color: #fff;
         transform: scale(0.90);
-        letter-spacing: 0;
+        letter-spacing: 0.25em;
     }
     25%{
         color: #ff8888;
@@ -179,7 +191,7 @@ header{
     50%{
         color: #fff;
         transform: scale(0.90);
-        letter-spacing: 0;
+        letter-spacing: 0.25em;
     }
     75%{
         color: #8888ff;
@@ -189,6 +201,6 @@ header{
     100%{
         color: #fff;
         transform: scale(0.90);
-        letter-spacing: 0;
+        letter-spacing: 0.25em;
     }
 }
