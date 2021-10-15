@@ -35,6 +35,7 @@ header{
 .dropbtn p{
 	font-family: 'Alternate',serif;
     font-size: 7rem;
+    line-height: 1em;
     transition: all .5s;
 }
 
@@ -42,6 +43,9 @@ header{
 .dropdown{
     display: block;
     justify-content: center;
+    margin: 0 auto;
+    width: 960px;
+    padding: 2em 0;
     transition: all .5s;
 }
 
@@ -90,6 +94,7 @@ header{
 .dropdown:hover .dropbtn p{
     transform: rotateX(180deg) rotateZ(720deg);
     font-size: 5rem;
+    line-height: 2em;
 }
 .dropdown .dropbtn p:before{
     content: "?";
