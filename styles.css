@@ -66,9 +66,9 @@ header{
     position: absolute;
     bottom: 0;
     background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
     transition: all .5s;
-    animation: appear2 2s ease-out;
+    animation: appear2 1.5s ease-out;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -141,6 +141,9 @@ a:hover .maskNo{
 }
 
 /* Show the dropdown menu on hover */
+.dropdown:hover{
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
 .dropdown:hover .dropdown-content{
     display: flex;
     flex-direction: row;
@@ -221,13 +224,13 @@ a:hover .maskNo{
 @keyframes appear{
     0%{
         transform-origin: bottom;
-        transform: scale(0);
+        transform: translateY(1000px) rotateY(270deg);
         opacity: 0;
         letter-spacing: 5em;
     }
     100%{
         transform-origin: bottom;
-        transform: scale(1);
+        transform: translateY(0px) rotateY(0deg);
         opacity: 100;
         letter-spacing: 0.25em;
     }
