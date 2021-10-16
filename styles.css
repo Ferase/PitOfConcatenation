@@ -105,17 +105,17 @@ header{
 }
 
 /* Change color of dropdown links on hover */
-.mask{
+a .mask{
     transition: color .1s linear;
 }
-.mask:hover{
+a:hover .mask{
     color: #fff;
 }
-.maskNo{
+a .maskNo{
     transition: color .1s linear;
 }
-.maskNo:hover{
-    color: #000;
+a:hover .maskNo{
+    color: #555;
 }
 
 .hide{
