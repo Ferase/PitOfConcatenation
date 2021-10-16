@@ -1,0 +1,286 @@
+* {
+	
+	margin: 0;
+	padding: 0;
+	
+}
+
+body {
+	font-family: 'Rubik';
+	background-color: #342A21;
+}
+
+footer{
+    
+    display: flex; 
+    justify-content: center; 
+    
+    background: #000000;
+    color: black;
+    padding: 1em;
+    font-family: 'Karma', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.9;
+    text-align: center;
+}
+
+header{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    background: #559CAD;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 600;
+	line-height: 1.1;
+	font-family: 'Martel', serif;
+	color: #FFFFFF;
+	text-align: left;
+	text-decoration: none;
+	text-transform: none;
+}
+
+h1 {
+	font-size: 11rem;
+	font-weight: 900;
+	padding-top: 0.53em;
+	padding-bottom: 0.4em;
+	text-transform: capitalize;
+	font-family: 'Martel', serif;
+	font-style: normal;
+	line-height: 1.15;
+	text-align: center;
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 4rem;
+	font-weight: 900;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	font-family: 'Martel', serif;
+}
+
+h3 {
+	font-size: 2.6rem;
+	font-weight: 800;
+	padding-top: 1em;
+	padding-bottom: 0.4em;
+	color: #F1E0C5;
+	font-family: 'Martel', serif;
+	text-align: left;
+}
+
+h4 {
+	font-size: 1.6rem;
+	font-weight: 800;
+	padding-top: 0.8em;
+	padding-bottom: 0.67em;
+	line-height: 1;
+	font-family: 'Rasa', serif;
+}
+
+h5 {
+	font-size: 1.06rem;
+	font-weight: 700;
+	padding-top: 3em;
+	padding-bottom: 0.94em;
+	color: #F1E0C5;
+	font-family: 'Rasa', serif;
+}
+
+h6 {
+	font-size: 1rem;
+	font-weight: 700;
+	padding-top: 2.6em;
+	padding-bottom: 1em;
+	color: #F1E0C5;
+	font-family: 'Rasa', serif;
+}
+
+p {
+	padding-top: 1em;
+	padding-bottom: 1.2em;
+	font-family: 'Karma', serif;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #FFFFFF;
+	line-height: 1.9;
+	text-align: left;
+}
+
+strong {
+	font-weight: 500;
+}
+
+em {
+	font-style: italic;
+}
+
+a {
+	color: #F1E0C5;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FFFFFF;
+}
+
+a:visited {
+	color: #AC9F8A;
+}
+
+ul,ol {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+	padding-left: 1.1em;
+	font-weight: 400;
+	color: #8b743d;
+	text-align: left;
+	list-style-position: outside;
+}
+
+ol {
+	font-weight: 400;
+}
+
+li {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.chicago {
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-style: normal;
+    color: #F1E0C5;
+    line-height: 1em;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 0.1em;
+}
+
+.codeConduct {
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-style: normal;
+    color: #F1E0C5;
+    line-height: 1.2em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.augustSeptember {
+
+    color: #F1E0C5;
+    line-height: 1.55;
+
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 0.8em;
+    margin-bottom: 0.67em;
+    line-height: 1;
+    font-family: 'Rasa', serif;
+}
+
+.jobTitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 2em;
+    margin-bottom: 0.67em;
+    line-height: 1.9;
+    color: #F1E0C5;
+    font-family: 'Rasa', serif;
+}
+
+.tan{
+    color: #F1E0C5;
+}
+
+section{
+    margin: 3em auto;
+}
+
+main{
+    margin: 3em auto;
+}
+
+#columnTest {
+    column-count: 3;
+}
+
+#mainContainer {
+    display: block;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    resize: horizontal;
+}
+
+/* Tablet-Medium */
+@media only screen and (max-width: 1280px){
+    
+    #mainContainer {
+        max-width: 720px;
+    }
+    
+    h1{
+        font-size: 8rem;
+    }
+    
+    .chicago {
+        font-size: 4rem;
+    }
+
+    .codeConduct {
+        font-size: 4rem;
+    }
+    
+}
+
+/* Mobile-Small */
+@media only screen and (max-width: 512px){
+    
+    #mainContainer {
+        max-width: 480px;
+    }
+    
+    h1{
+        font-size: 5rem;
+    }
+    
+    .chicago {
+        font-size: 3rem;
+    }
+
+    .codeConduct {
+        font-size: 3rem;
+    }
+    
+    h2{
+	    font-size: 3rem;
+    }
+    
+    h3{
+	    font-size: 2rem;
+    }
+    
+    h4{
+	    font-size: 1.5rem;
+    }
+    
+    p{
+	    font-size: 0.8rem;
+    }
+    
+}
