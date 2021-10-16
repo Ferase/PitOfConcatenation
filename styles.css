@@ -208,12 +208,14 @@ header{
 /* Animation Keyframes */
 @keyframes appear{
     0%{
-        transform: translateY(-1000px) rotateY(270deg) rotateX(90deg) scale(0);
+        transform-origin: bottom;
+        transform: scale(0);
         opacity: 0;
         letter-spacing: 5em;
     }
     100%{
-        transform: translateY(0px) rotateY(0deg) rotateX(0deg) scale(1);
+        transform-origin: bottom;
+        transform: scale(1);
         opacity: 100;
         letter-spacing: 0.25em;
     }
