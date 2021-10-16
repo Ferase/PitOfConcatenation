@@ -374,6 +374,10 @@ header{
         font-size: 1rem;
         letter-spacing: -0.25em;
     }
+
+    .dropdown-content a.home{
+        animation: example-2c 8s infinite;
+    }
     
     .dropdown:hover{
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
