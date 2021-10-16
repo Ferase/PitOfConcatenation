@@ -466,7 +466,7 @@ header{
     .dropdown:hover .dropbtn{
         margin: 0 2em;
         margin-right: auto;
-        margin-bottom: 1em;
+        margin-bottom: 0em;
         transform-origin: left;
     }
     .dropdown:hover .dropbtn p{
