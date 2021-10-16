@@ -159,7 +159,7 @@ header{
 .wrapper3 h1{
 	font-family: 'Alternate',serif;
     font-size: 20rem;
-    line-height: 1.175em;
+    line-height: 1.05em;
 }
 .wrapper h5{
 	font-family: 'RockwellStd-Condensed',serif;
@@ -167,7 +167,7 @@ header{
     line-height: 1em;
 }
 .wrapper3 h6{
-	font-family: 'RockwellStd-Condensed',serif;
+	font-family: 'Alternate',serif;
     font-size: 2rem;
 }
 
