@@ -31,7 +31,7 @@ header{
 
 /* Dropdown Container */
 .dropbtn{
-    grid-column: 1/-1;
+    grid-column: 2/3;
     grid-row: 1/2;
     display: block;
     margin: 0 auto;
@@ -48,28 +48,33 @@ header{
 }
 
 /* The container <div> - needed to position the dropdown content */
+.dropdown-parent{
+    position: relative;
+}
 .dropdown{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,auto);
     justify-content: center;
-    margin: 0 auto;
-    width: 960px;
-    padding: 2em 0;
+    width: 100%;
+    padding: 4em 0;
+    position: absolute;
+    bottom: 0;
+    /left: 25%;
     transition: all .5s;
     animation: appear2 2s ease-out;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content{
-    grid-column: 1/-1;
+    grid-column: 2/3;
     grid-row: 2/3;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     visibility: hidden;
-    transform: translateY(-100px);
     opacity: 0;
+    transform: translateY(-100px);
     transition: all .5s;
 }
 
@@ -77,7 +82,6 @@ header{
 .dropdown-content a{
 	font-family: 'RockwellStd-Condensed',serif;
     font-size: 2rem;
-    padding: 0px;
     letter-spacing: -0.25em;
     text-decoration: none;
     display: block;
@@ -86,9 +90,11 @@ header{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover{
+.mask{
+    transition: color .5s ease-out;
+}
+.mask:hover{
     color: #fff;
-    background-color: rgba(255,0,0,0.25);
 }
 
 /* Show the dropdown menu on hover */
@@ -152,15 +158,13 @@ header{
 }
 .wrapper3 h1{
 	font-family: 'Alternate',serif;
-    font-size: 16rem;
+    font-size: 20rem;
     line-height: 1.175em;
-}
-.wrapper2:nth-letter(even){
-    font-size: 99rem;
 }
 .wrapper h5{
 	font-family: 'RockwellStd-Condensed',serif;
-    font-size: 3rem;
+    font-size: 4rem;
+    line-height: 1em;
 }
 .wrapper3 h6{
 	font-family: 'RockwellStd-Condensed',serif;
