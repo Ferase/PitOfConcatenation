@@ -306,7 +306,7 @@ header{
     }
 }
 
-@media screen and (max-width: 600px){
+@media all and (max-width: 600px){
     
     header{
         padding: 5em 0;
