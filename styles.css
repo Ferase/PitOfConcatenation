@@ -373,7 +373,7 @@ header{
         transform: translateY(0px);
     }
     .dropdown:hover .dropdown-content a{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         letter-spacing: 0em;
         padding: 12px 20px;
     }
