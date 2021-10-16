@@ -91,7 +91,7 @@ header{
 
 /* Change color of dropdown links on hover */
 .mask{
-    transition: color .5s ease-out;
+    transition: color .1s linear;
 }
 .mask:hover{
     color: #fff;
@@ -159,7 +159,7 @@ header{
 .wrapper3 h1{
 	font-family: 'Alternate',serif;
     font-size: 20rem;
-    line-height: 1.05em;
+    line-height: 1.1em;
 }
 .wrapper h5{
 	font-family: 'RockwellStd-Condensed',serif;
