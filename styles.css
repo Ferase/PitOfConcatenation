@@ -105,6 +105,23 @@ header{
 .mask:hover{
     color: #fff;
 }
+.maskNo{
+    transition: color .1s linear;
+}
+.maskNo:hover{
+    color: #000;
+}
+
+.hide{
+	font-family: 'RockwellStd-Condensed',serif;
+    visibility: hidden;
+    text-align: center;
+    line-height: 0;
+}
+.dropdown-content a:hover + .hide{
+    visibility: visible;
+    margin: 0 auto;
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content{
@@ -380,7 +397,5 @@ header{
         font-family: 'Alternate',serif;
         font-size: 2rem;
     }
-    
-    
     
 }
