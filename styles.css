@@ -344,7 +344,7 @@ header{
     }
     .dropdown-content{
         grid-column: 1/2;
-        flex-direction: column;
+        flex-direction: column !important;
         justify-content: center;
         transform: translateY(-100px);
     }
@@ -357,6 +357,10 @@ header{
     
     .dropdown:hover{
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    }
+    
+    .hide{
+        transform: translate(50px,-25px);
     }
 
     /* Show the dropdown menu on hover */
