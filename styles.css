@@ -77,7 +77,6 @@ header{
 }
 .dropdown-item2{
     grid-row: 3/4;
-    padding: 0 10em;
 }
 .dropdown-content{
     grid-column: 2/3;
@@ -99,6 +98,10 @@ header{
     display: block;
     transition: all .15s linear;
     animation: example-2b 8s infinite;
+}
+
+.dropdown-content a.home{
+    animation: example-2c 8s infinite;
 }
 
 /* Change color of dropdown links on hover */
@@ -277,6 +280,20 @@ header{
     }
     100%{
         color: #ff8888;
+        transform: rotate(5deg) translateY(-10px);
+    }
+}
+@keyframes example-2c {
+    0%{
+        color: #8888ff;
+        transform: rotate(5deg) translateY(-10px);
+    }
+    50%{
+        color: #ff8888;
+        transform: rotate(-5deg) translateY(10px);
+    }
+    100%{
+        color: #8888ff;
         transform: rotate(5deg) translateY(-10px);
     }
 }
