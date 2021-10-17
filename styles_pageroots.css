@@ -109,7 +109,7 @@ main{
     padding-top: 0em;
 }
 
-#gridContainer_Main h1{
+h1{
 	font-family: 'RockwellStd',serif;
     font-weight: 400;
     color: #ff6666;
@@ -118,7 +118,7 @@ main{
     line-height: 1.25em;
 }
 
-#gridContainer_Main h2{
+h2{
 	font-family: 'RockwellStd',serif;
     font-weight: 300;
     color: #ff6666;
@@ -127,7 +127,7 @@ main{
     line-height: 1.25em;
 }
 
-#gridContainer_Main p{
+p{
 	font-family: 'Oswald',sans-serif;
 	font-weight: 300;
     color: #ddd;
@@ -175,6 +175,11 @@ nav{
 
 a{
     text-decoration: none;
+}
+
+footer a{
+    padding-top: -0.25em;
+    padding-bottom: 0.25em;
 }
 
 /* Change color of dropdown links on hover */
