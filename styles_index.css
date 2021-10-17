@@ -192,6 +192,7 @@ a:hover .maskNo, a:active .maskNo{
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
     animation: appear 1s ease-out;
+    z-index: 100;
 }
 
 .wrapper{

@@ -56,7 +56,7 @@
     margin: 2em auto 4em;
     background: rgba(0,0,0,0);
     animation: appear2 1s ease-out;
-    z-index: 1;
+    z-index: 100;
 }
 
 #gridContainer_Footer{
