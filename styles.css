@@ -128,8 +128,8 @@ a .maskNo{
 .dropdown-content > div{
     animation: example-2d 8s infinite;
 }
-
-@media (hover: hover) {
+    
+    /* All Hover */
     a:hover .mask{
         color: #fff;
     }
@@ -172,7 +172,6 @@ a .maskNo{
     .dropdown:hover .dropbtn p:after{
         content: "";
     }
-}
     
 .dropdown .dropbtn p:before{
     content: "?";
@@ -450,43 +449,39 @@ a .maskNo{
         text-align: left;
         font-size: 3rem;
     }
-    
-    @media (hover: hover) {
         
-        .dropdown-content a:hover + .hide{
-            transform: translate(0px,-10px);
-            padding: 0 2em;
-        }
-        .dropdown:hover{
-            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-        }
-        
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content{
-            flex-direction: column;
-            justify-content: center;
-            transform: translateY(0px);
-        }
-        .dropdown:hover .dropdown-content a{
-            font-size: 2rem;
-            letter-spacing: 0em;
-            padding: 12px 20px;
-        }
-        
-        .dropdown:hover .dropbtn{
-            margin: 0 2em;
-            margin-right: auto;
-            margin-bottom: 0em;
-            transform-origin: left;
-        }
-        .dropdown:hover .dropbtn p{
-            text-align: left;
-            transform-origin: center;
-            transform: rotateX(180deg) rotateZ(720deg);
-            font-size: 2.6rem;
-            line-height: 2em;
-        }
-        
+    /* All hover */
+    .dropdown-content a:hover + .hide, .dropdown-content a:active + .hide{
+        transform: translate(0px,-10px);
+        padding: 0 2em;
+    }
+    .dropdown:hover{
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    }
+
+    .dropdown:hover .dropdown-content, .dropdown:active .dropdown-content{
+        flex-direction: column;
+        justify-content: center;
+        transform: translateY(0px);
+    }
+    .dropdown:hover .dropdown-content a, .dropdown:active .dropdown-content a{
+        font-size: 2rem;
+        letter-spacing: 0em;
+        padding: 12px 20px;
+    }
+
+    .dropdown:hover .dropbtn, .dropdown:active .dropbtn{
+        margin: 0 2em;
+        margin-right: auto;
+        margin-bottom: 0em;
+        transform-origin: left;
+    }
+    .dropdown:hover .dropbtn p, .dropdown:active .dropbtn p{
+        text-align: left;
+        transform-origin: center;
+        transform: rotateX(180deg) rotateZ(720deg);
+        font-size: 2.6rem;
+        line-height: 2em;
     }
     
     /* Title */
