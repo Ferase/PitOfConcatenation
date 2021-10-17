@@ -70,6 +70,7 @@ header{
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
+    animation: appear 1s ease-out;
 }
 header h1{
 	font-family: 'Alternate',serif;
@@ -88,6 +89,7 @@ header h4{
 
 main{
     grid-column: 1/-1;
+    animation: appear2 1s ease-out;
     z-index: 100;
 }
 
@@ -227,72 +229,24 @@ a:hover .maskNo, a:active .maskNo{
     content: "?";
 }
 
-/* Title */
-.titleContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    line-height: 3em;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
-    animation: appear 1s ease-out;
-}
-
-.wrapper{
-    animation: example-1 8s infinite;
-    animation-timing-function: ease-in-out;
-}
-.wrapper2{
-    animation: example-2 10s infinite;
-    animation-timing-function: ease-in-out;
-}
-.wrapper3{
-    animation: example-3 8s infinite;
-    animation-timing-function: ease-in-out;
-}
-.wrapper3 h1{
-	font-family: 'Alternate',serif;
-    font-size: 20rem;
-    line-height: 1.1em;
-}
-.wrapper h5{
-	font-family: 'RockwellStd-Condensed',serif;
-    font-size: 4rem;
-    line-height: 1em;
-}
-.wrapper3 h6{
-	font-family: 'Alternate',serif;
-    font-size: 2rem;
-}
-
-/* General Text Styles */
-
 /* Animation Keyframes */
 @keyframes appear{
     0%{
-        transform-origin: bottom;
         transform: translateY(1000px) rotateY(270deg);
         opacity: 0;
-        letter-spacing: 5em;
     }
     100%{
-        transform-origin: bottom;
         transform: translateY(0px) rotateY(0deg);
         opacity: 100;
-        letter-spacing: 0.25em;
     }
 }
-
 @keyframes appear2{
     0%{
-        transform: translateY(1000px) rotateY(-270deg);
+        transform: translateY(1000px);
         opacity: 0;
     }
     100%{
-        transform: translateY(0px) rotateY(0deg);
+        transform: translateY(0px);
         opacity: 100;
     }
 }
