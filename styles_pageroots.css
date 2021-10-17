@@ -15,19 +15,31 @@
 @font-face {
 	font-family: 'RockwellStd';
 	src: url('Fonts/RockwellStd.otf') format('opentype');
-	font-weight: normal;
+    font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'RockwellStd';
+	src: url('Fonts/RockwellStd-Light.otf') format('opentype');
+    font-weight: 300;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'RockwellStd-Condensed';
-	src: url('Fonts/39644.otf') format('opentype');
+	src: url('Fonts/RockwellStd-Condensed.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Oswald Light';
+	font-family: 'Oswald';
 	src: url('Fonts/OswaldLight.otf') format('opentype');
-	font-weight: normal;
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Oswald';
+	src: url('Fonts/OswaldBold.otf') format('opentype');
+	font-weight: 400;
 	font-style: normal;
 }
 
@@ -95,16 +107,34 @@ main{
     z-index: 100;
 }
 
+#gridContainer_Main .bodyHeader{
+    padding: 1.5em 0 1em;
+}
+#gridContainer_Main .bodyHeader:first-child{
+    padding-top: 0em;
+}
+
 #gridContainer_Main h1{
 	font-family: 'RockwellStd',serif;
+    font-weight: 400;
     color: #ff6666;
     font-size: 2.75rem;
     text-align: center;
-    padding-bottom: 1em;
+    line-height: 1.25em;
+}
+
+#gridContainer_Main h2{
+	font-family: 'RockwellStd',serif;
+    font-weight: 300;
+    color: #ff6666;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.25em;
 }
 
 #gridContainer_Main p{
-	font-family: 'Oswald Light',sans-serif;
+	font-family: 'Oswald',sans-serif;
+	font-weight: 300;
     color: #ddd;
     font-size: 1.5rem;
     text-align: left;
@@ -115,7 +145,7 @@ main{
 }
 
 #gridContainer_Main a{
-	font-family: 'Oswald Light',sans-serif;
+	font-family: 'Oswald',sans-serif;
     color: #ff8888;
     font-size: 1.5rem;
     text-align: left;
@@ -431,6 +461,10 @@ a:hover .maskNo, a:active .maskNo{
 
     .homeNav{
         flex-direction: column;
+    }
+    
+    .hide{
+        animation: example-2e 8s infinite;
     }
 
 }
