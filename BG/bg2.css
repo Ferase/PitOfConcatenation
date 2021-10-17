@@ -102,3 +102,11 @@ body{
         top:-70%;
     }
 }
+
+@media all and (max-width: 600px){
+    
+    .leaf img{
+        opacity: 0.25;
+    }
+    
+}
