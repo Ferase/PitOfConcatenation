@@ -82,6 +82,9 @@ header{
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
+    -webkit-animation: appear 1s ease-out;
+    -moz-animation: appear 1s ease-out;
+    -ms-animation: appear 1s ease-out;
     animation: appear 1s ease-out;
 }
 header h1{
