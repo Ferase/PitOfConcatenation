@@ -19,12 +19,6 @@
 	font-style: normal;
 }
 
-.upperGradient{
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-    z-index: -1;
-}
-
 body{
     color: #fff;
     background-color: #000;
