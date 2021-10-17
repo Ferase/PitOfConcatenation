@@ -454,6 +454,13 @@ a:hover .maskNo, a:active .maskNo{
     #gridContainer_Footer{
         width: 100%;
     }
+
+    #gridContainer_Main h1{
+        font-size: 2.5rem;
+    }
+    #gridContainer_Main h2{
+        font-size: 1.75rem;
+    }
     
     nav{
         flex-direction: column;
