@@ -92,6 +92,7 @@ main{
 
 #gridContainer_Main h1{
 	font-family: 'RockwellStd',serif;
+    color: #ff8888;
     font-size: 2.5rem;
     text-align: center;
     padding-bottom: 1em;
@@ -99,7 +100,7 @@ main{
 
 #gridContainer_Main p{
 	font-family: 'Oswald Light',sans-serif;
-    color: #bbb;
+    color: #fff;
     font-size: 1.5rem;
     text-align: left;
     padding-bottom: 1em;
