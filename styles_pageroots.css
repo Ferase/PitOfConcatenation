@@ -213,9 +213,13 @@ nav a.home{
     text-align: center;
     line-height: 0;
     transform-origin: center;
+    transform: translateY(10px);
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
     animation: example-2e 8s infinite;
     transition: all .1s linear;
-    transform: translateY(10px);
 }
 nav a:hover + .hide, nav a:active + .hide{
     visibility: visible;
