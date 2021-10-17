@@ -356,7 +356,6 @@ a:hover .maskNo, a:active .maskNo{
     }
     50%{
         transform: rotate(-5deg) translateY(-10px);
-    transform: ;
     }
     100%{
         transform: rotate(5deg) translateY(-10px);
@@ -389,6 +388,57 @@ a:hover .maskNo, a:active .maskNo{
         transform: scale(0.90);
         letter-spacing: 0.25em;
     }
+}
+
+@media all and (max-height: 600px){
+    
+    header{
+        padding-top: 0.5em;
+    }
+    
+    .dropdown{
+        grid-template-columns: 1fr;
+    }
+    .dropdown:hover .dropdown-content a, .dropdown:active .dropdown-content a{
+        font-size: 2rem;
+        padding: 12px 10px;
+    }
+    
+    .hide{
+        font-size: 1rem;
+    }
+    
+    .dropbtn{
+        grid-column: 1/-1;
+    }
+    .dropbtn p{
+        font-size: 3rem;
+    }
+    .dropdown:hover .dropbtn p, .dropdown:active .dropbtn p{
+        font-size: 2.6rem;
+        line-height: 2em;
+    }
+    
+    .dropdown-content{
+        grid-column: 1/-1;
+    }
+    
+    .titleContainer{
+        line-height: 3em;
+    }
+    
+    .wrapper3 h1{
+        font-size: 10rem;
+        line-height: 1.1em;
+    }
+    .wrapper h5{
+        font-size: 2rem;
+        line-height: 1em;
+    }
+    .wrapper3 h6{
+        font-size: 1rem;
+    }
+    
 }
 
 @media all and (max-width: 600px){
