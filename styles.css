@@ -129,49 +129,49 @@ a .maskNo{
     animation: example-2d 8s infinite;
 }
     
-    /* All Hover */
-    a:hover .mask{
-        color: #fff;
-    }
-    a:hover .maskNo{
-        color: #555;
-    }
-    .dropdown-content a:hover + .hide{
-        visibility: visible;
-        transform: translateY(-10px);
-        opacity: 1;
-    }
+/* All Hover */
+a:hover .mask, a:active .mask{
+    color: #fff;
+}
+a:hover .maskNo, a:active .maskNo{
+    color: #555;
+}
+.dropdown-content a:hover + .hide, .dropdown-content a:active + .hide{
+    visibility: visible;
+    transform: translateY(-10px);
+    opacity: 1;
+}
 
-    /* Show the dropdown menu on hover */
-    .dropdown:hover{
-        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-    }
-    .dropdown:hover .dropdown-content{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        visibility: visible;
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    .dropdown:hover .dropdown-content a{
-        font-size: 3rem;
-        letter-spacing: 0em;
-        padding: 12px 20px;
-    }
+/* Show the dropdown menu on hover */
+.dropdown:hover, .dropdown:active{
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+}
+.dropdown:hover .dropdown-content a, .dropdown:active .dropdown-content a{
+    font-size: 3rem;
+    letter-spacing: 0em;
+    padding: 12px 20px;
+}
 
-    .dropdown:hover .dropbtn p{
-        transform-origin: center;
-        transform: rotateX(180deg) rotateZ(720deg);
-        font-size: 5rem;
-        line-height: 2em;
-    }
-    .dropdown:hover .dropbtn p:before{
-        content: "";
-    }
-    .dropdown:hover .dropbtn p:after{
-        content: "";
-    }
+.dropdown:hover .dropbtn p, .dropdown:active .dropbtn p{
+    transform-origin: center;
+    transform: rotateX(180deg) rotateZ(720deg);
+    font-size: 5rem;
+    line-height: 2em;
+}
+.dropdown:hover .dropbtn p:before, .dropdown:active .dropbtn p:before{
+    content: "";
+}
+.dropdown:hover .dropbtn p:after, .dropdown:active .dropbtn p:after{
+    content: "";
+}
     
 .dropdown .dropbtn p:before{
     content: "?";
