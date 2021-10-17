@@ -13,10 +13,40 @@
 	font-style: normal;
 }
 @font-face {
+	font-family: 'RockwellStd';
+	src: url('Fonts/RockwellStd.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
 	font-family: 'RockwellStd-Condensed';
 	src: url('Fonts/39644.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
+}
+@font-face {
+	font-family: 'Oswald Light';
+	src: url('Fonts/OswaldLight.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#gridContainer_Main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,auto);
+    width: 720px;
+    margin: 2em auto 4em;
+    background: #000;
+    z-index: 1;
+}
+
+#gridContainer_Footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,auto);
+    width: 960px;
+    margin: 0 auto;
 }
 
 .upperGradient{
@@ -27,81 +57,70 @@
 body{
     color: #fff;
     background-color: #000;
-    -webkit-overflow: hidden; /* Safari */        
-    -moz-overflow: hidden; /* Firefox */
-    -ms-overflow: hidden; /* IE10+/Edge */
-    overflow: hidden; /* Standard */
+    -webkit-overflow-x: hidden; /* Safari */        
+    -moz-overflow-x: hidden; /* Firefox */
+    -ms-overflow-x: hidden; /* IE10+/Edge */
+    overflow-x: hidden; /* Standard */
 }
 
 header{
+    text-align: center;
     padding: 5em 5em;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+header h1{
+	font-family: 'Alternate',serif;
+    font-size: 10rem;
+    line-height: 1.1em;
+    color: #fff;
+    animation: example-2 8s infinite ease-in-out;
+}
+header h4{
+	font-family: 'RockwellStd-Condensed',serif;
+    font-size: 4rem;
+    line-height: 1em;
+    color: #888;
+    animation: example-2 8s infinite ease-in-out;
+}
+
+main{
+    grid-column: 1/-1;
+}
+
+#gridContainer_Main h1{
+	font-family: 'RockwellStd',serif;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+#gridContainer_Main p{
+	font-family: 'Oswald Light',sans-serif;
+    color: #bbb;
+    font-size: 1.5rem;
+    text-align: left;
+    padding-bottom: 1em;
 }
 
 /* Dropdown Container */
-.dropbtn{
-    grid-column: 2/3;
+nav{
     grid-row: 1/2;
-    display: block;
-    margin: 0 auto;
-    color: #fff;
-    border: none;
-    animation: example-2 8s infinite;
-    background: rgba(0,0,0,0);
-}
-.dropbtn p{
-	font-family: 'Alternate',serif;
-    font-size: 7rem;
-    line-height: 1em;
-    transition: all .5s;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,auto);
-    justify-content: center;
-    width: 100%;
-    padding: 4em 0;
-    position: absolute;
-    bottom: 0;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
-    transition: all .5s;
-    animation: appear2 1.5s ease-out;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-item1{
-    grid-row: 2/3;
-}
-.dropdown-item2{
-    grid-row: 3/4;
-}
-.dropdown-content{
-    grid-column: 2/3;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-100px);
-    transition: all .5s;
+    padding: 2em;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
 
-/* Links inside the dropdown */
-.dropdown-content a{
-	font-family: 'RockwellStd-Condensed',serif;
-    font-size: 2rem;
-    letter-spacing: -0.25em;
-    text-decoration: none;
-    display: block;
-    transition: all .15s linear;
-    animation: example-2b 8s infinite;
-}
-
-.dropdown-content a.home{
-    animation: example-2c 8s infinite;
+.homeNav{
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0em;
 }
 
 /* Change color of dropdown links on hover */
@@ -112,20 +131,39 @@ a .maskNo{
     transition: color .1s linear;
 }
 
+nav a{
+	font-family: 'RockwellStd-Condensed',serif;
+    font-size: 2rem;
+    letter-spacing: 0em;
+    text-decoration: none;
+    display: block;
+    transition: all .15s linear;
+    animation: example-2b 8s infinite;
+}
+
+nav a.home{
+    animation: example-2c 8s infinite;
+}
+
 .hide{
 	font-family: 'RockwellStd-Condensed',serif;
+    font-size: 0.9em;
     visibility: hidden;
     opacity: 0;
     margin: 0 auto;
     text-align: center;
     line-height: 0;
     transform-origin: center;
-    transition: all .1s linear;
     animation: example-2e 8s infinite;
+    transition: all .1s linear;
     transform: translateY(10px);
 }
+nav a:hover + .hide, nav a:active + .hide{
+    visibility: visible;
+    opacity: 1;
+}
 
-.dropdown-content > div{
+nav > div{
     animation: example-2d 8s infinite;
 }
     
@@ -135,11 +173,6 @@ a:hover .mask, a:active .mask{
 }
 a:hover .maskNo, a:active .maskNo{
     color: #555;
-}
-.dropdown-content a:hover + .hide, .dropdown-content a:active + .hide{
-    visibility: visible;
-    transform: translateY(-10px);
-    opacity: 1;
 }
 
 /* Show the dropdown menu on hover */
@@ -352,13 +385,13 @@ a:hover .maskNo, a:active .maskNo{
 }
 @keyframes example-2e {
     0%{
-        transform: rotate(5deg) translateY(-10px);
+        transform: rotate(5deg);
     }
     50%{
-        transform: rotate(-5deg) translateY(-10px);
+        transform: rotate(-5deg);
     }
     100%{
-        transform: rotate(5deg) translateY(-10px);
+        transform: rotate(5deg);
     }
 }
 
@@ -388,170 +421,4 @@ a:hover .maskNo, a:active .maskNo{
         transform: scale(0.90);
         letter-spacing: 0.25em;
     }
-}
-
-@media all and (max-height: 600px){
-    
-    header{
-        padding-top: 0.5em;
-    }
-    
-    .dropdown{
-        grid-template-columns: 1fr;
-    }
-    .dropdown:hover .dropdown-content a, .dropdown:active .dropdown-content a{
-        font-size: 2rem;
-        padding: 12px 10px;
-    }
-    
-    .hide{
-        font-size: 1rem;
-    }
-    
-    .dropbtn{
-        grid-column: 1/-1;
-    }
-    .dropbtn p{
-        font-size: 3rem;
-    }
-    .dropdown:hover .dropbtn p, .dropdown:active .dropbtn p{
-        font-size: 2.6rem;
-        line-height: 2em;
-    }
-    
-    .dropdown-content{
-        grid-column: 1/-1;
-    }
-    
-    .titleContainer{
-        line-height: 3em;
-    }
-    
-    .wrapper3 h1{
-        font-size: 10rem;
-        line-height: 1.1em;
-    }
-    .wrapper h5{
-        font-size: 2rem;
-        line-height: 1em;
-    }
-    .wrapper3 h6{
-        font-size: 1rem;
-    }
-    
-}
-
-@media all and (max-width: 600px){
-    
-    header{
-        padding: 5em 0;
-    }
-    
-    .upperGradient{
-        background: rgb(0,0,0);
-        background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-    }
-
-    /* The container <div> - needed to position the dropdown content */
-    .dropdown{
-        grid-template-columns: 1fr 1fr;
-        padding: 4em 0;
-    }
-
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-item1{
-        grid-row: 2/3;
-    }
-    .dropdown-item2{
-        grid-row: 3/4;
-        padding: 0;
-    }
-    .dropdown-content{
-        grid-column: 1/2;
-        flex-direction: column;
-        justify-content: center;
-        transform: translateY(-100px);
-    }
-
-    /* Links inside the dropdown */
-    .dropdown-content a{
-        font-size: 1rem;
-        letter-spacing: -0.25em;
-        transform-origin: left;
-    }
-
-    .dropdown-content a.home{
-        transform-origin: left;
-    }
-    
-    .hide{
-        text-align: left;
-        transform-origin: left;
-        transform: translate(100px,0px);
-        font-size: 1.25rem;
-    }
-    
-    .dropbtn{
-        grid-column: 1/-1;
-        padding-bottom: -10em;
-    }
-    .dropbtn p{
-        text-align: left;
-        font-size: 3rem;
-    }
-        
-    /* All hover */
-    .dropdown-content a:hover + .hide, .dropdown-content a:active + .hide{
-        transform: translate(0px,-10px);
-        padding: 0 2em;
-    }
-    .dropdown:hover{
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-    }
-
-    .dropdown:hover .dropdown-content, .dropdown:active .dropdown-content{
-        flex-direction: column;
-        justify-content: center;
-        transform: translateY(0px);
-    }
-    .dropdown:hover .dropdown-content a, .dropdown:active .dropdown-content a{
-        font-size: 2rem;
-        letter-spacing: 0em;
-        padding: 12px 20px;
-    }
-
-    .dropdown:hover .dropbtn, .dropdown:active .dropbtn{
-        margin: 0 2em;
-        margin-right: auto;
-        margin-bottom: 0em;
-        transform-origin: left;
-    }
-    .dropdown:hover .dropbtn p, .dropdown:active .dropbtn p{
-        text-align: left;
-        transform-origin: center;
-        transform: rotateX(180deg) rotateZ(720deg);
-        font-size: 2.6rem;
-        line-height: 2em;
-    }
-    
-    /* Title */
-    .titleContainer{
-        margin: 0 auto;
-        padding: 0 auto;
-    }
-    .wrapper3 h1{
-        font-family: 'Alternate',serif;
-        font-size: 10rem;
-        line-height: 1.1em;
-    }
-    .wrapper h5{
-        font-family: 'RockwellStd-Condensed',serif;
-        font-size: 2.2rem;
-        line-height: 1em;
-    }
-    .wrapper3 h6{
-        font-family: 'Alternate',serif;
-        font-size: 2rem;
-    }
-    
 }

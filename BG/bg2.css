@@ -1,8 +1,8 @@
 body{
-    -webkit-overflow: hidden; /* Safari */        
-    -moz-overflow: hidden; /* Firefox */
-    -ms-overflow: hidden; /* IE10+/Edge */
-    overflow: hidden; /* Standard */
+    -webkit-overflow-x: hidden; /* Safari */        
+    -moz-overflow-x: hidden; /* Firefox */
+    -ms-overflow-x: hidden; /* IE10+/Edge */
+    overflow-x: hidden; /* Standard */
 }
 
 .leaf{
