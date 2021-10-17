@@ -50,6 +50,9 @@
     width: 960px;
     margin: 2em auto 4em;
     background: rgba(0,0,0,0);
+    -webkit-animation: appear2 1s ease-out;
+    -moz-animation: appear2 1s ease-out;
+    -ms-animation: appear2 1s ease-out;
     animation: appear2 1s ease-out;
     z-index: 100;
 }
