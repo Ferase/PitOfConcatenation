@@ -124,19 +124,28 @@ main{
 
 /* Dropdown Container */
 nav{
+    grid-column: 1/-1;
     grid-row: 1/2;
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 0;
     justify-content: space-around;
+    text-align: center;
     padding: 2em;
 }
 
 .homeNav{
+    grid-column: 1/-1;
     grid-row: 2/3;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    text-align: center;
     padding-top: 0em;
+}
+
+.footerAppear{
+    animation: appear2 1s ease-out;
 }
 
 a{
@@ -393,4 +402,35 @@ a:hover .maskNo, a:active .maskNo{
         transform: scale(0.90);
         letter-spacing: 0.25em;
     }
+}
+
+
+@media all and (max-width: 600px){
+    
+    header{
+        padding: 2em 1em;
+    }
+    header h1{
+        font-size: 5rem;
+    }
+    header h4{
+        font-size: 2.5rem;
+    }
+    
+    #gridContainer_Main{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    #gridContainer_Footer{
+        width: 100%;
+    }
+    
+    nav{
+        flex-direction: column;
+    }
+
+    .homeNav{
+        flex-direction: column;
+    }
+
 }
