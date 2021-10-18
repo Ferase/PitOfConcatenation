@@ -50,8 +50,44 @@
 
 <body>
     <main id="abyssContainer">
-        <h2>All pits have a bottom</h2>
+        <h2><span id="abyssFlavor"></span></h2>
         <h1>404</h1>
     </main>
+    
+    <script>
+        var num = Math.floor(Math.random() * 10);
+        
+        if(num == 0){
+            document.getElementById("abyssFlavor").innerText =
+                'All pits have a bottom';
+        } else if(num == 1){
+            document.getElementById("abyssFlavor").innerText =
+                'Seems you\'ve reached the bottom';
+        } else if(num == 2){
+            document.getElementById("abyssFlavor").innerText =
+                'You\'ve fallen too far...';
+        } else if(num == 3){
+            document.getElementById("abyssFlavor").innerText =
+                'The Pit is deep, but not that deep';
+        } else if(num == 4){
+            document.getElementById("abyssFlavor").innerText =
+                'Seems you\'ve fallen too far';
+        } else if(num == 5){
+            document.getElementById("abyssFlavor").innerText =
+                'Nothing is here...';
+        } else if(num == 6){
+            document.getElementById("abyssFlavor").innerText =
+                'How did you get here?';
+        } else if(num == 7){
+            document.getElementById("abyssFlavor").innerText =
+                'Nothing could be found';
+        } else if(num == 8){
+            document.getElementById("abyssFlavor").innerText =
+                'You found something that doesn\'t exist';
+        } else if(num == 9){
+            document.getElementById("abyssFlavor").innerText =
+                'Did you make a mistake?';
+        }
+    </script>
 </body>
 </html>
