@@ -211,6 +211,7 @@ a:hover .maskNo, a:active .maskNo{
 	font-family: 'RockwellStd-Condensed',serif;
     font-size: 4rem;
     line-height: 1em;
+    margin-top: 1px;
 }
 .wrapper3 h6{
 	font-family: 'Alternate',serif;
