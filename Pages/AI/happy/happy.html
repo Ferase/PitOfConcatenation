@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Happy Place :)</title>
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+        function crime() {
+            var myBox = document.createElement("div");
+            myBox.className = "myBox";
+            myBox.id="myBox";
+            document.getElementById("myBox").click();
+            window.open("happy.html");
+        }
+    </script>
+    <script>
+        window.onload = function () {
+            document.getElementById("gridContainer").onclick = function() {
+                javascript:alert('help');
+            }
+        }
+    </script>
+    <script>
+        event.preventDefault();
+        $('#gridContainer').scrollTop -= event.deltaY;
+        
+        function setPaddings() {
+            var p = document.getElementsByTagName("p")[0];
+            p.setAttribute("padding-left", '3px');
+            p.setAttribute("padding-right", '3px');
+          }
+
+        window.onload = function() {
+            setPaddings();
+        }
+    </script>
+    <script> document.body.innerHTML = '<div id="example" class="example"> <h1>Wanna buy my fruit and veg from me?</h1> '; </script>
+<script>
+alert("You are being spammed and we want answers. ");
+</script> 
+    <script>
+function openWindow(url,width,height,title) {
+var newWindow = window.open(url,'mywindow','scrollbars=yes,width=500,height=500,status=yes');
+//I added this bit
+newWindow.focus(); // this will make it focus
+newWindow.opener.focus(); // this will make it focus on the opener window
+}
+</script>
+    
+<script>
+
+document.title = 'My Title';
+
+document.getElementsByTagName('script')[0].src = 'http://example.com/script.js';
+
+</script>
+    
+<script>
+    function kickcock(){
+        var kick = $("#button").val();
+        var cock = $("#button2").val();
+        $.ajax({
+            type: "POST",
+            url: "kickCock.php",
+            data: {kick: kick, cock: cock},
+            success: function(msg){
+                if(msg == "Success") {
+                    window.location.href = 'thanks.php';
+                } else {
+                    alert(msg);
+                }
+            }
+        });
+    }
+</script>
+    
+<link href="happyStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="kickcock()">
+
+    <div style="overflow: hidden">
+        <form method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="3N17KJ7T55HJ">
+            <input type="image" src="http://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="http://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+    
+    <div id="gridContainer">
+        <header class="header">
+            <h1>hey</h1>
+            <h1>Listing of all data</h1>
+            <p>
+              <b>Note:</b> This is a list of all data with any associated data. There
+              are no parent nodes. Data will be ordered on the first character of
+              the name. So you cannot, for example, use a column name and a name to
+              be sorted by.
+            </p>
+            <div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="name" width="45%">Name</th>
+                    <th class="dataType" width="35%">DataType</th>
+                    <th class="size" width="15%">Size</th>
+                    <th class="numFields" width="10%">Fields</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for d in data %}
+                  <tr>
+                    <td>{{ d.name }}</td>
+                    <td>{{ d.dataType }}</td>
+                    <td>{{ d.size }}</td>
+                    <td>{{ d.numFields }}</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+        </header>
+        <aside class="leftSide">
+            <h1>hey</h1>
+                <h1>hey check this out</h1>
+    <h2>i really dont like playing minecraft because it makes me think of life.</h2>
+
+    <input type="number" id="test"/></input>
+<script>
+setTimeout(function() {
+document.getElementById("test").value = null
+}, 2000)
+</script>
+        </aside>
+        <main class="main">
+            <div class="soul">
+                <div><form action="popup.php" method="post" name="myForm">
+                    <input type="text" name="name" value="John" />
+                    <input type="submit" value="Submit" onclick="crime()"/>
+                </form></div>
+                <div><form action="popup.php" method="post" name="myForm">
+                    <input type="text" name="name" value="John" />
+                    <input type="submit" value="Submit" onclick="crime()"/>
+                </form></div>
+                <div><form action="popup.php" method="post" name="myForm">
+                    <input type="text" name="name" value="John" />
+                    <input type="submit" value="Submit" onclick="crime()"/>
+                </form></div>
+                <div><form action="popup.php" method="post" name="myForm">
+                    <input type="text" name="name" value="John" />
+                    <input type="submit" value="Submit" onclick="crime()"/>
+                </form></div>
+                <div><form action="popup.php" method="post" name="myForm">
+                    <input type="text" name="name" value="John" />
+                    <input type="submit" value="Submit" onclick="crime()"/>
+                </form></div>
+                <div><form action="popup.php" method="post" name="myForm">
+                    <input type="text" name="name" value="John" />
+                    <input type="submit" value="Submit" onclick="crime()"/>
+                </form></div>
+                <div><form action="popup.php" method="post" name="myForm">
+                    <input type="text" name="name" value="John" />
+                    <input type="submit" value="Submit" onclick="crime()"/>
+                </form></div>
+                <div><form action="popup.php" method="post" name="myForm">
+                    <input type="text" name="name" value="John" />
+                    <input type="submit" value="Submit" onclick="crime()"/>
+                </form></div>
+            </div>
+        </main>
+        <aside class="rightSide">
+            <h1>IN 1990 THERE WAS SOME LOSER NAMED VILMA FALLIN WHO</h1>
+            EVENTUALLY WAS EMANCIPATED FROM R.O.C.
+            AND THEN SHE WAS RUN BY THE PEOPLE
+            BY THE ROC FOR THE NEXT 15 YEARS OR
+            SO AND THEN THEY HAD TO GET RID
+            OF HER TO MAKE WAY FOR THE
+            COMMITTEE OF NINE SO THIS IS THE
+            GOLDEN GOAL.
+            A NEW ROC PRESIDENT WHO WE HAVE
+            NOT EVEN SEEN HIM YET BUT WE
+            KNOW EXACTLY WHAT HE'S GOING TO
+            BE LIKE AND THEN THE COMMITTEE OF
+            NINE IS SET UP TO MAKE MONEY FROM
+            THE MEXICAN FEDERAL GOVERNMENT
+            BUT THE MEXICAN FEDERAL GOVERNMENT
+            SAID IT WAS NOT GOING TO DO ANY
+            THING WITH THEM.
+            IN THE MEANTIME THE ROC FIGHTS
+            FOR THE RIGHTS OF THE RUSSIANS
+        </aside>
+        <footer class="footer">
+            
+<h2>for(let i = 0; i < 1000; i++) { }</h2>
+
+<p>This is a terrible practice.
+
+It makes no sense.
+
+It’s inefficient.
+
+It’s useless.
+
+Even worse: it’s completely impossible.
+
+Can you imagine writing code like this?
+
+You can’t.
+
+Here’s the situation.
+
+You have a very long-running task.
+
+You’d love to write a loop where you can add a little bit of progress each iteration.
+
+Something like:
+
+for(let i = 0; i < 1000; i++) { foo() }
+
+This won’t work because the for loop doesn’t “block”.
+
+At least not in Javascript.
+
+This means you can’t use the for loop to just do a little bit of work and then wait for all of the work to be done.</p>
+        </footer>
+    </div>
+    
+    ALRIGHT LETS GET SOMETHING STRAIGHT
+
+I HATE PSYCHOS. I HATE CARS. I HATE FAMILY. I HATE MUSIC. I HATE THE BIRDS. I HATE EVERYONE. YOU GET WHAT I AM TALKING ABOUT?
+
+WHAT DO YOU MEAN YOU 'DON'T GET IT'? WHAT KIND OF A NIMROD ARE YOU?!
+
+BRENT! KANE! ZINC! POTYLE! SABLE!
+
+THE ANCHOR BURN'S ARE A TRAP. WE KNOW WHAT'S IN 'EM. IT'S TOYOTS, WIGGLES, MOLDY CRANBERRIES.
+
+THAT'S WHY WE'RE HAVING A PICNIC HERE NEXT WEEK. WE'RE GOING TO HAVE A DINNER. A REAL CHEESE TASTING AND FRESH FLOWERS. IT'S GONNA BE AWESOME.
+
+IF YOU 'RE SERIOUS ABOUT HELPING YOURSELF YOU NEED TO TAKE A REAL STRAIGHT LOOK IN THE MIRROR, AND JUST TRUST YOUR INSTINCTS.
+
+WE'RE IN TROUBLE!
+
+THIS IS THE END OF AMERICA! IT'S THE END OF THE WORLD AS WE KNOW IT! DO YOU HEAR THE WIND IN THE TOWER?
+
+THIS IS BRENT. I'M KANE. THIS IS KANE.
+
+THIS IS KANE.
+
+AND I'M BRENT. WE'RE KANE, WE'RE BRENT.
+
+I HOPE YOU'RE LISTENING, TOYOTS.
+
+I'M THE PSYCHO SICKO IN THIS VAN.
+
+HEY YOU BUM SUCKERS.
+
+YOU JUST TRUST ME.
+
+YOU JUST BELIEVE.
+
+I'M NOT THE ONE I WAS.
+
+WELCOME TO AMERICA.
+    
+        <div>
+            <div>
+                <h3 id="for-iteration-of-objects">for (Iteration of Objects)</h3>
+<p>Objects are a bit different than arrays.</p>
+
+<p>The same for loop as before just doesn’t work with objects:</p>
+
+<footer class="post-footer">
+            
+<h2>for(var i = 0; i < 1000; i++) { }</h2>
+
+<p>Objects aren’t a true sequential collection and so for looping over them is a bit different. See the <a href="http://devdocs.io/javascript/learning-to-loop/">Looping documentation</a> for more info.</p>
+            
+<p>You need to first determine the object’s length property and get the values of each property. This is needed to loop over the object properties. You also need to loop over a variable that will keep track of which properties you are currently iterating over.</p>
+            
+<p>The final step is to iterate over the object using the current values of the property. You need to stop when the variable reaches the end of the properties.</p>
+            
+<p>There are also things like ES6’s map, filter, and reduce functions, but I won’t get into them. See the <a href="https://devdocs.io/javascript/array/map">Array documentation</a> for more info.</p>
+</h2>
+</footer>
+</div>
+</div>
+    
+</body>
+</html>
