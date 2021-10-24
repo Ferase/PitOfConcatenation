@@ -81,6 +81,7 @@ body{
     overflow-x: hidden; /* Standard */
 }
 
+/* Header */
 header{
     text-align: center;
     padding: 5em 5em;
@@ -137,17 +138,33 @@ li{
 
 #gridContainer_Main .bodyHeader{
     padding: 1.5em 0 1em;
+    text-align: center;
 }
 #gridContainer_Main .bodyHeader:first-child{
     padding-top: 0em;
+    text-align: center;
 }
 
+.aboutFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.aboutMe_Pic{
+	float: left;
+	max-width: 17.5vw;
+	max-height: 17.5vw;
+}
+
+/* Text Styles */
 h1{
 	font-family: 'RockwellStd',serif;
     font-weight: 500;
     color: #ff6666;
     font-size: 2.75rem;
-    text-align: center;
     line-height: 1.25em;
 }
 
@@ -156,7 +173,6 @@ h2{
     font-weight: 400;
     color: #ff6666;
     font-size: 2rem;
-    text-align: center;
     line-height: 1.25em;
 }
 
@@ -165,7 +181,6 @@ h3{
     font-weight: 300;
     color: #ff6666;
     font-size: 1.5rem;
-    text-align: center;
     line-height: 1.25em;
 }
 
@@ -521,6 +536,22 @@ a:hover .maskNo, a:active .maskNo{
 
     .homeNav{
         flex-direction: column;
+    }
+    
+    .aboutFlex{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .aboutMe_Pic{
+        display: inline-block;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        padding-bottom: 2em;
     }
     
     .hide{
