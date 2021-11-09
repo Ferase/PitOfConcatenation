@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/* Universal Reset */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    color: #fff;
+    background: #000;
+}
+
+/* Fonts */
+/* KafuTechno */
+@font-face {
+	font-family: 'FOT-KafuTechno Std';
+	src: url('font/FOT-KafuTechnoStd-E.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FOT-KafuTechno Std';
+	src: url('font/FOT-KafuTechnoStd-H.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FOT-KafuTechno Std';
+	src: url('font/FOT-KafuTechnoStd-U.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+/* Eurostile Condensed */
+@font-face {
+	font-family: 'EurostileCon-Reg';
+	src: url('font/EurostileCon-Reg.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'EurostileCon-Reg';
+	src: url('font/EurostileCon-RegIta.otf') format('opentype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'EurostileCon-Reg';
+	src: url('font/EurostileCon-Hea.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'EurostileCon-Reg';
+	src: url('font/EurostileCon-HeaIta.otf') format('opentype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* IDs */
+#mainContainer{
+    display: block;
+    max-width: 100%;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #586F7C;
+}
+#titleHeader{
+    text-align: center;
+    line-height: 6rem;
+    padding: 4em;
+    color: #fff;
+    background-color: #2F4550;
+}
+#indexIntro{
+    
+}
+
+/* Block Elements */
+header{
+    
+}
+nav{
+    display: flex;
+    flex-direction: row;
+}
+nav a{
+    width: 100%;
+    padding: 0 auto;
+    text-align: center;
+    padding: 1em 0;
+    border: #2F4550 solid;
+    border-width: 1px;
+    transition: all .2s linear;
+    cursor: pointer;
+	color: #fff;
+}
+nav a:first-child{
+    border-width: 0 1px 1px;
+}
+nav a:last-child{
+    border-width: 1px 1px 0;
+}
+nav a:hover{
+    color: #000;
+    background-color: #fff;
+}
+main{
+    padding: 2em;
+}
+main h2{
+    margin-top: 1em;
+    line-height: 3.4rem;
+}
+main h2:first-child{
+    margin-top: 0em;
+    line-height: 4rem;
+}
+section{
+    padding: 2em;
+}
+section#indexIntro p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+footer{
+    padding: 2em;
+    text-align: center;
+    color: #fff;
+    background-color: #2F4550;
+}
+
+/* Text Elements */
+h1{
+	font-family: 'FOT-KafuTechno Std', sans-serif;
+	font-weight: 600;
+}
+h2{
+	font-family: 'FOT-KafuTechno Std', sans-serif;
+	font-weight: 500;
+}
+h3{
+	font-family: 'FOT-KafuTechno Std', sans-serif;
+	font-weight: 400;
+}
+p{
+	font-family: 'EurostileCon-Reg', sans-serif;
+}
+a{
+	font-family: 'FOT-KafuTechno Std', sans-serif;
+	font-weight: 400;
+    text-decoration: none;
+    color: #000;
+}
+ul{
+    list-style: none;
+}
+li{
+	margin-top: 1rem;
+}
+hr{
+    border: #fff solid;
+    border-width: 2px 0;
+    margin: 0 2em;
+}
+
+/* Text Modifiers */
+#titleHeader h1{
+    font-size: 6rem;
+}
+#titleHeader h2{
+    font-size: 4rem;
+}
+
+/* General Classes */
