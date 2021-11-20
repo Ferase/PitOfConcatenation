@@ -1,56 +1,93 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
+<script>
+	function pressStart() {
+		document.getElementById("startButtonContainer").style.display="none"; 
+		document.getElementById("mainBody").style.display="contents";
+	}
+</script>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>VGM Analysis - Home</title>
-<link href="vgm.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-	
-	
-	
 </style>
+<link href="vgm.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+
+<div id="mainContainer">
 	
-    <div id="mainContainer">
-        <nav class="mainNav">
-            <a href="index.html">Home</a>
-            <a href="#">Terminology</a>
-            <a href="#">Examples</a>
-            <a href="#">Resources</a>
-            <a href="#">Interviews</a>
-            <a href="#">About</a>
-        </nav>
-        
-        <header id="titleHeader">
-	        <h1>VGM</h1>
-	        <h2>Analysis</h2>
+	<div class="topNavBG">
+		<div class="topNavHoverText">
+			Hover Here for Navigation
+		</div>
+		<nav class="topNav">
+			<a href="index.html" class="currentPage navItem">Home</a>
+			<a href="about.html" class="navItem">About Us</a>
+			<a href="#" class="navItem">Ventures</a>
+			<a href="#" class="navItem">Resources</a>
+			<a href="#" class="navItem">Our Words</a>
+		</nav>
+	</div>
+    
+    <div class="heroContainer">
+        <img src="img/hero_waveform.png" alt="VGM Analysis" class="heroWaveform">
+        <img src="img/hero.png" alt="VGM Analysis" class="heroImage">
+    </div>
+    
+    <div class="gradient_In"></div>
+    
+    <div id="bodyContainer">
+        <header class="pageTitle">
+            <h1>Welcome!</h1>
         </header>
         
-        <section id="indexIntro">
-            <p>Music has evolved to be something that can accompany almost anything if the creator works intently enough with it. Despite this wide angle lens, many believe that they need big, expensive software and hardware to create music, and although this can be true for certain areas of the industry, this is certainly not the case in all others. How? Video game music.</p>
+        <img src="" alt="wip" class="introImg">
+        
+        <section class="body01">
+            <p>This site is the ground for information about the <strong>VGM Analysis community,</strong> an online and asynchronous body of people who create, research, and of course, analyze music from video games. Here, you will find a trove of information about who they are, how they do what they do, what their goals are, and how the community operates as a collective whole.</p><br>
+            
+            <h3>Click any of the navigation tabs at the top or bottom of this page to start your journey, or <strong>press START</strong> below for a quick speedrun!</h3>
         </section>
-        
-        <hr>
-        
-        <main>
-            <h2>Who Are They?</h2>
-            
-            <p>The VGM Analysis community is a group that focuses on identifying the tools used by musicians within their works in video games. A lot of video games nowadays typically use digitally-composed music, and a good portion of the time, the digital instruments and effects used in these tracks can be traced back to whatever plugins, VSTs, sound canvases, or other sample libraries the composers used to create them. This what this community thrives on, as their goal is to pull together these resources and provide musicians looking for digital instruments a place to find some completely free and visibly powerful tools to get them going. Although they are primarily focused on VGM, their experience and trained ears often result in them identifying tools used in the music for films, TV shows, ads, and other media simply by audio memory alone.</p>
-            
-            
-            <h2>Their Goal</h2>
+		
+		<div id="startButtonContainer">
+			<button href="#startButtonContainer" onClick="pressStart()">Start</button>
+		</div>
+		
+		<div id="mainBody">
+			<main class="body02">
+				<h2>Who Are We?</h2>
+                <p>As previously stated, the VGM Analysis community is a collection of people from a wide variety of musical backgrounds who study music from video games. Some do it for the sake of practicing sound design techniques, some search these songs for sounds and digital instruments they can use for their own production, and some simply use their findings to add to their musical palette. Overall, we all connect ourselves through a mutual interest or love of video game music, and a vast majority of us have done research of our own or even collaborated to create comprehensive and resource-packed repositories for others to use and share.</p><br>
+                <h3>If you would like to know more about us, check out the <a href="#">About Us</a> section!</h3><br>
+                
+                <h2>Why Do We Do This?</h2>
+                <p>There are a variety of reasons we do what we obsess over video game music, though it might not be entirely obvious at first. The short answer is that we want to provide and share both resources and understandings gathered from researching and archiving video game music and their original sources. Essentially, you can think of us as a source; we archive tools, resources, information, and other goodies that those wanting to compose digital music can use and learn from.</p><br>
+                <h3>For the full scoop, check out the <a href="#">Ventures</a> page!</h3><br>
 
-            <p>As previously mentioned, the VGM Analysis community thrives on taking video game music and deciphering the audio to identify the tools used to make it for any other musician’s reference. Some of the time, these tools and plugins they find are paid, but there’s a vast amount of games that use free libraries, usually soundfonts or other VSTs, that anyone can download and use. Moreover, because they are being identified through music in which they’ve been used, the music itself acts as a specimen of the potential power of these free tools and, therefore, the capability to make good music with such tools.</p>
-        </main>
-        
-        <footer>
-            <p>Created by Parker Lippstock</p>
-            <p>2021</p>
-        </footer>
+                <h2>Where Can We Be Found?</h2>
+                <p>Frankly, if you search for VGM Analysis communities on any social media platform or even Google, you’ll find many different groups that do what we do. Even though this community technically encompasses all of those who research and make video game music, we’re not all connected; there are so many VGM Analysis groups out there, whether you’re looking on Google, Discord, or any other platform. If you’re interested, just dive in using your search engine of choice and pick a place to begin!</p><br>
+                <h3>Some of the notable online community servers and projects are in the <a href="#">Resources</a> page, so go take a look if you’re interested!</h3>
+
+			</main>
+		</div>
+		
     </div>
+    
+    <div class="gradient_Out"></div>
+    
+    <footer>
+		<nav class="bottomNav">
+			<a href="index.html" class="currentPage navItem">Home</a>
+			<a href="about.html" class="navItem">About Us</a>
+			<a href="#" class="navItem">Ventures</a>
+			<a href="#" class="navItem">Resources</a>
+			<a href="#" class="navItem">Our Words</a>
+		</nav>
+        <p>VGM Anaysis Community • Site by Parker Lippstock • 2021</p>
+    </footer>
+</div>
 	
 </body>
 </html>
