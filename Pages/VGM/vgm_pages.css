@@ -115,13 +115,53 @@ nav a:visited{
 .navItem:first-child a { margin-right: auto; }
 .navItem:last-child a { margin-left: auto;  }
 
+.topNavHoverText{
+	position: absolute; 
+	left: 0; 
+	right: 0; 
+	margin: 1em auto;
+	font-family: 'Bungee',sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+	text-align: center;
+	opacity: 0;
+	transition: all 100ms linear;
+	
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+	pointer-events: none;
+	
+	animation: topNavHoverText_Appear 5000ms linear forwards;
+	animation-iteration-count: 1;
+}
+
+.topNavBG{
+	position: relative;
+	background-color: #000;
+}
+
+.topNavBG:hover .topNav{
+	visibility: visible;
+	opacity: 1;
+}
+
+.topNavBG:hover .topNavHoverText{
+	opacity: 0;
+	
+	animation: topNavHoverText_Hide 1ms linear;
+	animation-iteration-count: 1;
+}
+
 .topNav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 	padding: 1em 8em;
 	transition: all 200ms linear;
-	background-color: #000;
+	visibility: hidden;
+	opacity: 0;
 }
 
 .bottomNav{
@@ -215,6 +255,7 @@ h3{
 	font-family: 'Apotek',sans-serif;
 	font-weight: 500;
     font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 p{
