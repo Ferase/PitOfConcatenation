@@ -123,6 +123,10 @@ nav a:visited{
     -webkit-text-fill-color: transparent;
     opacity: 0.80;
 }
+.buttonNavCurrentPage{
+    color: #FFBE00;
+    opacity: 1;
+}
 
 .navItem{
     flex: 1;
@@ -391,7 +395,7 @@ a{
     .topNavBG, .topNav, .topNavHoverText, .bottomNav{
         display: none;
     }
-
+    
     .buttonNav{
         display: block;
         position: fixed;
@@ -401,11 +405,14 @@ a{
         height: 48px;
         background-color: #5400A6;
         z-index: 101;
+        text-align: center;
         transition: all 200ms linear;
-        padding: 1.5rem;
+        padding: 1rem;
     }
     .buttonNav img{
         position: absolute;
+        left: 25%;
+        top: 25%;
         width: 50%;
         height: 50%;
         max-width: 50%;
@@ -418,7 +425,7 @@ a{
     }
     .buttonNav:hover, .buttonNav:active{
         width: calc(100% - 128px);
-        height: auto;
+        height: 400px;
         background-color: #000;
     }
     .buttonNav:hover img, .buttonNav:active img{
