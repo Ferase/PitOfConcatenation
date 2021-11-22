@@ -449,6 +449,7 @@ a{
     }
     .buttonNav:hover img, .buttonNav:active img{
         opacity: 0;
+		display: none;
     }
     .buttonNav:hover .buttonNavOpen, .buttonNav:active .buttonNavOpen{
         display: flex;
