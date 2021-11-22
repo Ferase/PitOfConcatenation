@@ -424,7 +424,7 @@ a{
         height: 48px;
         background-color: #5400A6;
         z-index: 101;
-        text-align: center;
+        text-align: right;
         transition: all 200ms linear;
         padding: 1rem;
     }
@@ -442,9 +442,12 @@ a{
     .buttonNavOpen{
         display: none;
     }
+	.buttonNavOpen a{
+		display: contents;
+	}
     .buttonNav:hover{
-        width: calc(100% - 128px);
-        height: 400px;
+        width: 224px;
+        height: 240px;
         background-color: #000;
     }
     .buttonNav:hover img{
@@ -454,7 +457,7 @@ a{
     .buttonNav:hover .buttonNavOpen{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     
     .heroImage{
