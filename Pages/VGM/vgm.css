@@ -379,6 +379,23 @@ a{
 
 @media all and (max-width: 640px){
     
+    .pageTitle > h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 1.25rem;
+    }
+    
     .topNavBG, .topNav, .topNavHoverText, .bottomNav{
         display: none;
     }
