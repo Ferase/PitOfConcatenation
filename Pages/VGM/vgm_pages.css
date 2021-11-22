@@ -418,7 +418,7 @@ a{
     }
     .buttonNav:hover, .buttonNav:active{
         width: calc(100% - 128px);
-        height: 384px;
+        height: auto;
         background-color: #000;
     }
     .buttonNav:hover img, .buttonNav:active img{
