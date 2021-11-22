@@ -431,16 +431,16 @@ a{
     .buttonNavOpen{
         display: none;
     }
-    .buttonNav:hover, .buttonNav:active{
+    .buttonNav:hover{
         width: calc(100% - 128px);
         height: 400px;
         background-color: #000;
     }
-    .buttonNav:hover img, .buttonNav:active img{
+    .buttonNav:hover img{
         opacity: 0;
 		display: none;
     }
-    .buttonNav:hover .buttonNavOpen, .buttonNav:active .buttonNavOpen{
+    .buttonNav:hover .buttonNavOpen{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
