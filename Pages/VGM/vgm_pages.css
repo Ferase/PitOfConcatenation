@@ -104,6 +104,7 @@ a{
 }
 .introImg{
     mix-blend-mode: overlay;
+	margin-top: 1.5em;
 }
 
 /* Nav */
