@@ -11,6 +11,7 @@
 body{
     color: #fff;
     background-color: #000;
+    overflow-x: hidden;
 }
 img{
     max-width: 100%;
@@ -382,18 +383,6 @@ label{
     .d_options_right{
         grid-column: 2/-2;
         margin-left: 0;
-    }
-
-    /* Flourishes */
-    #FLOURISH_01{
-        bottom: 30%;
-        right: 35%;
-        opacity: 0.4;
-    }
-    #FLOURISH_02{
-        top: 60%;
-        left: 50%;
-        opacity: 0.4;
     }
     
 }
