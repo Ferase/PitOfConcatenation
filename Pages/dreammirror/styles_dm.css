@@ -141,16 +141,6 @@ nav a:link{
 	font-family: 'Bebas Kai', sans-serif;
     font-size: 5vw;
     text-decoration: none;
-    opacity: 0.5;
-}
-nav a:hover{
-    opacity: 1;
-}
-nav a:active{
-    opacity: 1;
-}
-nav a:visited{
-    opacity: 0.5;
 }
 nav a:nth-of-type(1){
     position: absolute;
