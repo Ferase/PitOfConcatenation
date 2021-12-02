@@ -140,7 +140,6 @@ nav{
 nav a:link{
 	font-family: 'Bebas Kai', sans-serif;
     font-size: 5vw;
-    color: #009833;
     text-decoration: none;
 }
 nav a:nth-of-type(1){
