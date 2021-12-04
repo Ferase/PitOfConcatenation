@@ -41,18 +41,16 @@ img{
 }
 .logoImg{
 	display: block;
-	width: 192px;
-	height: 192px;
-	max-width: 192px;
-	max-height: 192px;
+	width: 50%;
+    height: auto;
 	margin: 0 auto;
 }
 .screenImg{
 	display: block;
-	width: 540px;
-	height: 262px;
-	max-width: 540px;
-	max-height: 262px;
+	width: 100%;
+    height: auto;
+	max-width: 100%;
+    max0-height: auto;
 	margin: 0 auto;
 }
 
