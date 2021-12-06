@@ -3,15 +3,19 @@
 var pathText = "text.html"
 var pathImg = "images.html"
 
+var activeSel_Heading = "";
 var activeSel_Text = "";
 var activeSel_Img = "";
+var runID_Heading = "";
 var runID_Text = "";
 var runID_Img = "";
 
 // Who or what did you see?
 $('input[name=DREAM_BEING]').change(function() {
+    activeSel_Heading = "#DH_INS_BEING";
     activeSel_Text = "#D_INS_BEING";
     activeSel_Img = "#DIMG_INS_BEING";
+    runID_Heading = " #heading_being";
     switch($(this).val()) {
         case 'Person':
                 runID_Text = " #being_01";
@@ -45,8 +49,10 @@ $('input[name=DREAM_BEING]').change(function() {
 
 // What objects do you remember finding?
 $('input[name=DREAM_OBJ]').change(function() {
+    activeSel_Heading = "#DH_INS_OBJ";
     activeSel_Text = "#D_INS_OBJ";
     activeSel_Img = "#DIMG_INS_OBJ";
+    runID_Heading = " #heading_obj";
     switch($(this).val()) {
         case 'Flower':
                 runID_Text = " #obj_01";
@@ -80,8 +86,10 @@ $('input[name=DREAM_OBJ]').change(function() {
 
 // How did you feel?
 $('input[name=DREAM_FEEL]').change(function() {
+    activeSel_Heading = "#DH_INS_FEEL";
     activeSel_Text = "#D_INS_FEEL";
     activeSel_Img = "#DIMG_INS_FEEL";
+    runID_Heading = " #heading_feel";
     switch($(this).val()) {
         case 'Happy':
                 runID_Text = " #feel_01";
@@ -114,6 +122,12 @@ $('input[name=DREAM_FEEL]').change(function() {
 });
 
 function setContent(){
+    $(activeSel_Heading).load(pathText + runID_Heading, function(status){
+        // Failsafe
+        if (status == "error") {
+            $(activeSel_Heading).load("text.html #error_heading");
+        }
+    });
     $(activeSel_Text).load(pathText + runID_Text, function(status){
         // Failsafe
         if (status == "error") {
