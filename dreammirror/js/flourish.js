@@ -1,6 +1,6 @@
 // JavaScript Document
 
-var F_Path = "img/_flourish/";
+var F_Path = "img/flourish/";
 var numImg = 20; // Adjust as new flourish images are added
 
 var F_NamesUn = [];

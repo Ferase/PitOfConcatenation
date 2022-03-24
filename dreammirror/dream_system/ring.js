@@ -3,7 +3,7 @@
 var dir_text = "dream_system/text.html",
     dir_img = "dream_system/images.html"
 
-var DM_DIV = "#DM_LIST_CONTAIN",
+var DM_DIV = "#DMlist_CONTAIN",
     prefixes = ["place","being","obj","feel"],
     wheels = 4,
     amount = 10;
@@ -68,17 +68,17 @@ for(let i = 0; i < prefixes.length; i++){
     for(let j = 0; j < amount; j++){
         switch(i){
             case(0):
-                $('#dm_list_0' + (i+1)).append("<li id=\"place_c_" + (j+1) + "\">" + place[j] + "</li>");
+                $('#dmlist_0' + (i+1)).append("<li id=\"place_c_" + (j+1) + "\">" + place[j] + "</li>");
                 break;
             case(1):
-                $('#dm_list_0' + (i+1)).append("<li id=\"being_c_" + (j+1) + "\">" + being[j] + "</li>");
+                $('#dmlist_0' + (i+1)).append("<li id=\"being_c_" + (j+1) + "\">" + being[j] + "</li>");
                 break;
             case(2):
-                $('#dm_list_0' + (i+1)).append("<li id=\"obj_c_" + (j+1) + "\">" + obj[j] + "</li>");
+                $('#dmlist_0' + (i+1)).append("<li id=\"obj_c_" + (j+1) + "\">" + obj[j] + "</li>");
                 break;
             case(3):
                 if(j < 5){
-                    $('#dm_list_0' + (i+1)).append("<li id=\"feel_c_" + (j+1) + "\">" + feel[j] + "</li>");
+                    $('#dmlist_0' + (i+1)).append("<li id=\"feel_c_" + (j+1) + "\">" + feel[j] + "</li>");
                 }
                 break;
         }
@@ -87,10 +87,10 @@ for(let i = 0; i < prefixes.length; i++){
 
 for(let i = 0; i < 4; i++){
     if(i == 3){
-        createList('dm_list_0' + (i+1),0.15,-209);
+        createList('dmlist_0' + (i+1),0.15,-209);
     }
     else{
-        createList('dm_list_0' + (i+1),0.35,-245);
+        createList('dmlist_0' + (i+1),0.35,-245);
     }
 }
 
