@@ -11,6 +11,7 @@
 body{
     color: #fff;
     background-color: #000;
+    filter: sepia(0.25);
     overflow-x: hidden;
 }
 img{
