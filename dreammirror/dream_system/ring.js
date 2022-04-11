@@ -20,7 +20,7 @@ var place = [
     "Office",
     "Hotel",
     "Hospital",
-    "Theme Park",
+    "Fair",
     "Hallway",
     "Store",
     "Theater",
@@ -29,7 +29,7 @@ var place = [
     
 var being = [
     // Beings
-    "People",
+    "Person",
     "Cat",
     "Dog",
     "Bird",
@@ -100,58 +100,113 @@ function createList(element,type,start){
         $elements = $("#" + element + ' li:not(:first-child)'),
         numberOfElements = (type === 1) ? $elements.length : $elements.length - 1, //adj for even distro of elements when not full circle
         slice = 360 * type / numberOfElements,
+        distance = 40,
+        offset = 70,
         isOpen = false;
 
     $first.click(function(){
-        if(isOpen == true){
-            $elements.each(function() {
-                var $self = $(this),
-                    $bg = $(".shield");
+        if($(window).width() <= 600){
+            if(isOpen == true){
+                $elements.each(function() {
+                    var $self = $(this),
+                        $bg = $(".shield");
 
-                $self.css({
-                    'transform': 'rotate(0deg) translate(0) rotate(0deg)',
-                    'opacity': '0',
-                    'z-index': '100'
+                    $self.css({
+                        'top': 0 + 'px',
+                        'opacity': '0',
+                        'z-index': '100'
+                    });
+                    $first.css({
+                        'z-index': '200'
+                    });
+                    $bg.css({
+                        'opacity': '0',
+                        'pointer-events': 'none'
+                    });
+                    $('body').css({
+                        'height': '100%',
+                        'overflow': 'visible'
+                    });
                 });
-                $first.css({
-                    'z-index': '200'
+                isOpen = false;
+            }
+            else{
+                $elements.each(function(i) {
+                    var $self = $(this),
+                        $bg = $(".shield"),
+                        move = (distance*i);
+
+                    $self.css({
+                        'top': offset + move + 'px',
+                        'opacity': '1',
+                        'z-index': '202'
+                    });
+                    $first.css({
+                        'z-index': '202'
+                    });
+                    $bg.css({
+                        'opacity': '0.75',
+                        'pointer-events': 'auto'
+                    });
+                    $('body').css({
+                        'height': 'auto'
+                        //'overflow': 'hidden'
+                    });
                 });
-                $bg.css({
-                    'opacity': '0',
-                    'pointer-events': 'none'
-                });
-                $('body').css({
-                    'height': '100%',
-                    'overflow': 'visible'
-                });
-            });
-            isOpen = false;
+                isOpen = true;
+            }
         }
         else{
-            $elements.each(function(i) {
-                var $self = $(this),
-                    $bg = $(".shield"),
-                    rotate = slice * i + start,
-                    rotateReverse = rotate * -1;
+            if(isOpen == true){
+                $elements.each(function() {
+                    var $self = $(this),
+                        $bg = $(".shield");
 
-                $self.css({
-                    'transform': 'rotate(' + rotate + 'deg) translate(' + radius + ') rotate(180deg)',
-                    'opacity': '1',
-                    'z-index': '202'
+                    $self.css({
+                        'transform': 'rotate(0deg) translate(0) rotate(0deg)',
+                        'opacity': '0',
+                        'z-index': '100'
+                    });
+                    $first.css({
+                        'z-index': '200'
+                    });
+                    $bg.css({
+                        'opacity': '0',
+                        'pointer-events': 'none'
+                    });
+                    $('body').css({
+                        'height': '100%',
+                        'overflow': 'visible'
+                    });
                 });
-                $first.css({
-                    'z-index': '202'
+                isOpen = false;
+            }
+            else{
+                $elements.each(function(i) {
+                    var $self = $(this),
+                        $bg = $(".shield"),
+                        rotate = slice * i + start,
+                        rotateReverse = rotate * -1;
+
+                    $self.css({
+                        'transform': 'rotate(' + rotate + 'deg) translate(' + radius + ') rotate(180deg)',
+                        'opacity': '1',
+                        'z-index': '202'
+                    });
+                    $first.css({
+                        'z-index': '202'
+                    });
+                    $bg.css({
+                        'opacity': '0.75',
+                        'pointer-events': 'auto'
+                    });
+                    $('body').css({
+                        'height': 'auto'
+                        //'overflow': 'hidden'
+                    });
                 });
-                $bg.css({
-                    'opacity': '0.75',
-                    'pointer-events': 'auto'
-                });
-                $('body').css({
-                    'height': 'auto'
-                    //'overflow': 'hidden'
-                });
-            });
-            isOpen = true;
+                isOpen = true;
+            }
         }
     });
     
@@ -167,33 +222,49 @@ function createList(element,type,start){
             if($(event.target).is('#place_c_' + (k+1))){
                 place_curr = (k+1);
                 $(event.target).css({
-                    'list-style': 'disc',
                     'color': '#fff'
                 });
+                if($(window).width() > 600){
+                    $(event.target).css({
+                        'list-style': 'disc'
+                    });
+                }
                 break;
             }
             else if($(event.target).is('#being_c_' + (k+1))){
                 being_curr = (k+1);
                 $(event.target).css({
-                    'list-style': 'disc',
                     'color': '#fff'
                 });
+                if($(window).width() > 600){
+                    $(event.target).css({
+                        'list-style': 'disc'
+                    });
+                }
                 break;
             }
             else if($(event.target).is('#obj_c_' + (k+1))){
                 obj_curr = (k+1);
                 $(event.target).css({
-                    'list-style': 'disc',
                     'color': '#fff'
                 });
+                if($(window).width() > 600){
+                    $(event.target).css({
+                        'list-style': 'disc'
+                    });
+                }
                 break;
             }
             else if($(event.target).is('#feel_c_' + (k+1))){
                 feel_curr = (k+1);
                 $(event.target).css({
-                    'list-style': 'disc',
                     'color': '#fff'
                 });
+                if($(window).width() > 600){
+                    $(event.target).css({
+                        'list-style': 'disc'
+                    });
+                }
                 break;
             }
         }
@@ -263,27 +334,43 @@ function updateContent(){
     for(let k = 0; k < amount; k++){
         if(place_curr != (k+1)){
             $('#place_c_' + (k+1)).css({
-                'list-style': 'circle',
                 'color': '#888'
             });
+            if($(window).width() > 600){
+                $('#place_c_' + (k+1)).css({
+                    'list-style': 'circle'
+                });
+            }
         }
         if(being_curr != (k+1)){
             $('#being_c_' + (k+1)).css({
-                'list-style': 'circle',
                 'color': '#888'
             });
+            if($(window).width() > 600){
+                $('#being_c_' + (k+1)).css({
+                    'list-style': 'circle'
+                });
+            }
         }
         if(obj_curr != (k+1)){
             $('#obj_c_' + (k+1)).css({
-                'list-style': 'circle',
                 'color': '#888'
             });
+            if($(window).width() > 600){
+                $('#obj_c_' + (k+1)).css({
+                    'list-style': 'circle'
+                });
+            }
         }
         if(feel_curr != (k+1)){
             $('#feel_c_' + (k+1)).css({
-                'list-style': 'circle',
                 'color': '#888'
             });
+            if($(window).width() > 600){
+                $('#feel_c_' + (k+1)).css({
+                    'list-style': 'circle'
+                });
+            }
         }
     }
 	
