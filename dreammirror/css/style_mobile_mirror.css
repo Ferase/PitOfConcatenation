@@ -70,8 +70,12 @@
         grid-column: 1/-1;
         padding: 0 3em;
     }
+    .navUpper{
+        padding: 0;
+        width: 75%;
+    }
     
-    .navMain a > *{
+    .navMain a > *,.navUpper a > *{
         transform: scale(100%,100%);
     }
     
@@ -99,6 +103,15 @@
 
     #DM_MAIN #DM_IMG{
         grid-column: 1/-1;
+    }
+    
+    #DM_DESC_PLACE{
+        grid-column: 2/-2;
+        padding: 7em 0 1em;
+    }
+    #DM_DESC_BEING,#DM_DESC_OBJ,#DM_DESC_FEEL{
+        grid-column: 2/-2;
+        padding: 1em 0;
     }
     
     #DMlist_CONTAIN{

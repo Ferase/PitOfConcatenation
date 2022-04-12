@@ -20,6 +20,7 @@ img{
 }
 #MAIN_CONTAINER{
     position: relative;
+    overflow: hidden;
 }
 
 
@@ -182,7 +183,7 @@ img{
     position: relative;
     margin-bottom: 5em;
 }
-.pageDivider{
+.pageDivider,.navUpperContainer{
     background-image: url("../img/core/sitebg.gif");
     background-repeat: repeat-y;
     background-position: center;
@@ -233,7 +234,7 @@ img{
     text-align: center;
     height: 270px;
     padding: 0 1em;
-    margin-top: 4em;
+    margin-top: 2em;
 }
 
 .landingOpener{
@@ -296,14 +297,24 @@ img{
     flex-direction: row;
     justify-content: space-around;
 }
-.navMain a img{
+
+.navUpper{
+    padding: 0 8em;
+    margin: 4em auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.navMain a img,.navUpper a img{
     max-width: 100%;
 }
-.navMain a > *{
+.navMain a > *,.navUpper a > *{
     transition: all 200ms ease-in-out;
     transform: scale(80%,80%);
 }
-.navMain a > *:hover{
+.navMain a > *:hover,.navUpper a > *:hover{
     transform: scale(100%,100%);
 }
 

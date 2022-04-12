@@ -29,7 +29,7 @@
         display: none;
     }
     
-    .pageDivider{
+    .pageDivider,.navUpperContainer{
         background-image: none;
     }
     
@@ -70,8 +70,12 @@
         grid-column: 1/-1;
         padding: 0 3em;
     }
+    .navUpper{
+        padding: 0;
+        width: 75%;
+    }
     
-    .navMain a > *{
+    .navMain a > *,.navUpper a > *{
         transform: scale(100%,100%);
     }
     
