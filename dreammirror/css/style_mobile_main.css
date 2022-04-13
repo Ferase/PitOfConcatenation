@@ -154,5 +154,12 @@
     label{
         font-size: 1rem;
     }
+
+	/* Dropcap */
+	.landingSect p:first-child:first-letter {
+		font-size: 5rem;
+		line-height: 0.2em;
+		padding: 0.5rem 0.5rem 0;
+	}
     
 }

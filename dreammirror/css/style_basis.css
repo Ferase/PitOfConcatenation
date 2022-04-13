@@ -388,9 +388,6 @@ p{
 .landingSect p{
 	line-height: 2.25rem;
 }
-.landingSect p::first-letter{
-    font-size: 6rem;
-}
 li p{
 	font-family: 'FranklinGothicURWCond', sans-serif;
     font-size: 1.5rem;
@@ -409,6 +406,17 @@ label{
 }
 .alignRight{
     text-align: right;
+}
+
+/* Dropcap */
+.landingSect p:first-child:first-letter {
+	color: #fff;
+	float: left;
+	font-family: "Duper",sans-serif;
+	font-style: bold;
+	font-size: 6rem;
+	line-height: 0.2em;
+	padding: 0.5rem 0.5rem 0;
 }
 
 
