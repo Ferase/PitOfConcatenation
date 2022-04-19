@@ -415,8 +415,8 @@ label{
 	font-family: "Duper",sans-serif;
 	font-style: bold;
 	font-size: 6rem;
-	line-height: 0.2em;
-	padding: 0.5rem 0.5rem 0;
+		line-height: 0.5em;
+		padding: 1rem 0.5rem 0;
 }
 
 
