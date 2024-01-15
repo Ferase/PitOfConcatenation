@@ -13,7 +13,7 @@
         }
 
         html, body{
-            background-color: white;
+            background: linear-gradient(-180deg, rgba(255,255,255,1) 0%, rgba(226,235,255,1) 100%);
             color: black;
             font-family: sans-serif;
         }
@@ -22,13 +22,14 @@
             margin: 0 2em;
             max-width: 100%;
             max-height: 100%;
+            position: relative;
         }
 
         #MAIN_HEADER{
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-items: top;
+            align-items: center;
             height: 200px;
         }
         #MAIN_HEADER img{
@@ -37,20 +38,47 @@
         }
 
         #MAIN_NAV{
+            padding: 1.5em 1em;
+            text-align: center;
+        }
+        #MAIN_NAV > ul{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            padding: 1.5em 1em;
         }
-        #MAIN_NAV a{
-            margin: 0 2em;
+        #MAIN_NAV > ul li{
+            display: grid;
+            place-items: center;
+            margin: 0 auto;
+            position: relative;
+        }
+        #MAIN_NAV > ul li a{
             padding: 0.5em 1.5em;
             font-size: 1.5em;
             background-color: rgba(255, 100, 0, 0);
             transition: background-color 300ms ease;
         }
         #MAIN_NAV a:hover, #MAIN_NAV a:active{background-color: rgba(255, 100, 0, 0.15);}
+        
+        ul.nav_sublist{
+            position: absolute;
+            top: 0;
+            left: -50;
+            z-index: 1;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 500ms ease;
+        }
+        ul.nav_sublist > li{
+            margin: 0 !important;
+        }
+
+        #MAIN_NAV a:hover + .nav_sublist, .nav_sublist:hover{
+            transform: translateY(50%);
+            opacity: 1;
+            pointer-events: auto;
+        }
 
         /* Link styles */
         a{text-decoration: none; font-family: sans-serif;}
@@ -148,6 +176,24 @@
             list-style: none;
         }
 
+        .flourish_shape_circle{
+            position: absolute;
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        .flourish_shape_topleft{
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            transform: translate(-30%, -30%);
+        }
+
+        .flourish_shape_topleft + .flourish_shape_topleft{
+            width: 500px;
+            height: 500px;
+        }
+
         @keyframes intro_header{
             0%{
                 height: 0%;
@@ -204,13 +250,34 @@
 
     <div id="MAIN_CONTAINER">
 
+        <div class="flourish_shape_circle shape_orange flourish_shape_topleft"></div>
+        <div class="flourish_shape_circle shape_orange flourish_shape_topleft"></div>
+
         <header id="MAIN_HEADER">
             <img src="svg/inktrinket_logo_v2.svg" alt="inktrinket">
             <nav id="MAIN_NAV">
-                <a href="#" target="_blank">about</a>
-                <a href="#" target="_blank">portfolio</a> <!-- Add dropdown menu here -->
-                <a href="#" target="_blank">commissions</a>
-                <a href="#" target="_blank">contact</a>
+                <ul>
+                    <li class="nav_item">
+                        <a href="#">about</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">portfolio</a>
+                        <ul class="nav_sublist">
+                            <li>
+                                <a href="#">professional</a>
+                            </li>
+                            <li>
+                                <a href="#">personal</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#" target="_blank">commissions</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#" target="_blank">contact</a>
+                    </li>
+                </ul>
             </nav>
         </header>
 
