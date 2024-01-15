@@ -18,25 +18,35 @@
             font-family: sans-serif;
         }
 
-        @keyframes bg_scroll{
-            0%{
-                background-position-y: 0px;
-            }
-            100%{
-                background-position-y: 1080px;
-            }
-        }
-
         #MAIN_CONTAINER{
-            padding: 2em;
+            padding: 2em 0;
             max-width: 100%;
             max-height: 100%;
             position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        #BG_SCROLL{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500vh;
+            position: absolute;
             background-image: url("img/bg_scroll.png");
             background-repeat: repeat-y;
-            background-size: cover;
+            background-size: 100% 100vh;
             animation: infinite bg_scroll 10000ms linear;
             z-index: 0;
+        }
+
+        @keyframes bg_scroll{
+            0%{
+                background-position-y : 0;
+            }
+            100%{
+                background-position-y : 100%;
+            }
         }
 
         #MAIN_HEADER{
@@ -101,14 +111,14 @@
         a:active{color: black;}
         a:visited{color: black;}
 
-        #MAIN{
+        #MAIN_SHAPE_ANIM{
             display: grid;
             place-items: center;
             width: 100%;
             margin: 16em 0;
             position: relative;
         }
-        #MAIN h1{
+        #MAIN_SHAPE_ANIM h1{
             font-size: 4rem;
             z-index: 1;
         }
@@ -158,7 +168,7 @@
         }
 
         #VIDEO_BAR_WRAPPER{
-            padding: 1em;
+            padding: 2em;
             background-color: #111;
         }
         #VIDEO_BAR{
@@ -168,9 +178,14 @@
             flex-wrap: nowrap;
             overflow-x: scroll;
             overflow-y: hidden;
-            gap: 1em;
+            gap: 2em;
+            position: relative;
+            z-index: 100;
 
-            width: 100%;
+            width: 100vw;
+            max-height: 100%;
+        }
+        .video_bar_wrapper{
             max-height: 100%;
         }
         .video_bar_thumbnail{
@@ -273,6 +288,8 @@
 
     <div id="MAIN_CONTAINER">
 
+        <div id="BG_SCROLL"></div>
+
         <div class="flourish_shape_circle shape_c flourish_shape_topleft_01"></div>
         <div class="flourish_shape_circle shape_m flourish_shape_topleft_02"></div>
         <div class="flourish_shape_circle shape_y flourish_shape_topleft_03"></div>
@@ -305,14 +322,15 @@
             </nav>
         </header>
 
-        <div id="MAIN">
-            <div class="shape_main shape_c shape_rot_0"></div>
-            <div class="shape_main shape_m shape_rot_p30"></div>
-            <div class="shape_main shape_y shape_rot_n30"></div>
-            <h1 class="anim_grow">hi.</h1>
-        </div>
-
         <main>
+
+            <div id="MAIN_SHAPE_ANIM">
+                <div class="shape_main shape_c shape_rot_0"></div>
+                <div class="shape_main shape_m shape_rot_p30"></div>
+                <div class="shape_main shape_y shape_rot_n30"></div>
+                <h1 class="anim_grow">hi.</h1>
+            </div>
+
             <div id="VIDEO_BAR_WRAPPER">
                 <ul id="VIDEO_BAR">
                     <li class="video_bar_wrapper">
