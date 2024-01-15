@@ -14,15 +14,29 @@
 
         html, body{
             background: linear-gradient(-180deg, rgba(255,255,255,1) 0%, rgba(226,235,255,1) 100%);
-            color: black;
+            color: #111;
             font-family: sans-serif;
         }
 
+        @keyframes bg_scroll{
+            0%{
+                background-position-y: 0px;
+            }
+            100%{
+                background-position-y: 1080px;
+            }
+        }
+
         #MAIN_CONTAINER{
-            margin: 0 2em;
+            padding: 2em;
             max-width: 100%;
             max-height: 100%;
             position: relative;
+            background-image: url("img/bg_scroll.png");
+            background-repeat: repeat-y;
+            background-size: cover;
+            animation: infinite bg_scroll 10000ms linear;
+            z-index: 0;
         }
 
         #MAIN_HEADER{
@@ -98,7 +112,7 @@
             font-size: 4rem;
             z-index: 1;
         }
-        .shape{
+        .shape_main{
             border-radius: 5em;
             position: absolute;
             top: 50;
@@ -106,21 +120,17 @@
             width: 50%;
             z-index: 0;
         }
-        .shape_orange{
-            mix-blend-mode: multiply;
-            background-color: orange;
-        }
         .shape_c{
-            mix-blend-mode: multiply;
-            background-color: cyan;
+            mix-blend-mode: lighten;
+            background-color: rgba(100, 255, 255, 0.75);
         }
         .shape_m{
-            mix-blend-mode: multiply;
-            background-color: magenta;
+            mix-blend-mode: lighten;
+            background-color: rgba(255, 100, 255, 0.75);
         }
         .shape_y{
-            mix-blend-mode: multiply;
-            background-color: yellow;
+            mix-blend-mode: lighten;
+            background-color: rgba(255, 255, 100, 0.75);
         }
         .shape_rot_0{
             transform: rotate(0deg);
@@ -149,7 +159,6 @@
 
         #VIDEO_BAR_WRAPPER{
             padding: 1em;
-            margin-bottom: 1em;
             background-color: #111;
         }
         #VIDEO_BAR{
@@ -163,9 +172,6 @@
 
             width: 100%;
             max-height: 100%;
-        }
-        .video_bar_wrapper{
-            /flex: 0 0 auto;
         }
         .video_bar_thumbnail{
             max-height: 200px;
@@ -181,15 +187,24 @@
             clip-path: circle(50% at 50% 50%);
         }
 
-        .flourish_shape_topleft{
+        .flourish_shape_topleft_01, .flourish_shape_topleft_02, .flourish_shape_topleft_03{
             top: 0;
             left: 0;
-            width: 300px;
-            height: 300px;
             transform: translate(-30%, -30%);
+            z-index: 100;
         }
 
-        .flourish_shape_topleft + .flourish_shape_topleft{
+        .flourish_shape_topleft_01{
+            width: 300px;
+            height: 300px;
+        }
+
+        .flourish_shape_topleft_02{
+            width: 400px;
+            height: 400px;
+        }
+
+        .flourish_shape_topleft_03{
             width: 500px;
             height: 500px;
         }
@@ -213,11 +228,15 @@
             }
             25%{
                 height: 300%;
-                transform: rotate(15deg);
+                transform: rotate(0deg);
+            }
+            50%{
+                height: 300%;
+                transform: rotate(0deg);
             }
             100%{
                 height: 300%;
-                transform: rotate(10deg);
+                transform: rotate(15deg);
             }
         }
         @keyframes intro_header_n{
@@ -227,11 +246,15 @@
             }
             25%{
                 height: 300%;
-                transform: rotate(-15deg);
+                transform: rotate(0deg);
+            }
+            50%{
+                height: 300%;
+                transform: rotate(0deg);
             }
             100%{
                 height: 300%;
-                transform: rotate(-10deg);
+                transform: rotate(-15deg);
             }
         }
 
@@ -250,8 +273,9 @@
 
     <div id="MAIN_CONTAINER">
 
-        <div class="flourish_shape_circle shape_orange flourish_shape_topleft"></div>
-        <div class="flourish_shape_circle shape_orange flourish_shape_topleft"></div>
+        <div class="flourish_shape_circle shape_c flourish_shape_topleft_01"></div>
+        <div class="flourish_shape_circle shape_m flourish_shape_topleft_02"></div>
+        <div class="flourish_shape_circle shape_y flourish_shape_topleft_03"></div>
 
         <header id="MAIN_HEADER">
             <img src="svg/inktrinket_logo_v2.svg" alt="inktrinket">
@@ -282,9 +306,9 @@
         </header>
 
         <div id="MAIN">
-            <div class="shape shape_orange shape_rot_0"></div>
-            <div class="shape shape_orange shape_rot_p30"></div>
-            <div class="shape shape_orange shape_rot_n30"></div>
+            <div class="shape_main shape_c shape_rot_0"></div>
+            <div class="shape_main shape_m shape_rot_p30"></div>
+            <div class="shape_main shape_y shape_rot_n30"></div>
             <h1 class="anim_grow">hi.</h1>
         </div>
 
@@ -292,39 +316,26 @@
             <div id="VIDEO_BAR_WRAPPER">
                 <ul id="VIDEO_BAR">
                     <li class="video_bar_wrapper">
-                        <img src="img/16-9_test.jpg" alt="test" class="video_bar_thumbnail">
+                        <img src="img/thumbs/thumbnail_day21.png" alt="test" class="video_bar_thumbnail">
                     </li>
                     <li class="video_bar_wrapper">
-                        <img src="img/16-9_test.jpg" alt="test" class="video_bar_thumbnail">
+                        <img src="img/thumbs/skydeathlive_thumbnail.jpg" alt="test" class="video_bar_thumbnail">
                     </li>
                     <li class="video_bar_wrapper">
-                        <img src="img/16-9_test.jpg" alt="test" class="video_bar_thumbnail">
+                        <img src="img/thumbs/inktrinket_-_flowers2023_epilepsy_warning_5XCX8yHuDmc_-_2037x1146_-_0m06s.png" alt="test" class="video_bar_thumbnail">
                     </li>
                     <li class="video_bar_wrapper">
-                        <img src="img/16-9_test.jpg" alt="test" class="video_bar_thumbnail">
+                        <img src="img/thumbs/maxresdefault2.jpg" alt="test" class="video_bar_thumbnail">
                     </li>
                     <li class="video_bar_wrapper">
-                        <img src="img/16-9_test.jpg" alt="test" class="video_bar_thumbnail">
+                        <img src="img/thumbs/steph_vindex_thumbnail.png" alt="test" class="video_bar_thumbnail">
                     </li>
                     <li class="video_bar_wrapper">
-                        <img src="img/16-9_test.jpg" alt="test" class="video_bar_thumbnail">
-                    </li>
-                    <li class="video_bar_wrapper">
-                        <img src="img/16-9_test.jpg" alt="test" class="video_bar_thumbnail">
-                    </li>
-                    <li class="video_bar_wrapper">
-                        <img src="img/16-9_test.jpg" alt="test" class="video_bar_thumbnail">
-                    </li>
-                    <li class="video_bar_wrapper">
-                        <img src="img/16-9_test.jpg" alt="test" class="video_bar_thumbnail">
-                    </li>
-                    <li class="video_bar_wrapper">
-                        <img src="img/16-9_test.jpg" alt="test" class="video_bar_thumbnail">
+                        <img src="img/thumbs/TheMOBAttacks_LethalCompany_Part1.jpg" alt="test" class="video_bar_thumbnail">
                     </li>
                 </ul>
             </div>
         </main>
-
     </div>
     
 </body>
