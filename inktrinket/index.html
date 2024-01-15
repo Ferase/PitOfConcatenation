@@ -36,7 +36,7 @@
             background-image: url("img/bg_scroll.png");
             background-repeat: repeat-y;
             background-size: 100% 100vh;
-            animation: infinite bg_scroll 10000ms linear;
+            animation: infinite bg_scroll 20000ms linear;
             z-index: 0;
         }
 
@@ -111,7 +111,15 @@
         a:active{color: black;}
         a:visited{color: black;}
 
+        #MAIN_GRID{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+        }
+
         #MAIN_SHAPE_ANIM{
+            grid-column: 1/4;
+            grid-row: 1/2;
             display: grid;
             place-items: center;
             width: 100%;
@@ -168,9 +176,11 @@
         }
 
         #VIDEO_BAR_WRAPPER{
+            grid-column: 1/4;
+            grid-row: 2/3;
             padding: 1em 2em;
             background-color: #111;
-            overflow-x: scroll;
+            overflow-x: hidden;
         }
         #VIDEO_BAR{
             display: flex;
@@ -178,6 +188,7 @@
             justify-content: flex-start;
             flex-wrap: nowrap;
             overflow-y: hidden;
+            overflow-x: scroll;
             gap: 2em;
             position: relative;
             z-index: 100;
@@ -185,12 +196,11 @@
             width: 100vw;
             max-height: 100%;
         }
-        .video_bar_wrapper{
+        .video_wrapper{
             padding: 1em 0;
             max-height: 100%;
-            overflow-x: hidden;
         }
-        .video_bar_thumbnail{
+        .video_thumbnail{
             max-height: 200px;
             cursor: pointer;
         }
@@ -324,7 +334,7 @@
             </nav>
         </header>
 
-        <main>
+        <main id="MAIN_GRID">
 
             <div id="MAIN_SHAPE_ANIM">
                 <div class="shape_main shape_c shape_rot_0"></div>
@@ -335,23 +345,23 @@
 
             <div id="VIDEO_BAR_WRAPPER">
                 <ul id="VIDEO_BAR">
-                    <li class="video_bar_wrapper">
-                        <img src="img/thumbs/thumbnail_day21.png" alt="test" class="video_bar_thumbnail">
+                    <li class="video_wrapper">
+                        <img src="img/thumbs/thumbnail_day21.png" alt="test" class="video_thumbnail">
                     </li>
-                    <li class="video_bar_wrapper">
-                        <img src="img/thumbs/skydeathlive_thumbnail.jpg" alt="test" class="video_bar_thumbnail">
+                    <li class="video_wrapper">
+                        <img src="img/thumbs/skydeathlive_thumbnail.jpg" alt="test" class="video_thumbnail">
                     </li>
-                    <li class="video_bar_wrapper">
-                        <img src="img/thumbs/inktrinket_-_flowers2023_epilepsy_warning_5XCX8yHuDmc_-_2037x1146_-_0m06s.png" alt="test" class="video_bar_thumbnail">
+                    <li class="video_wrapper">
+                        <img src="img/thumbs/inktrinket_-_flowers2023_epilepsy_warning_5XCX8yHuDmc_-_2037x1146_-_0m06s.png" alt="test" class="video_thumbnail">
                     </li>
-                    <li class="video_bar_wrapper">
-                        <img src="img/thumbs/maxresdefault2.jpg" alt="test" class="video_bar_thumbnail">
+                    <li class="video_wrapper">
+                        <img src="img/thumbs/maxresdefault2.jpg" alt="test" class="video_thumbnail">
                     </li>
-                    <li class="video_bar_wrapper">
-                        <img src="img/thumbs/steph_vindex_thumbnail.png" alt="test" class="video_bar_thumbnail">
+                    <li class="video_wrapper">
+                        <img src="img/thumbs/steph_vindex_thumbnail.png" alt="test" class="video_thumbnail">
                     </li>
-                    <li class="video_bar_wrapper">
-                        <img src="img/thumbs/TheMOBAttacks_LethalCompany_Part1.jpg" alt="test" class="video_bar_thumbnail">
+                    <li class="video_wrapper">
+                        <img src="img/thumbs/TheMOBAttacks_LethalCompany_Part1.jpg" alt="test" class="video_thumbnail">
                     </li>
                 </ul>
             </div>
