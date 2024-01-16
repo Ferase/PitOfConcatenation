@@ -4,8 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <style type="text/css">
+
+        /* Universal reset */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body{
+            background: linear-gradient(-180deg, rgba(255,255,255,1) 0%, rgba(226,235,255,1) 100%);
+            color: #111;
+            font-family: sans-serif;
+        }
+
+        #MAIN_CONTAINER{
+            padding: 2em 0 0;
+            max-width: 100%;
+            max-height: 100%;
+            position: relative;
+            overflow-y: hidden;
+            z-index: 0;
+        }
+
+        #BG_SCROLL{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500vh;
+            pointer-events: none;
+            position: absolute;
+            background-image: url("img/bg_scroll.png");
+            background-repeat: repeat-y;
+            background-size: 100% 100vh;
+            animation: infinite bg_scroll 50000ms linear;
+            z-index: 0;
+        }
+
+        @keyframes bg_scroll{
+            0%{
+                background-position-y : 0;
+            }
+            100%{
+                background-position-y : 100%;
+            }
+        }
+
+        #MAIN_HEADER{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+        }
+        a.inktrinket_icon{
+            height: 100%;
+        }
+        a.inktrinket_icon img{
+            height: 100%;
+        }
+
+        #MAIN_NAV{
+            padding: 1.5em 1em;
+            text-align: center;
+        }
+        #MAIN_NAV > ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #MAIN_NAV > ul li{
+            display: grid;
+            place-items: center;
+            margin: 0 auto;
+            position: relative;
+        }
+        #MAIN_NAV > ul li a{
+            padding: 0.5em 1.5em;
+            font-size: 1.5em;
+            background-color: rgba(255, 255, 17, 0);
+            border-radius: 5rem;
+            transition: background-color 300ms ease;
+        }
+        #MAIN_NAV a:hover, #MAIN_NAV a:active{background-color: rgba(255, 255, 17, 0.15);}
+        
+        ul.nav_sublist{
+            position: absolute;
+            top: 0;
+            left: -50;
+            z-index: 1;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 500ms ease;
+        }
+        ul.nav_sublist > li{
+            margin: 0 !important;
+        }
+
+        #MAIN_NAV a:hover + .nav_sublist, .nav_sublist:hover{
+            transform: translateY(50%);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Link styles */
+        a{text-decoration: none; font-family: sans-serif;}
+        a:link{color: black;}
+        a:hover{color: black;}
+        a:active{color: black;}
+        a:visited{color: black;}
 
         #MAIN_GRID{
             display: grid;
@@ -115,6 +223,10 @@
             cursor: pointer;
         }
 
+        ul{
+            list-style: none;
+        }
+
         .flourish_shape_circle{
             position: absolute;
             clip-path: circle(50% at 50% 50%);
@@ -141,6 +253,37 @@
         .flourish_shape_topleft_03{
             width: 500px;
             height: 500px;
+        }
+
+        #MAIN_FOOTER{
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 1rem;
+            text-align: center;
+            color: #fff;
+            background-color: #111;
+            padding: 2em;
+        }
+        .footer_icon_wrapper{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 2em;
+        }
+        .footer_icon{
+            width: 80px;
+            height: 80px;
+        }
+        .footer_icon img{
+            filter: invert(1);
+        }
+        .footer_text{
+            grid-column: 2/3;
+            grid-row: 2/3;
         }
 
         @keyframes intro_header{
