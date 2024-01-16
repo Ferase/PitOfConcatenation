@@ -9,30 +9,49 @@
 
         #MAIN_GRID{
             display: grid;
+            place-items: center;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
             grid-gap: 5em;
         }
 
-        #ABOUT_ARTICLE{
-            grid-column: 2/3;
+        #CONTACT_LINES{
+            grid-column: 1/4;
             grid-row: 1/2;
         }
-        #ABOUT_ARTICLE h1{
+        #CONTACT_LINES h1{
             text-align: center;
             font-size: 3rem;
         }
-        #ABOUT_ARTICLE h2{
-            text-align: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        #ABOUT_ARTICLE p{
+        #CONTACT_LINES p{
             font-size: 1.25rem;
             line-height: 2rem;
         }
-        #ABOUT_ARTICLE hr:last-child{
-            margin: 5em 0 0;
+
+        .contact_selection{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-bottom: 5em;
+        }
+        .content_link_wrapper{
+            margin: 0 auto;
+            transform: translateX(-50%);
+            height: 100%;
+        }
+        .contact_link{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            gap: 0.5em;
+        }
+        .contact_link img{
+            max-height: 100%
+        }
+        .contact_link p{
+            font-size: 1.5rem;
         }
 
     </style>
@@ -74,21 +93,19 @@
         </header>
 
         <main id="MAIN_GRID">
-            <article id="ABOUT_ARTICLE">
-                <h1>about me</h1>
+            <div id="CONTACT_LINES">
+                <h1>contact me</h1>
                 <hr>
-                <h2>hi, my name is steph!</h2>
-                <p>
-                    i am a video designer who has a great passion for the complexity of detail in media.  i have been designing videos for countless years, and i graduated with a media communications bachelor's degree from full sail university.  some of my absolute favorite things include art, animation, film, and being absolutely ridiculous.<br><br>
-
-                    "inktrinket" is my brand and online alias. you also might know me from random parts of the internet, like chilloutvr.<br><br>
-
-                    i have been designing videos for as long as i can remember.  it all really started with me just hitting the record button with my friends and making some happy memories with each other. since then, my perspective and interests have expanded to much more than that, but at the same time,  those initial interests are the very reason i'm so passionate about this line of work. videos are about telling impactful stories, showcasing true talent, giving new meaning to media - and more. the amount of detail and creativity one can put into any given video project is truly remarkable; i don't think i can put enough emphasis on how important that is to me.<br><br>
-
-                    as a video designer, i am always seeking out video editing and designing opportunities. i do commissions on the side to hone my skills and put them to use, so if you would like to commission me, please do not hesitate to do so. i would absolutely love to hear your video ideas.
-                </p>
-                <hr>
-            </article>
+                <div class="contact_selection">
+                    <div class="content_link_wrapper">
+                        <a href="#" class="contact_link">
+                            <img src="svg/socials/socials_Gmail.svg" alt="Gmail">
+                            <p>gmail</p>
+                        </a>
+                    </div>
+                </div>
+                <p>go to my fucking <a href="#">commissions</a> page you stupid mother fucker</p>
+            </div>
         </main>
 
         <footer id="MAIN_FOOTER">

@@ -2,9 +2,9 @@
 
 /* CSS variables */
 :root{
-    --color-c: rgba(100, 255, 255, 0.75);
-    --color-m: rgba(255, 100, 255, 0.75);
-    --color-y: rgba(255, 255, 100, 0.75);
+    --color-c: rgba(100, 255, 255, 1);
+    --color-m: rgba(255, 100, 255, 1);
+    --color-y: rgba(255, 255, 100, 1);
 }
 
 /* Universal reset */
@@ -21,6 +21,18 @@ html, body{
     );
     color: #111;
     font-family: sans-serif;
+}
+
+/* Horizontal rule */
+hr{
+    border-style: solid;
+    border-width: 5px;
+    border-image: linear-gradient(90deg,
+        var(--color-c) 0%,
+        var(--color-m) 50%,
+        var(--color-y) 100%
+    ) 1;
+    margin: 2em 0;
 }
 
 /* Unordered list */
@@ -163,6 +175,11 @@ ul.nav_sublist > li{
 .footer_text{
     grid-column: 2/3;
     grid-row: 2/3;
+}
+
+#MAIN_GRID{
+    margin-top: 5em;
+    margin-bottom: 10em;
 }
 
 /* Animation for background scrolling */
