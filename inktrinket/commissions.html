@@ -9,30 +9,57 @@
 
         #MAIN_GRID{
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
+            place-items: center;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, auto);
             grid-gap: 5em;
         }
-
-        #ABOUT_ARTICLE{
-            grid-column: 2/3;
+        
+        .main_opener{
+            grid-column: 2/5;
             grid-row: 1/2;
         }
-        #ABOUT_ARTICLE h1{
-            text-align: center;
+        .main_opener h1{
             font-size: 3rem;
-        }
-        #ABOUT_ARTICLE h2{
+            margin-bottom: 1em;
             text-align: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
         }
-        #ABOUT_ARTICLE p{
+        .main_opener p{
             font-size: 1.25rem;
             line-height: 2rem;
+            text-align: center;
         }
-        #ABOUT_ARTICLE hr:last-child{
-            margin: 5em 0 0;
+
+        .pricing_container{
+            grid-column: 3/4;
+            grid-row: 2/3;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .pricing_container h2{
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .pricing_container h2 span{
+            font-size: 2rem;
+            font-weight: 400;
+            text-align: center;
+        }
+        .pricing_container h3{
+            font-size: 1.65rem;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .infographic_comms{
+            grid-column: 2/5;
+            grid-row: 3/4;
+            display: grid;
+            place-items: center;
+        }
+        .infographic_comms img{
+            width: 100%;
         }
 
     </style>
@@ -74,21 +101,21 @@
         </header>
 
         <main id="MAIN_GRID">
-            <article id="ABOUT_ARTICLE">
-                <h1>about me</h1>
-                <hr>
-                <h2>hi, my name is steph!</h2>
-                <p>
-                    i am a video designer who has a great passion for the complexity of detail in media.  i have been designing videos for countless years, and i graduated with a media communications bachelor's degree from full sail university.  some of my absolute favorite things include art, animation, film, and being absolutely ridiculous.<br><br>
-
-                    "inktrinket" is my brand and online alias. you also might know me from random parts of the internet, like chilloutvr.<br><br>
-
-                    i have been designing videos for as long as i can remember.  it all really started with me just hitting the record button with my friends and making some happy memories with each other. since then, my perspective and interests have expanded to much more than that, but at the same time,  those initial interests are the very reason i'm so passionate about this line of work. videos are about telling impactful stories, showcasing true talent, giving new meaning to media - and more. the amount of detail and creativity one can put into any given video project is truly remarkable; i don't think i can put enough emphasis on how important that is to me.<br><br>
-
-                    as a video designer, i am always seeking out video editing and designing opportunities. i do commissions on the side to hone my skills and put them to use, so if you would like to commission me, please do not hesitate to do so. i would absolutely love to hear your video ideas.
-                </p>
-                <hr>
-            </article>
+            <div class="main_opener">
+                <h1>i would love to edit for you!</h1>
+                <p>as a video designer, i love to make videos. i also love to help amazing people (like you)<br>
+                this is why i do video commissions on the side to hone my skills and put them to use!<br>
+                i like to be very organized throughout my design process and plan accordingly, and i like to edit various kinds of videos.</p>
+            </div>
+            <div class="pricing_container">
+                <div>
+                    <h2>$50<span>/hr</span></h2>
+                    <h3>hourly wage</h3>
+                </div>
+            </div>
+            <div class="infographic_comms">
+                <img src="img/infographic/infographic_commissions.png" alt="infographic">
+            </div>
         </main>
 
         <footer id="MAIN_FOOTER">
