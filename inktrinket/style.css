@@ -43,11 +43,13 @@ ul{
 /* Main container for full page content */
 #MAIN_CONTAINER{
     padding: 2em 0 0;
-    max-width: 100%;
-    max-height: 100%;
     position: relative;
     overflow-y: hidden;
     z-index: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
 }
 
 /* Scrolling side bars */
