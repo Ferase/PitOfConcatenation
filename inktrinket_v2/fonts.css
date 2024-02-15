@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "peridot-pe-variable";
+    src: url("font/peridot_variabvle.otf");
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    position: relative;
+    font-family: "peridot-pe-variable", sans-serif;
+}
+h1{
+    font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
+    font-size: 48px;
+}
+h2{
+    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    font-size: 36px;
+}
+h3{
+    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    font-size: 32px;
+}
+h4{
+    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    font-size: 24px;
+}
+h5{
+    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    font-size: 20px;
+}
+h6{
+    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    font-size: 18px;
+}
+p{
+    font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
+    font-size: 18px;
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inktrinket</title>
+    <link rel="stylesheet" href="fonts.css">
+    <style type="text/css">
+
+        /* Resets */
+        *{margin: 0; padding: 0;}
+        *,::before,::after {box-sizing: border-box;}
+        a{text-decoration: none;}
+        a:link,a:hover,a:visited,a:invalid{color: var(--clr-darkest);}
+        nav ul{list-style: none;}
+
+        /* Variables */
+        :root{
+            --clr-lightest: hsl(0, 100%, 100%);
+            --clr-darkest: hsl(0, 0%, 0%);
+            --clr-accent1: hsl(180, 100%, 50%);
+            --clr-accent2: hsl(300, 100%, 50%);
+            --clr-accent3: hsl(60, 100%, 50%);
+        }
+
+        /* Body */
+        body{
+            position: relative;
+            background-color: var(--clr-lightest);
+            color: var(--clr-darkest);
+            font-family: sans-serif;
+        }
+
+        /* Horizontal rule */
+        hr{
+            border-style: solid;
+            border-width: 5px;
+            border-image: linear-gradient(90deg,
+                var(--clr-accent1) 0%,
+                var(--clr-accent2) 50%,
+                var(--clr-accent3) 100%
+            ) 1;
+            margin: 2rem 0;
+        }
+
+        /* Spacing */
+        .up_margin{
+            margin-top: 24px;
+        }
+        .low_margin{
+            margin-bottom: 24px;
+        }
+        .up_margin_large{
+            margin-top: 48px;
+        }
+        .low_margin_large{
+            margin-bottom: 48px;
+        }
+
+        /* Site borders */
+        .site_frame{
+            position: fixed;
+            top: 0;
+            pointer-events: none;
+            width: 5dvw;
+            height: 100dvh;
+            background-repeat: repeat-y;
+            background-size: 100% 100vh;
+            animation: site_frame_flow infinite 10000ms linear;
+            z-index: 0;
+        }
+        .frame_left{
+            left: 0;
+            background-image: url("img/flourish/border_L.png");
+        }
+        .frame_right{
+            right: 0;
+            background-image: url("img/flourish/border_R.png");
+            background-position-x: right;
+        }
+
+        /* Header & Nav */
+        .header_flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 64px;
+            padding: 24px 0;
+        }
+
+        .header_icon{
+            max-width: 100px;
+        }
+
+        .header_nav_grid{
+            display: grid;
+            grid-auto-flow: column;
+            gap: 32px;
+        }
+        .header_nav_grid li{
+            padding: 24px;
+        }
+        .header_nav_grid a:link{
+            font-family: "peridot-pe-variable", sans-serif;
+            font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
+            font-size: 24px;
+        }
+
+        /* General grid */
+        .grid_thirds{
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+        }
+
+        /* Visual testing layouts */
+        section{ /* Do not use generally, this is jsut for testing simplicity */
+            grid-column: 2/3;
+        }
+        .vis_fonts{
+            text-align: center;
+        }
+        .vis_svg_with_text{
+            position: relative;
+            text-align: center;
+        }
+        #stylized_header{
+            width: 50%;
+        }
+        
+        .sh_h1, .sh_h2{
+            font-family: "peridot-pe-variable", sans-serif;
+            font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
+            font-size: 125px;
+        }
+        .shape_mask .sh_h1, .shape_mask .sh_h2{
+            fill: var(--clr-lightest);
+            pointer-events: none;
+        }
+        .sh_h1{
+            font-variation-settings: "wght" 100, "wdth" 100, "ital" 0;
+            font-size: 125px;
+            opacity: 0;
+            /filter: blur(100px);
+            animation: stylized_header_in_h1 1000ms forwards ease;
+            animation-delay: 250ms;
+        }
+        .sh_h2{
+            font-variation-settings: "wght" 100, "wdth" 100, "ital" 0;
+            font-size: 100px;
+            opacity: 0;
+            /filter: blur(100px);
+            animation: stylized_header_in_h2 2000ms forwards ease;
+            animation-delay: 500ms;
+        }
+        .shape_mask_pointer{
+            clip-path: url(#clippath);
+        }
+        .shape_bg{
+            fill: url(#linear-gradient);
+            filter: blur(100px);
+            transform: scale(0%, 0%);
+            transform-origin: center;
+            animation: stylized_header_bg 2000ms forwards ease;
+        }
+
+
+        /* Animations */
+        @keyframes site_frame_flow{
+            to{
+                background-position-y: 100dvh;
+            }
+        }
+        @keyframes stylized_header_in_h1{
+            25%{
+                opacity: 1;
+            }
+            50%{
+                /filter: blur(0);
+                opacity: 1;
+            }
+            100%{
+                /filter: blur(0);
+                font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
+                opacity: 1;
+            }
+        }
+        @keyframes stylized_header_in_h2{
+            25%{
+                opacity: 1;
+            }
+            50%{
+                /filter: blur(0);
+                opacity: 1;
+            }
+            100%{
+                /filter: blur(0);
+                font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+                opacity: 1;
+            }
+        }
+        @keyframes stylized_header_bg{
+            to{
+                filter: blur(0px);
+                transform: scale(100%, 100%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Borders -->
+    <div class="site_frame frame_left"></div>
+    <div class="site_frame frame_right"></div>
+
+    <!-- Heading -->
+    <header class="header_flex">
+        <img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket">
+        <nav>
+            <ul class="header_nav_grid">
+                <li><a href="#">about</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">commissions</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid_thirds">
+        <section class="vis_fonts">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <hr>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6 class="low_margin">Heading 6</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus autem odit nihil reiciendis modi voluptatum ipsa vitae dignissimos totam cupiditate hic temporibus harum, amet quidem! Debitis sequi reprehenderit repudiandae?</p>
+        </section>
+
+        <section class="vis_svg_with_text up_margin_large">
+            <svg id="stylized_header"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 571.83">
+                <defs>
+                    <linearGradient id="linear-gradient" x1="402.98" y1="48.4" x2="863.15" y2="508.58" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="aqua"/>
+                        <stop offset=".5" stop-color="#f0f"/>
+                        <stop offset="1" stop-color="#ff0"/>
+                    </linearGradient>
+                    <clipPath id="clippath">
+                        <path fill="none" d="M713,67.41c-27.78-37.12-72.11-61.15-122.05-61.15-16.54,0-32.46,2.65-47.37,7.52-14.88-8.75-32.21-13.78-50.72-13.78-55.32,0-100.17,44.85-100.17,100.17,0,21.37,6.7,41.17,18.1,57.44-46.93,26.5-78.62,76.83-78.62,134.56,0,82.07,64.02,149.17,144.84,154.13,43.77,75.07,125.13,125.52,218.29,125.52,139.46,0,252.52-113.06,252.52-252.52s-103.62-242.81-234.82-251.9Z"/>
+                    </clipPath>
+                </defs>
+                <path class="shape_bg" d="M713,67.41c-27.78-37.12-72.11-61.15-122.05-61.15-16.54,0-32.46,2.65-47.37,7.52-14.88-8.75-32.21-13.78-50.72-13.78-55.32,0-100.17,44.85-100.17,100.17,0,21.37,6.7,41.17,18.1,57.44-46.93,26.5-78.62,76.83-78.62,134.56,0,82.07,64.02,149.17,144.84,154.13,43.77,75.07,125.13,125.52,218.29,125.52,139.46,0,252.52-113.06,252.52-252.52s-103.62-242.81-234.82-251.9Z"/>
+                <text class="sh_h1" transform="translate(64.43 268.83)">
+                    <tspan x="0" y="0">welcome to</tspan>
+                </text>
+                <text class="sh_h2" transform="translate(600.07 385.95)">
+                    <tspan x="0" y="0">my website</tspan>
+                </text>
+                <g class="shape_mask">
+                    <g class="shape_mask_pointer">
+                        <text class="sh_h1" transform="translate(64.43 268.83)">
+                            <tspan x="0" y="0">welcome to</tspan>
+                        </text>
+                        <text class="sh_h2" transform="translate(600.07 385.95)">
+                            <tspan x="0" y="0">my website</tspan>
+                        </text>
+                    </g>
+                </g>
+            </svg>
+        </section>
+    </div>
+</body>
+</html>
