@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inktrinket</title>
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="svg.css">
     <style type="text/css">
 
         /* Resets */
@@ -56,6 +57,14 @@
         .low_margin_large{
             margin-bottom: 48px;
         }
+        .uplow_margin{
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        .uplow_margin_large{
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
 
         /* Site borders */
         .site_frame{
@@ -79,91 +88,92 @@
             background-position-x: right;
         }
 
-        /* Header & Nav */
-        .header_flex{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 64px;
-            padding: 24px 0;
+        /* Portfolio Header + Footer */
+        .potfolio_header{
+            max-width: 80%;
+            text-align: center;
+            margin: 48px auto;
         }
-
-        .header_icon{
-            max-width: 100px;
+        .potfolio_footer{
+            background-color: var(--clr-darkest);
+            color: var(--clr-lightest);
+            text-align: center;
+            margin-top: 64px;
+            padding: 48px;
         }
-
-        .header_nav_grid{
-            display: grid;
-            grid-auto-flow: column;
-            gap: 32px;
-        }
-        .header_nav_grid li{
-            padding: 24px;
-        }
-        .header_nav_grid a:link{
-            font-family: "peridot-pe-variable", sans-serif;
-            font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
-            font-size: 24px;
+        .potfolio_footer a{
+            font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+            color: var(--clr-lightest);
         }
 
         /* General grid */
         .grid_thirds{
             display: grid;
-            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-columns: 1fr 5fr 1fr;
         }
-
-        /* Visual testing layouts */
-        section{ /* Do not use generally, this is jsut for testing simplicity */
+        .uber_grid{
             grid-column: 2/3;
+            display: grid;
+            grid-template-areas:
+                "a b c d"
+                "e e f f";
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(auto-fill, auto);
+            gap: 24px;
         }
-        .vis_fonts{
-            text-align: center;
-        }
-        .vis_svg_with_text{
+        .uber_grid > a{
             position: relative;
-            text-align: center;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            place-items: bottom;
+            padding: 24px;
         }
-        #stylized_header{
-            width: 50%;
+        .uber_grid > a > *{
+            width: 100%;
+            transition: all 300ms ease;
         }
-        
-        .sh_h1, .sh_h2{
-            font-family: "peridot-pe-variable", sans-serif;
+        .uber_grid > a h2{
+            margin-bottom: 8px;
+        }
+        .uber_grid > a h3{
+            font-size: 18px;
             font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
-            font-size: 125px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            line-height: 18px;
         }
-        .shape_mask .sh_h1, .shape_mask .sh_h2{
-            fill: var(--clr-lightest);
-            pointer-events: none;
+        .uber_grid a:link{
+            transition: transform 300ms ease;
         }
-        .sh_h1{
-            font-variation-settings: "wght" 100, "wdth" 100, "ital" 0;
-            font-size: 125px;
-            opacity: 0;
-            /filter: blur(100px);
-            animation: stylized_header_in_h1 1000ms forwards ease;
-            animation-delay: 250ms;
+        .uber_grid a:hover{
+            transform: scale(105%, 105%);
         }
-        .sh_h2{
-            font-variation-settings: "wght" 100, "wdth" 100, "ital" 0;
-            font-size: 100px;
-            opacity: 0;
-            /filter: blur(100px);
-            animation: stylized_header_in_h2 2000ms forwards ease;
-            animation-delay: 500ms;
+        .uber_grid a:active > *{
+            color: var(--clr-lightest);
         }
-        .shape_mask_pointer{
-            clip-path: url(#clippath);
+        .uber_grid a::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: -1;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: all 300ms ease;
         }
-        .shape_bg{
-            fill: url(#linear-gradient);
-            filter: blur(100px);
-            transform: scale(0%, 0%);
-            transform-origin: center;
-            animation: stylized_header_bg 2000ms forwards ease;
+        .uber_grid a:active::before{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
 
+        .el_a{grid-area: a;}
+        .el_b{grid-area: b;}
+        .el_c{grid-area: c;}
+        .el_d{grid-area: d;}
+        .el_e{grid-area: e;}
+        .el_f{grid-area: f;}
 
         /* Animations */
         @keyframes site_frame_flow{
@@ -171,38 +181,28 @@
                 background-position-y: 100dvh;
             }
         }
-        @keyframes stylized_header_in_h1{
-            25%{
-                opacity: 1;
+
+        /* Tablet Overrides */
+        @media only screen and (max-width: 1025px){
+            .grid_thirds{
+                grid-template-columns: 1fr 8fr 1fr;
             }
-            50%{
-                /filter: blur(0);
-                opacity: 1;
+            .uber_grid{
+                grid-template-areas:
+                    "a b"
+                    "c d"
+                    "e f";
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
             }
-            100%{
-                /filter: blur(0);
-                font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
-                opacity: 1;
+            .uber_grid > a h2{
+                font-size: 24px;
+                margin-bottom: 8px;
             }
-        }
-        @keyframes stylized_header_in_h2{
-            25%{
-                opacity: 1;
-            }
-            50%{
-                /filter: blur(0);
-                opacity: 1;
-            }
-            100%{
-                /filter: blur(0);
-                font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
-                opacity: 1;
-            }
-        }
-        @keyframes stylized_header_bg{
-            to{
-                filter: blur(0px);
-                transform: scale(100%, 100%);
+            .uber_grid > a h3{
+                font-size: 14px;
+                letter-spacing: 3px;
+                margin-bottom: 12px;
             }
         }
 
@@ -214,64 +214,51 @@
     <div class="site_frame frame_left"></div>
     <div class="site_frame frame_right"></div>
 
-    <!-- Heading -->
-    <header class="header_flex">
-        <img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket">
-        <nav>
-            <ul class="header_nav_grid">
-                <li><a href="#">about</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">commissions</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="potfolio_header">
+        <h1>Stephen Gerard's Portfolio</h1>
+        <hr>
     </header>
 
-    <div class="grid_thirds">
-        <section class="vis_fonts">
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <hr>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6 class="low_margin">Heading 6</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus autem odit nihil reiciendis modi voluptatum ipsa vitae dignissimos totam cupiditate hic temporibus harum, amet quidem! Debitis sequi reprehenderit repudiandae?</p>
+    <!-- Main grid -->
+    <main class="grid_thirds">
+        <section class="uber_grid">
+            <a class="el_a" href="https://youtu.be/5XCX8yHuDmc?si=77Q2fBRHx-btGTW2" target="_blank">
+                <h2>flowers2023</h2>
+                <h3>Visual Demo</h3>
+                <img src="img/thumbs/inktrinket_-_flowers2023_epilepsy_warning_5XCX8yHuDmc_-_2037x1146_-_0m06s.png" alt="Flowers 2023">
+            </a>
+            <a class="el_b" href="https://youtu.be/liRyKcRLuxU?si=qQnuoYjdKSthjbzW" target="_blank">
+                <h2>recovery signal</h2>
+                <h3>Music Video</h3>
+                <img src="img/thumbs/maxresdefault2.jpg" alt="Recovery Signal Music Video">
+            </a>
+            <a class="el_c" href="https://youtu.be/wZdugQuDjoY?si=2jQiZU5l8VSt1X2H" target="_blank">
+                <h2>Skydeath Live</h2>
+                <h3>Visual Presentation</h3>
+                <img src="img/thumbs/skydeathlive_thumbnail.jpg" alt="Skydeath Live Presentation">
+            </a>
+            <a class="el_d" href="https://youtu.be/f9ZOBYzTpUQ?si=eY0FMg1RXvum0eKC" target="_blank">
+                <h2>OpenVR2Key</h2>
+                <h3>Tutorial Video</h3>
+                <img src="img/thumbs/steph_vindex_thumbnail.png" alt="OpenVR2Key Tutorial Video">
+            </a>
+            <a class="el_e" href="https://youtu.be/pr7Z7ntzoUY?si=wNmbrzJ8KvAaTn1P" target="_blank">
+                <h2>Skydeath Presentation</h2>
+                <h3>Visual Presentation</h3>
+                <img src="img/thumbs/thumbnail_day21.png" alt="Skydeath Presentation">
+            </a>
+            <a class="el_f" href="https://youtu.be/OM942qQ9aW4?si=o2hgOtKocHIKdl1i" target="_blank">
+                <h2>The MOB Attacks: Lethal Company</h2>
+                <h3>Gameplay Video</h3>
+                <img src="img/thumbs/TheMOBAttacks_LethalCompany_Part1.jpg" alt="The MOB Attacks: Lethal Company">
+            </a>
         </section>
+    </main>
 
-        <section class="vis_svg_with_text up_margin_large">
-            <svg id="stylized_header"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 571.83">
-                <defs>
-                    <linearGradient id="linear-gradient" x1="402.98" y1="48.4" x2="863.15" y2="508.58" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="aqua"/>
-                        <stop offset=".5" stop-color="#f0f"/>
-                        <stop offset="1" stop-color="#ff0"/>
-                    </linearGradient>
-                    <clipPath id="clippath">
-                        <path fill="none" d="M713,67.41c-27.78-37.12-72.11-61.15-122.05-61.15-16.54,0-32.46,2.65-47.37,7.52-14.88-8.75-32.21-13.78-50.72-13.78-55.32,0-100.17,44.85-100.17,100.17,0,21.37,6.7,41.17,18.1,57.44-46.93,26.5-78.62,76.83-78.62,134.56,0,82.07,64.02,149.17,144.84,154.13,43.77,75.07,125.13,125.52,218.29,125.52,139.46,0,252.52-113.06,252.52-252.52s-103.62-242.81-234.82-251.9Z"/>
-                    </clipPath>
-                </defs>
-                <path class="shape_bg" d="M713,67.41c-27.78-37.12-72.11-61.15-122.05-61.15-16.54,0-32.46,2.65-47.37,7.52-14.88-8.75-32.21-13.78-50.72-13.78-55.32,0-100.17,44.85-100.17,100.17,0,21.37,6.7,41.17,18.1,57.44-46.93,26.5-78.62,76.83-78.62,134.56,0,82.07,64.02,149.17,144.84,154.13,43.77,75.07,125.13,125.52,218.29,125.52,139.46,0,252.52-113.06,252.52-252.52s-103.62-242.81-234.82-251.9Z"/>
-                <text class="sh_h1" transform="translate(64.43 268.83)">
-                    <tspan x="0" y="0">welcome to</tspan>
-                </text>
-                <text class="sh_h2" transform="translate(600.07 385.95)">
-                    <tspan x="0" y="0">my website</tspan>
-                </text>
-                <g class="shape_mask">
-                    <g class="shape_mask_pointer">
-                        <text class="sh_h1" transform="translate(64.43 268.83)">
-                            <tspan x="0" y="0">welcome to</tspan>
-                        </text>
-                        <text class="sh_h2" transform="translate(600.07 385.95)">
-                            <tspan x="0" y="0">my website</tspan>
-                        </text>
-                    </g>
-                </g>
-            </svg>
-        </section>
-    </div>
+    <!-- Footer -->
+    <footer class="potfolio_footer">
+        <p>All works shown here were created by <a href="https://www.linkedin.com/in/inktrinket/" target="_blank">Stephen Gerard</a></p>
+    </footer>
 </body>
 </html>

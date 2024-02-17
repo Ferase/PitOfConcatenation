@@ -14,7 +14,7 @@ h1{
     font-size: 48px;
 }
 h2{
-    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
     font-size: 36px;
 }
 h3{
@@ -22,7 +22,7 @@ h3{
     font-size: 32px;
 }
 h4{
-    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
     font-size: 24px;
 }
 h5{
@@ -30,10 +30,10 @@ h5{
     font-size: 20px;
 }
 h6{
-    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
     font-size: 18px;
 }
 p{
-    font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
     font-size: 18px;
 }

@@ -1,0 +1,17 @@
+<svg id="article_heading"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1644.11 651.61">
+    <defs>
+        <style>.cls-1{font-family:PeridotPEVariable-ExtraBold, 'Peridot PE Variable';font-size:130.03px;font-variation-settings:'wght' 800, 'wdth' 100, 'ital' 0;}.cls-2{stroke-width:25px;}.cls-2,.cls-3{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}.cls-3{stroke-width:40px;}.cls-4{font-family:PeridotPEVariable-Light, 'Peridot PE Variable';font-size:87.87px;font-variation-settings:'wght' 300, 'wdth' 100, 'ital' 0;}</style>
+    </defs>
+    <text class="cls-1" transform="translate(325.62 307.02)">
+        <tspan x="0" y="0">Article Heading</tspan>
+    </text>
+    <text class="cls-4" transform="translate(325.62 433.97)">
+        <tspan x="0" y="0">This is a Subheading</tspan>
+    </text>
+    <path d="M1195.84,0H328.16C148.6,0-.32,146.91,0,326.47c.31,178.81,144.64,323.83,323.18,325.28,3.9,.03,7.78-.03,11.65-.14h507.73c43.31,0,78.42-35.11,78.42-78.42h0c0-43.31-35.11-78.42-78.42-78.42h-189.31c-21.45,0-35.83-21.92-27.42-41.65,16.69-39.11,25.93-82.11,25.94-127.23,0-45.22-9.21-88.29-25.85-127.43-8.39-19.73,6-41.61,27.43-41.61h542.51c43.31,0,78.42-35.11,78.42-78.42h0C1274.27,35.11,1239.16,0,1195.84,0Z"/>
+    <path class="cls-3" d="M180.17,116.18c35.77-24.9,78.22-40.89,124.12-44.73"/>
+    <path class="cls-3" d="M304.36,580.32c-130.95-10.93-233.81-120.67-233.81-254.44,0-34.68,6.91-67.74,19.44-97.89"/>
+    <path class="cls-2" d="M181.35,401.19c-11.76-22.52-18.41-48.14-18.41-75.31,0-82.67,61.56-150.96,141.34-161.52"/>
+    <path class="cls-2" d="M304.47,487.43c-21.64-2.84-41.95-9.93-60.06-20.41"/>
+</svg>

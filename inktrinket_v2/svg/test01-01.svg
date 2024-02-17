@@ -1,1 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="stylized_header" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 571.83"><defs><style>.cls-1,.cls-2{fill:#fff;}.cls-1,.cls-3{font-family:PeridotPEVariable-SemiBold, 'Peridot PE Variable';font-size:106.46px;font-variation-settings:'wght' 600, 'wdth' 100, 'ital' 0;}.cls-4,.cls-2{font-family:PeridotPEVariable-ExtraBold, 'Peridot PE Variable';font-size:130.03px;font-variation-settings:'wght' 800, 'wdth' 100, 'ital' 0;}.cls-5{clip-path:url(#clippath);}.cls-6{fill:none;}.cls-7{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="402.98" y1="48.4" x2="863.15" y2="508.58" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="aqua"/><stop offset=".5" stop-color="#f0f"/><stop offset="1" stop-color="#ff0"/></linearGradient><clipPath id="clippath"><path id="shape_bg-2" class="cls-6" d="M713,67.41c-27.78-37.12-72.11-61.15-122.05-61.15-16.54,0-32.46,2.65-47.37,7.52-14.88-8.75-32.21-13.78-50.72-13.78-55.32,0-100.17,44.85-100.17,100.17,0,21.37,6.7,41.17,18.1,57.44-46.93,26.5-78.62,76.83-78.62,134.56,0,82.07,64.02,149.17,144.84,154.13,43.77,75.07,125.13,125.52,218.29,125.52,139.46,0,252.52-113.06,252.52-252.52s-103.62-242.81-234.82-251.9Z"/></clipPath></defs><path id="shape_bg" class="cls-7" d="M713,67.41c-27.78-37.12-72.11-61.15-122.05-61.15-16.54,0-32.46,2.65-47.37,7.52-14.88-8.75-32.21-13.78-50.72-13.78-55.32,0-100.17,44.85-100.17,100.17,0,21.37,6.7,41.17,18.1,57.44-46.93,26.5-78.62,76.83-78.62,134.56,0,82.07,64.02,149.17,144.84,154.13,43.77,75.07,125.13,125.52,218.29,125.52,139.46,0,252.52-113.06,252.52-252.52s-103.62-242.81-234.82-251.9Z"/><text id="text_title" class="cls-4" transform="translate(64.43 268.83)"><tspan x="0" y="0">This is a Title</tspan></text><text id="text_subtitle" class="cls-3" transform="translate(395.07 385.95)"><tspan x="0" y="0">This is a Subtitle</tspan></text><g id="shape_mask"><g class="cls-5"><text id="mask_text_title" class="cls-2" transform="translate(64.43 268.83)"><tspan x="0" y="0">This is a Title</tspan></text><text id="mask_text_subtitle" class="cls-1" transform="translate(395.07 385.95)"><tspan x="0" y="0">This is a Subtitle</tspan></text></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="stylized_header"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 571.83">
+    <defs>
+        <style>
+            .cls-1,.cls-2 {
+                fill: #fff;
+            }
+            .cls-1,.cls-3 {
+                font-family: PeridotPEVariable-SemiBold, 'Peridot PE Variable';
+                font-size: 106.46px;
+                font-variation-settings: 'wght' 600, 'wdth' 100, 'ital' 0;
+            }
+            .cls-4,.cls-2 {
+                font-family: PeridotPEVariable-ExtraBold, 'Peridot PE Variable';
+                font-size: 130.03px;
+                font-variation-settings: 'wght' 800, 'wdth' 100, 'ital' 0;
+            }
+            .cls-5 {
+                clip-path: url(#clippath);
+            }
+            .cls-6 {
+                fill: none;
+            }
+            .cls-7 {
+                fill: url(#linear-gradient);
+            }
+        </style>
+        <linearGradient id="linear-gradient" x1="402.98" y1="48.4" x2="863.15" y2="508.58" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="aqua"/>
+            <stop offset=".5" stop-color="#f0f"/>
+            <stop offset="1" stop-color="#ff0"/>
+        </linearGradient>
+        <clipPath id="clippath">
+            <path id="shape_bg-2" class="cls-6" d="M713,67.41c-27.78-37.12-72.11-61.15-122.05-61.15-16.54,0-32.46,2.65-47.37,7.52-14.88-8.75-32.21-13.78-50.72-13.78-55.32,0-100.17,44.85-100.17,100.17,0,21.37,6.7,41.17,18.1,57.44-46.93,26.5-78.62,76.83-78.62,134.56,0,82.07,64.02,149.17,144.84,154.13,43.77,75.07,125.13,125.52,218.29,125.52,139.46,0,252.52-113.06,252.52-252.52s-103.62-242.81-234.82-251.9Z"/>
+        </clipPath>
+    </defs>
+    <path id="shape_bg" class="cls-7" d="M713,67.41c-27.78-37.12-72.11-61.15-122.05-61.15-16.54,0-32.46,2.65-47.37,7.52-14.88-8.75-32.21-13.78-50.72-13.78-55.32,0-100.17,44.85-100.17,100.17,0,21.37,6.7,41.17,18.1,57.44-46.93,26.5-78.62,76.83-78.62,134.56,0,82.07,64.02,149.17,144.84,154.13,43.77,75.07,125.13,125.52,218.29,125.52,139.46,0,252.52-113.06,252.52-252.52s-103.62-242.81-234.82-251.9Z"/>
+    <text id="text_title" class="cls-4" transform="translate(64.43 268.83)">
+        <tspan x="0" y="0">This is a Title</tspan>
+    </text>
+    <text id="text_subtitle" class="cls-3" transform="translate(395.07 385.95)">
+        <tspan x="0" y="0">This is a Subtitle</tspan>
+    </text>
+    <g id="shape_mask">
+        <g class="cls-5">
+            <text id="mask_text_title" class="cls-2" transform="translate(64.43 268.83)">
+                <tspan x="0" y="0">This is a Title</tspan>
+            </text>
+            <text id="mask_text_subtitle" class="cls-1" transform="translate(395.07 385.95)">
+                <tspan x="0" y="0">This is a Subtitle</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
