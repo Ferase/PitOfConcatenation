@@ -37,3 +37,8 @@ p{
     font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
     font-size: 18px;
 }
+p.paragraph-big{
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+    line-height: 1.5em;
+    font-size: 24px;
+}

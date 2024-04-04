@@ -4,117 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inktrinket</title>
+    <link rel="stylesheet" href="core.css">
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="svg.css">
     <style type="text/css">
-
-        /* Resets */
-        *{margin: 0; padding: 0;}
-        *,::before,::after {box-sizing: border-box;}
-        a{text-decoration: none;}
-        a:link,a:hover,a:visited,a:invalid{color: var(--clr-darkest);}
-        nav ul{list-style: none;}
-
-        /* Variables */
-        :root{
-            --clr-lightest: hsl(0, 100%, 100%);
-            --clr-darkest: hsl(0, 0%, 0%);
-            --clr-accent1: hsl(180, 100%, 50%);
-            --clr-accent2: hsl(300, 100%, 50%);
-            --clr-accent3: hsl(60, 100%, 50%);
-        }
-
-        /* Body */
-        body{
-            position: relative;
-            background-color: var(--clr-lightest);
-            color: var(--clr-darkest);
-            font-family: sans-serif;
-        }
-
-        /* Horizontal rule */
-        hr{
-            border-style: solid;
-            border-width: 5px;
-            border-image: linear-gradient(90deg,
-                var(--clr-accent1) 0%,
-                var(--clr-accent2) 50%,
-                var(--clr-accent3) 100%
-            ) 1;
-            margin: 2rem 0;
-        }
-
-        /* Spacing */
-        .up_margin{
-            margin-top: 24px;
-        }
-        .low_margin{
-            margin-bottom: 24px;
-        }
-        .up_margin_large{
-            margin-top: 48px;
-        }
-        .low_margin_large{
-            margin-bottom: 48px;
-        }
-        .uplow_margin{
-            margin-top: 24px;
-            margin-bottom: 24px;
-        }
-        .uplow_margin_large{
-            margin-top: 48px;
-            margin-bottom: 48px;
-        }
-
-        /* Site borders */
-        .site_frame{
-            position: fixed;
-            top: 0;
-            pointer-events: none;
-            width: 5dvw;
-            height: 100dvh;
-            background-repeat: repeat-y;
-            background-size: 100% 100vh;
-            animation: site_frame_flow infinite 10000ms linear;
-            z-index: 0;
-        }
-        .frame_left{
-            left: 0;
-            background-image: url("img/flourish/border_L.png");
-        }
-        .frame_right{
-            right: 0;
-            background-image: url("img/flourish/border_R.png");
-            background-position-x: right;
-        }
-
-        /* Header & Nav */
-        .header_flex{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 64px;
-            padding: 24px 0;
-        }
-
-        .header_icon{
-            max-width: 100px;
-        }
-
-        .header_nav_grid{
-            display: grid;
-            grid-auto-flow: column;
-            gap: 32px;
-        }
-        .header_nav_grid li{
-            padding: 24px;
-        }
-        .header_nav_grid a:link{
-            font-family: "peridot-pe-variable", sans-serif;
-            font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
-            font-size: 24px;
-        }
 
         /* General grid */
         .grid_thirds{
@@ -182,13 +75,6 @@
         }
         .shape_article path{
             fill: rgb(255, 200, 124);
-        }
-
-        /* Animations */
-        @keyframes site_frame_flow{
-            to{
-                background-position-y: 100dvh;
-            }
         }
 
     </style>
