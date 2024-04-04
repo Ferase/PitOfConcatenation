@@ -136,3 +136,37 @@ hr{
     font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
     font-size: 24px;
 }
+
+/* Night Light  ------------------------ */
+
+#night-light{
+    position: fixed;
+    top: -24px;
+    left: 80%;
+    transform-box: fill-box;
+    transform-origin: 50px 24px;
+    animation: night-light-onload 1000ms ease;
+    animation-fill-mode: forwards;
+    transform: translateY(-116px) rotateZ(10deg);
+}
+
+@keyframes night-light-onload{
+    0%{
+        transform: translateY(-116px) rotateZ(10deg);
+    }
+    25%{
+        transform: translateY(0px) rotateZ(-10deg);
+    }
+    55%{
+        transform: translateY(0px) rotateZ(6deg);
+    }
+    75%{
+        transform: translateY(0px) rotateZ(-4deg);
+    }
+    90%{
+        transform: translateY(0px) rotateZ(2deg);
+    }
+    100%{
+        transform: translateY(0px) rotateZ(0deg);
+    }
+}
