@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inktrinket</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="svg.css">
+    <style type="text/css">
+
+        /* General grid */
+        .grid-main{
+            display: grid;
+            grid-template-areas:
+                "hero-lt"
+                "socials";
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        .grid-hero-lt{
+            grid-area: hero-lt;
+        }
+        .grid-socials{
+            grid-area: socials;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            list-style: none;
+            align-items: center;
+            text-align: center;
+            font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+            font-size: 24px;
+        }
+        .grid-socials img{
+            min-width: 32px;
+        }
+        
+        .hero-lt__border {
+            fill: none;
+            stroke: #111;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 5px;
+        }
+
+        .hero-lt__text {
+            font-family: "peridot-pe-variable", sans-serif;
+            font-variation-settings: 'wght' 700, 'wdth' 100, 'ital' 0;
+            font-size: 125px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Borders -->
+    <div class="site_frame frame_left"></div>
+    <div class="site_frame frame_right"></div>
+
+    <!-- Heading -->
+    <a id="night-light" href="#"><img src="img/night_light.png" alt="Night Light"></a>
+
+    <!-- Heading -->
+    <header class="header_flex">
+        <nav>
+            <ul class="header_nav_grid">
+                <li><a href="index.html"><img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket go home"></a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">commissions</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="grid-main">
+        <div class="grid-hero-lt">
+            <svg id="hero-lt"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+                <text class="hero-lt__text" transform="translate(123.94 246.5)">
+                    <tspan x="0" y="0">let's talk!</tspan>
+                </text>
+                <g>
+                    <path class="hero-lt__border" d="M132.1,66.22c-28.77-8.14-56.02,11.83-64.12,43.36-31.53,8.09-51.5,35.35-43.36,64.12"/>
+                    <path class="hero-lt__border" d="M667.9,66.22c28.77-8.14,56.02,11.83,64.12,43.36,31.53,8.09,51.5,35.35,43.36,64.12"/>
+                    <path class="hero-lt__border" d="M132.1,333.78c-28.77,8.14-56.02-11.83-64.12-43.36-31.53-8.09-51.5-35.35-43.36-64.12"/>
+                    <path class="hero-lt__border" d="M667.9,333.78c28.77,8.14,56.02-11.83,64.12-43.36,31.53-8.09,51.5-35.35,43.36-64.12"/>
+                </g>
+            </svg>
+        </div>
+        <ul class="grid-socials">
+            <li><a href="#"><img src="svg/socials/socials_YouTube.svg" alt="YouTube">YouTube</a></li>
+            <li><a href="#"><img src="svg/socials/socials_Twitter.svg" alt="Twitter">Twitter</a></li>
+            <li><a href="#"><img src="svg/socials/socials_Bluesky.svg" alt="Bluesky">Bluesky</a></li>
+            <li><a href="#"><img src="svg/socials/socials_Gmail.svg" alt="Email">Email</a></li>
+        </ul>
+    </main>
+    
+</body>
+</html>

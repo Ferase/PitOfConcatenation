@@ -120,15 +120,16 @@ hr{
 }
 
 .header_icon{
-    max-width: 100px;
+    width: 100px;
 }
 
 .header_nav_grid{
     display: grid;
     grid-auto-flow: column;
+    align-items: center;
     gap: 32px;
 }
-.header_nav_grid li{
+.header_nav_grid li:not(:first-child){
     padding: 24px;
 }
 .header_nav_grid a:link{
