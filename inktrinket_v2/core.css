@@ -5,7 +5,7 @@
 a{text-decoration: none;}
 a:link,a:hover,a:visited,a:invalid{color: var(--clr-darkest);}
 nav ul{list-style: none;}
-::-webkit-scrollbar{display: none;}
+body,html{scrollbar-width: none;}
 
 
 
