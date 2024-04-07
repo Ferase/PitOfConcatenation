@@ -5,9 +5,9 @@
 a{text-decoration: none;}
 a:link,a:hover,a:visited,a:invalid{color: var(--clr-darkest);}
 nav ul{list-style: none;}
-@media only screen and (min-width: 2500px) {
+@media only screen and (min-width: 1900px) {
     html {
-        zoom: 130%
+        zoom: 200%;
     }
 }
 
@@ -17,7 +17,7 @@ nav ul{list-style: none;}
 
 :root{
     --clr-lightest: hsl(0, 100%, 100%);
-    --clr-darkest: hsl(0, 0%, 0%);
+    --clr-darkest: #111111;
     --clr-accent1: hsl(180, 100%, 50%);
     --clr-accent2: hsl(300, 100%, 50%);
     --clr-accent3: hsl(60, 100%, 50%);
