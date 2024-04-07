@@ -108,7 +108,7 @@ hr{
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 24px 0;
+    padding: 1.4rem 0;
 }
 
 .header_icon{
@@ -139,6 +139,10 @@ hr{
     }
     .header_nav_grid a:link{
         font-size: 1.8rem;
+    }
+    .header_flex{
+        gap: 2.2rem;
+        padding: 1.8rem 0;
     }
 }
 
