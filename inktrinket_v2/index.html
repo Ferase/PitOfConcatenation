@@ -15,7 +15,7 @@
             grid-template-areas: 
                 "a a a b"
                 "c c c c";
-            gap: 32px;
+            gap: 1.4rem;
             max-width: 50%;
             margin: 0 auto;
         }
@@ -24,7 +24,7 @@
             grid-area: a;
             display: grid;
             /* place-items: center; */
-            max-width: 80%;
+            max-width: 75%;
         }
         .grid-main__b{
             grid-area: b;
@@ -35,14 +35,14 @@
         }
 
         /* Hero Banner */
-        .hero-banner__text {
+        .hero-banner__text{
             fill: #111;
             font-family: "peridot-pe-variable", sans-serif;
             font-size: 6rem;
             font-variation-settings: 'wght' 400, 'wdth' 100, 'ital' 0;
         }
 
-        .hero-banner__border {
+        .hero-banner__border{
             fill: none;
             stroke: #111;
             stroke-linecap: round;
@@ -50,23 +50,23 @@
             stroke-width: 5px;
         }
 
-        .hero-banner__fill-01 {
+        .hero-banner__fill-01{
             fill: var(--clr-palette-05);
         }
 
-        .hero-banner__fill-02 {
+        .hero-banner__fill-02{
             fill: var(--clr-palette-02);
         }
 
-        .hero-banner__fill-03 {
+        .hero-banner__fill-03{
             fill: var(--clr-palette-03);
         }
 
-        .hero-banner__fill-04 {
+        .hero-banner__fill-04{
             fill: var(--clr-palette-04);
         }
 
-        .hero-banner__animate {
+        .hero-banner__animate{
             --delay-add: 50ms;
             animation: hero-banner-hi 300ms ease;
             animation-fill-mode: forwards;
@@ -82,7 +82,7 @@
         .hero-banner__animate:nth-child(7){animation-delay: calc(var(--delay-add) * 4);}
         .hero-banner__animate:nth-child(8){animation-delay: calc(var(--delay-add) * 5);}
 
-        .hero-banner__animate-droplet {
+        .hero-banner__animate-droplet{
             --delay-base: 100ms;
             --delay-add: 50ms;
             animation: hero-banner-droplet 300ms ease;
@@ -114,6 +114,12 @@
             }
         }
 
+        @media only screen and (min-width: 2500px){
+            .hero-banner__text {
+                font-size: 8rem;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -141,7 +147,7 @@
     <div class="grid-main">
         <div class="grid-main__a">
             <svg id="hero-banner"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 960" height="480">
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 960" height="100%">
                 <text class="hero-banner__text" transform="translate(276.47 623.01)">
                     <tspan x="0" y="0">i design</tspan>
                 </text>

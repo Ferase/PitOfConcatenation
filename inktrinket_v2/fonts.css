@@ -8,7 +8,7 @@
 h1,h2,h3,h4,h5,h6,p{
     position: relative;
     font-family: "peridot-pe-variable", sans-serif;
-    line-height: 1.5em;
+    line-height: 2rem;
 }
 h1{
     font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
@@ -45,4 +45,46 @@ p strong em, p em strong{font-variation-settings: "wght" 400, "wdth" 100, "ital"
 p.paragraph-big{
     font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
     font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 2500px){
+    h1,h2,h3,h4,h5,h6,p{
+        line-height: 3rem;
+    }
+    h1{
+        font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
+        font-size: 3.2rem;
+    }
+    h2{
+        font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+        font-size: 2.75rem;
+    }
+    h3{
+        font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+        font-size: 2.5rem;
+    }
+    h4{
+        font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+        font-size: 2.25rem;
+    }
+    h5{
+        font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+        font-size: 2rem;
+    }
+    h6{
+        font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+        font-size: 1.8rem;
+    }
+    p{
+        font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+        font-size: 1.8rem;
+    }
+    p strong{font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;}
+    p em{font-variation-settings: "wght" 300, "wdth" 100, "ital" 300;}
+    p strong em, p em strong{font-variation-settings: "wght" 400, "wdth" 100, "ital" 300;}
+    
+    p.paragraph-big{
+        font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+        font-size: 1.8rem;
+    }
 }

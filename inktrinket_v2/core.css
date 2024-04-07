@@ -5,11 +5,6 @@
 a{text-decoration: none;}
 a:link,a:hover,a:visited,a:invalid{color: var(--clr-darkest);}
 nav ul{list-style: none;}
-@media only screen and (min-width: 1900px) {
-    html {
-        zoom: 200%;
-    }
-}
 
 
 
@@ -60,24 +55,16 @@ hr{
 /* Spacing ------------------------ */
 
 .up_margin{
-    margin-top: 24px;
+    margin-top: 1.4rem;
 }
 .low_margin{
-    margin-bottom: 24px;
+    margin-bottom: 1.4rem;
 }
 .up_margin_large{
-    margin-top: 48px;
+    margin-top: 2.1rem;
 }
 .low_margin_large{
-    margin-bottom: 48px;
-}
-.uplow_margin{
-    margin-top: 24px;
-    margin-bottom: 24px;
-}
-.uplow_margin_large{
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-bottom: 2.1rem;
 }
 
 
@@ -120,7 +107,7 @@ hr{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 64px;
+    gap: 2rem;
     padding: 24px 0;
 }
 
@@ -132,15 +119,15 @@ hr{
     display: grid;
     grid-auto-flow: column;
     align-items: center;
-    gap: 32px;
+    gap: 1.4rem;
 }
 .header_nav_grid li:not(:first-child){
-    padding: 24px;
+    padding: 1.4rem;
 }
 .header_nav_grid a:link{
     font-family: "peridot-pe-variable", sans-serif;
     font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
-    font-size: 24px;
+    font-size: 1.4rem;
 }
 
 /* Night Light  ------------------------ */
