@@ -25,17 +25,29 @@
         }
         .grid-socials{
             grid-area: socials;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            display: grid;
+            grid-auto-flow: column;
+            place-items: center;
+            align-items: end;
+            gap: 1.4rem;
             list-style: none;
-            align-items: center;
+        }
+        .grid-socials li{
+            width: 100%;
+        }
+        .grid-socials li a{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+        .grid-socials li a img{
+            width: 8rem;
+            margin: 0 auto;
+        }
+        .grid-socials li a p{
             text-align: center;
             font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
             font-size: 1.4rem;
-        }
-        .grid-socials img{
-            min-width: 1.4rem;
         }
         
         #hero-lt{
@@ -58,11 +70,11 @@
         }
 
         @media only screen and (min-width: 2500px){
-            .grid-socials{
+            .grid-socials li a p{
                 font-size: 2rem;
             }
-            .grid-socials img{
-                min-width: 2rem;
+            .grid-socials li a img{
+                min-width: 9rem;
             }
         }
 
@@ -106,10 +118,30 @@
             </svg>
         </div>
         <ul class="grid-socials">
-            <li><a href="#"><img src="svg/socials/socials_YouTube.svg" alt="YouTube">YouTube</a></li>
-            <li><a href="#"><img src="svg/socials/socials_Twitter.svg" alt="Twitter">Twitter</a></li>
-            <li><a href="#"><img src="svg/socials/socials_Bluesky.svg" alt="Bluesky">Bluesky</a></li>
-            <li><a href="#"><img src="svg/socials/socials_Gmail.svg" alt="Email">Email</a></li>
+            <li>
+                <a href="#">
+                    <img src="svg/socials/socials_YouTube.svg" alt="YouTube">
+                    <p>YouTube</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="svg/socials/socials_Twitter.svg" alt="Twitter">
+                    <p>Twitter</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="svg/socials/socials_Bluesky.svg" alt="Bluesky">
+                    <p>Bluesky</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="svg/socials/socials_Gmail.svg" alt="Email">
+                    <p>Email</p>
+                </a>
+            </li>
         </ul>
     </main>
     
