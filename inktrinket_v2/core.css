@@ -139,7 +139,7 @@ hr{
     flex-wrap: wrap;
     gap: var(--space-large);
     padding: var(--space-small) 0;
-    margin-bottom: var(--space-large);
+    margin-bottom: var(--space-largest);
 }
 
 .header_icon{
