@@ -152,13 +152,35 @@ hr{
     align-items: center;
     gap: var(--space-small);
 }
-.header_nav_grid li:not(:first-child){
+.header_nav_grid li:not(:first-child), .header_portfolio_fold li{
     padding: var(--space-small);
+    position: relative;
 }
-.header_nav_grid a:link{
+.header_nav_grid li > *, .header_portfolio_fold li > *{
     font-family: "peridot-pe-variable", sans-serif;
     font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
     font-size: var(--space-small);
+}
+
+.header_portfolio_fold{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+.header_nav_hover_list:hover .header_portfolio_fold{
+    top: 100%;
+    pointer-events: auto;
+    opacity: 1;
+}
+.header_nav_hover_list{
+    user-select: none;
+}
+.header_portfolio_fold li{
+    padding-block: 0;
+    position: relative;
 }
 
 

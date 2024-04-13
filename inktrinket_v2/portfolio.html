@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inktrinket</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="svg.css">
+    <style type="text/css">
+
+        /* General grid */
+        .grid-main{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        .grid-main__a{
+            grid-area: a;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Borders -->
+    <div class="site_frame frame_left"></div>
+    <div class="site_frame frame_right"></div>
+
+    <!-- Night Light -->
+    <a id="night-light" href="#"><img src="img/night_light.png" alt="Night Light"></a>
+
+    <!-- Heading -->
+    <header class="header_flex">
+        <nav>
+            <ul class="header_nav_grid">
+                <li><a href="index.html"><img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket go home"></a></li>
+                <li><a href="about.html">about</a></li>
+                <li class="header_nav_hover_list">
+                    <p href="#">portfolio</p>
+                    <ul class="header_portfolio_fold">
+                        <li><a href="portfolio.html">professional</a></li>
+                        <li><a href="portfolio.html">personal</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">commissions</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid-main">
+    </div>
+    
+</body>
+</html>
