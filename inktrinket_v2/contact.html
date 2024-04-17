@@ -55,7 +55,7 @@
         }
         .hero-lt__border {
             fill: none;
-            stroke: #111;
+            stroke: var(--clr-darkest);
             stroke-linecap: round;
             stroke-linejoin: round;
             stroke-width: 5px;
@@ -65,6 +65,7 @@
             font-family: "peridot-pe-variable", sans-serif;
             font-variation-settings: 'wght' 700, 'wdth' 100, 'ital' 0;
             font-size: 8rem;
+            fill: var(--clr-darkest);
             text-anchor: middle;
             dominant-baseline: middle;
         }
@@ -83,17 +84,17 @@
 <body>
     
     <!-- Borders -->
-    <div class="site_frame frame_left"></div>
-    <div class="site_frame frame_right"></div>
+    <div class="site_frame frame_left" data-invert-dark="true"></div>
+    <div class="site_frame frame_right" data-invert-dark="true"></div>
 
     <!-- Night Light -->
-    <a id="night-light" href="#"><img src="img/night_light.png" alt="Night Light"></a>
+    <input id="night-light" type="checkbox"><label for="night-light" data-invert-dark="true"></label>
 
     <!-- Heading -->
     <header class="header_flex">
         <nav>
             <ul class="header_nav_grid">
-                <li><a href="index.html"><img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket go home"></a></li>
+                <li><a href="index.html"><img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
                 <li><a href="about.html">about</a></li>
                 <li class="header_nav_hover_list">
                     <p href="#">portfolio</p>
@@ -126,30 +127,31 @@
         <ul class="grid-socials">
             <li>
                 <a href="#">
-                    <img src="svg/socials/socials_YouTube.svg" alt="YouTube">
+                    <img src="svg/socials/socials_YouTube.svg" alt="YouTube" data-invert-dark="true">
                     <p>YouTube</p>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="svg/socials/socials_Twitter.svg" alt="Twitter">
+                    <img src="svg/socials/socials_Twitter.svg" alt="Twitter" data-invert-dark="true">
                     <p>Twitter</p>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="svg/socials/socials_Bluesky.svg" alt="Bluesky">
+                    <img src="svg/socials/socials_Bluesky.svg" alt="Bluesky" data-invert-dark="true">
                     <p>Bluesky</p>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="svg/socials/socials_Gmail.svg" alt="Email">
+                    <img src="svg/socials/socials_Gmail.svg" alt="Email" data-invert-dark="true">
                     <p>Email</p>
                 </a>
             </li>
         </ul>
     </main>
-    
+
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>

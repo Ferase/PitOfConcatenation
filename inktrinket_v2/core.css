@@ -5,7 +5,7 @@
 a{text-decoration: none;}
 a:link,a:hover,a:visited,a:invalid{color: var(--clr-darkest);}
 nav ul{list-style: none;}
-body,html{scrollbar-width: none;}
+body,html{scrollbar-width: none; color: var(--clr-darkest); background-color: var(--clr-lightest);}
 
 
 
@@ -20,7 +20,7 @@ body,html{scrollbar-width: none;}
     --nl-position: 80%;
 
     --clr-lightest: hsl(0, 100%, 100%);
-    --clr-darkest: #111111;
+    --clr-darkest: hsl(0, 0%, 0%);
     --clr-accent1: hsl(180, 100%, 50%);
     --clr-accent2: hsl(300, 100%, 50%);
     --clr-accent3: hsl(60, 100%, 50%);
@@ -30,6 +30,13 @@ body,html{scrollbar-width: none;}
     --clr-palette-03: hsla(151, 100%, 72%, 1);
     --clr-palette-04: hsla(36, 100%, 72%, 1);
     --clr-palette-05: hsla(8, 100%, 65%, 1);
+}
+html[data-theme="dark"]{
+    --clr-lightest: hsl(0, 0%, 0%);
+    --clr-darkest: hsl(0, 100%, 100%);
+}
+html[data-theme="dark"] [data-invert-dark="true"]{
+    filter: invert(1);
 }
 
 /* 4K */
@@ -188,11 +195,18 @@ hr{
 /* Night Light  ------------------------ */
 
 #night-light{
+    display: none;
+}
+#night-light + label{
     position: fixed;
     top: -24px;
     left: var(--nl-position);
     transform-box: fill-box;
     transform-origin: 50px 24px;
+    background: url(img/night_light.png);
+    width: 100px;
+    height: 116px;
+    cursor: pointer;
     animation: night-light-onload 1000ms ease;
     animation-fill-mode: forwards;
     transform: translateY(-116px) rotateZ(10deg);

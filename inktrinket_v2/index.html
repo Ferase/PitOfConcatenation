@@ -36,7 +36,7 @@
 
         /* Hero Banner */
         .hero-banner__text{
-            fill: #111;
+            fill: var(--clr-darkest);
             font-family: "peridot-pe-variable", sans-serif;
             font-size: 6rem;
             font-variation-settings: 'wght' 600, 'wdth' 100, 'ital' 0;
@@ -44,7 +44,7 @@
 
         .hero-banner__border{
             fill: none;
-            stroke: #111;
+            stroke: var(--clr-darkest);
             stroke-linecap: round;
             stroke-linejoin: round;
             stroke-width: 5px;
@@ -119,17 +119,17 @@
 <body>
     
     <!-- Borders -->
-    <div class="site_frame frame_left"></div>
-    <div class="site_frame frame_right"></div>
+    <div class="site_frame frame_left" data-invert-dark="true"></div>
+    <div class="site_frame frame_right" data-invert-dark="true"></div>
 
     <!-- Night Light -->
-    <a id="night-light" href="#"><img src="img/night_light.png" alt="Night Light"></a>
+    <input id="night-light" type="checkbox"><label for="night-light" data-invert-dark="true"></label>
 
     <!-- Heading -->
     <header class="header_flex">
         <nav>
             <ul class="header_nav_grid">
-                <li><a href="index.html"><img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket go home"></a></li>
+                <li><a href="index.html"><img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
                 <li><a href="about.html">about</a></li>
                 <li class="header_nav_hover_list">
                     <p href="#">portfolio</p>
@@ -188,6 +188,7 @@
             <p class="paragraph-big">feel free to have a look around and click on as many things as you'd like! the tabs at the top of the page should help you find what you are looking for. you can also click on things repeatedly, like i always do, but it won't do anything. :3</p>
         </main>
     </div>
-    
+
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
