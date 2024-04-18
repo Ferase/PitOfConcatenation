@@ -7,7 +7,7 @@ function getColorScheme(){
         document.documentElement.setAttribute("data-theme", theme);
         return;
     }
-    if (prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches){ // If user has prefers dark mode
+    if(prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches){ // If user has prefers dark mode
         document.documentElement.setAttribute("data-theme", "dark");
         localStorage.setItem("theme", "dark");
         return;
