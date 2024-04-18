@@ -3,7 +3,7 @@ var theme = localStorage.getItem("theme");
 
 // Set the user's color scheme
 function getColorScheme(){
-    if (theme !== null){ // If user has visited prior
+    if(theme !== null){ // If user has visited prior
         document.documentElement.setAttribute("data-theme", theme);
         return;
     }
@@ -13,7 +13,7 @@ function getColorScheme(){
         return;
     }
     // Define light theme and set otherwise
-    document.documentElement.setAttribute("data-theme", "dark");
+    document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light");
 }
 
@@ -28,10 +28,11 @@ window.onload = function applyCheck(){
     // Toggle dark mode via the night light
     var checkbox = document.getElementById("night-light");
     checkbox.addEventListener("change", function() {
-        if (this.checked) {
+        if(this.checked){
             document.documentElement.setAttribute("data-theme", "dark");
             localStorage.setItem("theme", "dark");
-        } else {
+        } 
+        else{
             document.documentElement.setAttribute("data-theme", "light");
             localStorage.setItem("theme", "light");
         }
