@@ -7,14 +7,13 @@ function getColorScheme(){
         document.documentElement.setAttribute("data-theme", theme);
         return;
     }
-    if(prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches){ // If user has prefers dark mode
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-        return;
+
+    // Check user system preference, then set accordingly
+    if(prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches){
+        theme = "dark"
     }
-    // Define light theme and set otherwise
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
 }
 
 getColorScheme() // Run before page draws
@@ -36,5 +35,13 @@ window.onload = function applyCheck(){
             document.documentElement.setAttribute("data-theme", "light");
             localStorage.setItem("theme", "light");
         }
+    });
+    
+    var v_checkbox = document.getElementById("night-light-label");
+    v_checkbox.addEventListener("mousedown", function() {
+        this.classList.add("pulldown");
+    });
+    v_checkbox.addEventListener("mouseup", function() {
+        this.classList.remove("pulldown");
     });
 }

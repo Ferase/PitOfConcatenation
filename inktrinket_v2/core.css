@@ -210,6 +210,10 @@ hr{
     animation: night-light-onload 1000ms ease;
     animation-fill-mode: forwards;
     transform: translateY(-116px) rotateZ(10deg);
+    transition: top 50ms linear;
+}
+.pulldown{
+    top: -12px !important;
 }
 
 @keyframes night-light-onload{
