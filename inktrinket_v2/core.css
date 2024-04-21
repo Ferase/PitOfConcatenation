@@ -203,13 +203,13 @@ hr{
     left: var(--nl-position);
     transform-box: fill-box;
     transform-origin: 50px 24px;
-    background: url(img/night_light.png);
+    background: url(img/night_light/nl_night.png);
     width: 100px;
-    height: 116px;
+    height: 130px;
     cursor: pointer;
     animation: night-light-onload 1000ms ease;
     animation-fill-mode: forwards;
-    transform: translateY(-116px) rotateZ(10deg);
+    transform: translateY(-130px) rotateZ(10deg);
     transition: top 50ms linear;
 }
 .pulldown{
@@ -218,7 +218,7 @@ hr{
 
 @keyframes night-light-onload{
     0%{
-        transform: translateY(-116px) rotateZ(10deg);
+        transform: translateY(-130px) rotateZ(10deg);
     }
     25%{
         transform: translateY(0px) rotateZ(-10deg);

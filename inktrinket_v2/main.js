@@ -25,19 +25,21 @@ window.onload = function applyCheck(){
     }
 
     // Toggle dark mode via the night light
+    var v_checkbox = document.getElementById("night-light-label");
     var checkbox = document.getElementById("night-light");
     checkbox.addEventListener("change", function() {
         if(this.checked){
             document.documentElement.setAttribute("data-theme", "dark");
             localStorage.setItem("theme", "dark");
+            v_checkbox.style.backgroundImage = "url(img/night_light/nl_day.png)";
         } 
         else{
             document.documentElement.setAttribute("data-theme", "light");
             localStorage.setItem("theme", "light");
+            v_checkbox.style.backgroundImage = "url(img/night_light/nl_night.png)";
         }
     });
     
-    var v_checkbox = document.getElementById("night-light-label");
     v_checkbox.addEventListener("mousedown", function() {
         this.classList.add("pulldown");
     });
