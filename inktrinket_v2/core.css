@@ -203,7 +203,7 @@ hr{
     left: var(--nl-position);
     transform-box: fill-box;
     transform-origin: 50px 24px;
-    background: url(img/night_light/nl_night.png);
+    background: url(img/night_light/nl_light.png);
     width: 100px;
     height: 130px;
     cursor: pointer;
