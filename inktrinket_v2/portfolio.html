@@ -14,14 +14,116 @@
         .grid-main{
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: auto;
+            grid-template-rows: auto auto;
+            gap: calc(var(--space-largest) * 2);
             max-width: 50%;
             margin: 0 auto;
         }
 
         .grid-main__a{
-            grid-area: a;
+            display: grid;
+            gap: var(--space-large);
+            text-align: center;
         }
+
+        input[type="text"]{
+            max-width: 100%;
+            width: 50%;
+            height: var(--space-small);
+            background-color: var(--clr-lightest);
+            border: solid 3px var(--clr-darkest);
+            border-radius: var(--space-smallest);
+            place-self: center;
+            padding: var(--space-smallest);
+
+            font-family: "peridot-pe-variable", sans-serif;
+            font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
+            font-size: var(--txt-h5);
+        }
+        input[type="text"]:focus{
+            border: solid 3px var(--clr-darkest);
+            border-color: var(--clr-darkest);
+        }
+
+        .grid-main__pagination{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            gap: var(--space-small);
+        }
+
+        .grid-main__pagination ul{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: var(--space-small);
+            list-style: none;
+        }
+
+        .v-card{
+            display: grid;
+            text-align: center;
+            gap: var(--space-smallest);
+        }
+        .v-card .v-card__img{
+            width: 100%;
+            height: calc(var(--space-largest) * 3);
+            position: relative;
+            overflow: hidden;
+        }
+        .v-card .v-card__img img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
+        }
+
+        .v-card h2{
+            font-family: "acumin-variable", sans-serif;
+            font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+            font-size: var(--txt-h5);
+        }
+
+
+        .grid-main__pagination ul li.hidden{
+            display: none;
+        }
+
+        .pagination-container {
+            display: flex;
+            align-items: center;
+            bottom: 0;
+            justify-content: center;
+        }
+        .pagination-number,
+        .pagination-button{
+            font-family: "acumin-variable", sans-serif;
+            font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
+            font-size: var(--txt-h5);
+            background-color: var(--clr-lightest);
+            border: none;
+            cursor: pointer;
+            height: var(--space-largest);
+            width: var(--space-largest);
+        }
+
+        .pagination-number.active{
+            color: var(--clr-lightest);
+            background-color: var(--clr-darkest);
+        }
+
+        .pagination-number:hover,
+        .pagination-button:not(.disabled):hover {
+            color: var(--clr-lightest);
+            background: var(--clr-darkest);
+        }
+
+        .pagination-number.active {
+            color: var(--clr-darkest);
+            background-color: var(--clr-lightest);
+        }
+
 
     </style>
 </head>
@@ -41,7 +143,7 @@
                 <li><a href="index.html"><img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
                 <li><a href="about.html">about</a></li>
                 <li class="header_nav_hover_list">
-                    <p href="#">portfolio</p>
+                    <p>portfolio</p>
                     <ul class="header_portfolio_fold">
                         <li><a href="portfolio.html">professional</a></li>
                         <li><a href="portfolio.html">personal</a></li>
@@ -54,10 +156,28 @@
     </header>
 
     <div class="grid-main">
-        <div class="grid-main__a">
-            
-        </div>
+        <section class="grid-main__a">
+            <h1>Portfolio Title</h1>
+            <input type="text">
+        </section>
+
+        <main class="grid-main__pagination">
+            <ul id="paginated-list">
+            </ul>
+            <nav class="pagination-container">
+                <button class="pagination-button" id="prev-button" title="Previous page" aria-label="Previous page">
+                    &lt;
+                </button>
+                <div id="pagination-numbers">
+              
+                </div>
+                <button class="pagination-button" id="next-button" title="Next page" aria-label="Next page">
+                    &gt;
+                </button>
+            </nav>
+        </main>
     </div>
 
+    <script type="text/javascript" src="portfolio_pagination.js"></script>
 </body>
 </html>

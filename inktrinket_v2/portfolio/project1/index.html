@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inktrinket</title>
+    <script type="text/javascript" src="../../main.js"></script>
+    <link rel="stylesheet" href="../../core.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="stylesheet" href="../../svg.css">
+    <style type="text/css">
+
+        /* General grid */
+        .grid-main{
+            display: grid;
+            gap: var(--space-small);
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Borders -->
+    <div class="site_frame frame_left" data-invert-dark="true"></div>
+    <div class="site_frame frame_right" data-invert-dark="true"></div>
+
+    <!-- Night Light -->
+    <input id="night-light" type="checkbox"><label id="night-light-label" for="night-light" data-invert-dark="true"></label>
+
+    <!-- Heading -->
+    <header class="header_flex">
+        <nav>
+            <ul class="header_nav_grid">
+                <li><a href="../../index.html"><img class="header_icon" src="../../svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
+                <li><a href="../../about.html">about</a></li>
+                <li class="header_nav_hover_list">
+                    <p>portfolio</p>
+                    <ul class="header_portfolio_fold">
+                        <li><a href="../../portfolio.html">professional</a></li>
+                        <li><a href="../../portfolio.html">personal</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../commissions.html">commissions</a></li>
+                <li><a href="../../contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid-main">
+    </div>
+
+</body>
+</html>

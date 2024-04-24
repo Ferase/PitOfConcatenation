@@ -6,6 +6,7 @@ a{text-decoration: none;}
 a:link,a:hover,a:visited,a:invalid{color: var(--clr-darkest);}
 nav ul{list-style: none;}
 body,html{scrollbar-width: none; color: var(--clr-darkest); background-color: var(--clr-lightest);}
+input:focus{outline: none;}
 
 
 
@@ -160,13 +161,15 @@ hr{
     gap: var(--space-small);
 }
 .header_nav_grid li:not(:first-child), .header_portfolio_fold li{
-    padding: var(--space-small);
     position: relative;
 }
 .header_nav_grid li > *, .header_portfolio_fold li > *{
     font-family: "peridot-pe-variable", sans-serif;
     font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
     font-size: var(--space-small);
+}
+.header_portfolio_fold li > *{
+    font-size: var(--space-smallest) !important;
 }
 
 .header_portfolio_fold{
@@ -211,6 +214,7 @@ hr{
     animation-fill-mode: forwards;
     transform: translateY(-130px) rotateZ(10deg);
     transition: top 50ms linear;
+    z-index: 10;
 }
 .pulldown{
     top: -12px !important;
