@@ -125,7 +125,7 @@ const setCurrentPage = (pageNum) => {
 
 // --- Onload ---
 
-window.onload = async function(){
+window.addEventListener("load", async () => {
     // Load JSON
     await processJSON();
 
@@ -156,4 +156,4 @@ window.onload = async function(){
             });
         }
     });
-}
+});
