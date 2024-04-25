@@ -32,13 +32,13 @@ window.onload = function applyCheck(){
             break;
     }
 
-    image_other.src = `img/night_light/nl_${other}.png`;
+    image_other.src = `/img/night_light/nl_${other}.png`;
 
     // Toggle dark mode via the night light
     var checkbox = document.getElementById("night-light");
     
     var v_checkbox = document.getElementById("night-light-label");
-    v_checkbox.style.backgroundImage = `url(img/night_light/nl_${theme}.png)`;
+    v_checkbox.style.backgroundImage = `url(/img/night_light/nl_${theme}.png)`;
 
     v_checkbox.addEventListener("mousedown", function() {
         this.classList.add("pulldown");
@@ -53,6 +53,6 @@ window.onload = function applyCheck(){
         }
         document.documentElement.setAttribute("data-theme", theme);
         localStorage.setItem("theme", theme);
-        v_checkbox.style.backgroundImage = `url(img/night_light/nl_${theme}.png)`;
+        v_checkbox.style.backgroundImage = `url(/img/night_light/nl_${theme}.png)`;
     });
 }

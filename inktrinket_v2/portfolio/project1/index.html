@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inktrinket</title>
-    <script type="text/javascript" src="../../main.js"></script>
-    <link rel="stylesheet" href="../../core.css">
-    <link rel="stylesheet" href="../../fonts.css">
-    <link rel="stylesheet" href="../../svg.css">
-    <link rel="stylesheet" href="../portfolio.css">
+    <script type="text/javascript" src="/main.js"></script>
+    <link rel="stylesheet" href="/core.css">
+    <link rel="stylesheet" href="/fonts.css">
+    <link rel="stylesheet" href="/svg.css">
+    <link rel="stylesheet" href="/portfolio/portfolio.css">
     <style type="text/css">
 
         /* General grid */
@@ -51,6 +51,10 @@
             width: 100%;
         }
 
+        #hero-image{
+            cursor: pointer;
+        }
+
         #image-reel{
             display: flex;
             flex-direction: row;
@@ -71,9 +75,56 @@
             height: calc(var(--space-largest) * 2);
         }
 
+        #blackout{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 6;
+            opacity: 0;
+            transition: opacity 500ms ease;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        #blackout.zoomed{
+            opacity: 0.5;
+            pointer-events: auto;
+            user-select: auto;
+        }
+
+        #image-zoom{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 55%;
+            height: 55%;
+            z-index: 7;
+            transform: translate(-50%, -100%);
+            opacity: 0;
+            transition: transform 500ms ease, opacity 500ms ease;
+            pointer-events: none;
+            user-select: none;
+        }
+        #image-zoom.zoomed{
+            transform: translate(-50%, -50%);
+            opacity: 1;
+        }
+
+        #image-zoom img{
+            width: 100%;
+            height: 100%;
+        }
+
     </style>
 </head>
 <body>
+
+    <div id="blackout" onclick="removeZoom(this)"></div>
+
+    <div id="image-zoom">
+        <img src="" alt="Full image">
+    </div>
     
     <!-- Borders -->
     <div class="site_frame frame_left" data-invert-dark="true"></div>
@@ -86,17 +137,17 @@
     <header class="header_flex">
         <nav>
             <ul class="header_nav_grid">
-                <li><a href="../../index.html"><img class="header_icon" src="../../svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
-                <li><a href="../../about.html">about</a></li>
+                <li><a href="/index.html"><img class="header_icon" src="/svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
+                <li><a href="/about.html">about</a></li>
                 <li class="header_nav_hover_list">
                     <p>portfolio</p>
                     <ul class="header_portfolio_fold">
-                        <li><a href="../../portfolio.html">professional</a></li>
-                        <li><a href="../../portfolio.html">personal</a></li>
+                        <li><a href="/portfolio.html">professional</a></li>
+                        <li><a href="/portfolio.html">personal</a></li>
                     </ul>
                 </li>
-                <li><a href="../../commissions.html">commissions</a></li>
-                <li><a href="../../contact.html">contact</a></li>
+                <li><a href="/commissions.html">commissions</a></li>
+                <li><a href="/contact.html">contact</a></li>
             </ul>
         </nav>
     </header>
@@ -107,7 +158,7 @@
                 <iframe id="hero-video" class="" width="100%" height="100%"
                     src="">
                 </iframe>
-                <img id="hero-image" class="" src="img/01.png">
+                <img id="hero-image" class="" src="" onclick="setZoom(this)">
             </div>
             <nav class="hero-gallery__image-reel">
                 <ul id="image-reel">

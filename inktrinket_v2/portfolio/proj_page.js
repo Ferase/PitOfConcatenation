@@ -3,8 +3,11 @@ const heroVideo = document.getElementById("hero-video");
 const heroImage = document.getElementById("hero-image");
 const imageReel = document.getElementById("image-reel");
 
+const zoomImage = document.getElementById("image-zoom");
+const blackoutBG = document.getElementById("blackout");
+
 var youtubeBase = "https://www.youtube.com/embed/"
-var reelItems;
+var reelItems = [];
 
 // Parse JSON
 const processJSON = async() => {
@@ -62,10 +65,31 @@ const setImage = (item) => {
     heroImage.classList.remove("disabled");
 }
 
+const setZoom = (item) => {
+    zoomImage.children[0].src = item.getAttribute("src");
+    zoomImage.classList.add("zoomed");
+    blackoutBG.classList.add("zoomed");
+}
+const removeZoom = (item) => {
+    zoomImage.classList.remove("zoomed");
+    blackoutBG.classList.remove("zoomed");
+}
+
+const setReelActive = (num) => {
+    if(reelItems[num].getAttribute("onclick") === "setYoutubeVideo(this)"){
+        setYoutubeVideo(reelItems[num]);
+    } else {
+        setImage(reelItems[num]);
+    }
+}
+
 
 
 // --- Onload ---
 
 window.addEventListener("load", async () => {
     await processJSON();
+    reelItems = document.querySelectorAll(".reel-item");
+    console.log(reelItems);
+    setReelActive(0);
 });
