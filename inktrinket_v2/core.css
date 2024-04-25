@@ -43,10 +43,10 @@ html[data-theme="dark"] [data-invert-dark="true"]{
 /* 4K */
 @media only screen and (min-width: 2500px){ /* 2500px or bigger */
     :root{
-        --space-smallest: 1.3rem;
-        --space-small: 1.8rem;
-        --space-large: 2.3rem;
-        --space-largest: 2.8rem;
+        --space-smallest: 1.35rem;
+        --space-small: 1.85rem;
+        --space-large: 2.35rem;
+        --space-largest: 2.85rem;
     }
 }
 

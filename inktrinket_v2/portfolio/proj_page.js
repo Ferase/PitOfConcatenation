@@ -23,13 +23,32 @@ const processJSON = async() => {
             console.error("Unable to fetch data:", error));
 }
 
+const setYoutubeVideo = () => {
+
+    heroImage.classList.add("disabled");
+
+    heroVideo.attributes.
+
+    heroVideo.classList.remove("disabled");
+
+}
+
 // Create reel item
-const createImageReel = async (image, title) => {
-    var li = document.createElement("li");
+const createImageReel = async (func, image, title) => {
+    var li = document.createElement("li"),
+        src = `img/${image}`;
+
+    switch(func){
+        case "setYoutubeVideo":
+            src = "https://www.youtube.com/embed/";
+            break;
+        default:
+            break;
+    }
 
     li.innerHTML = `
-        <div class="reel-item">
-            <img class="reel-thumb" src="img/${image}" alt="${title}">
+        <div class="reel-item" onclick="${func}">
+            <img class="reel-thumb" src="${src}" alt="${title}">
         </div>
     `;
     imageReel.appendChild(li);
