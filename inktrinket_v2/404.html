@@ -41,11 +41,15 @@
         }
 
         .q-mark,.q-mark::before,.q-mark::after{
+            --font-size: calc(var(--txt-h1));
+            --font-mod: 1rem;
+
             position: absolute;
             font-family: "acumin-variable", sans-serif;
-            font-size: calc(var(--txt-h1));
+            font-size: var(--font-size);
             transform: translate(-50%, -50%);
             pointer-events: none;
+            user-select: none;
         }
         .q-mark::before,.q-mark::after{
             content: "?";
@@ -60,17 +64,20 @@
             font-variation-settings: "wght" 100, "wdth" 100, "slnt" 0;
             top: 150%;
             left: -30%;
+            font-size: calc(var(--font-size) - var(--font-mod));
         }
         .q-mark__l::after{
             font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
             top: 105%;
             left: 180%;
+            font-size: calc(var(--font-size) + var(--font-mod));
         }
         
         .q-mark__r{
             font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
             top: 50%;
             left: 65%;
+            font-size: calc(var(--font-size) + var(--font-mod));
         }
         .q-mark__r::before{
             font-variation-settings: "wght" 200, "wdth" 100, "slnt" 0;
@@ -81,6 +88,7 @@
             font-variation-settings: "wght" 100, "wdth" 100, "slnt" 0;
             top: 90%;
             left: 230%;
+            font-size: calc(var(--font-size) - var(--font-mod));
         }
 
     </style>

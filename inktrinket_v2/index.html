@@ -5,34 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inktrinket</title>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+        var image_crane = new Image();
+        image_crane.src = "img/anim/index_crane.webp";
+    </script>
     <link rel="stylesheet" href="core.css">
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="svg.css">
     <style type="text/css">
 
+        body{
+            height: 100vh;
+        }
+
         /* General grid */
         .grid-main{
             display: grid;
+            grid-template-columns: repeat(4, 25%);
             grid-template-areas: 
-                "a a a b"
-                "c c c c";
+                "a a a a"
+                "b b c c";
             gap: var(--space-small);
             max-width: 50%;
             margin: 0 auto;
         }
+        /* .grid-main > *:nth-child(even){
+            background-color: #0f0;
+        }
+        .grid-main > *:nth-child(odd){
+            background-color: #f0f;
+        } */
 
         .grid-main__a{
             grid-area: a;
             display: grid;
-            /* place-items: center; */
-            max-width: 75%;
+        }
+        .grid-main__a svg{
+            max-width: 50%;
         }
         .grid-main__b{
             grid-area: b;
+            /* text-align: center; */
         }
         .grid-main__c{
             grid-area: c;
-            text-align: center;
+            width: 100%;
         }
 
         /* Hero Banner */
@@ -115,6 +132,16 @@
             }
         }
 
+        #crane-anim{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform-origin: center right;
+            transform: translateY(-50%);
+            max-height: 100vh;
+            user-select: none;
+        }
+
     </style>
 </head>
 <body>
@@ -144,6 +171,11 @@
             </ul>
         </nav>
     </header>
+
+    <img id="crane-anim" src="" alt="Crane arm animation" data-invert-dark="true">
+    <script type="text/javascript">
+        document.getElementById("crane-anim").src = image_crane.src;
+    </script>
 
     <div class="grid-main">
         <div class="grid-main__a">
@@ -182,11 +214,11 @@
                 <path class="hero-banner__border" d="M68.85,586.74c-32.49,72.05-22.23,121.52,66.78,129.39-11.55,80.6,34.82,114.3,124.79,112.7,47.45,77.6,107.78,83.33,175.73,46.59"/>
             </svg>
         </div>
-        <div class="grid-main__b">
-
-        </div>
-        <main class="grid-main__c">
+        
+        <main class="grid-main__b">
             <p class="paragraph-big">feel free to have a look around and click on as many things as you'd like! the tabs at the top of the page should help you find what you are looking for. you can also click on things repeatedly, like i always do, but it won't do anything. :3</p>
+        </main>
+        <main class="grid-main__c">
         </main>
     </div>
 

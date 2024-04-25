@@ -64,10 +64,12 @@
             display: grid;
             text-align: center;
             gap: var(--space-smallest);
+            transition: transform 300ms ease;
         }
         .v-card .v-card__img{
             width: 100%;
-            height: calc(var(--space-largest) * 3);
+            aspect-ratio: 16 / 9;
+            border-radius: var(--space-smallest);
             position: relative;
             overflow: hidden;
         }
@@ -85,12 +87,15 @@
             font-size: var(--txt-h5);
         }
 
+        .v-card:hover{
+            transform: scale(105%);
+        }
 
         .grid-main__pagination ul li.hidden{
             display: none;
         }
 
-        .pagination-container {
+        .pagination-container{
             display: flex;
             align-items: center;
             bottom: 0;
@@ -101,6 +106,7 @@
             font-family: "acumin-variable", sans-serif;
             font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
             font-size: var(--txt-h5);
+            color: var(--clr-darkest);
             background-color: var(--clr-lightest);
             border: none;
             cursor: pointer;
@@ -114,14 +120,9 @@
         }
 
         .pagination-number:hover,
-        .pagination-button:not(.disabled):hover {
+        .pagination-button:not(.disabled):hover{
             color: var(--clr-lightest);
             background: var(--clr-darkest);
-        }
-
-        .pagination-number.active {
-            color: var(--clr-darkest);
-            background-color: var(--clr-lightest);
         }
 
 
