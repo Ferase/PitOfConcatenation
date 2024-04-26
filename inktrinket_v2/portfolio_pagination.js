@@ -96,6 +96,8 @@ const appendPageNumber = (index) => {
 
 // Append page numbers to array
 const getPaginationNumbers = () => {
+    paginationNumbers.innerHTML = "";
+    
     for (let i = 1; i <= pageCount; i++) {
         appendPageNumber(i);
     }
@@ -130,6 +132,19 @@ const setCurrentPage = (pageNum) => {
     });
 };
 
+const refreshPageNumbers = () => {
+    // Number button events
+    document.querySelectorAll(".pagination-number").forEach((button) => {
+        const pageIndex = Number(button.getAttribute("page-index"));
+
+        if (pageIndex) {
+            button.addEventListener("click", () => {
+                setCurrentPage(pageIndex);
+            });
+        }
+    });
+}
+
 
 
 // --- Search ---
@@ -147,8 +162,6 @@ const search = () => {
             let queries = start_data[key]["tags"].concat([start_data[key]["title"].toLowerCase()]);
             let subQueries = queries.filter(str => str.includes(searchTerm));
 
-            console.log(subQueries);
-
             if(subQueries.length > 0){
                 new_data[key] = {
                     "title": start_data[key]["title"],
@@ -157,9 +170,6 @@ const search = () => {
             }
         }
 
-        listItems = paginatedList.querySelectorAll("li");
-        pageCount = Math.ceil(listItems.length / paginationLimit);
-
     } else {
         new_data = start_data;
     }
@@ -167,6 +177,13 @@ const search = () => {
     for (let [key, value] of Object.entries(new_data)) {
         createPortfolioItem(key, new_data[key]["title"], new_data[key]["tags"]);
     }
+
+    listItems = paginatedList.querySelectorAll("li");
+    pageCount = Math.ceil(listItems.length / paginationLimit);
+
+    getPaginationNumbers();
+    setCurrentPage(1);
+    refreshPageNumbers();
 
 };
 
@@ -199,16 +216,7 @@ window.addEventListener("load", async () => {
         setCurrentPage(currentPage + 1);
     });
 
-    // Number button events
-    document.querySelectorAll(".pagination-number").forEach((button) => {
-        const pageIndex = Number(button.getAttribute("page-index"));
-
-        if (pageIndex) {
-            button.addEventListener("click", () => {
-                setCurrentPage(pageIndex);
-            });
-        }
-    });
+    refreshPageNumbers();
 
     searchButton.addEventListener("click", () => {
         search();

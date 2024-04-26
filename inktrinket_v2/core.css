@@ -110,7 +110,7 @@ hr{
 
 /* Button ------------------------ */
 
-button{
+.button{
     border: solid 2px var(--clr-darkest);
     border-radius: var(--space-smallest);
     padding: calc(var(--space-small) / 3);
