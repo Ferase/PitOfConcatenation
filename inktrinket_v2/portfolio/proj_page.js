@@ -1,3 +1,6 @@
+const path = window.location.pathname;
+const project = path.substring(path.lastIndexOf("/", path.lastIndexOf("/") - 1), path.lastIndexOf("/")).slice(1);
+
 const portfolioGallery = document.getElementById("grid-main__hero-gallery");
 const heroVideo = document.getElementById("hero-video");
 const heroImage = document.getElementById("hero-image");
@@ -11,7 +14,7 @@ var reelItems = [];
 
 // Parse JSON
 const processJSON = async() => {
-    await fetch("./data.json")
+    await fetch("/portfolio/main_portfolio.json")
         .then((res) => {
             if (!res.ok) {
                 throw new Error(`HTTP error! Status: ${res.status}`);
@@ -19,12 +22,15 @@ const processJSON = async() => {
             return res.json();
         })
         .then((data) => {
-            for(let i = 0; i < data["videos"].length; i++){
-                createReelVideo(data["videos"][i]);
-            };
-            for(let j = 0; j < data["images"].length; j++){
-                createReelImage(data["images"][j]["image"], data["images"][j]["title"]);
-            };
+            let getVideos = data[project]["videos"];
+            let getImages = data[project]["images"];
+
+            getVideos.forEach((video) => {
+                createReelVideo(video);
+            });
+            getImages.forEach((image) => {
+                createReelImage(image["image"], image["title"]);
+            });
         })
         .catch((error) => 
             console.error("Unable to fetch data:", error));
@@ -90,6 +96,6 @@ const setReelActive = (num) => {
 window.addEventListener("load", async () => {
     await processJSON();
     reelItems = document.querySelectorAll(".reel-item");
-    console.log(reelItems);
+    
     setReelActive(0);
 });

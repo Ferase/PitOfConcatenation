@@ -7,6 +7,7 @@ a:link,a:hover,a:visited,a:invalid{color: var(--clr-darkest);}
 nav ul{list-style: none;}
 body,html{scrollbar-width: none; color: var(--clr-darkest); background-color: var(--clr-lightest);}
 input:focus{outline: none;}
+iframe{border: none;}
 
 
 
@@ -103,6 +104,21 @@ hr{
 }
 .low_margin_large{
     margin-bottom: var(--space-large);
+}
+
+
+
+/* Button ------------------------ */
+
+button{
+    border: solid 2px var(--clr-darkest);
+    border-radius: var(--space-smallest);
+    padding: calc(var(--space-small) / 3);
+    color: var(--clr-lightest);
+    background-color: var(--clr-darkest);
+    font-family: "peridot-pe-variable", sans-serif;
+    font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
+    font-size: var(--txt-h6);
 }
 
 

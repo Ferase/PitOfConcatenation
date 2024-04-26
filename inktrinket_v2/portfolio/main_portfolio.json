@@ -1,0 +1,54 @@
+{
+    "project1": {
+        "title": "Project Title",
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4"
+        ],
+        "videos": [
+            "f9ZOBYzTpUQ"
+        ],
+        "images": [
+            {
+                "image": "01.png",
+                "title": "First image"
+            },
+            {
+                "image": "02.png",
+                "title": "Second image"
+            },
+            {
+                "image": "03.png",
+                "title": "Third image"
+            }
+        ]
+    },
+    "project2": {
+        "title": "Project Title",
+        "tags": [
+            "tag5",
+            "tag6",
+            "tag7",
+            "tag8"
+        ],
+        "videos": [
+            "pr7Z7ntzoUY"
+        ],
+        "images": [
+            {
+                "image": "01.png",
+                "title": "First image"
+            },
+            {
+                "image": "02.png",
+                "title": "Second image"
+            },
+            {
+                "image": "03.png",
+                "title": "Third image"
+            }
+        ]
+    }
+}
