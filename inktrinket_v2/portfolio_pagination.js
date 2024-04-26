@@ -144,18 +144,16 @@ const search = () => {
     if (searchTerm && searchTerm.trim().length > 0){
 
         for (let [key, value] of Object.entries(start_data)) {
-            let queries = start_data[key]["tags"].concat([start_data[key]["title"]]);
+            let queries = start_data[key]["tags"].concat([start_data[key]["title"].toLowerCase()]);
+            let subQueries = queries.filter(str => str.includes(searchTerm));
 
-            switch(queries.includes(searchTerm)){
-                case true:
-                    new_data[key] = {
-                        "title": start_data[key]["title"],
-                        "tags": start_data[key]["tags"]
-                    }
-                    break;
-                default:
-                    console.log(`Wanted any from ${start_data[key]["tags"]}, got ${searchTerm} instead`)
-                    break;
+            console.log(subQueries);
+
+            if(subQueries.length > 0){
+                new_data[key] = {
+                    "title": start_data[key]["title"],
+                    "tags": start_data[key]["tags"]
+                }
             }
         }
 
