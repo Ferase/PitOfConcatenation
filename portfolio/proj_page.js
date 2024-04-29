@@ -41,7 +41,7 @@ const createReelVideo = async (video) => {
     var li = document.createElement("li");
 
     li.innerHTML = `
-        <div class="reel-item" data-video="${video}" onclick="setYoutubeVideo(this)">
+        <div class="reel-item" data-video="${video}" onclick="setYoutubeVideo(this)" data-invert-dark="true">
             <img class="reel-thumb" src="../../img/icons/thumb_video.png" alt="Video">
         </div>
     `;
