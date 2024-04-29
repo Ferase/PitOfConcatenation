@@ -64,6 +64,10 @@
             pointer-events: none;
         }
 
+        #svg-home{
+            --js-clr-svg-hue: 200deg;
+        }
+
         .svg-home__dark,
         #inktrinket-char path,
         #inktrinket-char circle{
@@ -86,11 +90,11 @@
 
         .svg-home__text__drops path,
         .svg-home__shape__hi path {
-            fill: #007c99;
+            fill: hsl(calc(var(--js-clr-svg-hue) - 9deg), 100%, 30%);
         }
 
         .svg-home__shape-splash {
-            fill: #73d0ff;
+            fill: hsl(var(--js-clr-svg-hue) 100% 73%);
         }
 
         .svg-home__stroke02 {
@@ -164,7 +168,7 @@
 
     <div class="grid-main">
         <div class="grid-main__a">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2270.87 991.6">
+            <svg id="svg-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2270.87 991.6">
                 <g id="wires">
                     <path class="svg-home__stroke01" d="M0,403.84c385.75,321.91,1302.78,314.41,1630.22,109.73"/>
                     <path class="svg-home__stroke01" d="M0,444.39c495.61,134.18,1193.64,278.49,1702.21,106.92"/>
@@ -253,6 +257,11 @@
                 </g>
             </svg>
         </div>
+        
+        <script type="text/javascript">
+            var svg = document.getElementById("svg-home")
+            svg.style.setProperty("--js-clr-svg-hue", `${Math.floor(Math.random() * 360)}deg`);
+        </script>
         
         <main class="grid-main__b">
             <p class="paragraph-big">feel free to have a look around and click on as many things as you'd like! the tabs at the top of the page should help you find what you are looking for. you can also click on things repeatedly, like i always do, but it won't do anything. :3</p>
