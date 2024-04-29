@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "acumin-variable";
+    src: url("font/acumin_variable.otf");
+}
+@font-face {
+    font-family: "peridot-pe-variable";
+    src: url("font/peridot_variable.otf");
+}
+
+:root{
+    --mod: 0.3rem;
+    --txt-lh: 2rem;
+    --txt-h1: 2.5rem;
+    --txt-h2: calc(var(--txt-h1) - var(--mod));
+    --txt-h3: calc(var(--txt-h2) - var(--mod));
+    --txt-h4: calc(var(--txt-h3) - var(--mod));
+    --txt-h5: calc(var(--txt-h4) - var(--mod));
+    --txt-h6: calc(var(--txt-h5) - var(--mod));
+    --txt-p: var(--txt-h6);
+}
+
+/* 4K */
+@media only screen and (min-width: 2500px){ /* 2500px or bigger */
+    :root{
+        --txt-lh: 2.5rem;
+        --txt-h1: 3rem;
+    }
+}
+
+/* Phone */
+@media only screen and (max-width: 768px){ /* 768px or smaller */
+    :root{
+        --txt-lh: 1rem;
+        --txt-h1: 1.25rem;
+    }
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    position: relative;
+    font-family: "peridot-pe-variable", sans-serif;
+    line-height: var(--txt-lh);
+}
+h1,h2,h3,h4,h5,h6,p{
+    position: relative;
+    font-family: "peridot-pe-variable", sans-serif;
+    line-height: var(--txt-lh);
+}
+h1{
+    font-family: "acumin-variable", sans-serif;
+    font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
+    font-size: var(--txt-h1);
+    line-height: calc(var(--txt-lh) + calc(var(--txt-lh) /  2));
+}
+h2{
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+    font-size: var(--txt-h2);
+}
+h3{
+    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    font-size: var(--txt-h3);
+}
+h4{
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+    font-size: var(--txt-h4);
+}
+h5{
+    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    font-size: var(--txt-h5);
+}
+h6{
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+    font-size: var(--txt-h6);
+}
+p{
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+    font-size: var(--txt-p);
+}
+p strong{font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;}
+p em{font-variation-settings: "wght" 300, "wdth" 100, "ital" 300;}
+p strong em, p em strong{font-variation-settings: "wght" 400, "wdth" 100, "ital" 300;}
+
+p.paragraph-big{
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+    font-size: calc(var(--txt-p) + calc(var(--txt-p) / 3));
+}

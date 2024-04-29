@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inktrinket</title>
+    <script type="text/javascript" src="../../main.js"></script>
+    <link rel="stylesheet" href="../../core.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="stylesheet" href="../../svg.css">
+    <link rel="stylesheet" href="../portfolio.css">
+    <style type="text/css">
+
+        /* General grid */
+        .grid-main{
+            --gap: var(--space-small);
+
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-areas:
+                "video info";
+            gap: var(--gap);
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        #grid-main__hero-gallery{
+            grid-area: video;
+            display: grid;
+            gap: var(--space-smallest);
+            place-items: start;
+            align-content: flex-start;
+            grid-auto-flow: column;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, auto);
+        }
+
+        .hero-gallery__image-container{
+            position: relative;
+            aspect-ratio: 16 / 9;
+            width: 100%;
+        }
+        .hero-gallery__image-container *{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
+            overflow: hidden;
+            object-fit: contain;
+            border-radius: var(--space-smallest);
+        }
+
+        .hero-gallery__image-reel{
+            width: 100%;
+        }
+
+        #hero-image{
+            cursor: pointer;
+        }
+
+        #image-reel{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: var(--space-smallest);
+            overflow-x: auto;
+            max-height: 100%;
+            padding-bottom: var(--space-smallest);
+        }
+
+        .reel-item{
+            cursor: pointer;
+        }
+
+        .reel-thumb{
+            aspect-ratio: 16 / 9;
+            border-radius: var(--space-smallest);
+            height: calc(var(--space-largest) * 2);
+        }
+
+        #blackout{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 6;
+            opacity: 0;
+            transition: opacity 500ms ease;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        #blackout.zoomed{
+            opacity: 0.5;
+            pointer-events: auto;
+            user-select: auto;
+        }
+
+        #image-zoom{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 55%;
+            height: 55%;
+            z-index: 7;
+            transform: translate(-50%, -100%);
+            opacity: 0;
+            transition: transform 500ms ease, opacity 500ms ease;
+            pointer-events: none;
+            user-select: none;
+        }
+        #image-zoom.zoomed{
+            transform: translate(-50%, -50%);
+            opacity: 1;
+        }
+
+        #image-zoom img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .grid-main__info{
+            grid-area: info;
+            display: grid;
+            grid-template-areas:
+                "a"
+                "b"
+                "c";
+            grid-gap: var(--gap);
+        }
+
+        .grid-main__heading{
+            grid-area: a;
+            /* margin-bottom: calc(var(--gap) * -1); */
+        }
+        .grid-main__paragraph{
+            grid-area: b;
+            place-self: start;
+        }
+        .grid-main__programs{
+            grid-area: c;
+            display: grid;
+            gap: var(--space-smallest);
+        }
+
+        #program-list{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: start;
+            gap: calc(var(--space-smallest) / 2);
+            flex-wrap: wrap;
+            list-style: none;
+            max-width: 50%;
+        }
+        #program-list li img{
+            max-width: var(--space-largest);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="blackout" onclick="removeZoom(this)"></div>
+
+    <div id="image-zoom">
+        <img src="" alt="Full image">
+    </div>
+    
+    <!-- Borders -->
+    <div class="site_frame frame_left" data-invert-dark="true"></div>
+    <div class="site_frame frame_right" data-invert-dark="true"></div>
+
+    <!-- Night Light -->
+    <input id="night-light" type="checkbox"><label id="night-light-label" for="night-light" title="toggle color theme" aria-label="Toggle color theme" data-invert-dark="true"></label>
+
+    <!-- Heading -->
+    <header class="header_flex" aria-label="Site header">
+        <nav>
+            <ul class="header_nav_grid">
+                <li><a href="../../index.html" title="go home" aria-label="Return to home page"><img class="header_icon" src="../../svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
+                <li><a href="../../about.html" aria-label="About page">about</a></li>
+                <li class="header_nav_hover_list" aria-label="Portfolio">
+                    <p>portfolio</p>
+                    <ul class="header_portfolio_fold">
+                        <li><a href="../../portfolio.html" aria-label="Professional portfolio">professional</a></li>
+                        <li><a href="../../portfolio.html" aria-label="Personal work portfolio">personal</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../commissions.html" aria-label="Commissions page">commissions</a></li>
+                <li><a href="../../contact.html" aria-label="Contact page">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid-main">
+        <div id="grid-main__hero-gallery">
+            <div class="hero-gallery__image-container">
+                <iframe id="hero-video" class="" width="100%" height="100%"
+                    src="">
+                </iframe>
+                <img id="hero-image" class="" src="" onclick="setZoom(this)">
+            </div>
+            <nav class="hero-gallery__image-reel">
+                <ul id="image-reel">
+
+                </ul>
+            </nav>
+        </div>
+
+        <main class="grid-main__info">
+            <h1 class="grid-main__heading">project title goes here</h1>
+            <p class="grid-main__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde totam eaque cumque quae. Aut error nam quod. Ipsum harum atque repudiandae illo itaque! Esse nihil sint id quos eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde totam eaque cumque quae. Aut error nam quod. Ipsum harum atque repudiandae illo itaque! Esse nihil sint id quos eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde totam eaque cumque quae. Aut error nam quod. Ipsum harum atque repudiandae illo itaque! Esse nihil sint id quos eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde totam eaque cumque quae. Aut error nam quod. Ipsum harum atque repudiandae illo itaque! Esse nihil sint id quos eius!</p>
+            <div class="grid-main__programs">
+                <h3>programs used</h3>
+                <ul id="program-list">
+                    <li><img src="../../svg/programs/program_premiere.png" alt="Adobe Premiere Pro" title="Adobe Premiere Pro" aria-label="Adobe Premiere Pro" data-invert-dark="true"></li>
+                    <li><img src="../../svg/programs/program_aftereffects.png" alt="Adobe After Effects" title="Adobe After Effects" aria-label="Adobe After Effects" data-invert-dark="true"></li>
+                    <li><img src="../../svg/programs/program_audition.png" alt="Adobe Audition" title="Adobe Audition" aria-label="Adobe Audition" data-invert-dark="true"></li>
+                    <li><img src="../../svg/programs/program_photoshop.png" alt="Adobe Photoshop" title="Adobe Photoshop" aria-label="Adobe Photoshop" data-invert-dark="true"></li>
+                    <li><img src="../../svg/programs/program_illustrator.png" alt="Adobe Illustrator" title="Adobe Illustrator" aria-label="Adobe Illustrator" data-invert-dark="true"></li>
+                    <li><img src="../../svg/programs/program_blender.png" alt="Blender" aria-label="Blender" title="Blender" data-invert-dark="true"></li>
+                    <li><img src="../../svg/programs/program_msoffice.png" alt="Microsoft Office" title="Microsoft Office" aria-label="Microsoft Office" data-invert-dark="true"></li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="../proj_page.js"></script>
+</body>
+</html>

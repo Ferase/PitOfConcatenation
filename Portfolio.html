@@ -1,135 +1,199 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link href="styles_pageroots.css" rel="stylesheet" type="text/css">
-<link href="BG/bg2.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-    
-    
-    
-</style>
-<title>Pit of Portfolios</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inktrinket</title>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="svg.css">
+    <style type="text/css">
 
+        /* General grid */
+        .grid-main{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            gap: calc(var(--space-largest) * 2);
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        .grid-main__a{
+            display: grid;
+            gap: var(--space-large);
+            text-align: center;
+        }
+
+        .grid-main__pagination{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            gap: var(--space-small);
+        }
+
+        .grid-main__pagination ul{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 22vh);
+            gap: var(--space-small);
+            list-style: none;
+        }
+
+        #search{
+            display: grid;
+            gap: var(--space-smallest);
+            grid-auto-flow: column;
+            align-items: center;
+            max-width: 60%;
+            margin-inline: auto;
+        }
+        #search-bar{
+            max-width: 100%;
+            height: var(--space-large);
+            color: var(--clr-darkest);
+            background-color: var(--clr-lightest);
+            border: solid 3px var(--clr-darkest);
+            border-radius: var(--space-smallest);
+            padding: var(--space-smallest);
+
+            font-family: "peridot-pe-variable", sans-serif;
+            font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
+            font-size: var(--txt-h5);
+        }
+        #search-bar:focus{
+            border: solid 3px var(--clr-darkest);
+            border-color: var(--clr-darkest);
+        }
+        #search-submit{
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .v-card{
+            display: grid;
+            text-align: center;
+            gap: var(--space-smallest);
+            transition: transform 300ms ease;
+        }
+        .v-card .v-card__img{
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: var(--space-smallest);
+            position: relative;
+            overflow: hidden;
+        }
+        .v-card .v-card__img img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
+        }
+
+        .v-card h2{
+            font-family: "acumin-variable", sans-serif;
+            font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+            font-size: var(--txt-h5);
+        }
+
+        .v-card:hover{
+            transform: scale(105%);
+        }
+
+        .grid-main__pagination ul li.hidden{
+            display: none;
+        }
+
+        .pagination-container{
+            display: flex;
+            align-items: center;
+            bottom: 0;
+            justify-content: center;
+        }
+        .pagination-number,
+        .pagination-button{
+            font-family: "acumin-variable", sans-serif;
+            font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
+            font-size: var(--txt-h5);
+            color: var(--clr-darkest);
+            background-color: var(--clr-lightest);
+            border: none;
+            cursor: pointer;
+            height: var(--space-largest);
+            width: var(--space-largest);
+        }
+
+        .pagination-number.active{
+            color: var(--clr-lightest);
+            background-color: var(--clr-darkest);
+        }
+
+        .pagination-number:hover,
+        .pagination-button:not(.disabled):hover{
+            color: var(--clr-lightest);
+            background: var(--clr-darkest);
+        }
+
+
+    </style>
+</head>
 <body>
     
-    <div class="leaf">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-    </div>
-    
-    <header class="headerAnim">
-            <h4>Pit of</h4>
-            <h1>Portfolios</h1>
+    <!-- Borders -->
+    <div class="site_frame frame_left" data-invert-dark="true"></div>
+    <div class="site_frame frame_right" data-invert-dark="true"></div>
+
+    <!-- Night Light -->
+    <input id="night-light" type="checkbox"><label id="night-light-label" for="night-light" title="toggle color theme" aria-label="Toggle color theme" data-invert-dark="true"></label>
+
+    <!-- Heading -->
+    <header class="header_flex" aria-label="Site header">
+        <nav>
+            <ul class="header_nav_grid">
+                <li><a href="index.html" title="go home" aria-label="Return to home page"><img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
+                <li><a href="about.html" aria-label="About page">about</a></li>
+                <li class="header_nav_hover_list" aria-label="Portfolio">
+                    <p>portfolio</p>
+                    <ul class="header_portfolio_fold">
+                        <li><a href="portfolio.html" aria-label="Professional portfolio">professional</a></li>
+                        <li><a href="portfolio.html" aria-label="Personal work portfolio">personal</a></li>
+                    </ul>
+                </li>
+                <li><a href="commissions.html" aria-label="Commissions page">commissions</a></li>
+                <li><a href="contact.html" aria-label="Contact page">contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <div id="gridContainer_Main">
-        <main>
-            <div class="bodyHeader">
-                <h1>Dropping in for Some Portfolios?</h1>
-            </div>
-            
-            <p>You've found yourself in the chasm of projects, experiments, and downright fun that resulted from my education! From high school to college, this is where you'll find my progression and evolution during my academic life. Get ready to dive in!</p>
-            
-            <div class="bodyHeader">
-                <h1>Hempstead High School</h1>
-                <h2>(2014-2018)</h2>
-            </div>
-            
-            <p>By the time I took my first art class at Hempstead, I found my calling. Had I never had these classes and never learned the skills I did, I don't know if I would be where I am today. While the archive here is limited, this really <strong>was</strong> my defining time.</p>
-        </main>
-        
-        <section id="grid_miscList">
-            <div>
-                <h1>Year I</h1>
-                <h3>Freshman</h3>
-            </div>
-            <div>
-                <h1>Year II</h1>
-                <h3>Sophomore</h3>
-            </div>
-            <div>
-                <h1>Year III</h1>
-                <h3>Junior</h3>
-            </div>
-            <div class="year4">
-                <h1>Year IV</h1>
-                <h3>Senior</h3>
+
+    <div class="grid-main">
+        <section class="grid-main__a">
+            <h1>portfolio title</h1>
+            <div id="search">
+                <input id="search-bar" type="text" aria-label="Search bar">
+                <button id="search-submit" class="button" aria-label="Submit search">submit</button>
             </div>
         </section>
-        
-        <main>
-            <div class="bodyHeader">
-                <h1>Clarke University</h1>
-                <h2>(2018-present)</h2>
-            </div>
-            
-            <p><strong>Much</strong> has happened between 2018 and 2022 that changed my world. I learned so much, I've experienced great things, and I had met so many talented and awesome people. This period of time in my life truly opened my eyes to the vast realm of art and design, and it played an integral role in defining me as a designer and a person.</p>
+
+        <main class="grid-main__pagination">
+            <ul id="paginated-list">
+
+            </ul>
+            <nav class="pagination-container">
+                <button class="pagination-button" id="prev-button" title="Previous page" aria-label="Previous page">
+                    &lt;
+                </button>
+                <div id="pagination-numbers">
+              
+                </div>
+                <button class="pagination-button" id="next-button" title="Next page" aria-label="Next page">
+                    &gt;
+                </button>
+            </nav>
         </main>
-        
-        <section id="grid_miscList">
-            <div>
-                <h1>Year I</h1>
-                <h3>Freshman</h3>
-            </div>
-            <div>
-                <h1>Year II</h1>
-                <h3>Sophomore</h3>
-            </div>
-            <div>
-                <h1>Year III</h1>
-                <h3>Junior</h3>
-            </div>
-            <div class="year4">
-                <h1>Year IV</h1>
-                <h3>Senior</h3>
-            </div>
-        </section>
     </div>
-    
-    <footer id="gridContainer_Footer">
-        <div class="footerAppear">
-            <nav>
-                <div>
-                    <a href="Portfolio.html"><span class="mask">Portfolio</span></a>
-                    <p class="hide">Pit of Portfolios</p>
-                </div>
-                <div>
-                    <a href="#"><span class="maskNo">Blender</span></a>
-                    <p class="hide">In progress...</p>
-                </div>
-                <div>
-                    <a href="#"><span class="maskNo">AI Land</span></a>
-                    <p class="hide">In progress...</p>
-                </div>
-                <div>
-                    <a href="Misc.html"><span class="mask">Misc</span></a>
-                    <p class="hide">Other cool stuff!</p>
-                </div>
-                <div>
-                    <a href="About.html"><span class="mask">About</span></a>
-                    <p class="hide">What's The Pit?</p>
-                </div>
-            </nav>
-            <nav class="homeNav">
-                <div>
-                    <a href="index.html" class="home"><span class="mask">Home</span></a>
-                    <p class="hide">Back into Freefall</p>
-                </div>
-            </nav>
-        </div>
-    </footer>
-    
+
+    <script type="text/javascript" src="portfolio_pagination.js"></script>
 </body>
 </html>

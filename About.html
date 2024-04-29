@@ -1,104 +1,97 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link href="styles_pageroots.css" rel="stylesheet" type="text/css">
-<link href="BG/bg2.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-    
-    
-    
-</style>
-<title>Pit of Portfolios</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inktrinket</title>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="svg.css">
+    <style type="text/css">
 
+        /* General grid */
+        .grid-main{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        .grid-main__a{
+            grid-area: a;
+        }
+        .grid-main__a p{
+            margin-bottom: var(--space-small);
+        }
+
+        .steph-img{
+            --gap: var(--space-large);
+            display: grid;
+            gap: calc(var(--gap) / 2);
+            float: right;
+            max-width: 50%;
+            margin-left: calc(var(--gap) / 2);
+            padding-left: calc(var(--gap) / 2);
+        }
+        .steph-img img{
+            max-width: 100%;
+        }
+
+        @media only screen and (max-width: 1050px){
+            .steph-img{
+                float: none;
+                max-width: 100%;
+                margin-left: initial;
+                padding-left: initial;
+            }
+        }
+
+    </style>
+</head>
 <body>
     
-    <div class="leaf">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-        <img src="Images/fall.png" alt="Falling Star">
-    </div>
-    
-    <header class="headerAnim">
-            <h1>About</h1>
+    <!-- Borders -->
+    <div class="site_frame frame_left" data-invert-dark="true"></div>
+    <div class="site_frame frame_right" data-invert-dark="true"></div>
+
+    <!-- Night Light -->
+    <input id="night-light" type="checkbox"><label id="night-light-label" for="night-light" title="toggle color theme" aria-label="Toggle color theme" data-invert-dark="true"></label>
+
+    <!-- Heading -->
+    <header class="header_flex" aria-label="Site header">
+        <nav>
+            <ul class="header_nav_grid">
+                <li><a href="index.html" title="go home" aria-label="Return to home page"><img class="header_icon" src="svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
+                <li><a href="about.html" aria-label="About page">about</a></li>
+                <li class="header_nav_hover_list" aria-label="Portfolio">
+                    <p>portfolio</p>
+                    <ul class="header_portfolio_fold">
+                        <li><a href="portfolio.html" aria-label="Professional portfolio">professional</a></li>
+                        <li><a href="portfolio.html" aria-label="Personal work portfolio">personal</a></li>
+                    </ul>
+                </li>
+                <li><a href="commissions.html" aria-label="Commissions page">commissions</a></li>
+                <li><a href="contact.html" aria-label="Contact page">contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <div id="gridContainer_Main">
-        
-        
-        <main>
-            
-            <div class="aboutFlex">
-                <img src="Images/parker.png" alt="Parker Lippstock" class="aboutMe_Pic">
-        
-                <aside>
-                    <h2>Parker Lippstock</h2>
-                    <h3>Designer &amp; Developer of The Pit</h3><br>
-                    <p>I'm a 21 year-old student at Clarke University majoring in graphic desgin. I've loved art all my life, and after my experiences in high school, I knew what to pursue. I also love 3D modeling, learning and writing code, experimenting with augumented reality and VR development, and much more!</p>
-                </aside>
+
+    <div class="grid-main">
+        <main class="grid-main__a">
+            <div class="steph-img">
+                <img src="img/steph_gerard.GIF" alt="Steph Gerard">
+                <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea saepe architecto.</em></p>
             </div>
-            
-            <div class="bodyHeader">
-                <h1>The Pit</h1>
-            </div>
-            
-            <p>Welcome to <strong>The Pit!</strong> This is my repository for all of my past and ongoing work in the field of graphic, 3D, and experimental art + design. It's still under construction, so stuff is being added on a fairly regular basis, so keep an eye out!</p>
-            
-            <p>The purpose of the site overall is to provide a solid and stable place to share my work and processes, and therefore there will likely be a wide variety of content to be found once I begin filling the site. So, if you're interested, take the plunge! The Pit is waiting...</p>
+            <h1 class="low_margin">about stuff</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea saepe architecto.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea saepe architecto, nobis temporibus neque tenetur molestias quaerat eveniet pariatur! Eum amet odio a mollitia, eveniet accusantium porro iste deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea saepe architecto, nobis temporibus neque tenetur molestias quaerat eveniet pariatur! Eum amet odio a mollitia, eveniet accusantium porro iste deleniti?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea saepe architecto, nobis temporibus neque tenetur molestias quaerat eveniet pariatur! Eum amet odio a mollitia, eveniet accusantium porro iste deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea saepe architecto, nobis temporibus neque tenetur molestias quaerat eveniet pariatur! Eum amet odio a mollitia, eveniet accusantium porro iste deleniti?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea saepe architecto, nobis temporibus neque tenetur molestias quaerat eveniet pariatur! Eum amet odio a mollitia, eveniet accusantium porro iste deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea saepe architecto, nobis temporibus neque tenetur molestias quaerat eveniet pariatur! Eum amet odio a mollitia, eveniet accusantium porro iste deleniti?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea saepe architecto, nobis temporibus neque tenetur molestias quaerat eveniet pariatur! Eum amet odio a mollitia, eveniet accusantium porro iste deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea saepe architecto, nobis temporibus neque tenetur molestias quaerat eveniet pariatur! Eum amet odio a mollitia, eveniet accusantium porro iste deleniti?</p>
         </main>
-        
-        <section>
-            <div class="bodyHeader">
-                <h1>Contact</h1>
-            </div>
-            
-            <p>Have questions or want to reach out?</p>
-            <a href="mailto:ferase222@gmail.com">Shoot me an email!</a>
-        </section>
     </div>
-    
-    <footer id="gridContainer_Footer">
-        <div class="footerAppear">
-            <nav>
-                <div>
-                    <a href="Portfolio.html"><span class="mask">Portfolio</span></a>
-                    <p class="hide">Pit of Portfolios</p>
-                </div>
-                <div>
-                    <a href="#"><span class="maskNo">Blender</span></a>
-                    <p class="hide">In progress...</p>
-                </div>
-                <div>
-                    <a href="#"><span class="maskNo">AI Land</span></a>
-                    <p class="hide">In progress...</p>
-                </div>
-                <div>
-                    <a href="Misc.html"><span class="mask">Misc</span></a>
-                    <p class="hide">Other cool stuff!</p>
-                </div>
-                <div>
-                    <a href="About.html"><span class="mask">About</span></a>
-                    <p class="hide">What's The Pit?</p>
-                </div>
-            </nav>
-            <nav class="homeNav">
-                <div>
-                    <a href="index.html" class="home"><span class="mask">Home</span></a>
-                    <p class="hide">Back into Freefall</p>
-                </div>
-            </nav>
-        </div>
-    </footer>
     
 </body>
 </html>
