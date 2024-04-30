@@ -10,8 +10,8 @@
 }
 
 :root{
-    --mod: 0.3rem;
-    --txt-lh: 2rem;
+    --mod: 0.28rem;
+    --txt-lh: 2.2rem;
     --txt-h1: 2.5rem;
     --txt-h2: calc(var(--txt-h1) - var(--mod));
     --txt-h3: calc(var(--txt-h2) - var(--mod));
@@ -24,7 +24,7 @@
 /* 4K */
 @media only screen and (min-width: 2500px){ /* 2500px or bigger */
     :root{
-        --txt-lh: 2.5rem;
+        --txt-lh: 2.7rem;
         --txt-h1: 3rem;
     }
 }
