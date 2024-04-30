@@ -83,5 +83,5 @@ p strong em, p em strong{font-variation-settings: "wght" 400, "wdth" 100, "ital"
 
 p.paragraph-big{
     font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
-    font-size: calc(var(--txt-p) + calc(var(--txt-p) / 3));
+    font-size: calc(var(--txt-p) + calc(var(--txt-p) / 1.5));
 }

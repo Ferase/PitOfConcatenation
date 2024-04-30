@@ -105,18 +105,16 @@
             stroke-width: 20px;
         }
 
-        #INK_EYELIDL,
-        #INK_EYELIDR,
-        #INK_BLINKL,
-        #INK_BLINKR{
-            display: none;
-        }
+        /* Hero Animations */
 
         #inktrinket-char{
-            animation: ink-char forwards 450ms ease;
+            transform: translate(-200px, 250px);
             animation-delay: 1000ms;
             animation-iteration-count: 1;
-            transform: translate(-200px, 250px);
+            animation-timing-function: ease;
+            animation-duration: 450ms;
+            animation-fill-mode: forwards;
+            animation-name: ink-char;
         }
 
         @keyframes ink-char {
@@ -128,6 +126,137 @@
             }
             100%{
                 transform: translate(-10px, 10px);
+            }
+        }
+
+        #INK_EYEL,
+        #INK_EYER{
+            animation-delay: 950ms;
+            animation-iteration-count: 1;
+            animation-direction: forwards;
+            animation-duration: 5000ms;
+            animation-timing-function: ease;
+        }
+
+        #INK_EYEL{
+            animation-name: ink-eyeL;
+        }
+        #INK_EYER{
+            animation-name: ink-eyeR;
+        }
+
+        @keyframes ink-eyeL {
+            0%{
+                transform: translate(0px, 0px);
+            }
+            2%{
+                transform: translate(13px, 10px);
+            }
+            24%{
+                transform: translate(13px, 10px);
+            }
+            26%{
+                transform: translate(12px, 7px);
+            }
+            42%{
+                transform: translate(12px, 7px);
+            }
+            44%{
+                transform: translate(10px, 14px);
+            }
+            70%{
+                transform: translate(10px, 14px);
+            }
+            72%{
+                transform: translate(10px, 15px);
+            }
+            98%{
+                transform: translate(10px, 15px);
+            }
+            100%{
+                transform: translate(0px, 0px);
+            }
+        }
+
+        @keyframes ink-eyeR {
+            0%{
+                transform: translate(0px, 0px);
+            }
+            2%{
+                transform: translate(17px, 13px);
+            }
+            24%{
+                transform: translate(17px, 13px);
+            }
+            26%{
+                transform: translate(17px, 10px);
+            }
+            42%{
+                transform: translate(17px, 10px);
+            }
+            44%{
+                transform: translate(8px, 20px);
+            }
+            70%{
+                transform: translate(8px, 20px);
+            }
+            72%{
+                transform: translate(9px, 18px);
+            }
+            98%{
+                transform: translate(9px, 18px);
+            }
+            100%{
+                transform: translate(0, 0);
+            }
+        }
+
+        #INK_EYELIDL,
+        #INK_EYELIDR{
+            animation: ink-eyelids 2000ms step-start;
+            animation-delay: 2950ms;
+            animation-iteration-count: 1;
+            transform: scale(0%, 0%);
+        }
+
+        @keyframes ink-eyelids {
+            0%{
+                transform: scale(100%, 100%);
+            }
+            100%{
+                transform: scale(100%, 100%);
+            }
+        }
+
+        #INK_BLINKL,
+        #INK_BLINKR{
+            animation: ink-blink 5000ms step-end;
+            animation-delay: 950ms;
+            animation-iteration-count: 1;
+            transform: scale(0%, 0%);
+        }
+
+        @keyframes ink-blink {
+            0%{
+                transform: scale(0%, 0%);
+            }
+            2%{
+                transform: scale(100%, 100%);
+            }
+            4%{
+                transform: scale(0%, 0%);
+            }
+            79%{
+                transform: scale(100%, 100%);
+            }
+            80%{
+                transform: scale(0%, 0%);
+            }
+            98%{
+                transform: scale(100%, 100%);
+            }
+            100%{
+                transform: scale(0%, 0%);
             }
         }
 
@@ -264,7 +393,7 @@
         </script>
         
         <main class="grid-main__b">
-            <p class="paragraph-big">feel free to have a look around and click on as many things as you'd like! the tabs at the top of the page should help you find what you are looking for. you can also click on things repeatedly, like i always do, but it won't do anything. :3</p>
+            <p class="paragraph-big">welcome to the home page! if you'd like to know more about me or are otherwise interested in my services, you can visit any of the pages up above!</p>
         </main>
     </div>
 
