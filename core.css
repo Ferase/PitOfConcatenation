@@ -34,11 +34,11 @@ iframe{border: none;}
     --clr-palette-05: hsla(8, 100%, 65%, 1);
 }
 html[data-theme="dark"]{
-    --clr-lightest: hsl(0, 0%, 0%);
+    --clr-lightest: hsl(0, 0%, 10%);
     --clr-darkest: hsl(0, 100%, 100%);
 }
 html[data-theme="dark"] [data-invert-dark="true"]{
-    filter: invert(1);
+    filter: invert(0.9);
 }
 
 /* 4K */
