@@ -24,9 +24,9 @@
 /* 4K */
 @media only screen and (min-width: 2500px){ /* 2500px or bigger */
     :root{
-        --mod: 0.3rem;
-        --txt-lh: 2.9rem;
-        --txt-h1: 3.2rem;
+        --mod: 0.285rem;
+        --txt-lh: 2.7rem;
+        --txt-h1: 3rem;
     }
 }
 
@@ -84,5 +84,5 @@ p strong em, p em strong{font-variation-settings: "wght" 400, "wdth" 100, "ital"
 
 p.paragraph-big{
     font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
-    font-size: calc(var(--txt-p) + calc(var(--txt-p) / 1.5));
+    font-size: calc(var(--txt-p) + calc(var(--txt-p) / 1.25));
 }
