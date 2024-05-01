@@ -24,6 +24,7 @@
 /* 4K */
 @media only screen and (min-width: 2500px){ /* 2500px or bigger */
     :root{
+        --mod: 0.3rem;
         --txt-lh: 2.9rem;
         --txt-h1: 3.2rem;
     }
