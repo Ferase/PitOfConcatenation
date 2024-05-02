@@ -16,6 +16,7 @@
 
         body{
             height: 100vh;
+            overflow-x: hidden;
         }
 
         /* General grid */
@@ -27,7 +28,7 @@
                 "b b . .";
             gap: var(--space-small);
             margin-inline: auto;
-            overflow-x: hidden;
+            /* overflow-x: hidden; */
         }
         /* .grid-main > *:nth-child(even){
             background-color: #0f0;
@@ -39,9 +40,6 @@
         .grid-main__a{
             grid-area: a;
             display: grid;
-        }
-        .grid-main__a svg{
-            max-width: 50%;
         }
         .grid-main__b{
             grid-area: b;
@@ -67,6 +65,7 @@
 
         #svg-home{
             --js-clr-svg-hue: 200deg;
+            max-width: 50%;
         }
 
         .svg-home__dark,
