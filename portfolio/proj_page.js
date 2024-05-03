@@ -22,8 +22,8 @@ const processJSON = async() => {
             return res.json();
         })
         .then((data) => {
-            let getVideos = data[project]["videos"];
-            let getImages = data[project]["images"];
+            let getVideos = data[type][project]["videos"];
+            let getImages = data[type][project]["images"];
 
             getVideos.forEach((video) => {
                 createReelVideo(video);

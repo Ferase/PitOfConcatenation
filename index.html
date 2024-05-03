@@ -8,6 +8,23 @@
     <script type="text/javascript">
         var image_crane = new Image();
         image_crane.src = "img/anim/index_crane.webp";
+
+        var hues = [
+            30, // Orange
+            12, // Red
+            200, // Baby blue
+            309, // Pink
+            284, // Purple
+            216, // Blue
+        ],
+            lights = [
+            70, // Normal
+            50 // Darker
+        ]
+            lights_mod = [
+            40, // Normal
+            20 // Darker
+        ]
     </script>
     <link rel="stylesheet" href="/core.css">
     <link rel="stylesheet" href="/fonts.css">
@@ -28,14 +45,7 @@
                 "b b . .";
             gap: var(--space-small);
             margin-inline: auto;
-            /* overflow-x: hidden; */
         }
-        /* .grid-main > *:nth-child(even){
-            background-color: #0f0;
-        }
-        .grid-main > *:nth-child(odd){
-            background-color: #f0f;
-        } */
 
         .grid-main__a{
             grid-area: a;
@@ -65,6 +75,8 @@
 
         #svg-home{
             --js-clr-svg-hue: 200deg;
+            --js-clr-svg-light: 70%;
+            --js-clr-svg-light-mod: 40%;
             max-width: 50%;
         }
 
@@ -78,7 +90,7 @@
             fill: #fff;
         }
         .svg-home__text__outline path {
-            stroke: hsl(calc(var(--js-clr-svg-hue) - 9deg), 100%, 30%);
+            stroke: hsl(calc(var(--js-clr-svg-hue) - 9deg), 100%, calc(var(--js-clr-svg-light) - var(--js-clr-svg-light-mod)));
             stroke-width: 10px;
         }
 
@@ -94,11 +106,11 @@
 
         .svg-home__text__drops path,
         .svg-home__shape__hi path {
-            fill: hsl(calc(var(--js-clr-svg-hue) - 9deg), 100%, 30%);
+            fill: hsl(calc(var(--js-clr-svg-hue) - 9deg), 100%, calc(var(--js-clr-svg-light) - var(--js-clr-svg-light-mod)));
         }
 
         .svg-home__shape-splash {
-            fill: hsl(var(--js-clr-svg-hue) 100% 73%);
+            fill: hsl(var(--js-clr-svg-hue) 100% var(--js-clr-svg-light));
         }
 
         .svg-home__stroke02 {
@@ -264,6 +276,15 @@
             }
         }
 
+        .hero-subheading{
+            font-variation-settings: "wght" 500, "wdth" 100, "ital" 0;
+            margin-bottom: var(--space-smallest);
+        }
+        .hero-paragraph{
+            font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+            font-size: calc(var(--txt-p) * 1.35);
+        }
+
     </style>
 </head>
 <body>
@@ -284,8 +305,8 @@
                 <li class="header_nav_hover_list" aria-label="Portfolio">
                     <p>portfolio</p>
                     <ul class="header_portfolio_fold">
-                        <li><a href="/portfolio.html" aria-label="Professional portfolio">professional</a></li>
-                        <li><a href="/portfolio.html" aria-label="Personal work portfolio">personal</a></li>
+                        <li><a href="/portfolio_professional.html" aria-label="Professional portfolio">professional</a></li>
+                        <li><a href="/portfolio_personal.html" aria-label="Personal work portfolio">personal</a></li>
                     </ul>
                 </li>
                 <li><a href="/commissions.html" aria-label="Commissions page">commissions</a></li>
@@ -409,11 +430,21 @@
         
         <script type="text/javascript">
             var svg = document.getElementById("svg-home")
-            svg.style.setProperty("--js-clr-svg-hue", `${Math.floor(Math.random() * 360)}deg`);
+
+            t_light = 0;
+            t_hue = Math.floor(Math.random() * (hues.length));
+            if(t_hue <= 0){
+                t_light = 1
+            }
+
+            svg.style.setProperty("--js-clr-svg-hue", `${hues[t_hue]}deg`);
+            svg.style.setProperty("--js-clr-svg-light", `${lights[t_light]}%`);
+            svg.style.setProperty("--js-clr-svg-light-mod", `${lights_mod[t_light]}%`);
         </script>
         
         <main class="grid-main__b">
-            <p class="paragraph-big">welcome to my website! if you'd like to know more about me or are otherwise interested in my services, you can visit any of the pages up above!</p>
+            <h2 class="hero-subheading">welcome to my website!</h2>
+            <p class="hero-paragraph">if you'd like to know more about me or are otherwise interested in my services, you can visit any of the pages up above!</p>
         </main>
     </div>
 

@@ -42,10 +42,10 @@ const processJSON = async() => {
         })
         .then((data) => {
 
-            for (let [key, value] of Object.entries(data)) {
+            for (let [key, value] of Object.entries(data[type])) {
                 start_data[key] = {
-                    "title": data[key]["title"],
-                    "tags": data[key]["tags"]
+                    "title": data[type][key]["title"],
+                    "tags": data[type][key]["tags"]
                 }
             }
 
