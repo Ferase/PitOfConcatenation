@@ -13,7 +13,7 @@ iframe{border: none;}
 
 /* Variables ------------------------ */
 
-:root{
+:root,::before,::after{
     --space-smallest: 1rem;
     --space-small: 1.5rem;
     --space-large: 2rem;
@@ -211,11 +211,12 @@ hr{
     left: var(--nl-position);
     transform-box: fill-box;
     transform-origin: 50px 24px;
-    background: url(img/night_light/nl_light.png);
+    background: var(--night-light-url);
     width: 100px;
     height: 130px;
     cursor: pointer;
     animation: night-light-onload 1000ms ease;
+    animation-delay: 300ms;
     animation-fill-mode: forwards;
     transform: translateY(-130px) rotateZ(10deg);
     transition: top 50ms linear;
@@ -223,6 +224,24 @@ hr{
 }
 .pulldown{
     top: -12px !important;
+}
+
+#night-light + label::after{
+    content: "too bright?";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    transform: translateX(-90px);
+    font-family: "peridot-pe-variable", sans-serif;
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+    font-size: calc(var(--txt-p) / 1.2);
+    color: var(--clr-darkest) !important;
+    text-align: right;
+    user-select: none;
+    pointer-events: none;
+    animation: night-light-notif 500ms forwards ease;
+    animation-delay: 7000ms;
+    opacity: 0;
 }
 
 @keyframes night-light-onload{
@@ -243,5 +262,11 @@ hr{
     }
     100%{
         transform: translateY(0px) rotateZ(0deg);
+    }
+}
+
+@keyframes night-light-notif{
+    to{
+        opacity: 1;
     }
 }
