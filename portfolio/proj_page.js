@@ -6,11 +6,23 @@ const heroVideo = document.getElementById("hero-video");
 const heroImage = document.getElementById("hero-image");
 const imageReel = document.getElementById("image-reel");
 
+const programList = document.getElementById("program-list");
+
 const zoomImage = document.getElementById("image-zoom");
 const blackoutBG = document.getElementById("blackout");
 
 var youtubeBase = "https://www.youtube.com/embed/"
 var reelItems = [];
+
+var programs = {
+    "premiere": "Adobe Premiere Pro",
+    "aftereffects": "Adobe After Effects",
+    "audition": "Adobe Audition",
+    "photoshop": "Adobe Photoshop",
+    "illustrator": "Adobe Illustrator",
+    "blender": "Blender",
+    "msoffice": "Microsoft Office"
+}
 
 // Parse JSON
 const processJSON = async() => {
@@ -22,15 +34,24 @@ const processJSON = async() => {
             return res.json();
         })
         .then((data) => {
-            let getVideos = data[type][project]["videos"];
-            let getImages = data[type][project]["images"];
-
-            getVideos.forEach((video) => {
-                createReelVideo(video);
-            });
-            getImages.forEach((image) => {
-                createReelImage(image["image"], image["title"]);
-            });
+            try{
+                let getVideos = data[type][project]["videos"];
+                getVideos.forEach((video) => {
+                    createReelVideo(video);
+                });
+            } catch {} // No videos
+            try{
+                let getImages = data[type][project]["images"];
+                getImages.forEach((image) => {
+                    createReelImage(image["image"], image["title"]);
+                });
+            } catch {} // No images
+            try{
+                let getPrograms = data[type][project]["programs"];
+                getPrograms.forEach((prog) => {
+                    createUsedProgram(prog);
+                });
+            } catch {} // No programs
         })
         .catch((error) => 
             console.error("Unable to fetch data:", error));
@@ -58,6 +79,22 @@ const createReelImage = async (image, title) => {
         </div>
     `;
     imageReel.appendChild(li);
+}
+
+// Create used program icon
+const createUsedProgram = async (prog) => {
+
+    if(!prog in programs){
+        console.log(`WARNING: No case for ${prog}!`)
+        return;
+    }
+
+    var li = document.createElement("li");
+
+    li.innerHTML = `
+        <img src="/svg/programs/program_${prog}.png" alt="${programs[prog]}" title="${programs[prog]}" aria-label="${programs[prog]}" data-invert-dark="true">
+    `;
+    programList.appendChild(li);
 }
 
 const setYoutubeVideo = (item) => {

@@ -10,142 +10,8 @@
     <script type="text/javascript" src="/main.js"></script>
     <link rel="stylesheet" href="/core.css">
     <link rel="stylesheet" href="/fonts.css">
-    <link rel="stylesheet" href="/svg.css">
+    <link rel="stylesheet" href="/portfolio.css">
     <style type="text/css">
-
-        /* General grid */
-        .grid-main{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto;
-            gap: calc(var(--space-largest) * 2);
-            max-width: 50%;
-            margin-inline: auto;
-            margin-bottom: calc(var(--space-largest) * 2);
-        }
-
-        .grid-main__a{
-            display: grid;
-            gap: var(--space-small);
-            text-align: center;
-            max-width: 80%;
-            margin-inline: auto;
-        }
-
-        .grid-main__a p{
-            line-height: calc(var(--txt-lh) / 1.5);
-            margin-bottom: var(--space-small);
-        }
-
-        .grid-main__pagination{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, auto);
-            gap: var(--space-small);
-        }
-
-        .grid-main__pagination ul{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 22vh);
-            gap: var(--space-small);
-            list-style: none;
-        }
-
-        #search{
-            display: grid;
-            gap: var(--space-smallest);
-            grid-auto-flow: column;
-            align-items: center;
-            max-width: 60%;
-            margin-inline: auto;
-        }
-        #search-bar{
-            max-width: 100%;
-            height: var(--space-large);
-            color: var(--clr-darkest);
-            background-color: var(--clr-lightest);
-            border: solid 3px var(--clr-darkest);
-            border-radius: var(--space-smallest);
-            padding: var(--space-smallest);
-
-            font-family: "peridot-pe-variable", sans-serif;
-            font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
-            font-size: var(--txt-h5);
-        }
-        #search-bar:focus{
-            border: solid 3px var(--clr-darkest);
-            border-color: var(--clr-darkest);
-        }
-        #search-submit{
-            height: 100%;
-            cursor: pointer;
-        }
-
-        .v-card{
-            display: grid;
-            text-align: center;
-            gap: var(--space-smallest);
-            transition: transform 300ms ease;
-        }
-        .v-card .v-card__img{
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border-radius: var(--space-smallest);
-            position: relative;
-            overflow: hidden;
-        }
-        .v-card .v-card__img img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-height: 100%;
-        }
-
-        .v-card h2{
-            font-family: "acumin-variable", sans-serif;
-            font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
-            font-size: var(--txt-h5);
-        }
-
-        .v-card:hover{
-            transform: scale(105%);
-        }
-
-        .grid-main__pagination ul li.hidden{
-            display: none;
-        }
-
-        .pagination-container{
-            display: flex;
-            align-items: center;
-            bottom: 0;
-            justify-content: center;
-        }
-        .pagination-number,
-        .pagination-button{
-            font-family: "acumin-variable", sans-serif;
-            font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
-            font-size: var(--txt-h5);
-            color: var(--clr-darkest);
-            background-color: var(--clr-lightest);
-            border: none;
-            cursor: pointer;
-            height: var(--space-largest);
-            width: var(--space-largest);
-        }
-
-        .pagination-number.active{
-            color: var(--clr-lightest);
-            background-color: var(--clr-darkest);
-        }
-
-        .pagination-number:hover,
-        .pagination-button:not(.disabled):hover{
-            color: var(--clr-lightest);
-            background: var(--clr-darkest);
-        }
 
         #svg-heading{
             max-width: 70%;
@@ -185,14 +51,6 @@
         }
         #svg-proport-right{
             right: 0;
-        }
-
-        #svg-search-glass{
-            width: 2rem;
-        }
-        #svg-search-glass path,
-        #svg-search-glass circle{
-            fill: var(--clr-darkest);
         }
 
     </style>

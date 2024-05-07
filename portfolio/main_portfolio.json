@@ -1,290 +1,213 @@
 {
     "PERSONAL": {
-        "project1": {
-            "title": "First Project",
+        "mob_lc": {
+            "title": "The MOB Attacks:",
+            "subtitle": "Lethal Company",
             "tags": [
-                "tag1",
-                "tag2",
-                "tag3",
-                "tag4"
+                "gameplay",
+                "lethal company",
+                "the mob",
+                "commentary"
+            ],
+            "programs": [
+                "premiere",
+                "photoshop"
+            ],
+            "videos": [
+                "OM942qQ9aW4"
+            ],
+            "images": [
+                {
+                    "image": "01.jpg",
+                    "title": "video thumbnail"
+                }
+            ]
+        },
+        "steamvr_tutorial": {
+            "title": "OpenVR2Key Tutorial",
+            "tags": [
+                "How to Control Your Keyboard with your VR Controllers",
+                "tutorial",
+                "steamvr",
+                "guide",
+                "commentary"
+            ],
+            "programs": [
+                "premiere",
+                "aftereffects",
+                "photoshop",
+                "illustrator"
             ],
             "videos": [
                 "f9ZOBYzTpUQ"
             ],
             "images": [
                 {
-                    "image": "01.png",
-                    "title": "First image"
-                },
-                {
-                    "image": "02.png",
-                    "title": "Second image"
-                },
-                {
-                    "image": "03.png",
-                    "title": "Third image"
+                    "image": "01.jpg",
+                    "title": "video thumbnail"
                 }
             ]
         },
-        "project2": {
-            "title": "Second Project",
+        "fishing": {
+            "title": "\"fishing\"",
             "tags": [
-                "tag5",
-                "tag6",
-                "tag7",
-                "tag8"
+                "animation",
+                "artwork",
+                "3d"
+            ],
+            "programs": [
+                "premiere",
+                "blender"
             ],
             "videos": [
-                "pr7Z7ntzoUY"
+                "7vNQ_vdN_Q0"
             ],
             "images": [
                 {
-                    "image": "01.png",
-                    "title": "First image"
-                },
-                {
-                    "image": "02.png",
-                    "title": "Second image"
-                },
-                {
-                    "image": "03.png",
-                    "title": "Third image"
+                    "image": "01.jpg",
+                    "title": "video thumbnail"
                 }
             ]
         },
-        "project3": {
-            "title": "Third Project",
+        "flowers2023": {
+            "title": "\"flowers2023\"",
             "tags": [
-                "tag5",
-                "tag6",
-                "tag7",
-                "tag8"
+                "music",
+                "artwork",
+                "mixed media"
+            ],
+            "programs": [
+                "premiere"
             ],
             "videos": [
-                "pr7Z7ntzoUY"
+                "5XCX8yHuDmc"
             ],
             "images": [
                 {
-                    "image": "01.png",
-                    "title": "First image"
-                },
-                {
-                    "image": "02.png",
-                    "title": "Second image"
-                },
-                {
-                    "image": "03.png",
-                    "title": "Third image"
+                    "image": "01.jpg",
+                    "title": "video thumbnail"
                 }
             ]
         },
-        "project4": {
-            "title": "Fourth Project",
+        "thxmcbs": {
+            "title": "\"THXMCBS\"",
             "tags": [
-                "tag5",
-                "tag6",
-                "tag7",
-                "tag8"
+                "music",
+                "artwork",
+                "photography"
+            ],
+            "programs": [
+                "premiere"
             ],
             "videos": [
-                "pr7Z7ntzoUY"
+                "kvL3CaaSiKk"
             ],
             "images": [
                 {
-                    "image": "01.png",
-                    "title": "First image"
-                },
-                {
-                    "image": "02.png",
-                    "title": "Second image"
-                },
-                {
-                    "image": "03.png",
-                    "title": "Third image"
-                }
-            ]
-        },
-        "project5": {
-            "title": "Fifth Project",
-            "tags": [
-                "tag5",
-                "tag6",
-                "tag7",
-                "tag8"
-            ],
-            "videos": [
-                "pr7Z7ntzoUY"
-            ],
-            "images": [
-                {
-                    "image": "01.png",
-                    "title": "First image"
-                },
-                {
-                    "image": "02.png",
-                    "title": "Second image"
-                },
-                {
-                    "image": "03.png",
-                    "title": "Third image"
-                }
-            ]
-        },
-        "project6": {
-            "title": "Sixth Project",
-            "tags": [
-                "tag5",
-                "tag6",
-                "tag7",
-                "tag8"
-            ],
-            "videos": [
-                "pr7Z7ntzoUY"
-            ],
-            "images": [
-                {
-                    "image": "01.png",
-                    "title": "First image"
-                },
-                {
-                    "image": "02.png",
-                    "title": "Second image"
-                },
-                {
-                    "image": "03.png",
-                    "title": "Third image"
-                }
-            ]
-        },
-        "project7": {
-            "title": "Seventh Project",
-            "tags": [
-                "tag5",
-                "tag6",
-                "tag7",
-                "tag8"
-            ],
-            "videos": [
-                "pr7Z7ntzoUY"
-            ],
-            "images": [
-                {
-                    "image": "01.png",
-                    "title": "First image"
-                },
-                {
-                    "image": "02.png",
-                    "title": "Second image"
-                },
-                {
-                    "image": "03.png",
-                    "title": "Third image"
-                }
-            ]
-        },
-        "project8": {
-            "title": "Eighth Project",
-            "tags": [
-                "tag5",
-                "tag6",
-                "tag7",
-                "tag8"
-            ],
-            "videos": [
-                "pr7Z7ntzoUY"
-            ],
-            "images": [
-                {
-                    "image": "01.png",
-                    "title": "First image"
-                },
-                {
-                    "image": "02.png",
-                    "title": "Second image"
-                },
-                {
-                    "image": "03.png",
-                    "title": "Third image"
-                }
-            ]
-        },
-        "project9": {
-            "title": "Ninth Project",
-            "tags": [
-                "tag5",
-                "tag6",
-                "tag7",
-                "tag8"
-            ],
-            "videos": [
-                "pr7Z7ntzoUY"
-            ],
-            "images": [
-                {
-                    "image": "01.png",
-                    "title": "First image"
-                },
-                {
-                    "image": "02.png",
-                    "title": "Second image"
-                },
-                {
-                    "image": "03.png",
-                    "title": "Third image"
-                }
-            ]
-        },
-        "project10": {
-            "title": "Tenth Project",
-            "tags": [
-                "tag5",
-                "tag6",
-                "tag7",
-                "tag8"
-            ],
-            "videos": [
-                "pr7Z7ntzoUY"
-            ],
-            "images": [
-                {
-                    "image": "01.png",
-                    "title": "First image"
-                },
-                {
-                    "image": "02.png",
-                    "title": "Second image"
-                },
-                {
-                    "image": "03.png",
-                    "title": "Third image"
+                    "image": "01.jpg",
+                    "title": "video thumbnail"
                 }
             ]
         }
     },
     "PROFESSIONAL": {
-        "project1": {
-            "title": "Professional Project",
+        "mcbs_presentation_anxiety": {
+            "title": "MCBS Presents: Presentation Anxiety",
+            "subtitle": "(and how we get over it!)",
             "tags": [
-                "tag1",
-                "tag2",
-                "tag3",
-                "tag4"
+                "informative"
+            ],
+            "programs": [
+                "premiere",
+                "photoshop",
+                "illustrator"
             ],
             "videos": [
-                "f9ZOBYzTpUQ"
+                "F_3DrlFe7w8"
             ],
             "images": [
                 {
-                    "image": "02.png",
-                    "title": "Second image"
+                    "image": "01.jpg",
+                    "title": "video thumbnail"
+                }
+            ]
+        },
+        "rabbit_hole": {
+            "title": "The Rabbit Hole Podcast",
+            "tags": [
+                "podcast"
+            ],
+            "programs": [
+                "premiere",
+                "audition",
+                "photoshop"
+            ],
+            "images": [
+                {
+                    "image": "01.jpg",
+                    "title": "video thumbnail"
+                }
+            ]
+        },
+        "lucihaslanded_gameplay": {
+            "title": "LuciHasLanded",
+            "subtitle": "Gameplay Videos",
+            "tags": [
+                "gameplay",
+                "commentary",
+                "lethal company",
+                "five nights at freddy's: help wanted"
+            ],
+            "programs": [
+                "premiere",
+                "photoshop"
+            ],
+            "videos": [
+                "ifSlFva2bSQ",
+                "crzyC-fwxJE"
+            ],
+            "images": [
+                {
+                    "image": "01.jpg",
+                    "title": "lethal company video thumbnail"
                 },
                 {
-                    "image": "01.png",
-                    "title": "First image"
+                    "image": "02.jpg",
+                    "title": "fnaf: help wanted video thumbnail"
+                }
+            ]
+        },
+        "day21_presentations": {
+            "title": "DAY21",
+            "subtitle": "Visual Presentations",
+            "tags": [
+                "music",
+                "artwork",
+                "mixed media",
+                "live"
+            ],
+            "programs": [
+                "premiere",
+                "photoshop",
+                "blender"
+            ],
+            "videos": [
+                "pr7Z7ntzoUY",
+                "wZdugQuDjoY",
+                "liRyKcRLuxU"
+            ],
+            "images": [
+                {
+                    "image": "01.jpg",
+                    "title": "skydeath presentation thumbnail"
                 },
                 {
-                    "image": "03.png",
-                    "title": "Third image"
+                    "image": "02.jpg",
+                    "title": "skydeath live thumbnail"
+                },
+                {
+                    "image": "03.jpg",
+                    "title": "recovery signal thumbnail"
                 }
             ]
         }

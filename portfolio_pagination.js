@@ -18,14 +18,21 @@ var start_data = {};
 // --- JSON and layout ---
 
 // Create portfolio list item
-const createPortfolioItem = (link, title) => {
+const createPortfolioItem = (link, title, subtitle) => {
     var li = document.createElement("li");
+
+    sub = ""
+    if(subtitle){
+        sub = `
+        <h3>${subtitle}</h3>`
+    }
+
     li.innerHTML = `
         <a class="v-card" href="portfolio/${link}">
             <div class="v-card__img">
-                <img src="portfolio/${link}/thumb.png" alt="${title}">
+                <img src="portfolio/${link}/thumb.jpg" alt="${title}">
             </div>
-            <h2>${title}</h2>
+            <h2>${title}</h2>${sub}
         </a>
     `;
     paginatedList.appendChild(li);
@@ -45,7 +52,8 @@ const processJSON = async() => {
             for (let [key, value] of Object.entries(data[type])) {
                 start_data[key] = {
                     "title": data[type][key]["title"],
-                    "tags": data[type][key]["tags"]
+                    "tags": data[type][key]["tags"],
+                    "subtitle": data[type][key]["subtitle"]
                 }
             }
 
@@ -155,17 +163,20 @@ const search = () => {
     let searchTerm = searchInput.value.trim().toLowerCase();
     let new_data = {};
 
-    // 2. check: if input exists and if input is larger than 0
     if (searchTerm && searchTerm.trim().length > 0){
 
         for (let [key, value] of Object.entries(start_data)) {
             let queries = start_data[key]["tags"].concat([start_data[key]["title"].toLowerCase()]);
+            try{
+                queries = queries.concat([start_data[key]["subtitle"].toLowerCase()]);
+            } catch {}
             let subQueries = queries.filter(str => str.includes(searchTerm));
 
             if(subQueries.length > 0){
                 new_data[key] = {
                     "title": start_data[key]["title"],
-                    "tags": start_data[key]["tags"]
+                    "tags": start_data[key]["tags"],
+                    "subtitle": start_data[key]["subtitle"]
                 }
             }
         }
@@ -175,7 +186,7 @@ const search = () => {
     }
 
     for (let [key, value] of Object.entries(new_data)) {
-        createPortfolioItem(key, new_data[key]["title"], new_data[key]["tags"]);
+        createPortfolioItem(key, new_data[key]["title"], new_data[key]["subtitle"]);
     }
 
     listItems = paginatedList.querySelectorAll("li");
@@ -196,7 +207,7 @@ window.addEventListener("load", async () => {
     await processJSON();
 
     for (let [key, value] of Object.entries(start_data)) {
-        createPortfolioItem(key, start_data[key]["title"], start_data[key]["tags"]);
+        createPortfolioItem(key, start_data[key]["title"], start_data[key]["subtitle"]);
     }
 
     const paginatedList = document.getElementById("paginated-list");
