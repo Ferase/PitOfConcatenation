@@ -13,7 +13,6 @@
     display: grid;
     gap: var(--space-small);
     text-align: center;
-    max-width: 80%;
     margin-inline: auto;
 }
 
