@@ -140,8 +140,16 @@
 
 #svg-search-glass{
     width: 2rem;
+    transition: transform 500ms ease;
 }
 #svg-search-glass path,
 #svg-search-glass circle{
     fill: var(--clr-darkest);
+}
+
+#svg-search-glass.searching{
+    transform: rotateZ(45deg) scale(120%, 120%);
+}
+#svg-search-glass.searching.found{
+    transform: rotateZ(405deg) scale(120%, 120%);
 }

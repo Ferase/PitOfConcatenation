@@ -19,6 +19,7 @@
     --txt-h5: calc(var(--txt-h4) - var(--mod));
     --txt-h6: calc(var(--txt-h5) - var(--mod));
     --txt-p: var(--txt-h6);
+    --txt-lh-p: calc(var(--txt-lh) / 1.15);
 }
 
 /* 4K */
@@ -77,6 +78,7 @@ h6{
 p{
     font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
     font-size: var(--txt-p);
+    line-height: var(--txt-lh-p);
 }
 p strong{font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;}
 p em{font-variation-settings: "wght" 300, "wdth" 100, "ital" 300;}

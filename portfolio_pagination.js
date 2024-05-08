@@ -6,6 +6,7 @@ const prevButton = document.getElementById("prev-button");
 
 const searchInput = document.getElementById("search-bar");
 const searchButton = document.getElementById("search-submit");
+const searchGlass = document.getElementById("svg-search-glass");
 
 const paginatedList = document.getElementById("paginated-list");
 const paginationLimit = 8;
@@ -165,6 +166,8 @@ const search = () => {
 
     if (searchTerm && searchTerm.trim().length > 0){
 
+        searchGlass.classList.add("searching");
+
         for (let [key, value] of Object.entries(start_data)) {
             let queries = start_data[key]["tags"].concat([start_data[key]["title"].toLowerCase()]);
             try{
@@ -173,6 +176,7 @@ const search = () => {
             let subQueries = queries.filter(str => str.includes(searchTerm));
 
             if(subQueries.length > 0){
+                searchGlass.classList.add("found");
                 new_data[key] = {
                     "title": start_data[key]["title"],
                     "tags": start_data[key]["tags"],
@@ -182,6 +186,8 @@ const search = () => {
         }
 
     } else {
+        searchGlass.classList.remove("found");
+        searchGlass.classList.remove("searching");
         new_data = start_data;
     }
 
