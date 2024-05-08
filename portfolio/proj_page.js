@@ -98,7 +98,7 @@ const createUsedProgram = async (prog) => {
 }
 
 const setYoutubeVideo = (item) => {
-    heroVideo.src = `${youtubeBase}${item.getAttribute("data-video")}`;
+    heroVideo.contentWindow.location.replace(`${youtubeBase}${item.getAttribute("data-video")}`);
     heroImage.classList.add("disabled");
     heroVideo.classList.remove("disabled");
 }
@@ -119,7 +119,7 @@ const removeZoom = (item) => {
 }
 
 const setReelActive = (num) => {
-    if(reelItems[num].getAttribute("onclick") === "setYoutubeVideo(this)"){
+    if(reelItems[num].hasAttribute("data-video")){
         setYoutubeVideo(reelItems[num]);
     } else {
         setImage(reelItems[num]);

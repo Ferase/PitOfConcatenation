@@ -148,7 +148,7 @@
 }
 
 #svg-search-glass.searching{
-    transform: rotateZ(45deg) scale(120%, 120%);
+    transform: rotateZ(45deg);
 }
 #svg-search-glass.searching.found{
     transform: rotateZ(405deg) scale(120%, 120%);
