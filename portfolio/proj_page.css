@@ -2,7 +2,7 @@
 
 /* General grid */
 .grid-main{
-    --gap: var(--space-small);
+    --gap: var(--space-large);
 
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -121,7 +121,7 @@
 
 .grid-main__heading{
     grid-area: a;
-    /* margin-bottom: calc(var(--gap) * -1); */
+    line-height: calc(var(--txt-lh) * 1.25);
 }
 .grid-main__paragraph{
     grid-area: b;
