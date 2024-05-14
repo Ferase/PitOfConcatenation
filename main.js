@@ -1,3 +1,5 @@
+// THEME ----------
+
 // Get user theme settings saved by the site (if they exist)
 var theme = localStorage.getItem("theme");
 
@@ -52,4 +54,13 @@ window.onload = function applyCheck(){
         localStorage.setItem("theme", theme);
         document.documentElement.style.setProperty("--night-light-url", `url(/img/night_light/nl_${theme}.png)`);
     });
+}
+
+
+
+// SVG ----------
+
+function applyHeight(element){
+    element.setAttribute("width", "100%");
+    element.setAttribute("height", `${Math.floor(element.getBoundingClientRect().height)}px`);
 }
