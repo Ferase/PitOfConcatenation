@@ -23,12 +23,16 @@ iframe{border: none;}
 
     --clr-lightest: hsl(0, 100%, 100%);
     --clr-darkest: hsl(0, 0%, 0%);
+    --clr-lightest-half: rgba(255, 255, 255, 0.5);
+    --clr-darkest-half: rgba(0, 0, 0, 0.5);
 
     --clr-palette-orange: hsl(36, 96%, 62%);
 }
 html[data-theme="dark"]{
     --clr-lightest: hsl(0, 0%, 10%);
     --clr-darkest: hsl(0, 0%, 90%);
+    --clr-lightest-half: rgba(26, 26, 26, 0.5);
+    --clr-darkest-half: rgba(230, 230, 230, 0.5);
 }
 html[data-theme="dark"] [data-invert-dark="true"]{
     filter: invert(0.9);
