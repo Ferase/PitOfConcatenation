@@ -17,11 +17,19 @@
         }
 
         /* General grid */
+        .grid-heading{
+            display: grid;
+            grid-template-areas:
+                "heading"
+                "subheading";
+            max-width: 50%;
+            margin-inline: auto;
+            margin-bottom: calc(var(--space-largest) * 2);
+        }
+
         .grid-main{
             display: grid;
             grid-template-areas:
-                "intro"
-                "middle"
                 "info"
                 "divider"
                 "process";
@@ -31,7 +39,7 @@
         }
 
         .grid-intro{
-            grid-area: intro;
+            grid-area: heading;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
@@ -39,7 +47,7 @@
             margin-bottom: calc(var(--space-largest) * 2);
         }
         .grid-middle{
-            grid-area: middle;
+            grid-area: subheading;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
@@ -116,9 +124,9 @@
         }
 
         #hero-video{
-            aspect-ratio: 16/9;
             border-radius: var(--space-small);
-            background-color: var(--clr-darkest);
+            max-width: 100%;
+            place-self: center;
         }
         
         .middle-text > *:not(:last-child){
@@ -383,7 +391,7 @@
         </nav>
     </header>
 
-    <div class="grid-main">
+    <div class="grid-heading">
         <div class="grid-intro">
             <svg id="svg-heading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 558.09">
                 <path d="M333.88,346.1l-152.17-1.75,49.88,18.35c26.66,9.81,56.23,7.81,81.33-5.49l20.96-11.11Z"/>
@@ -424,20 +432,20 @@
                 <path d="M95.64,0C42.82,0,0,53.42,0,119.32s42.82,119.32,95.64,119.32,95.64-53.42,95.64-119.32S148.46,0,95.64,0Zm0,26.09c8.44,0,15.29,8.54,15.29,19.07s-6.84,19.07-15.29,19.07-15.29-8.54-15.29-19.07,6.84-19.07,15.29-19.07Zm-59.44,112.3c-8.44,0-15.29-8.54-15.29-19.07s6.84-19.07,15.29-19.07,15.29,8.54,15.29,19.07-6.84,19.07-15.29,19.07Zm59.44,74.16c-8.44,0-15.29-8.54-15.29-19.07s6.84-19.07,15.29-19.07,15.29,8.54,15.29,19.07-6.84,19.07-15.29,19.07Zm0-57.65c-15.75,0-28.52-15.93-28.52-35.59s12.77-35.59,28.52-35.59,28.52,15.93,28.52,35.59-12.77,35.59-28.52,35.59Zm61.99-16.52c-8.44,0-15.29-8.54-15.29-19.07s6.84-19.07,15.29-19.07,15.29,8.54,15.29,19.07-6.84,19.07-15.29,19.07Z"/>
                 <path d="M191.9,344.35c0-2.86-1.18-5.43-3.07-7.29l99.25-101.55-22.68,6.97c-27.15,8.34-49.48,27.84-61.39,53.62l-18.02,39c-1.3-.6-2.74-.95-4.27-.95-2.12,0-4.08,.65-5.71,1.75l-18.39-27.19c-9.84-14.54-25.6-21.98-41.44-21.98-13.91,0-27.87,5.74-37.91,17.45-13.53,15.78-2.32,40.17,18.47,40.17h74.79c0,2.81,1.14,5.36,2.99,7.21l-52.88,52.88c-14.7,14.7-5.39,39.87,15.34,41.46,1.32,.1,2.64,.15,3.93,.15,31.01,0,54.97-28.38,48.97-59.46l-6.22-32.24c4.7-.9,8.26-5.04,8.26-10Zm-95.17-9.33c-6.02,0-11.12-3.27-13.63-8.73-2.52-5.47-1.68-11.46,2.24-16.03,7.73-9.02,18.97-14.19,30.83-14.19,13.53,0,26.14,6.69,33.71,17.88l14.26,21.08H96.73Zm75.43,86.91c-7.76,9.4-19.16,14.8-31.26,14.8-1.06,0-2.15-.04-3.22-.12-6-.46-10.83-4.11-12.92-9.75-2.09-5.65-.79-11.56,3.46-15.81l47.67-47.67,4.82,24.99c2.31,11.96-.81,24.19-8.55,33.57Z"/>
             </svg>
-            <div id="hero-video">
-
-            </div>
+            <img id="hero-video" src="img/websitevid_rendertest.webp" alt="promo">
         </div>
 
         <main class="grid-middle">
             <img src="img/editing_bay.jpg" alt="editing bay">
             <div class="middle-text">
                 <h2>i do commissions!</h2>
-                <p>as a video designer, i take commissions on the side to hone my skills and put them to good use!</p>
-                <p>i focus on planning my design process and keeping myself organized. i also love to edit various styles of videos!</p>
+                <p>as a video designer, i take commissions on the side as a way to utilize and hone my skills.</p>
+                <p>i typically focus on planning my design process and keeping myself organized throughout. i also love to edit various types of videos!</p>
             </div>
         </main>
+    </div>
 
+    <div class="grid-main">
         <div class="grid-infographic_info">
             <svg id="info-banner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1284.52 403.97">
                 <g class="info-banner__shape-color">
