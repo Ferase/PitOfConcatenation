@@ -11,7 +11,6 @@
 
         var hues = [
             36, // Orange
-            12, // Red
             200, // Baby blue
             309, // Pink
             284, // Purple
@@ -31,9 +30,40 @@
     <link rel="stylesheet" href="/svg.css">
     <style type="text/css">
 
+        :root{
+            --js-clr-svg-hue: 200deg;
+            --js-clr-svg-light: 70%;
+            --js-clr-svg-light-mod: 40%;
+        }
+
         body{
             height: 100vh;
             overflow-x: hidden;
+        }
+
+        #svg-border-01,
+        #svg-border-02,
+        #svg-border-03{
+            position: absolute;
+            width: 25%;
+            z-index: 0;
+        }
+        #svg-border-01{
+            top: 0;
+            left: 0;
+        }
+        #svg-border-02{
+            bottom: 0;
+            left: 0;
+        }
+        #svg-border-03{
+            bottom: 0;
+            right: 0;
+        }
+        #svg-border-01 path,
+        #svg-border-02 path,
+        #svg-border-03 path{
+            fill: hsl(var(--js-clr-svg-hue) 100% var(--js-clr-svg-light));
         }
 
         /* General grid */
@@ -74,9 +104,6 @@
         }
 
         #svg-home{
-            --js-clr-svg-hue: 200deg;
-            --js-clr-svg-light: 70%;
-            --js-clr-svg-light-mod: 40%;
             max-width: 50%;
         }
 
@@ -293,6 +320,17 @@
     <div class="site_frame frame_left" data-invert-dark="true"></div>
     <div class="site_frame frame_right" data-invert-dark="true"></div>
 
+    <!-- Special Borders -->
+    <svg id="svg-border-01" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459.35 444.99">
+        <path d="M459.35,0H0V444.99c19.24-3.98,37.95-10.24,55.4-18.99,57.91-29.04,87.94-83.56,100.54-145.42,5.72-28.09,16.05-51.08,41.28-66.91,19.23-12.07,43.4-21.5,66.24-22.22,27.98-.89,50.03,13.22,68.28,33.23,15.88,17.41,31.5,49.22,54.85,56.6,17.62,5.58,36.84-8.46,42.76-25.96s1.73-36.8-4.49-54.2c-20.63-57.67-20.43-102.95,7.77-159.34,7.05-14.09,17.02-27.76,26.71-41.77Z"/>
+    </svg>
+    <svg id="svg-border-02" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 418.58 263.71">
+        <path d="M0,263.71H418.58c-25.63-48.66-67.83-90.36-118.95-110.6-54.09-21.41-117.43-14.43-167.83-46.05C92.18,82.21,70.2,37.96,29.2,13.94c-4.87-2.86-9.9-5.44-14.93-8.02C9.6,3.52,4.8,1.35,0,0V263.71Z"/>
+    </svg>
+    <svg id="svg-border-03" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450.27 395.39">
+        <path d="M450.27,0c-.74,.22-1.41,.41-1.95,.56-66,18.28-131.12,44.24-177.37,96.77-45.74,51.94-78.27,116.85-140.05,152.62C70.46,284.94,3.64,314.38,0,394.22c-.02,.39,0,.78,.02,1.17H450.27V0Z"/>
+    </svg>
+
     <!-- Night Light -->
     <input id="night-light" type="checkbox"><label id="night-light-label" for="night-light" title="toggle color theme" aria-label="Toggle color theme" data-invert-dark="true"></label>
 
@@ -429,7 +467,7 @@
         </div>
         
         <script type="text/javascript">
-            var svg = document.getElementById("svg-home")
+            var root = document.documentElement;
 
             t_light = 0;
             t_hue = Math.floor(Math.random() * (hues.length));
@@ -437,9 +475,9 @@
                 t_light = 1
             }
 
-            svg.style.setProperty("--js-clr-svg-hue", `${hues[t_hue]}deg`);
-            svg.style.setProperty("--js-clr-svg-light", `${lights[t_light]}%`);
-            svg.style.setProperty("--js-clr-svg-light-mod", `${lights_mod[t_light]}%`);
+            root.style.setProperty("--js-clr-svg-hue", `${hues[t_hue]}deg`);
+            root.style.setProperty("--js-clr-svg-light", `${lights[t_light]}%`);
+            root.style.setProperty("--js-clr-svg-light-mod", `${lights_mod[t_light]}%`);
         </script>
         
         <main class="grid-main__b">

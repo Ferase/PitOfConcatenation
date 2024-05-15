@@ -102,11 +102,12 @@ hr{
 .button{
     border: solid 2px var(--clr-darkest);
     border-radius: var(--space-smallest);
-    padding: calc(var(--space-small) / 3);
-    color: var(--clr-lightest);
+    padding-inline: calc(var(--space-small));
+    padding-block: calc(var(--space-small) / 2);
+    color: var(--clr-lightest) !important;
     background-color: var(--clr-darkest);
-    font-family: "peridot-pe-variable", sans-serif;
-    font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
+    font-family: "acumin-variable", sans-serif;
+    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
     font-size: var(--txt-h6);
 }
 
@@ -123,7 +124,7 @@ hr{
     background-repeat: repeat-y;
     background-size: 100% 100vh;
     animation: site_frame_flow infinite 10000ms linear;
-    z-index: 0;
+    z-index: 1;
 }
 .frame_left{
     left: 0;
