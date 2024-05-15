@@ -12,8 +12,9 @@ function getColorScheme(){
     }
 
     // Check user system preference, then set accordingly
+    theme = "light";
     if(prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches){
-        theme = "dark"
+        theme = "dark";
     }
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
