@@ -217,7 +217,7 @@ hr{
     height: 130px;
     cursor: pointer;
     animation: night-light-onload 1000ms ease;
-    animation-delay: 300ms;
+    animation-delay: 500ms;
     animation-fill-mode: forwards;
     transform: translateY(-130px) rotateZ(10deg);
     transition: top 50ms linear;
@@ -227,15 +227,15 @@ hr{
     top: -12px !important;
 }
 
-#night-light + label::after{
+#night-light + label.first_visit::after{
     content: "too bright?";
     position: absolute;
     top: 80px;
     left: 0;
-    transform: translateX(-90px);
+    transform: translateX(-80px);
     font-family: "peridot-pe-variable", sans-serif;
     font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
-    font-size: calc(var(--txt-p) / 1.2);
+    font-size: calc(var(--txt-p) / 1.25);
     color: var(--clr-darkest) !important;
     text-align: right;
     user-select: none;
@@ -243,6 +243,15 @@ hr{
     animation: night-light-notif 500ms forwards ease;
     animation-delay: 7000ms;
     opacity: 0;
+}
+html[data-theme="dark"] #night-light + label.first_visit::after{
+    content: "too dark?";
+}
+#night-light + label.first_visit.theme_is_set::after{
+    content: "better!" !important;
+    animation: night-light-away 500ms forwards ease;
+    animation-delay: 2000ms;
+    opacity: 1;
 }
 
 @keyframes night-light-onload{
@@ -269,5 +278,14 @@ hr{
 @keyframes night-light-notif{
     to{
         opacity: 1;
+    }
+}
+
+@keyframes night-light-away{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
     }
 }

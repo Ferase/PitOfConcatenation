@@ -2,6 +2,7 @@
 
 // Get user theme settings saved by the site (if they exist)
 var theme = localStorage.getItem("theme");
+var has_set_theme = localStorage.getItem("has_set_theme");
 
 // Set the user's color scheme
 function getColorScheme(){
@@ -22,6 +23,11 @@ getColorScheme() // Run before page draws
 
 // On page load, check the checkbox if the user prefers dark mode and then add a listener for the checkbox
 window.onload = function applyCheck(){
+    if(!has_set_theme){
+        var fv_label = document.querySelector("#night-light + label");
+        fv_label.classList.add("first_visit");
+    }
+
     document.documentElement.style.setProperty("--night-light-url", `url(/img/night_light/nl_${theme}.png)`);
 
     var other = "dark";
@@ -52,7 +58,15 @@ window.onload = function applyCheck(){
         }
         document.documentElement.setAttribute("data-theme", theme);
         localStorage.setItem("theme", theme);
+        localStorage.setItem("has_set_theme", true);
         document.documentElement.style.setProperty("--night-light-url", `url(/img/night_light/nl_${theme}.png)`);
+        
+        if(has_set_theme){
+            return;
+        }
+
+        fv_label.classList.add("theme_is_set")
+
     });
 }
 
