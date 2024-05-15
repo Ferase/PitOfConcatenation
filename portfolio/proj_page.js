@@ -104,6 +104,7 @@ const setYoutubeVideo = (item) => {
 }
 const setImage = (item) => {
     heroVideo.classList.add("disabled");
+    heroVideo.contentWindow.location.replace(`about:blank`);
     heroImage.src = item.children[0].getAttribute("src");
     heroImage.classList.remove("disabled");
 }

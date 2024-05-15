@@ -50,6 +50,48 @@
             font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
             font-size: var(--txt-h4);
         }
+
+        #discord-account-link{
+            position: relative;
+            cursor: pointer;
+        }
+        .toast{
+            position: absolute;
+            bottom: -25%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: calc(var(--txt-p) - 0.25rem) !important;
+            visibility: hidden;
+            opacity: 0;
+            animation: none;
+            line-height: calc(var(--txt-lh) / 2);
+        }
+        .cc-anim{
+            animation: cc-anim 4000ms ease forwards;
+        }
+
+        @keyframes cc-anim{
+            0%{
+                visibility: visible;
+                opacity: 0;
+            }
+            15%{
+                visibility: visible;
+                opacity: 1;
+            }
+            85%{
+                visibility: visible;
+                opacity: 1;
+            }
+            99%{
+                visibility: visible;
+                opacity: 0;
+            }
+            99%{
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
         
         #svg-contact-main{
             width: 100%;
@@ -221,7 +263,8 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a id="discord-account-link" onclick="copyToClipboard(this, `inktrinket`)">
+                    <p class="toast">copied to clipboard</p>
                     <img src="svg/socials/socials_Discord.svg" alt="Discord" data-invert-dark="true">
                     <p>Discord</p>
                 </a>
@@ -235,5 +278,17 @@
         </ul>
     </main>
 
+    <script type="text/javascript">
+
+        function copyToClipboard(element, text){
+            let toast = document.querySelector(`#${element.id} .toast`);
+            toast.classList.remove("cc-anim");
+            setTimeout(function (){
+                navigator.clipboard.writeText(text);
+                toast.classList.add("cc-anim");
+            }, 100);
+        }
+
+    </script>
 </body>
 </html>

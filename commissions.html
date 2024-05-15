@@ -43,7 +43,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
-            gap: var(--space-large);
+            gap: var(--space-largest);
             margin-bottom: calc(var(--space-largest) * 2);
         }
         .grid-middle{
@@ -51,8 +51,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
-            gap: var(--space-large);
-            margin-bottom: calc(var(--space-largest) * 2);
+            gap: var(--space-largest);
         }
         .grid-infographic_info{
             --padding-mod: 2;
@@ -266,6 +265,47 @@
             font-size: calc(var(--txt-h5) - 0.5rem) !important;
         }
 
+        #discord-account-link{
+            position: relative;
+            cursor: pointer;
+        }
+        .toast{
+            position: absolute;
+            top: -35%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: calc(var(--txt-p) - 0.25rem) !important;
+            visibility: hidden;
+            opacity: 0;
+            animation: none;
+        }
+        .cc-anim{
+            animation: cc-anim 4000ms ease forwards;
+        }
+
+        @keyframes cc-anim{
+            0%{
+                visibility: visible;
+                opacity: 0;
+            }
+            15%{
+                visibility: visible;
+                opacity: 1;
+            }
+            85%{
+                visibility: visible;
+                opacity: 1;
+            }
+            99%{
+                visibility: visible;
+                opacity: 0;
+            }
+            99%{
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
         #ink-ask{
             grid-area: g;
             position: relative;
@@ -438,9 +478,9 @@
         <main class="grid-middle">
             <img src="img/websitevid_02.webp" alt="editing bay showcase">
             <div class="middle-text">
-                <h2>i could edit your video for you!</h2>
-                <p>as a video designer, i take commissions on the side to utilize and hone my skills.</p>
-                <p>i focus on planning my design process, maintaining organization, and prioritizing communication with my clients. i also love to edit various styles of videos!</p>
+                <h2>I could edit your video for you!</h2>
+                <p>As a video designer, I take commissions on the side to utilize and hone my skills.</p>
+                <p>I focus on planning my design process, maintaining organization, and prioritizing communication with my clients. I also love to edit various styles of videos!</p>
             </div>
         </main>
     </div>
@@ -473,17 +513,17 @@
                     <path class="prefs__positive" d="M121.94,56.44c-.56-4.38-1.11-8.77-1.55-13.17-.37-3.7-.27-7.71-1.9-11.14-2.64-5.59-6.91-10.22-11.23-14.55-4.31-4.31-8.53-9.11-13.67-12.44-3.51-2.28-7.59-2.9-11.84-2.71-4.47,.19-7.86,.31-12.07-1.26-6.02-2.23-11.13-1.03-16.8,1.44-1.89,.82-4.3,1.78-6.56,1.81-2.9,.04-5.39-1.67-8.25-1.81-9.67-.5-13.87,12.13-13.39,19.95,.02,.31,.04,.63-.08,.91-.11,.27-.33,.49-.55,.69-1.42,1.29-3.19,2.26-5.1,2.4-2.26,.17-4.45-.79-6.7-1.04-4.82-.53-9.15,2.52-11.13,6.78-2.65,5.71-.08,11.41,2.44,16.66,2.36,4.92,3.25,9.71,3.49,14.95-.86,3.49-.83,7.07-.22,10.61,.71,4.18-1.03,7.67,1.16,11.83,1.06,2.01,2.6,3.72,4.04,5.49,2.41,2.96,4.57,6.13,6.44,9.46,1.46,2.6,4.06,6.23,4.75,9.12,3.44,14.29,5.43,29.05,3.74,43.73-2.23,19.4-10.67,37.48-15.4,56.42-5.43,21.75-5.4,44.83-5.32,67.06,.06,18.01,3.79,36,1.76,54.01-1.75,15.46-6.79,32.33,4.22,45.9,3.05,3.76,7.22,6.77,9.22,11.3,2.23,5.04,1.58,11.67,5.83,15.18,3.74,3.09,9.22,2.04,14.02,1.35,4.8-.69,10.82-.2,12.88,4.19,.95,2.02,1.69,4.39,3.47,5.85,2.95,2.42,8.03,1.61,11.41,.69,3.14-.86,6.09-2.4,8.58-4.51,1.54-1.3,2.57-3.06,3.96-4.49,4.31-4.41,10.92-4.6,16.25-7.06,6.14-2.83,9.72-8.89,11.82-15.25-2.01-4.46-2.46-9.02-3.04-13.96-.62-5.26-2.81-10.32-4.64-15.27-10.42-28.04-15.78-59.7-5.32-88.46,8.91-24.49,14.43-49.68,9.07-75.66-3.86-18.7-11.1-39.35-3.52-58.04,2.69-6.64,6.53-12.91,7.86-20.04,1.17-6.27-.02-12.77,1.25-18.99,1.29-6.3,5.15-11.7,7.81-17.45,3.31-7.18,3.53-13.62,2.79-20.49m-39.51-15.17c-1.53,1.03-2.99,2.25-4.47,3.43-1.79,1.43-3.55,2.99-5.09,4.96-2.08,2.66-3.87,5.76-5.6,8.91-2.04,3.73-4.15,7.58-6.91,10.28-1.59,1.56-3.44,2.54-4.84,4.5-1.26,1.78-2.16,4.06-2.9,6.32-.59,1.79-1.06,3.72-1.78,5.42-.57,1.35-1.23,2.6-1.87,3.88-.49,.97-.66,2.09-1.04,3.13-.49,1.32-1.69,1.47-2.61,1.37-1.15-.12-2.21-.19-3.36-.12-.92,.06-1.83-.15-2.39-1.33-.48-1.02-.56-2.2-1.18-3.11-.51-.74-1.17-1.29-1.7-1.94-.64-.79-1.23-1.68-1.66-2.74-.9-2.23-1.23-4.81-1.66-7.28-.36-2.09-1.06-4.04-2.07-5.64-.58-.92-1.26-1.87-2.09-2.29-.54-.27-1.3-.26-1.62-1.06-.26-.64-.1-1.51,.28-1.96,.52-.61,1.32-.97,1.98-.96,.66,.02,1.32,.16,1.95,.43,.63,.27,1.24,.64,1.88,.9,1.03,.41,2.06,.88,2.97,1.7,.94,.86,1.65,2.16,2.18,3.52,.56,1.42,1.37,2.7,1.64,4.33,.25,1.51,.15,3.13,.63,4.56,.45,1.33,1.31,2.49,2.4,2.32,1.09-.17,1.69-2,2.02-3.3,.29-1.16,.56-2.34,.94-3.45,.56-1.64,1.29-3.2,2.07-4.61,1.96-3.58,4.37-6.62,6.72-9.64,4.45-5.7,8.99-11.33,14.13-15.71,1.29-1.1,2.63-2.08,4.01-2.91,1.58-.95,3.23-1.87,4.65-3.23,2.1-2.02,4.16-4.31,6.85-3.88,.61,.1,1.35,.48,1.35,1.54,0,2.27-2.73,2.93-3.82,3.67m12.29-5.38c-.63,.52-1.39,.66-2.08,.97-.66,.29-1.27,.79-1.94,1.01-.52,.17-1.03-.2-1.55-.12-.37,.06-.75,.23-1.12,.1-.73-.26-.81-1.51-.4-2.26,.4-.73,.98-1.22,1.51-1.71,.74-.69,1.55-1.24,2.39-1.61,1.11-.49,2.59-1.4,3.62-.14,.03,.04,.06,.07,.09,.12,.81,1.15,.38,2.91-.51,3.65m4.39,2.07c-.76,.21-1.87,.05-2.12-1.22-.19-.92,.2-1.84,.89-1.84,.47,0,.94-.1,1.4,0,.07,.01,.13,.03,.19,.05,.49,.17,.92,.86,.81,1.62-.11,.76-.7,1.25-1.18,1.39"/>
                 </svg>
                 <section>
-                    <h3>videos i like to edit</h3>
+                    <h3>Videos I like to edit</h3>
                     <ul>
-                        <li>gameplay videos</li>
-                        <li>live stream videos</li>
-                        <li>meme videos</li>
-                        <li>highlight videos</li>
-                        <li>podcast videos</li>
-                        <li>music/lyric videos</li>
-                        <li>instructional/tutorial videos</li>
-                        <li>informative/educational videos</li>
-                        <li>short form/social media videos</li>
+                        <li>Gameplay videos</li>
+                        <li>Live stream videos</li>
+                        <li>Meme videos</li>
+                        <li>Highlight videos</li>
+                        <li>Podcast videos</li>
+                        <li>Music/lyric videos</li>
+                        <li>Instructional/tutorial videos</li>
+                        <li>Informative/educational videos</li>
+                        <li>Short form/social media videos</li>
                     </ul>
                 </section>
             </div>
@@ -496,30 +536,30 @@
                     </g>
                 </svg>
                 <section>
-                    <h3>videos i will not edit</h3>
+                    <h3>Videos I will not edit</h3>
                     <ul>
-                        <li>graphic/nsfl content</li>
-                        <li>hateful/discriminatory content</li>
-                        <li>drama/exposé content</li>
-                        <li>political content</li>
-                        <li>pornographic content</li>
-                        <li>your homework!!!</li>
+                        <li>Graphic/NSFL content</li>
+                        <li>Hateful/discriminatory content</li>
+                        <li>Drama/exposé content</li>
+                        <li>Political content</li>
+                        <li>Pornographic content</li>
+                        <li>Your homework!!!</li>
                     </ul>
                 </section>
             </div>
 
             <aside id="time-info">
                 <div>
-                    <h4>working hrs</h4>
+                    <h4>Working hours</h4>
                     <p>4 hours per day</p>
                 </div>
                 <div>
-                    <h4>scheduling</h4>
-                    <p>can vary because life</p>
+                    <h4>Scheduling</h4>
+                    <p>Can vary because life</p>
                 </div>
                 <div>
-                    <h4>my timezone</h4>
-                    <p>eastern daylight time (EDT)</p>
+                    <h4>My timezone</h4>
+                    <p>Eastern Daylight Time (EDT)</p>
                 </div>
             </aside>
 
@@ -554,9 +594,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
+                        <a id="discord-account-link" onclick="copyToClipboard(this, `inktrinket`)">
+                            <p class="toast">copied to clipboard</p>
                             <img src="svg/socials/socials_Discord.svg" alt="Discord" data-invert-dark="true">
-                            <p>inktrinket</p>
+                            <p>inktrinket<br><span>on discord</span></p>
                         </a>
                     </li>
                     <li>
@@ -606,9 +647,9 @@
 
             <section id="process-paragraph">
                 <p>
-                    a commission begins with you (you) and me (not you) agreeing on an estimate for the project. then, you sign the estimate and provide me with the video assets you want edited! i will keep in touch and send frequent progress updates, aiming for a feedback-driven design process that will keep your interests in focus. once we reach a finished product, i will provide the finished video to you!
+                    A commission begins with you (you) and me (not you) agreeing on an estimate for the project. Then, you sign the estimate and provide me with the video assets you want edited! I will keep in touch and send frequent progress updates, aiming for a feedback-driven design process that will keep your interests in focus. Once we reach a finished product, I will provide the finished video to you!
                 </p>
-                <a class="button" href="contact.html">are you interested?</a>
+                <a class="button" href="contact.html">Are you interested?</a>
             </section>
 
 
@@ -756,5 +797,17 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+
+        function copyToClipboard(element, text){
+            let toast = document.querySelector(`#${element.id} .toast`);
+            toast.classList.remove("cc-anim");
+            setTimeout(function (){
+                navigator.clipboard.writeText(text);
+                toast.classList.add("cc-anim");
+            }, 100);
+        }
+
+    </script>
 </body>
 </html>
