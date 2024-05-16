@@ -230,11 +230,12 @@
             flex-direction: row;
             gap: calc(var(--space-smallest) / 2);
             justify-content: center;
+            align-items: baseline;
         }
-        #price-paypal{
+        #price-venmo{
             max-width: 40%;
         }
-        #price-paypal > path{
+        #price-venmo > path{
             fill: var(--clr-lightest);
         }
 
@@ -599,11 +600,8 @@
                     <h6>per hour</h6>
                     <div class="price-via">
                         <p>via</p>
-                        <svg id="price-paypal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.34 22.18">
-                            <path d="M22.27,8.91c.36,0,.68,.05,.98,.14,1.34,.43,2.11,1.73,1.89,3.12-.27,1.73-1.69,3-3.5,3-.36,0-.68-.05-.98-.14-1.34-.43-2.11-1.72-1.89-3.12,.27-1.72,1.69-3,3.51-3Zm-.1-3.8c-.83,0-1.78,.17-2.86,.62-2.46,1.02-3.64,3.14-4.14,4.68,0,0-1.6,4.71,2.01,7.3,0,0,3.34,2.49,7.11-.15l-.07,.41c-.04,.24,.13,.48,.38,.51,.02,0,.05,0,.07,0h3.12c.24,0,.44-.17,.48-.41l1.9-12.03c.04-.25-.13-.48-.37-.52-.02,0-.05,0-.07,0h-3.12c-.24,0-.44,.17-.48,.41l-.1,.65s-1.36-1.49-3.85-1.48h0ZM6.45,3.92h2.39c1.97,0,2.61,1.16,2.41,2.44-.2,1.29-1.2,2.23-3.1,2.23h-2.43l.74-4.68ZM3.26,0c-.24,0-.44,.17-.48,.41L0,17.98c-.04,.24,.13,.48,.38,.51,.02,0,.05,0,.07,0H3.73c.24,0,.44-.17,.48-.41l.81-5.16c.04-.24,.24-.41,.48-.41h2.99c3.49,0,6.45-2.55,6.99-6C16.03,3.04,13.31,0,9.46,0H3.26Z"/>
-                            <path d="M67.17,8.91c.36,0,.69,.05,.98,.14,1.35,.43,2.11,1.73,1.89,3.12-.27,1.73-1.69,3-3.5,3-.36,0-.68-.05-.98-.14-1.34-.43-2.11-1.72-1.89-3.12,.27-1.72,1.69-3,3.51-3Zm-.1-3.8c-.83,0-1.78,.17-2.85,.62-2.46,1.02-3.64,3.14-4.14,4.68,0,0-1.6,4.71,2.01,7.3,0,0,3.34,2.49,7.1-.15l-.07,.41c-.04,.24,.13,.48,.38,.51,.02,0,.05,0,.07,0h3.12c.24,0,.44-.17,.48-.41l1.9-12.03c.04-.25-.13-.48-.37-.52-.02,0-.05,0-.07,0h-3.12c-.24,0-.44,.17-.48,.41l-.1,.65s-1.36-1.49-3.85-1.48h0Zm-15.72-1.19h2.39c1.97,0,2.61,1.16,2.41,2.44-.2,1.29-1.2,2.23-3.1,2.23h-2.43l.74-4.68Zm-3.19-3.92c-.24,0-.44,.17-.48,.41l-2.77,17.56c-.04,.24,.13,.48,.38,.51,.02,0,.05,0,.07,0h3.28c.24,0,.44-.17,.48-.41l.81-5.16c.04-.24,.24-.41,.48-.41h2.99c3.49,0,6.45-2.55,6.99-6,.55-3.48-2.17-6.51-6.02-6.52h-6.21Z"/>
-                            <path d="M31.64,5.54c-.25,0-.42,.24-.35,.48l3.42,10.61-3.09,5c-.15,.24,.02,.56,.31,.56h3.65c.21,0,.41-.11,.52-.29l9.55-15.79c.15-.24-.03-.55-.31-.55h-3.65c-.22,0-.41,.11-.52,.3l-3.76,6.35-1.91-6.3c-.06-.2-.25-.35-.47-.35h-3.39Z"/>
-                            <path d="M78.61,0c-.24,0-.44,.17-.48,.41l-2.77,17.56c-.04,.24,.13,.48,.37,.51,.02,0,.05,0,.07,0h3.29c.24,0,.44-.17,.48-.41L82.34,.52c.04-.25-.13-.48-.37-.51-.02,0-.05,0-.07,0h-3.28Z"/>
+                        <svg id="price-venmo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 16.67">
+                            <path d="M14.79-.07c.61,1,.88,2.04,.88,3.34,0,4.16-3.56,9.57-6.44,13.37H2.63L0,.84,5.77,.29l1.4,11.25c1.31-2.13,2.92-5.47,2.92-7.75,0-1.25-.21-2.1-.55-2.8L14.79-.07Zm7.48,6.96c1.06,0,3.74-.49,3.74-2.01,0-.73-.52-1.09-1.12-1.09-1.06,0-2.46,1.28-2.61,3.1h0Zm-.12,3c0,1.85,1.03,2.58,2.4,2.58,1.5,0,2.92-.36,4.77-1.31l-.7,4.74c-1.31,.64-3.34,1.06-5.32,1.06-5,0-6.81-3.04-6.81-6.84C16.5,5.21,19.42-.02,25.43-.02c3.3,0,5.16,1.85,5.16,4.44,0,4.17-5.35,5.44-8.44,5.47h0ZM47.25,3.64c0,.61-.09,1.5-.18,2.07l-1.73,10.94h-5.62l1.58-10.03,.12-1.12c0-.73-.46-.91-1-.91-.73,0-1.46,.33-1.94,.58l-1.79,11.5h-5.65L33.61,.27h4.9l.06,1.31c1.15-.76,2.67-1.58,4.83-1.58,2.86,0,3.86,1.46,3.86,3.65h0Zm16.68-1.87C65.53,.63,67.06-.01,69.15-.01c2.89,0,3.9,1.46,3.9,3.65,0,.61-.09,1.5-.18,2.07l-1.73,10.94h-5.64l1.6-10.24,.09-.82c0-.82-.46-1-1-1-.7,0-1.4,.3-1.91,.58l-1.8,11.5h-5.62l1.6-10.24,.1-.82c0-.82-.46-1-1-1-.73,0-1.46,.33-1.94,.58l-1.79,11.5h-5.65L50.74,.28h4.83l.15,1.37C56.85,.83,58.37,.01,60.4,.01c1.76,0,2.92,.76,3.49,1.79l.03-.02Zm20.3,4.77c0-1.34-.33-2.25-1.34-2.25-2.22,0-2.67,3.92-2.67,5.93,0,1.52,.43,2.46,1.43,2.46,2.1,0,2.58-4.14,2.58-6.14h0Zm-9.72,3.44C74.51,4.82,77.24-.01,83.53-.01c4.74,0,6.47,2.8,6.47,6.66,0,5.11-2.7,10.4-9.14,10.4-4.77,0-6.35-3.13-6.35-7.05h0Z"/>
                         </svg>
                     </div>
                 </div>
@@ -677,7 +675,7 @@
 
             <section id="process-paragraph">
                 <p>
-                    A commission begins with you (you) and me (not you) agreeing on an estimate for the project. Then, you sign the estimate and provide me with the video assets you want edited! Before starting, I will ask a series of questions and effectively communicate with you to ensure that I understand what you are looking for. I will keep in touch and send frequent progress updates, aiming for a feedback-driven design process that will keep your interests in focus. Once we reach a finished product, I will provide the finished video to you!
+                    A commission begins with the both of us agreeing on an estimate for the project. Then, you sign the estimate and provide me with the video assets you want edited! Before starting, I will ask a series of questions and effectively communicate with you to ensure that I understand what you are looking for. I will keep in touch and send frequent progress updates, aiming for a feedback-driven design process that will keep your interests in focus. Once we reach a finished product, I will provide the finished video to you!
                 </p>
                 <a class="button" href="contact.html">are you interested?</a>
             </section>
@@ -828,15 +826,15 @@
         <section id="terms-and-conditions">
             <h3>Terms & Conditions</h3>
             <p>
-                The client will discuss the desired commission with "inktrinket" and provide required video assets where necessary.  An estimate will be created based on the client's requested commission and will be sent to client for a signature. Upon signing, an invoice for half of the total estimate will be delivered electronically to the client, and work on the project will not begin until this down payment is made. Once the client proclaims the project completed, another invoice for the second half of the estimate plus any overtime will be delivered electronically to the client. Overtime is calculated using the hourly rates provided in the estimate. The client will not receive the final version of their commission until all payments are fulfilled. "inktrinket" should be explicitly credited alongside a link to his website on all sources on which the content is posted or made accessible. All payments must be electronically transferred via PayPal, no exceptions. All payments cannot be withheld or refunded for any reason.
+                The client will discuss the desired commission with "inktrinket" and provide required video assets where necessary. An estimate will be created based on the client's requested commission and will be sent to the client for a signature. Upon signing, an invoice for half of the total estimate will be delivered electronically to the client, and work on the project will not begin until this down payment is made. Once the client proclaims the project is completed, another invoice for the second half of the estimate plus any overtime will be delivered electronically to the client. Overtime is calculated using the hourly rates provided in the estimate. The client will not receive the final version of their commission until all payments are fulfilled. "inktrinket" should be explicitly credited alongside a link to his website on all sources on which the content is posted or made accessible. All payments must be electronically transferred via Venmo, with no exceptions. All payments cannot be withheld or refunded for any reason.
             </p>
             <p>
-                "inktrinket" reserves the right to withdraw from the project and cease communications with the client if necessary, including if the client:
+                "inktrinket" reserves the right to withdraw from the project and cease communications with the client if necessary, including but not limited to the client:
             </p>
             <ul>
-                <li>Continuously requests drastic changes that leave their project in an unproductive state</li>
-                <li>Creates a hostile or otherwise unprofessional work environment</li>
-                <li>Attempts/begs to offer a counter payment</li>
+                <li>Continuously requesting drastic changes that leave their project in an unproductive state</li>
+                <li>Attempts/begs to offer an absurd counter payment (i.e "Payment with exposure")</li>
+                <li>Creates a hostile or otherwise undesirable work environment</li>
                 <li>Violates these terms and conditions</li>
             </ul>
         </section>
