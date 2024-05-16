@@ -5,7 +5,10 @@
 a{text-decoration: none;}
 a:link,a:hover,a:visited,a:invalid{color: var(--clr-darkest);}
 nav ul{list-style: none;}
+html{height: 100%;}
+body{min-height: 100%;}
 body,html{scrollbar-width: none; color: var(--clr-darkest); background-color: var(--clr-lightest);}
+body>*{flex-shrink: 0;}
 input:focus{outline: none;}
 iframe{border: none;}
 
