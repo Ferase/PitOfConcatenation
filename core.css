@@ -249,7 +249,7 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
 }
 #night-light + label.first_visit.theme_is_set::after{
     content: "better!" !important;
-    transform: translateX(-60px);
+    transform: translateX(-60px) !important;
     animation: night-light-away 500ms forwards ease;
     animation-delay: 2000ms;
     opacity: 1;
