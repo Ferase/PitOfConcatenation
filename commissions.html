@@ -32,7 +32,8 @@
             grid-template-areas:
                 "info"
                 "divider"
-                "process";
+                "process"
+                "terms";
             max-width: 50%;
             margin-inline: auto;
             margin-bottom: calc(var(--space-largest) * 2);
@@ -84,6 +85,7 @@
                 "i i j j";
             gap: var(--space-small);
             margin-top: calc(-1 * calc(var(--space-largest) * 5));
+            margin-bottom: calc(var(--space-largest) * 2);
             position: relative;
             z-index: 2;
         }
@@ -399,6 +401,33 @@
 
         .process-art__dialogue{
             fill: var(--clr-lightest) !important;
+        }
+
+        .terms{
+            grid-area: terms;
+        }
+
+        .terms h3{
+            font-family: "acumin-variable", sans-serif;
+            font-variation-settings: "wght" 800, "wdth" 100, "ital" 12;
+            font-style: italic;
+            font-size: var(--txt-h2);
+            margin-bottom: var(--space-small);
+        }
+
+        .terms > p{
+            margin-bottom: var(--space-smallest);
+        }
+
+        .terms ul{
+            list-style-position: inside;
+        }
+        .terms ul li{
+            margin-left: var(--space-small);
+            font-family: "peridot-pe-variable", sans-serif;
+            font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+            font-size: var(--txt-p);
+            line-height: var(--txt-lh-p);
         }
 
     </style>
@@ -796,6 +825,21 @@
                 </svg>
             </div>
         </div>
+        <section class="terms">
+            <h3>Terms & Conditions</h3>
+            <p>
+                The client will discuss the desired commission with "inktrinket" and provide required video assets where necessary.  An estimate will be created based on the client's requested commission and will be sent to client for a signature. Upon signing, an invoice for half of the total estimate will be delivered electronically to the client, and work on the project will not begin until this down payment is made. Once the client proclaims the project completed, another invoice for the second half of the estimate plus any overtime will be delivered electronically to the client. Overtime is calculated using the hourly rates provided in the estimate. The client will not receive the final version of their commission until all payments are fulfilled. "inktrinket" should be explicitly credited alongside a link to his website on all sources on which the content is posted or made accessible. All payments must be electronically transferred via PayPal, no exceptions. All payments cannot be withheld or refunded for any reason.
+            </p>
+            <p>
+                "inktrinket" reserves the right to withdraw from the project and cease communications with the client if necessary, including if the client:
+            </p>
+            <ul>
+                <li>continuously requests drastic changes that leave their project in an unproductive state,</li>
+                <li>creates a hostile or otherwise unprofessional work environment,</li>
+                <li>attempts/begs to offer a counter payment,</li>
+                <li>violates these terms and conditions</li>
+            </ul>
+        </section>
     </div>
 
     <script type="text/javascript">
