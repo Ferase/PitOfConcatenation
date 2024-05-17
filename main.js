@@ -92,7 +92,16 @@ window.addEventListener("load", () => {
         blackout = document.getElementById("mobile-blackout");
 
     hamburger.addEventListener("change", function() {
-        if(this.checked){
+        controlNav(hamburger.checked);
+    });
+
+    blackout.addEventListener("click", function() {
+        hamburger.checked = false;
+        controlNav(hamburger.checked);
+    });
+
+    function controlNav(state){
+        if(state){
             hamburger.classList.add("hamburger_pullout");
             v_hamburger.classList.add("hamburger_pullout");
             nav_main.classList.add("hamburger_pullout");
@@ -103,6 +112,6 @@ window.addEventListener("load", () => {
             nav_main.classList.remove("hamburger_pullout");
             blackout.classList.remove("hamburger_pullout");
         }
-    });
+    }
 
 });
