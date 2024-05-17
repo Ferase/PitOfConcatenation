@@ -131,11 +131,11 @@ hr{
 }
 .frame_left{
     left: 0;
-    background-image: url("img/flourish/border_L.png");
+    background-image: url("/img/flourish/border_L.png");
 }
 .frame_right{
     right: 0;
-    background-image: url("img/flourish/border_R.png");
+    background-image: url("/img/flourish/border_R.png");
     background-position-x: right;
 }
 
@@ -147,7 +147,7 @@ hr{
 
 /* Tablet & Phone */
 @media only screen and (max-width: 1050px){ /* 1050px or smaller */
-    .site_frame{
+    .frame_right{
         display: none;
     }
 }
@@ -228,7 +228,7 @@ hr{
         flex-direction: column;
         justify-content: flex-start;
         background-color: var(--clr-darkest);
-        z-index: 100;
+        z-index: 95;
         min-height: 100dvh;
         min-width: 50dvw;
         top: 0;
@@ -266,11 +266,11 @@ hr{
         transition: left 300ms ease;
     }
 
-    #hamburger + label.hamburger_pullout,
-    #hamburger.hamburger_pullout{
+    #hamburger:checked + label,
+    #hamburger:checked{
         left: 50% !important;
     }
-    #header_flex.hamburger_pullout{
+    #hamburger:checked ~ #header_flex{
         left: 0% !important;
     }
     #mobile-blackout{
@@ -290,6 +290,24 @@ hr{
         pointer-events: auto;
         user-select: auto;
         opacity: 0.5;
+    }
+
+    html[data-theme="dark"] #header_flex::after{
+        filter: invert(0.9);
+    }
+
+    .frame_left{
+        top: 0;
+        left: -5dvw;
+        pointer-events: none;
+        width: 5dvw;
+        height: 100dvh;
+        transition: left 300ms ease;
+        z-index: 95;
+    }
+
+    .frame_left.hamburger_pullout{
+        left: 50% !important;
     }
 }
 
@@ -347,6 +365,15 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
     animation: night-light-away 500ms forwards ease;
     animation-delay: 2000ms;
     opacity: 1;
+}
+
+
+/* Tablet & Phone */
+@media only screen and (max-width: 1050px){ /* 1050px or smaller */
+    #night-light,
+    #night-light + label{
+        display: none;
+    }
 }
 
 @keyframes night-light-onload{

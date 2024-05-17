@@ -87,8 +87,7 @@ function applyHeight(element){
 window.addEventListener("load", () => {
 
     var hamburger = document.getElementById("hamburger"),
-        v_hamburger = document.getElementById("hamburger-label"),
-        nav_main = document.getElementById("header_flex"),
+        frame_left = document.querySelector(".frame_left"),
         blackout = document.getElementById("mobile-blackout");
 
     hamburger.addEventListener("change", function() {
@@ -102,14 +101,10 @@ window.addEventListener("load", () => {
 
     function controlNav(state){
         if(state){
-            hamburger.classList.add("hamburger_pullout");
-            v_hamburger.classList.add("hamburger_pullout");
-            nav_main.classList.add("hamburger_pullout");
+            frame_left.classList.add("hamburger_pullout");
             blackout.classList.add("hamburger_pullout");
         } else {
-            hamburger.classList.remove("hamburger_pullout");
-            v_hamburger.classList.remove("hamburger_pullout");
-            nav_main.classList.remove("hamburger_pullout");
+            frame_left.classList.remove("hamburger_pullout");
             blackout.classList.remove("hamburger_pullout");
         }
     }
