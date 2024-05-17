@@ -79,3 +79,30 @@ function applyHeight(element){
     element.setAttribute("width", "100%");
     element.setAttribute("height", `${Math.floor(element.getBoundingClientRect().height)}px`);
 }
+
+
+
+// Hamburger Menu ----------
+
+window.addEventListener("load", () => {
+
+    var hamburger = document.getElementById("hamburger"),
+        v_hamburger = document.getElementById("hamburger-label"),
+        nav_main = document.getElementById("header_flex"),
+        blackout = document.getElementById("mobile-blackout");
+
+    hamburger.addEventListener("change", function() {
+        if(this.checked){
+            hamburger.classList.add("hamburger_pullout");
+            v_hamburger.classList.add("hamburger_pullout");
+            nav_main.classList.add("hamburger_pullout");
+            blackout.classList.add("hamburger_pullout");
+        } else {
+            hamburger.classList.remove("hamburger_pullout");
+            v_hamburger.classList.remove("hamburger_pullout");
+            nav_main.classList.remove("hamburger_pullout");
+            blackout.classList.remove("hamburger_pullout");
+        }
+    });
+
+});

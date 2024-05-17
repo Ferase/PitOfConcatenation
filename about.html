@@ -43,6 +43,7 @@
             margin-left: calc(var(--gap) / 2);
             padding-left: calc(var(--gap) / 2);
             text-align: center;
+            margin-bottom: var(--space-smallest);
         }
         .steph-img img{
             max-width: 100%;
@@ -143,12 +144,40 @@
             fill: #8c71ff;
         }
 
+        /* Tablet & Phone */
         @media only screen and (max-width: 1050px){
+            #svg-about{
+                max-width: 100%;
+                margin-bottom: var(--space-large);
+            }
             .steph-img{
                 float: none;
                 max-width: 100%;
                 margin-left: initial;
                 padding-left: initial;
+                margin-bottom: var(--space-large);
+            }
+            .grid-main{
+                max-width: 80%;
+                padding-top: calc(var(--space-largest) * 2);
+            }
+            .grid-main__b{
+                margin-bottom: calc(var(--space-largest) * 5.5);
+            }
+            .bird{
+                width: 3rem;
+            }
+            .bird__01{
+                bottom: 4%;
+                left: 25%;
+            }
+            .bird__02{
+                bottom: 2%;
+                left: 45%;
+            }
+            .bird__03{
+                bottom: 5%;
+                right: 16%;
             }
         }
 
@@ -163,8 +192,11 @@
     <!-- Night Light -->
     <input id="night-light" type="checkbox"><label id="night-light-label" for="night-light" title="toggle color theme" aria-label="Toggle color theme" data-invert-dark="true"></label>
 
+    <!-- Hamburger -->
+    <div id="mobile-blackout"></div>
+    <input id="hamburger" type="checkbox"><label id="hamburger-label" for="hamburger" title="open navigation" aria-label="open navigation" data-invert-dark="true"></label>
     <!-- Heading -->
-    <header class="header_flex" aria-label="Site header">
+    <header id="header_flex" aria-label="Site header">
         <nav>
             <ul class="header_nav_grid">
                 <li><a href="/index.html" title="go home" aria-label="Return to home page"><img class="header_icon" src="/svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>

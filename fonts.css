@@ -32,10 +32,10 @@
 }
 
 /* Phone */
-@media only screen and (max-width: 768px){ /* 768px or smaller */
+@media only screen and (max-width: 1050px){ /* 1050px or smaller */
     :root{
-        --txt-lh: 1rem;
-        --txt-h1: 1.25rem;
+        --txt-lh: 2.2rem;
+        --txt-h1: 2.4rem;
     }
 }
 
