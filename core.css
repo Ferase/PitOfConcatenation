@@ -221,6 +221,18 @@ hr{
 
 /* Tablet & Phone */
 @media only screen and (max-width: 1050px){ /* 1050px or smaller */
+
+    html[data-theme="dark"] #header_flex{
+        --clr-lightest: hsl(0, 0%, 0%);
+        --clr-darkest: hsl(0, 0%, 100%);
+    }
+
+    html[data-theme="dark"] #header_flex[data-invert-dark="true"],
+    html[data-theme="dark"] #hamburger + label[data-invert-dark="true"],
+    html[data-theme="dark"] .frame_left[data-invert-dark="true"]{
+        filter: invert(1) !important;
+    }
+
     #header_flex{
         --mobile-padding: var(--space-large);
 
@@ -241,10 +253,7 @@ hr{
         grid-auto-flow: row;
     }
     .header_nav_grid > li:first-child{
-        filter: invert(0.9);
-    }
-    .header_nav_grid > li:first-child[data-invert-dark="true"]{
-        filter: invert(0.1);
+        filter: invert(1);
     }
     .header_nav_grid li:not(:first-child), .header_portfolio_fold li{
         color: var(--clr-lightest) !important;
@@ -428,7 +437,7 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
     }
 
     html[data-theme="dark"] #night-light + label{
-        filter: invert(0.1);
+        filter: invert(0);
     }
 
     #night-light + label.hamburger_pullout{
@@ -445,7 +454,6 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
         left: 0;
         width: 100%;
         transform: translateY(-100%);
-        animation-delay: 0s;
         text-align: center;
     }
     #night-light + label.first_visit.theme_is_set::after{
@@ -453,12 +461,14 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
     }
 
     @media only screen and (orientation: landscape) and (max-height: 500px){
-        #night-light + label.hamburger_pullout{
+        #night-light + label{
             bottom: var(--space-smallest);
-            left: 40lvw !important;
             width: 50px;
             height: 50px;
             background-size: contain;
+        }
+        #night-light + label.hamburger_pullout{
+            left: 40lvw !important;
         }
 
         .pulldown{
@@ -471,11 +481,11 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
             width: 200% !important;
             height: 100%;
             align-content: center;
-            transform: translateX(60px);
-            text-align: left;
+            transform: translateX(-120px);
+            text-align: right;
         }
         #night-light + label.first_visit.theme_is_set::after{
-            transform: translateX(60px) !important;
+            transform: translateX(-120px) !important;
         }
     }
 }
