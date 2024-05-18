@@ -317,7 +317,8 @@
         /* Tablet & Phone */
         @media only screen and (max-width: 1050px){
 
-            #crane-anim{
+            #crane-anim,
+            #svg-border-01{
                 display: none;
             }
 
@@ -336,7 +337,7 @@
                 grid-template-areas: 
                     "a"
                     "b";
-                gap: var(--space-small);
+                gap: calc(var(--space-largest) * 1.5);
                 margin-inline: auto;
                 padding-top: calc(var(--space-largest) * 2);
             }
@@ -351,6 +352,26 @@
                 max-width: 150vw;
                 width: 150vw;
                 transform: translateX(-40%);
+            }
+
+            .hero-subheading{
+                font-size: calc(var(--txt-h2) / 1.2);
+                font-variation-settings: "wght" 500, "wdth" 100, "ital" 0;
+                margin-bottom: var(--space-small);
+            }
+
+            @media only screen and (orientation: landscape){
+                .grid-main{
+                    padding-bottom: calc(var(--space-largest) * 4);
+                }
+
+                @media only screen and (max-height: 500px){
+                    #svg-home{
+                        max-width: 100vw;
+                        width: 100vw;
+                        transform: translateX(-25%);
+                    }
+                }
             }
         }
 

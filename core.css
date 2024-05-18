@@ -168,6 +168,7 @@ hr{
 
 .header_icon{
     width: 100px;
+    user-select: none;
 }
 
 .header_nav_grid{
@@ -221,17 +222,6 @@ hr{
 
 /* Tablet & Phone */
 @media only screen and (max-width: 1050px){ /* 1050px or smaller */
-
-    html[data-theme="dark"] #header_flex{
-        --clr-lightest: hsl(0, 0%, 0%);
-        --clr-darkest: hsl(0, 0%, 100%);
-    }
-
-    html[data-theme="dark"] #header_flex[data-invert-dark="true"],
-    html[data-theme="dark"] #hamburger + label[data-invert-dark="true"],
-    html[data-theme="dark"] .frame_left[data-invert-dark="true"]{
-        filter: invert(1) !important;
-    }
 
     #header_flex{
         --mobile-padding: var(--space-large);
@@ -437,7 +427,7 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
     }
 
     html[data-theme="dark"] #night-light + label{
-        filter: invert(0);
+        filter: invert(0.1);
     }
 
     #night-light + label.hamburger_pullout{
