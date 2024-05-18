@@ -22,7 +22,7 @@ function getColorScheme(){
 
 getColorScheme() // Run before page draws
 
-function setNightLightMedia(media, theme) {
+function setNightLightMedia(media) {
     if (media.matches) {
         document.documentElement.style.setProperty("--night-light-url", `url(/img/night_light/mobile_nl_${theme}.png)`);
     } else {
@@ -40,7 +40,7 @@ window.onload = function applyCheck(){
         fv_label.classList.add("first_visit");
     }
 
-    setNightLightMedia(match_media, theme);
+    setNightLightMedia(match_media);
 
     var other = "dark";
     switch(theme){
@@ -72,11 +72,7 @@ window.onload = function applyCheck(){
         localStorage.setItem("theme", theme);
         localStorage.setItem("has_set_theme", true);
 
-        setNightLightMedia(match_media, theme);
-
-        match_media.addEventListener("change", function() {
-            setNightLightMedia(match_media, theme);
-        });
+        setNightLightMedia(match_media);
         
         if(has_set_theme){
             return;
@@ -84,6 +80,10 @@ window.onload = function applyCheck(){
 
         fv_label.classList.add("theme_is_set")
 
+    });
+
+    match_media.addEventListener("change", function() {
+        setNightLightMedia(match_media);
     });
 }
 
