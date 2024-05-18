@@ -53,6 +53,25 @@
             right: 0;
         }
 
+        @media only screen and (max-width: 1050px){
+            #svg-proport-left,
+            #svg-proport-right{
+                display: none;
+            }
+
+            #svg-heading{
+                max-width: 100%;
+            }
+
+            @media only screen and (orientation: landscape){
+                #svg-proport-left,
+                #svg-proport-right{
+                    display: block;
+                    max-height: 35%;
+                }
+            }
+        }
+
     </style>
 </head>
 <body>

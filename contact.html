@@ -149,6 +149,83 @@
             }
         }
 
+        @media only screen and (max-width: 1050px){
+            .grid-main{
+                max-width: 80%;
+                gap: var(--space-small);
+                padding-block: calc(var(--space-largest) * 2);
+            }
+            #svg-contact-left,
+            #svg-contact-right{
+                display: none
+            }
+
+            .grid-socials{
+                grid-auto-flow: row;
+                margin-inline: auto;
+            }
+            .grid-socials li a{
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: var(--space-small);
+            }
+            .grid-socials li a img{
+                width: 4rem;
+                margin: 0;
+            }
+            .grid-socials li a p{
+                text-align: left;
+                align-self: center;
+            }
+
+            .toast{
+                position: absolute;
+                top: 40%;
+                left: 0%;
+                transform: translate(80%);
+                height: 100%;
+                align-content: center;
+            }
+
+            @media only screen and (orientation: landscape){
+                .grid-main{
+                    max-width: 60%;
+                    gap: var(--space-large);
+                }
+                #svg-contact-left,
+                #svg-contact-right{
+                    display: block;
+                    max-height: 50%;
+                }
+
+                .grid-socials{
+                    grid-auto-flow: column;
+                    place-items: center;
+                    align-items: end;
+                    width: 100%;
+                }
+                .grid-socials li{
+                    width: 100%;
+                }
+                .grid-socials li a{
+                    flex-direction: column;
+                    justify-content: end;
+                    gap: calc(var(--space-smallest) / 2);
+                }
+                .grid-socials li a img{
+                    margin: 0 auto;
+                }
+                .grid-socials li a p{
+                    text-align: center;
+                }
+                .toast{
+                    bottom: -25%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
     </style>
 </head>
 <body>

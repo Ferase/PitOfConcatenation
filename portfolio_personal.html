@@ -55,6 +55,36 @@
             fill: #ff6464;
         }
 
+        @media only screen and (max-width: 1050px){
+
+            .blot{
+                display: none;
+            }
+
+            #svg-heading{
+                max-width: 100%;
+            }
+
+            @media only screen and (orientation: landscape){
+                .blot{
+                    display: block;
+                    width: 4rem;
+                }
+                .blot__01{
+                    left: 7%;
+                }
+                .blot__02{
+                    left: 5%;
+                }
+                .blot__03{
+                    right: 6%;
+                }
+                .blot__04{
+                    right: 10%;
+                }
+            }
+        }
+
     </style>
 </head>
 <body>

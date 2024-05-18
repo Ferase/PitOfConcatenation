@@ -73,7 +73,7 @@
     width: 100%;
     height: 100%;
     background-color: #000;
-    z-index: 6;
+    z-index: 150;
     opacity: 0;
     transition: opacity 500ms ease;
     pointer-events: none;
@@ -92,7 +92,7 @@
     left: 50%;
     width: 55%;
     height: 55%;
-    z-index: 7;
+    z-index: 150;
     transform: translate(-50%, -100%);
     opacity: 0;
     transition: transform 500ms ease, opacity 500ms ease;
@@ -105,8 +105,8 @@
 }
 
 #image-zoom img{
+    aspect-ratio: 16/9;
     width: 100%;
-    height: 100%;
 }
 
 .grid-main__info{
@@ -145,4 +145,24 @@
 }
 #program-list li img{
     max-width: var(--space-largest);
+}
+
+@media only screen and (max-width: 1050px){
+    .grid-main{
+        --gap: var(--space-large);
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "video"
+            "info";
+        gap: var(--gap);
+        max-width: 80%;
+        padding-block: calc(var(--space-largest) * 2);
+    }
+
+    @media only screen and (orientation: landscape){
+        .grid-main{
+            max-width: 60%;
+        }
+    }
 }
