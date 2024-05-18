@@ -240,14 +240,29 @@ hr{
         margin-left: var(--space-largest) !important;
         grid-auto-flow: row;
     }
-    .header_nav_grid li:first-child{
+    .header_nav_grid > li:first-child{
         filter: invert(0.9);
     }
-    .header_nav_grid li:first-child[data-invert-dark="true"]{
+    .header_nav_grid > li:first-child[data-invert-dark="true"]{
         filter: invert(0.1);
     }
     .header_nav_grid li:not(:first-child), .header_portfolio_fold li{
         color: var(--clr-lightest) !important;
+    }
+
+    .header_nav_grid > li:nth-child(4){
+        margin-top: calc(var(--space-largest) * 1.5);
+    }
+    
+    .header_nav_hover_list .header_portfolio_fold{
+        top: 100%;
+        user-select: auto;
+        pointer-events: auto;
+        left: var(--space-small);
+    }
+    .header_portfolio_fold{
+        color: var(--clr-lightest) !important;
+        opacity: 1;
     }
 
     #hamburger{
@@ -321,6 +336,10 @@ hr{
 
 
         @media only screen and (max-height: 500px){
+            .header_nav_grid > li:nth-child(4){
+                margin-top: calc(var(--space-largest) * 1.25);
+            }
+            
             .header_nav_grid{
                 gap: var(--space-smallest);
             }
@@ -436,7 +455,7 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
     @media only screen and (orientation: landscape) and (max-height: 500px){
         #night-light + label.hamburger_pullout{
             bottom: var(--space-smallest);
-            left: 5lvw !important;
+            left: 40lvw !important;
             width: 50px;
             height: 50px;
             background-size: contain;
