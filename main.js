@@ -22,14 +22,25 @@ function getColorScheme(){
 
 getColorScheme() // Run before page draws
 
+function setNightLightMedia(media, theme) {
+    if (media.matches) {
+        document.documentElement.style.setProperty("--night-light-url", `url(/img/night_light/mobile_nl_${theme}.png)`);
+    } else {
+        document.documentElement.style.setProperty("--night-light-url", `url(/img/night_light/nl_${theme}.png)`);
+    }
+}
+  
+
 // On page load, check the checkbox if the user prefers dark mode and then add a listener for the checkbox
 window.onload = function applyCheck(){
+    var match_media = window.matchMedia("only screen and (max-width: 1050px)");
+
     if(!has_set_theme){
         var fv_label = document.querySelector("#night-light + label");
         fv_label.classList.add("first_visit");
     }
 
-    document.documentElement.style.setProperty("--night-light-url", `url(/img/night_light/nl_${theme}.png)`);
+    setNightLightMedia(match_media, theme);
 
     var other = "dark";
     switch(theme){
@@ -60,7 +71,12 @@ window.onload = function applyCheck(){
         document.documentElement.setAttribute("data-theme", theme);
         localStorage.setItem("theme", theme);
         localStorage.setItem("has_set_theme", true);
-        document.documentElement.style.setProperty("--night-light-url", `url(/img/night_light/nl_${theme}.png)`);
+
+        setNightLightMedia(match_media, theme);
+
+        match_media.addEventListener("change", function() {
+            setNightLightMedia(match_media, theme);
+        });
         
         if(has_set_theme){
             return;
@@ -88,7 +104,10 @@ window.addEventListener("load", () => {
 
     var hamburger = document.getElementById("hamburger"),
         frame_left = document.querySelector(".frame_left"),
+        nl_mobile = document.getElementById("night-light-label"),
         blackout = document.getElementById("mobile-blackout");
+
+    controlNav(hamburger.checked);
 
     hamburger.addEventListener("change", function() {
         controlNav(hamburger.checked);
@@ -101,9 +120,11 @@ window.addEventListener("load", () => {
 
     function controlNav(state){
         if(state){
+            nl_mobile.classList.add("hamburger_pullout");
             frame_left.classList.add("hamburger_pullout");
             blackout.classList.add("hamburger_pullout");
         } else {
+            nl_mobile.classList.remove("hamburger_pullout");
             frame_left.classList.remove("hamburger_pullout");
             blackout.classList.remove("hamburger_pullout");
         }
