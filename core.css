@@ -318,6 +318,13 @@ hr{
             width: 10dvw;
             height: 10dvw;
         }
+
+
+        @media only screen and (max-height: 500px){
+            .header_nav_grid{
+                gap: var(--space-smallest);
+            }
+        }
     }
 
     @keyframes site_frame_flow{
