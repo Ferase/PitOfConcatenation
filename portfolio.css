@@ -160,16 +160,16 @@
     }
     .grid-main__pagination ul{
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(4, 40%);
         row-gap: var(--space-largest) !important;
     }
     .v-card h2{
-        font-size: calc(var(--txt-h5) / 1.35);
-        line-height: calc(var(--txt-lh) / 1.5);
+        font-size: calc(var(--txt-h5) / 1.4);
+        line-height: calc(var(--txt-lh) / 1.75);
     }
     .v-card h3{
-        font-size: calc(var(--txt-h6) / 1.35);
-        line-height: calc(var(--txt-lh) / 1.5);
+        font-size: calc(var(--txt-h6) / 1.4);
+        line-height: calc(var(--txt-lh) / 1.75);
     }
     .v-card .v-card__img{
         width: 80%;
@@ -202,8 +202,6 @@
             max-width: 60%;
         }
         .grid-main__pagination ul{
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(4, auto);
             column-gap: calc(var(--space-smallest) / 2) !important;
         }
         #search-bar{
