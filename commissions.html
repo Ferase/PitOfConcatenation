@@ -237,7 +237,7 @@
             align-items: baseline;
         }
         #price-venmo{
-            max-height: 0.8rem;
+            max-width: 3rem;
         }
         #price-venmo > path{
             fill: var(--clr-lightest);
@@ -485,8 +485,11 @@
             }
 
             #price > div{
-                max-width: 60%;
+                max-width: 100%;
                 margin-inline: auto;
+            }
+            #price div h5{
+                font-size: 4.5rem;
             }
             
             #time-info{
@@ -501,6 +504,14 @@
             }
             .prefs-list ul li{
                 font-size: var(--txt-p);
+            }
+
+            #social-icons ul li a p{
+                font-size: calc(var(--txt-h5) - 0.5rem);
+            }
+            
+            #social-icons ul li a p span{
+                font-size: calc(var(--txt-h5) - 0.8rem) !important;
             }
 
             #ink-ask{
