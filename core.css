@@ -72,34 +72,6 @@ body{
 
 
 
-/* Horizontal rule ------------------------ */
-
-hr{
-    border-style: solid;
-    border-width: 5px;
-    border-color: var(--clr-darkest);
-    margin: var(--space-large) 0;
-}
-
-
-
-/* Spacing ------------------------ */
-
-.up_margin{
-    margin-top: var(--space-small);
-}
-.low_margin{
-    margin-bottom: var(--space-small);
-}
-.up_margin_large{
-    margin-top: var(--space-large);
-}
-.low_margin_large{
-    margin-bottom: var(--space-large);
-}
-
-
-
 /* Button ------------------------ */
 
 .button{
