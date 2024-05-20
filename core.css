@@ -252,7 +252,14 @@ hr{
     .header_nav_grid > li:nth-child(4){
         margin-top: calc(var(--space-largest) * 1.5);
     }
-    
+
+    .header_nav_hover_list > p::after{
+        content: " ▼";
+        font-family: "acumin-variable", sans-serif;
+        font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
+        font-size: var(--txt-p);
+    }
+
     .header_nav_hover_list .header_portfolio_fold{
         top: 100%;
         user-select: auto;
@@ -262,6 +269,10 @@ hr{
     .header_portfolio_fold{
         color: var(--clr-lightest) !important;
         opacity: 1;
+    }
+
+    .header_portfolio_fold li > *{
+        font-size: var(--space-small) !important;
     }
 
     #hamburger{
@@ -332,7 +343,6 @@ hr{
             width: 10dvw;
             height: 10dvw;
         }
-
 
         @media only screen and (max-height: 500px){
             .header_nav_grid > li:nth-child(4){
