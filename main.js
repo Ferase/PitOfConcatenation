@@ -104,6 +104,8 @@ window.addEventListener("load", () => {
 
     var hamburger = document.getElementById("hamburger"),
         frame_left = document.querySelector(".frame_left"),
+        header_portfolio = document.querySelector(".header_nav_grid > li:nth-child(4)"),
+        header_fold = document.querySelector(".header_portfolio_fold"),
         nl_mobile = document.getElementById("night-light-label"),
         blackout = document.getElementById("mobile-blackout");
 
@@ -123,10 +125,14 @@ window.addEventListener("load", () => {
             nl_mobile.classList.add("hamburger_pullout");
             frame_left.classList.add("hamburger_pullout");
             blackout.classList.add("hamburger_pullout");
+            header_portfolio.classList.add("hamburger_pullout");
+            header_fold.classList.add("hamburger_pullout");
         } else {
             nl_mobile.classList.remove("hamburger_pullout");
             frame_left.classList.remove("hamburger_pullout");
             blackout.classList.remove("hamburger_pullout");
+            header_portfolio.classList.remove("hamburger_pullout");
+            header_fold.classList.remove("hamburger_pullout");
         }
     }
 
