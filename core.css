@@ -234,6 +234,10 @@ body{
         pointer-events: auto;
         left: var(--space-small);
     }
+    
+    .header_nav_hover_list:hover .header_portfolio_fold{
+        top: 125%;
+    }
     .header_portfolio_fold{
         color: var(--clr-lightest) !important;
         opacity: 0;
