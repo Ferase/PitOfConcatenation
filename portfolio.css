@@ -159,8 +159,8 @@
         padding-top: calc(var(--space-largest) * 2);
     }
     .grid-main__pagination ul{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, auto);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, auto);
         row-gap: var(--space-largest) !important;
     }
     .v-card h2{

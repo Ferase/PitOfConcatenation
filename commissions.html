@@ -247,9 +247,8 @@
             grid-area: f;
         }
         #social-icons ul{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            display: grid;
+            grid-auto-flow: column;
             list-style: none;
         }
         #social-icons ul li a{
@@ -506,10 +505,24 @@
                 font-size: var(--txt-p);
             }
 
+            #social-icons ul{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, auto);
+                grid-auto-flow: row;
+                row-gap: var(--space-largest);
+                column-gap: calc(var(--space-largest) * 2);
+            }
+            #social-icons ul li:nth-child(1),
+            #social-icons ul li:nth-child(3){
+                place-self: end;
+            }
+            #social-icons ul li:nth-child(2),
+            #social-icons ul li:nth-child(4){
+                place-self: start;
+            }
             #social-icons ul li a p{
                 font-size: calc(var(--txt-h5) - 0.5rem);
             }
-            
             #social-icons ul li a p span{
                 font-size: calc(var(--txt-h5) - 0.8rem) !important;
             }
