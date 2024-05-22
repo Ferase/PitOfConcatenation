@@ -149,7 +149,7 @@
     max-width: var(--space-largest);
 }
 
-@media only screen and (max-width: 1050px){
+@media only screen and (max-width: 1150px){
     .grid-main{
         --gap: var(--space-large);
         grid-template-columns: 100%;

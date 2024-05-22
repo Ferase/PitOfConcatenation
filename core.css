@@ -48,7 +48,7 @@ html[data-theme="dark"] [data-invert-dark="true"]{
 }
 
 /* Phone */
-@media only screen and (max-width: 1050px){ /* 1050px or smaller */
+@media only screen and (max-width: 1150px){ /* 1050px or smaller */
     :root{
         --space-smallest: 0.75rem;
         --space-small: 1.25rem;
@@ -118,7 +118,7 @@ body{
 }
 
 /* Tablet & Phone */
-@media only screen and (max-width: 1050px){ /* 1050px or smaller */
+@media only screen and (max-width: 1150px){ /* 1050px or smaller */
     .frame_right{
         display: none;
     }
@@ -193,7 +193,7 @@ body{
 }
 
 /* Tablet & Phone */
-@media only screen and (max-width: 1050px){ /* 1050px or smaller */
+@media only screen and (max-width: 1150px){ /* 1050px or smaller */
 
     #header_flex{
         --mobile-padding: var(--space-large);
@@ -409,7 +409,7 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
 
 
 /* Tablet & Phone */
-@media only screen and (max-width: 1050px){ /* 1050px or smaller */
+@media only screen and (max-width: 1150px){ /* 1050px or smaller */
     #night-light + label{
         top: unset;
         right: unset;
@@ -420,6 +420,7 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
         transform: none;
         animation: none;
         animation-delay: none;
+        background-size: contain;
         z-index: 100;
         filter: invert(0.9);
         transition: left 300ms ease, transform 300ms ease;
