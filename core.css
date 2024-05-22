@@ -367,6 +367,7 @@ and (max-width: 1050px){
     transform-box: fill-box;
     transform-origin: 50px 24px;
     background: var(--night-light-url);
+    background-size: contain;
     width: 100px;
     height: 130px;
     cursor: pointer;
@@ -422,7 +423,6 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
         transform: none;
         animation: none;
         animation-delay: none;
-        background-size: contain;
         z-index: 100;
         filter: invert(0.9);
         transition: left 300ms ease, transform 300ms ease;
@@ -457,7 +457,6 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
             bottom: var(--space-smallest);
             width: 50px;
             height: 50px;
-            background-size: contain;
         }
         #night-light + label.hamburger_pullout{
             left: 40lvw !important;
