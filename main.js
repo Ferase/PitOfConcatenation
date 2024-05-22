@@ -24,9 +24,9 @@ getColorScheme() // Run before page draws
 
 function setNightLightMedia(media) {
     if (media.matches) {
-        document.documentElement.style.setProperty("--night-light-url", `url(/img/night_light/mobile_nl_${theme}.png)`);
+        document.documentElement.style.setProperty("--night-light-url", `url(/svg/night_light/mobile_nl_${theme}.png)`);
     } else {
-        document.documentElement.style.setProperty("--night-light-url", `url(/img/night_light/nl_${theme}.png)`);
+        document.documentElement.style.setProperty("--night-light-url", `url(/svg/night_light/nl_${theme}.png)`);
     }
 }
   
