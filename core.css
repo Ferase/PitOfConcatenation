@@ -165,7 +165,7 @@ body{
 }
 
 .header_icon{
-    width: 50%;
+    max-width: 50%;
     user-select: none;
 }
 
