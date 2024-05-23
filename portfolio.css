@@ -100,7 +100,7 @@
 }
 
 .v-card:hover{
-    transform: scale(105%);
+    transform: scale(1.05);
 }
 
 .grid-main__pagination ul li.hidden{
@@ -150,7 +150,7 @@
     transform: rotateZ(45deg);
 }
 #svg-search-glass.searching.found{
-    transform: rotateZ(405deg) scale(120%, 120%);
+    transform: rotateZ(405deg) scale(1.2);
 }
 
 @media only screen and (max-width: 1050px){

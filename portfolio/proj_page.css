@@ -88,8 +88,12 @@
 
 #image-zoom{
     position: fixed;
+
+    top: 50vh;
+    left: 50vw;
     top: 50lvh;
     left: 50lvw;
+
     width: 55%;
     height: 55%;
     z-index: 150;

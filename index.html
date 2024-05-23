@@ -260,15 +260,15 @@
             animation: ink-eyelids 2000ms step-start;
             animation-delay: 2950ms;
             animation-iteration-count: 1;
-            transform: scale(0%, 0%);
+            transform: scale(0);
         }
 
         @keyframes ink-eyelids {
             0%{
-                transform: scale(100%, 100%);
+                transform: scale(1);
             }
             100%{
-                transform: scale(100%, 100%);
+                transform: scale(1);
             }
         }
 
@@ -277,30 +277,30 @@
             animation: ink-blink 5000ms step-end;
             animation-delay: 950ms;
             animation-iteration-count: 1;
-            transform: scale(0%, 0%);
+            transform: scale(0);
         }
 
         @keyframes ink-blink {
             0%{
-                transform: scale(0%, 0%);
+                transform: scale(0);
             }
             2%{
-                transform: scale(100%, 100%);
+                transform: scale(1, 1);
             }
             4%{
-                transform: scale(0%, 0%);
+                transform: scale(0);
             }
             79%{
-                transform: scale(100%, 100%);
+                transform: scale(1);
             }
             80%{
-                transform: scale(0%, 0%);
+                transform: scale(0);
             }
             98%{
-                transform: scale(100%, 100%);
+                transform: scale(1);
             }
             100%{
-                transform: scale(0%, 0%);
+                transform: scale(0);
             }
         }
 

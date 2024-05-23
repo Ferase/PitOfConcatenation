@@ -94,8 +94,12 @@ body{
     position: fixed;
     top: 0;
     pointer-events: none;
+
+    width: 5vw;
+    height: 100vh;
     width: 5dvw;
     height: 100dvh;
+
     background-repeat: repeat-y;
     background-size: 100% 100vh;
     animation: site_frame_flow infinite 10000ms linear;
@@ -113,6 +117,7 @@ body{
 
 @keyframes site_frame_flow{
     to{
+        background-position-y: 100vh;
         background-position-y: 100dvh;
     }
 }
@@ -121,6 +126,27 @@ body{
 @media only screen and (max-width: 1050px){ /* 1050px or smaller */
     .frame_right{
         display: none;
+    }
+
+    .frame_left{
+        top: 0;
+        left: 0%;
+        pointer-events: none;
+
+        width: 0vw;
+        height: 100vh;
+        width: 0lvw;
+        height: 100lvh;
+
+        transition: left 300ms ease;
+        z-index: 95;
+    }
+
+    .frame_left.hamburger_pullout{
+        left: 50% !important;
+
+        width: 5vw;
+        width: 5dvw;
     }
 }
 
@@ -204,8 +230,12 @@ body{
         align-items: start;
         background-color: var(--clr-darkest);
         z-index: 95;
+
+        min-height: 100vh;
+        min-width: 50vw;
         min-height: 100lvh;
         min-width: 50dvw;
+
         top: 0;
         left: -50%;
         transition: left 300ms ease;
@@ -273,8 +303,12 @@ body{
         position: fixed;
         top: 0;
         left: 0%;
+        
+        width: 15vw;
+        height: 15vw;
         width: 15dvw;
         height: 15dvw;
+
         z-index: 100;
         cursor: pointer;
         background-image: url(/img/hamburger.png);
@@ -312,23 +346,10 @@ body{
         filter: invert(0.9);
     }
 
-    .frame_left{
-        top: 0;
-        left: 0%;
-        pointer-events: none;
-        width: 0lvw;
-        height: 100lvh;
-        transition: left 300ms ease;
-        z-index: 95;
-    }
-
-    .frame_left.hamburger_pullout{
-        left: 50% !important;
-        width: 5dvw;
-    }
-
     @media only screen and (orientation: landscape){
         #hamburger + label{
+            width: 10vw;
+            height: 10vw;
             width: 10dvw;
             height: 10dvw;
         }
@@ -346,6 +367,7 @@ body{
 
     @keyframes site_frame_flow{
         to{
+            background-position-y: 100vh;
             background-position-y: 100lvh;
         }
     }
@@ -415,7 +437,10 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
         top: unset;
         right: unset;
         bottom: var(--space-large);
+
+        left: calc(-5vw - 150px);
         left: calc(-5dvw - 150px);
+
         width: 100px;
         height: 100px;
         transform: none;
@@ -436,7 +461,7 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
     
     .pulldown{
         top: unset !important;
-        transform: scale(90%, 90%) !important;
+        transform: scale(0.9) !important;
     }
 
     #night-light + label.first_visit::after{
@@ -457,11 +482,12 @@ html[data-theme="dark"] #night-light + label.first_visit::after{
             height: 50px;
         }
         #night-light + label.hamburger_pullout{
+            left: 40vw !important;
             left: 40lvw !important;
         }
 
         .pulldown{
-            transform: scale(90%, 90%) !important;
+            transform: scale(0.9) !important;
         }
 
         #night-light + label.first_visit::after{
