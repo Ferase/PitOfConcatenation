@@ -165,7 +165,7 @@ body{
 }
 
 .header_icon{
-    max-width: 50%;
+    width: 100px;
     user-select: none;
 }
 
@@ -240,6 +240,12 @@ body{
         left: -50%;
         transition: left 300ms ease;
     }
+    
+    .header_icon{
+        width: auto;
+        max-width: 50%;
+    }
+
     .header_nav_grid{
         margin-left: var(--space-largest) !important;
         grid-auto-flow: row;

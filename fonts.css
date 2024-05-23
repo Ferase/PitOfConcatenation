@@ -1,14 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-    font-family: "acumin-variable";
-    src: url("font/acumin_variable.otf");
-}
-@font-face {
-    font-family: "peridot-pe-variable";
-    src: url("font/peridot_variable.otf");
-}
-
 :root,::before,::after{
     --mod: 0.28rem;
     --txt-lh: 2.4rem;
