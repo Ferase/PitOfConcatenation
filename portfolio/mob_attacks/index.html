@@ -20,66 +20,68 @@
 </head>
 <body>
 
-    <div id="blackout" onclick="removeZoom(this)"></div>
+    <div id="main_wrapper">
+        <div id="blackout" onclick="removeZoom(this)"></div>
 
-    <div id="image-zoom">
-        <img src="" alt="full image">
-    </div>
-    
-    <!-- Borders -->
-    <div class="site_frame frame_left" data-invert-dark="true"></div>
-    <div class="site_frame frame_right" data-invert-dark="true"></div>
+        <div id="image-zoom">
+            <img src="" alt="full image">
+        </div>
+        
+        <!-- Borders -->
+        <div class="site_frame frame_left" data-invert-dark="true"></div>
+        <div class="site_frame frame_right" data-invert-dark="true"></div>
 
-    <!-- Night Light -->
-    <input id="night-light" type="checkbox"><label id="night-light-label" for="night-light" title="toggle color theme" aria-label="Toggle color theme" data-invert-dark="true"></label>
+        <!-- Night Light -->
+        <input id="night-light" type="checkbox"><label id="night-light-label" for="night-light" title="toggle color theme" aria-label="Toggle color theme" data-invert-dark="true"></label>
 
-    <!-- Hamburger -->
-    <div id="mobile-blackout"></div>
-    <input id="hamburger" type="checkbox"><label id="hamburger-label" for="hamburger" title="open navigation" aria-label="open navigation" data-invert-dark="true"></label>
-    <!-- Heading -->
-    <header id="header_flex" aria-label="Site header">
-        <nav>
-            <ul class="header_nav_grid">
-                <li><a href="/index.html" title="go home" aria-label="Return to home page"><img class="header_icon" src="/svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
-                <li><a href="/about.html" aria-label="About page">about</a></li>
-                <li class="header_nav_hover_list" aria-label="Portfolio">
-                    <p>portfolio</p>
-                    <ul class="header_portfolio_fold">
-                        <li><a href="/portfolio_professional.html" aria-label="Professional portfolio">professional</a></li>
-                        <li><a href="/portfolio_personal.html" aria-label="Personal work portfolio">personal</a></li>
-                    </ul>
-                </li>
-                <li><a href="/commissions.html" aria-label="Commissions page">commissions</a></li>
-                <li><a href="/contact.html" aria-label="Contact page">contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="grid-main">
-        <div id="grid-main__hero-gallery">
-            <div class="hero-gallery__image-container">
-                <iframe id="hero-video" class="" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-                    src="">
-                </iframe>
-                <img id="hero-image" class="" src="" onclick="setZoom(this)">
-            </div>
-            <nav class="hero-gallery__image-reel">
-                <ul id="image-reel">
-
+        <!-- Hamburger -->
+        <div id="mobile-blackout"></div>
+        <input id="hamburger" type="checkbox"><label id="hamburger-label" for="hamburger" title="open navigation" aria-label="open navigation" data-invert-dark="true"></label>
+        <!-- Heading -->
+        <header id="header_flex" aria-label="Site header">
+            <nav>
+                <ul class="header_nav_grid">
+                    <li><a href="/index.html" title="go home" aria-label="Return to home page"><img class="header_icon" src="/svg/inktrinket_logo_v2.svg" alt="inktrinket go home" data-invert-dark="true"></a></li>
+                    <li><a href="/about.html" aria-label="About page">about</a></li>
+                    <li class="header_nav_hover_list" aria-label="Portfolio">
+                        <p>portfolio</p>
+                        <ul class="header_portfolio_fold">
+                            <li><a href="/portfolio_professional.html" aria-label="Professional portfolio">professional</a></li>
+                            <li><a href="/portfolio_personal.html" aria-label="Personal work portfolio">personal</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/commissions.html" aria-label="Commissions page">commissions</a></li>
+                    <li><a href="/contact.html" aria-label="Contact page">contact</a></li>
                 </ul>
             </nav>
-        </div>
+        </header>
 
-        <main class="grid-main__info">
-            <h1 class="grid-main__heading">The MOB Attacks</h1>
-            <p class="grid-main__paragraph">"The MOB Attacks" is a gameplay series I like editing in my spare time. These videos primarily consist of me and our friend group (whom we like to call "The MOB") playing video games and having a good time. I practice a lot of visual and pacing-related editing with this series, which may take longer process-wise, but makes the result very fun.</p>
-            <div class="grid-main__programs">
-                <h3>Programs Used</h3>
-                <ul id="program-list">
-                    
-                </ul>
+        <div class="grid-main">
+            <div id="grid-main__hero-gallery">
+                <div class="hero-gallery__image-container">
+                    <iframe id="hero-video" class="" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                        src="">
+                    </iframe>
+                    <img id="hero-image" class="" src="" onclick="setZoom(this)">
+                </div>
+                <nav class="hero-gallery__image-reel">
+                    <ul id="image-reel">
+
+                    </ul>
+                </nav>
             </div>
-        </main>
+
+            <main class="grid-main__info">
+                <h1 class="grid-main__heading">The MOB Attacks</h1>
+                <p class="grid-main__paragraph">"The MOB Attacks" is a gameplay series I like editing in my spare time. These videos primarily consist of me and our friend group (whom we like to call "The MOB") playing video games and having a good time. I practice a lot of visual and pacing-related editing with this series, which may take longer process-wise, but makes the result very fun.</p>
+                <div class="grid-main__programs">
+                    <h3>Programs Used</h3>
+                    <ul id="program-list">
+                        
+                    </ul>
+                </div>
+            </main>
+        </div>
     </div>
 
     <script type="text/javascript" src="../proj_page.js"></script>
