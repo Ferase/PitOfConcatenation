@@ -98,7 +98,7 @@ const createUsedProgram = async (prog) => {
     var li = document.createElement("li");
 
     li.innerHTML = `
-        <img src="/svg/programs/program_${prog}.png" alt="${programs[prog]}" title="${programs[prog]}" aria-label="${programs[prog]}" data-invert-dark="true">
+        <img src="/img/programs/program_${prog}.png" alt="${programs[prog]}" title="${programs[prog]}" aria-label="${programs[prog]}" data-invert-dark="true">
     `;
     programList.appendChild(li);
 }

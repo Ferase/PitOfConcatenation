@@ -2,6 +2,7 @@
 
 *{margin: 0; padding: 0;}
 *,::before,::after{box-sizing: border-box;}
+#main_wrapper{overflow: auto; position: relative;}
 a{text-decoration: none;}
 a:link,a:hover,a:visited,a:invalid{color: inherit;}
 nav ul{list-style: none;}
