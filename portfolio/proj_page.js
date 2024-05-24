@@ -35,6 +35,12 @@ const processJSON = async() => {
         })
         .then((data) => {
             try{
+                document.title = `${data[type][project]["title"]} - inktrinket`
+            } catch {
+                document.title = `Project - inktrinket`
+            }
+
+            try{
                 let getVideos = data[type][project]["videos"];
                 getVideos.forEach((video) => {
                     createReelVideo(video);
