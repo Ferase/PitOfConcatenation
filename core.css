@@ -68,7 +68,7 @@ body{
     position: relative;
     background-color: var(--clr-lightest);
     color: var(--clr-darkest);
-    font-family: sans-serif;
+    font-family: "peridot-pe-variable", sans-serif;
 }
 
 
