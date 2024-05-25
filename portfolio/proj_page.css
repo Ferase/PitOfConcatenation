@@ -28,9 +28,10 @@
 
 .hero-gallery__image-container{
     position: relative;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16/9;
     width: 100%;
 }
+
 .hero-gallery__image-container *{
     position: absolute;
     top: 50%;
@@ -181,5 +182,23 @@
             width: 80%;
             height: 80%;
         }
+    }
+}
+
+
+
+
+@supports not (aspect-ratio: 16/9) { /* Fallback for aspect-ratio */
+    .hero-gallery__image-container::before,
+    #image-zoom img::before{
+        float: left;
+        padding-top: 56.25%;
+        content: "";
+    }
+    .hero-gallery__image-container::after,
+    #image-zoom img::after{
+        display: block;
+        content: "";
+        clear: both;
     }
 }

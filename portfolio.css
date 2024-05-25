@@ -78,6 +78,7 @@
     overflow: hidden;
     margin-bottom: var(--space-smallest);
 }
+
 .v-card .v-card__img img{
     position: absolute;
     top: 50%;
@@ -223,5 +224,18 @@
             max-width: auto !important;
             width: 100% !important;
         }
+    }
+}
+
+@supports not (aspect-ratio: 16 / 9) { /* Fallback for aspect-ratio */
+    .v-card .v-card__img::before {
+        float: left;
+        padding-top: 56.25%;
+        content: "";
+    }
+    .v-card .v-card__img::after {
+        display: block;
+        content: "";
+        clear: both;
     }
 }
