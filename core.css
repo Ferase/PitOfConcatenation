@@ -208,14 +208,14 @@ body{
     opacity: 0;
     transition: all 300ms ease;
 }
-.header_nav_hover_list:hover .header_portfolio_fold,
-.header_nav_hover_list:active .header_portfolio_fold{
+.header_nav_hover_list:hover .header_portfolio_fold{
     top: 100%;
     pointer-events: auto;
     opacity: 1;
 }
 .header_nav_hover_list{
     user-select: none;
+    cursor: pointer;
 }
 .header_portfolio_fold li{
     padding-block: 0;
@@ -290,8 +290,7 @@ body{
         left: var(--space-small);
     }
     
-    .header_nav_hover_list:hover .header_portfolio_fold,
-    .header_nav_hover_list:active .header_portfolio_fold{
+    .header_nav_hover_list:hover .header_portfolio_fold{
         top: 125%;
     }
     .header_portfolio_fold{
