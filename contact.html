@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="/svg.css">
     <style type="text/css">
 
+        #main_wrapper{
+            min-height: 100vh !important;
+        }
+
         /* General grid */
         .grid-main{
             display: grid;
@@ -18,6 +22,7 @@
                 "hero-lt"
                 "socials";
             max-width: 50%;
+            gap: var(--space-large);
             margin-inline: auto;
         }
 
@@ -43,7 +48,7 @@
             justify-content: end;
         }
         .grid-socials li a img{
-            width: 8rem;
+            width: 6rem;
             margin: 0 auto;
         }
         .grid-socials li a p{
@@ -58,7 +63,7 @@
         }
         .toast{
             position: absolute;
-            bottom: -25%;
+            bottom: -30%;
             left: 50%;
             transform: translateX(-50%);
             font-size: calc(var(--txt-p) - 0.25rem) !important;
