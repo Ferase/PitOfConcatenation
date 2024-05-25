@@ -22,6 +22,14 @@
     }
 }
 
+/* Tablet */
+@media only screen and (min-width: 1051px) and (max-width: 1366px) and (orientation: landscape){ /* between 1051px and 1366px */
+    :root{
+        --txt-lh: 2.2rem;
+        --txt-h1: 2.4rem;
+    }
+}
+
 /* Phone */
 @media only screen and (max-width: 1050px){ /* 1050px or smaller */
     :root{

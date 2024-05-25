@@ -153,6 +153,20 @@
     transform: rotateZ(405deg) scale(1.2);
 }
 
+/* Tablet landscape */
+@media only screen and (min-width: 1051px) and (max-width: 1366px) and (orientation: landscape){ /* between 1051px and 1366px */
+    
+    .grid-main{
+        max-width: 60%;
+    }
+    .grid-main__pagination ul{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        gap: var(--space-largest) !important;
+    }
+
+}
+
 @media only screen and (max-width: 1050px){
     .grid-main{
         max-width: 80%;

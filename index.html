@@ -315,6 +315,24 @@
             line-height: calc(var(--txt-lh-p) * 1.2);
         }
 
+        /* Tablet landscape */
+        @media only screen and (min-width: 1051px) and (max-width: 1366px) and (orientation: landscape){ /* between 1051px and 1366px */
+            
+            #crane-anim{
+                right: -25%;
+            }
+            .hero-subheading{
+                font-size: calc(var(--txt-h2) / 1.4);
+                margin-bottom: var(--space-small);
+            }
+            .hero-paragraph{
+                font-size: calc(var(--txt-p) * 1.2);
+                line-height: calc(var(--txt-lh-p) * 1.15);
+                margin-bottom: var(--space-small);
+            }
+
+        }
+
         /* Tablet & Phone */
         @media only screen and (max-width: 1050px){
 

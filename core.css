@@ -48,6 +48,18 @@ html[data-theme="dark"] [data-invert-dark="true"]{
     }
 }
 
+/* Tablet */
+@media only screen and (min-width: 1051px) and (max-width: 1366px) and (orientation: landscape){ /* between 1051px and 1366px */
+    :root{
+        --space-smallest: 0.85rem;
+        --space-small: 1.35rem;
+        --space-large: 1.85rem;
+        --space-largest: 2.35rem;
+
+        --nl-position: 82%;
+    }
+}
+
 /* Phone */
 @media only screen and (max-width: 1050px){ /* 1050px or smaller */
     :root{
