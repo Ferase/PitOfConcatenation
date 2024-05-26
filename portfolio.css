@@ -1,3 +1,7 @@
+#main_wrapper{
+    overflow-x: hidden;
+}
+
 /* General grid */
 .grid-main{
     display: grid;
