@@ -36,8 +36,9 @@ const processJSON = async() => {
         .then((data) => {
             try{
                 document.title = `${data[type][project]["title"]} - inktrinket`
+                document.querySelector('meta[name="description"]').setAttribute("content", `${data[type][project]["title"]} - a project by inktrinket`);
             } catch {
-                document.title = `Project - inktrinket`
+                document.title = "Project - inktrinket"
             }
 
             try{
