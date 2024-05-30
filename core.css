@@ -1,7 +1,7 @@
 /* Resets ------------------------ */
 
 *{margin: 0; padding: 0;}
-*,::before,::after{box-sizing: border-box;}
+*,::before,::after{box-sizing: border-box; font-size: 100%;}
 #main_wrapper{overflow: auto; position: relative;}
 a,a:link,a:hover,a:visited,a:invalid{text-decoration: none; color: inherit;}
 nav ul{list-style: none;}
