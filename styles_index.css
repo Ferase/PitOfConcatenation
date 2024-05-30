@@ -218,8 +218,23 @@ a:hover .maskNo, a:active .maskNo{
 }
 
 /* General Text Styles */
+p.temp{
+    font-family: 'RockwellStd-Condensed';
+    font-size: 3rem;
+    margin-inline: auto;
+    width: fit-content;
+    animation: temp-fade-in 300ms forwards ease;
+    animation-delay: 1000ms;
+    opacity: 0;
+}
 
 /* Animation Keyframes */
+@keyframes temp-fade-in{
+    to{
+        opacity: 1;
+    }
+}
+
 @keyframes appear{
     0%{
         transform-origin: bottom;
