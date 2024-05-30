@@ -1,0 +1,396 @@
+@charset "utf-8";
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Essentials */
+body{
+    color: #fff;
+    background-color: #000;
+    overflow-x: hidden;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    mix-blend-mode: lighten;
+}
+#MAIN_CONTAINER{
+    position: relative;
+}
+
+
+/* Fonts */
+/* Bebas Kai */
+@font-face {
+	font-family: 'Bebas Kai';
+	src: url('font/BebasKaiReg.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Noto Sans */
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('font/NotoSansLight.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('font/NotoSansReg.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('font/NotoSansLightIta.otf') format('opentype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('font/NotoSansIta.otf') format('opentype');
+	font-weight: bold;
+	font-style: italic;
+}
+/* Franklin Gothic URW Condensed */
+@font-face {
+	font-family: 'FranklinGothicURWCond';
+	src: url('font/FGURWBook.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FranklinGothicURWCond';
+	src: url('font/FGURWMed.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+/* Background */
+.bg_01{
+    background-image: url("img/bg.png");
+    background-repeat: repeat;
+    background-blend-mode: lighten;
+    mix-blend-mode: lighten;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.bg_02{
+    background-image: url("img/bg.png");
+    background-repeat: repeat;
+    background-size: 250px;
+    background-blend-mode: lighten;
+    mix-blend-mode: lighten;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -2;
+}
+
+
+/* Title */
+#TITLE_AREA{
+    position: relative;
+}
+.title_img{
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: lighten;
+}
+.title_img_place{
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -10;
+}
+.title_place{
+    position: absolute;
+}
+.title_gradient{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0.25) 26%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.75) 51%, rgba(0,0,0,0.75) 75%, rgba(0,0,0,1) 76%, rgba(0,0,0,1) 100%);
+    z-index: 2;
+}
+
+/* Nav */
+#TOP_NAV{
+    margin-bottom: 2em;
+}
+nav{
+    position: relative;
+}
+nav a:link{
+	font-family: 'Bebas Kai', sans-serif;
+    font-size: 5vw;
+    text-decoration: underline;
+    opacity: 0.5;
+}
+nav a:hover{
+    opacity: 1;
+}
+nav a:active{
+    opacity: 1;
+}
+nav a:visited{
+    opacity: 0.5;
+}
+nav a:nth-of-type(1){
+    position: absolute;
+    right: 73%;
+    top: 56%;
+    width: 19%;
+    height: 11%;
+    text-align: right;
+    z-index: 100;
+}
+nav a:nth-of-type(2){
+    position: absolute;
+    right: 70%;
+    top: 68%;
+    width: 20%;
+    height: 11%;
+    text-align: right;
+    z-index: 100;
+}
+nav a:nth-of-type(3){
+    position: absolute;
+    left: 73%;
+    top: 56%;
+    width: 19%;
+    height: 11%;
+    text-align: left;
+    z-index: 100;
+}
+nav a:nth-of-type(4){
+    position: absolute;
+    left: 71%;
+    top: 68%;
+    width: 20%;
+    height: 11%;
+    text-align: left;
+    z-index: 100;
+}
+.returnHome{
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    width: 40%;
+    height: 95%;
+}
+
+
+/* Footer */
+footer{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0.25) 26%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.75) 51%, rgba(0,0,0,0.75) 75%, rgba(0,0,0,1) 76%, rgba(0,0,0,1) 100%);
+    text-align: center;
+    padding: 2em;
+}
+footer a:link{
+	font-family: 'FranklinGothicURWCond', sans-serif;
+    font-size: 1rem;
+    color: #888;
+    text-decoration: none;
+}
+footer a:hover{
+    color: #bbb;
+}
+footer a:active{
+    color: #fff;
+}
+footer a:visited{
+    color: #888;
+}
+
+
+/* Main Grid Container */
+ul{
+    list-style: none;
+    padding: 1em 0;
+}
+li{
+    margin-bottom: 2em;
+}
+
+
+/* Main Grid Container */
+#GRID_MAIN{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(3,auto);
+    position: relative;
+}
+.landingHeader{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.landingSect{
+    grid-column: 3/-3;
+    grid-row: 2/3;
+    margin-bottom: 4em;
+}
+
+/* Dream Builder */
+#DREAM_MAIN{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(3,auto);
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    margin-bottom: 4em;
+}
+.dream_header{
+    grid-column: 2/-2;
+    grid-row: 1/2;
+}
+#DREAM_IMAGE_CONTAINER{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin-bottom: 2em;
+}
+#DREAM_IMAGE{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    border: solid 8px;
+    border-left: 0px;
+    border-right: 0px;
+    object-fit: contain;
+    mix-blend-mode: normal;
+}
+#DREAM_IMAGE_POSITION{
+    position: relative;
+}
+#DREAM_CONTENT{
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+#DREAM_OPTIONS{
+    grid-column: -4/-2;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+.dream_choice{
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+.option{
+    margin-bottom: 1em;
+}
+
+
+/* Main Grid Container */
+h1{
+	font-family: 'Bebas Kai', sans-serif;
+    font-size: 4rem;
+}
+.dream_header h1{
+    font-size: 12rem;
+    letter-spacing: 1rem;
+}
+
+h2{
+	font-family: 'Bebas Kai', sans-serif;
+    font-size: 3rem;
+}
+#DREAM_CONTAINER h2{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+h3{
+	font-family: 'Noto Sans', sans-serif;
+    font-size: 2rem;
+}
+
+p{
+	font-family: 'FranklinGothicURWCond', sans-serif;
+    font-size: 1.5rem;
+}
+li p{
+	font-family: 'FranklinGothicURWCond', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+}
+#DREAM_CONTENT p{
+    color: #fff;
+}
+.landingSect strong{
+    color: #fff;
+}
+
+label{
+	font-family: 'FranklinGothicURWCond', sans-serif;
+    font-size: 1.5rem;
+}
+.alignLeft{
+    text-align: left;
+}
+.alignCenter{
+    text-align: center;
+}
+.alignRight{
+    text-align: right;
+}
+
+
+/* Mobile */
+@media all and (max-width: 600px){
+    
+    #TITLE_AREA{
+        margin-top: 3em;
+    }
+    
+    .landingHeader{
+        grid-column: 2/-2;
+        line-height: 4rem;
+    }
+    .landingSect{
+        grid-column: 2/-2;
+    }
+
+    .dream_header h1{
+        font-size: 4rem;
+        letter-spacing: 0.5rem;
+    }
+    #DREAM_CONTENT h2{
+        line-height:  3rem;
+    }
+    
+
+    #DREAM_CONTENT{
+        grid-column: 2/-2;
+        grid-row: 3/4;
+        margin-bottom: 2em;
+    }
+    #DREAM_OPTIONS{
+        grid-column: 2/-2;
+        grid-row: 4/5;
+    }
+    
+}

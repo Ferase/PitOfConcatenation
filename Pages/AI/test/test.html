@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style type="text/css">
+	
+	.animation-container {
+  width: 350px;
+  height: 350px;
+  border: 1px solid black;
+}
+.animation {
+  background-color: red;
+  margin: 0px auto;
+  display: flex;
+  animation-duration: 3s;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  from {
+    transform: translate(10px, 10px);
+    background-color: red;
+  }
+  to {
+    transform: translate(0px, 0px);
+    background-color: blue;
+  }
+}
+	
+</style>
+</head>
+
+<body>
+<div class="animation-container">
+  <div class="animation">
+	  <h1>hi</h1>
+  </div>
+</div>
+</body>
+</html>

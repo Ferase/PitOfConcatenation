@@ -1,0 +1,451 @@
+@charset "utf-8";
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Essentials */
+body{
+    color: #fff;
+    background-color: #000;
+    filter: sepia(0.25);
+    overflow-x: hidden;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+#MAIN_CONTAINER{
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Fonts */
+/* Bebas Kai */
+@font-face {
+	font-family: 'Dreamwalker';
+	src: url("../font/Dreamwalker.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Providence Sans */
+@font-face {
+	font-family: 'ProvidenceSansPro-Bold';
+	src: url("../font/ProvidenceSansPro-Bold.otf") format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Duper */
+@font-face {
+	font-family: 'Duper';
+	src: url('../font/Duper_Reg.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Duper';
+	src: url('../font/Duper_Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Duper';
+	src: url('../font/Duper_Italic.otf') format('opentype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Duper';
+	src: url('../font/Duper_BoldItalic.otf') format('opentype');
+	font-weight: bold;
+	font-style: italic;
+}
+/* Noto Sans */
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('../font/NotoSansLight.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('../font/NotoSansReg.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('../font/NotoSansLightIta.otf') format('opentype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('../font/NotoSansIta.otf') format('opentype');
+	font-weight: bold;
+	font-style: italic;
+}
+/* Franklin Gothic URW Condensed */
+@font-face {
+	font-family: 'FranklinGothicURWCond';
+	src: url('../font/FGURWBook.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FranklinGothicURWCond';
+	src: url('../font/FGURWMed.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+/* Background */
+.bg_01{
+    background-image: url("../img/core/bg.png");
+    background-repeat: repeat;
+    background-blend-mode: lighten;
+    mix-blend-mode: lighten;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.bg_02{
+    background-image: url("../img/core/bg.png");
+    background-repeat: repeat;
+    background-size: 250px;
+    background-blend-mode: lighten;
+    mix-blend-mode: lighten;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -2;
+}
+
+
+/* Title */
+#TITLE_AREA{
+    position: relative;
+}
+.title_img{
+    position: absolute;
+    top:  0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+}
+.titlebg_img{
+    display: block;
+    margin: 0 auto;
+}
+.title_gradient{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    z-index: 2;
+}
+
+
+/* Scroll Down Indicator */
+#SCROLL_DOWN{
+    position: fixed;
+    bottom: 2%;
+    right: 18%;
+    max-width: 20%;
+    max-height: 20%;
+    filter: drop-shadow(0px 0px 4px #000);
+    -webkit-filter: drop-shadow(0px 0px 24px #000);
+    animation: scroll_Show 3500ms ease-out;
+    z-index: 10;
+}
+.hideScroll{
+    animation: scroll_Hide 1000ms ease-out;
+}
+
+
+/* Main Grid Container */
+#GRID_MAIN{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(4,auto);
+    position: relative;
+    margin-bottom: 5em;
+}
+.pageDivider,.navUpperContainer{
+    background-image: url("../img/core/sitebg.gif");
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: 100%;
+}
+
+.landingHeader{
+    grid-column: 3/-3;
+    grid-row: 1/2;
+    position: relative;
+    text-align: center;
+    height: 270px;
+    padding: 0 1em;
+    margin-bottom: 2em;
+}
+.header_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.header_line01{
+    position: absolute;
+    top: 0;
+    left: 15%;
+    font-size: 3.5vw;
+}
+.header_line02{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2vw;
+    color: #888;
+}
+.header_line03{
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    font-size: 5.75vw;
+}
+
+.aboutHeader{
+    grid-column: 3/-3;
+    grid-row: 1/2;
+    position: relative;
+    text-align: center;
+    height: 270px;
+    padding: 0 1em;
+    margin-top: 2em;
+}
+
+.landingOpener{
+    grid-column: 3/-3;
+    grid-row: 2/3;
+    padding: 1em 1em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.landingSect{
+    grid-column: 3/-3;
+    grid-row: 3/4;
+    padding: 1em 1em;
+    margin-bottom: 4em;
+}
+
+.aboutSect{
+    grid-column: 3/-3;
+    grid-row: 2/3;
+    padding: 0 1em;
+    margin-bottom: 4em;
+}
+
+#DICT > div{
+    margin-bottom: 2.5em;
+}
+
+
+/* Nav Grid Container */
+#GRIDnav{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(2,auto);
+    position: relative;
+}
+.navHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    padding: 0 14em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.navHeader .img_hr{
+    display: block;
+    width: 40%;
+    height: 40%;
+    margin: auto 0;
+}
+
+.navMain{
+    grid-column: 2/-2;
+    grid-row: 2/3;
+    padding: 0 8em;
+    margin-bottom: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navUpper{
+    padding: 0 8em;
+    margin: 4em auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.navMain a img,.navUpper a img{
+    max-width: 100%;
+}
+.navMain a > *,.navUpper a > *{
+    transition: all 200ms ease-in-out;
+    transform: scale(80%,80%);
+}
+.navMain a > *:hover,.navUpper a > *:hover{
+    transform: scale(100%,100%);
+}
+
+
+/* Footer */
+.mainFooter{
+    padding: 2em 0;
+    text-align: center;
+}
+.mainFooter a:link{
+    text-decoration: none;
+    color: #aaa;
+	font-family: 'ProvidenceSansPro-Bold', sans-serif;
+    font-size: 1rem;
+}
+.mainFooter a:hover{
+    color: #fff;
+}
+.mainFooter a:active{
+    color: #fff;
+}
+.mainFooter a:visited{
+    color: #aaa;
+}
+
+
+/* Horizontal Rule */
+.img_hr{
+    width: 100%;
+    height: auto;
+}
+
+
+/* Main Grid Container */
+h1{
+	font-family: 'Dreamwalker', sans-serif;
+    font-size: 4rem;
+}
+.dream_header h1{
+    font-size: 12rem;
+    letter-spacing: 1rem;
+}
+.aboutHeader h1{
+	font-family: 'ProvidenceSansPro-Bold', sans-serif;
+    font-size: 4rem;
+}
+
+h2{
+	font-family: 'Dreamwalker', sans-serif;
+    font-size: 3rem;
+}
+#DREAM_CONTAINER h2{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.landingOpener h2{
+	font-family: 'ProvidenceSansPro-Bold', sans-serif;
+    font-size: 2rem;
+}
+
+h3:first-child{
+	font-family: 'Dreamwalker', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+h3{
+	font-family: 'Dreamwalker', sans-serif;
+    font-size: 3rem;
+    margin: 1.5em 0 0.5em;
+}
+.navHeader h3{
+	font-family: 'ProvidenceSansPro-Bold', sans-serif;
+    font-size: 3rem;
+}
+
+h4{
+	font-family: 'ProvidenceSansPro-Bold', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.2em;
+}
+
+p{
+	font-family: 'Duper', sans-serif;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+.landingSect p{
+	line-height: 2.25rem;
+}
+.landingSect p::first-letter{
+    font-size: 6rem;
+}
+li p{
+	font-family: 'FranklinGothicURWCond', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+label{
+	font-family: 'FranklinGothicURWCond', sans-serif;
+    font-size: 1.5rem;
+}
+.alignLeft{
+    text-align: left;
+}
+.alignCenter{
+    text-align: center;
+}
+.alignRight{
+    text-align: right;
+}
+
+
+/* Keyframes */
+@keyframes scroll_Show{
+	0%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes scroll_Hide{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
+	}
+}
+

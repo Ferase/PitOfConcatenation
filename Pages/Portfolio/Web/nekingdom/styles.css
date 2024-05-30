@@ -1,0 +1,398 @@
+@charset "utf-8";
+
+/* Color Reference
+
+Body BG: #842A2C
+Main Container BG: rgba(223,90,91,0.55)
+Header: rgba(252,120,100,0.7)
+Box Container: rgba(223,90,91,0.55)
+
+*/
+
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #1c150f;
+    overflow-x: hidden;
+}
+
+/* Font Local Files */
+
+/* Jott 43 */
+@font-face {
+	font-family: 'Jott 43 Wide Bold';
+	src: url('Fonts/jott43.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Tahoma Std */
+@font-face {
+	font-family: 'Tahoma Std';
+	src: url('Fonts/TahomaStd.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Tahoma Std Italic';
+	src: url('Fonts/TahomaStd-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Tahoma Std Bold';
+	src: url('Fonts/TahomaStd-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Tahoma Std Bold Italic';
+	src: url('Fonts/TahomaStd-BoldItalic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+header{
+    line-height: 6em;
+    color: #e1c4a4;
+    background: #868a3d;
+    padding: 2em;
+    padding-top: 2.75em;
+    padding-bottom: 1em;
+    position: relative;
+    text-align: center;
+}
+
+nav{
+    position: relative;
+	display: flex;
+	justify-content: space-around;
+	width: auto;
+	background-color: #1c150f;
+    padding: 1em;
+}
+
+nav a:link{
+    color: #e1c4a4;
+	text-decoration: none;
+    font-family: 'Tahoma Std';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+nav a:visited{
+	color: #A69078;
+}
+
+nav a:hover{
+	color: #F9EAD9;
+}
+
+nav a:active{
+	color: #FBBE7A;
+}
+
+#toTop{
+	
+}
+
+#giftCard{
+	
+}
+
+#ourStory{
+	
+}
+
+aside{
+    position: relative;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.chef{
+	float: left;
+	padding-right: 2em;
+	max-width: 17.5vw;
+	max-height: 17.5vw;
+}
+
+.imgBox{
+    padding-top: 2em;
+}
+
+.description{
+	font-size: 0.85vw;
+}
+
+footer{
+    background: #39291a;
+    color: black;
+    text-align: center;
+    /* Top Right Bottom Left */
+    padding: 1.5em;
+}
+
+footer a:link{
+    color: #e1c4a4;
+	text-decoration: none;
+    font-family: 'Tahoma Std';
+    font-style: normal;
+}
+
+footer a:visited{
+	color: #A69078;
+}
+
+footer a:hover{
+	color: #F9EAD9;
+}
+
+footer a:active{
+	color: #FBBE7A;
+}
+
+/* List styles */
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Text styles */
+h1{
+    font-family: 'Jott 43 Wide Bold',sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 5rem;
+}
+
+h2{
+    font-family: paralucent, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 3rem;
+}
+
+h3{
+    font-family: 'Tahoma Std Bold';
+    font-style: normal;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 2.4rem;
+    color: #e1c4a4;
+}
+
+h4{
+    font-family: 'Tahoma Std Bold';
+    font-style: normal;
+    font-size: 2rem;
+}
+
+h5{
+    font-family: 'Tahoma Std';
+    font-style: normal;
+    font-size: 1.5rem;
+    padding-top: 0.5em;
+}
+
+p{
+    font-family: 'Tahoma Std';
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+.quoteFrom{
+    font-family: 'Tahoma Std Italic';
+    font-size: 1vw;
+    padding-bottom: 1em;
+    text-align: right;
+}
+
+div q{
+    font-family: 'Tahoma Std Bold Italic';
+    font-size: 1.2vw;
+}
+
+.chefContainer{
+	display: flex;
+	flex-direction: row;
+    background: #5e442b;
+    /* Top Right Bottom Left */
+    padding: 2em;
+    margin-bottom: 4em;
+}
+
+.boxContainer{
+    position: relative;
+    display: block;
+    background: #5e442b;
+    padding: 2em;
+    line-height: 2.25em;
+}
+
+.flexGap{
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+div .flexGap{
+    margin: 1.5em;
+}
+
+.menuTitles{
+    padding-top: 0.25em;
+    font-family: parkside,sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 4.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+#mainContainer {
+    position: relative;
+    color: #e1c4a4;
+    display: block;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #39291a;
+    resize: horizontal;
+}
+
+#menuContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #39291a;
+}
+
+/* Tablet-Medium */
+@media only screen and (max-width: 1280px){
+    
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a:link{
+        color: white;
+        padding: 0.4em;
+        font-size: 1.5rem;
+        flex-direction: column;
+    }
+
+    .quoteFrom{
+        font-size: 2.4vw;
+    }
+
+    div q{
+        font-size: 2.88vw;
+    }
+    
+    .chefContainer{
+        flex-direction: column;
+    }
+    
+    .chef{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        max-height: 100%;
+        padding-bottom: 2em;
+    }
+    
+    #menuContainer{
+        flex-direction: column-reverse;
+    }
+    
+}
+
+/* Mobile-Small */
+@media only screen and (max-width: 512px){
+    
+    /* Text styles */
+    header{
+        text-align: center;
+        padding: 1.5em;
+        padding-top: 2.25em;
+        line-height: 5em;
+    }
+    
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a:link{
+        color: white;
+        padding: 0.4em;
+        font-size: 1.5rem;
+    }
+    
+    h1{
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    h3{
+        font-size: 2.2rem;
+    }
+
+    h4{
+        font-size: 1.75rem;
+    }
+
+    h5{
+        font-size: 1.25rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+    .quoteFrom{
+        font-size: 3vw;
+    }
+
+    div q{
+        font-size: 3.6vw;
+    }
+    
+    .chefContainer{
+        flex-direction: column;
+    }
+    
+    .chef{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        max-height: 100%;
+        padding-bottom: 2em;
+    }
+    
+    #menuContainer{
+        flex-direction: column-reverse;
+    }
+    
+}

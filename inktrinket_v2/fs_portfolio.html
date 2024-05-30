@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inktrinket</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="svg.css">
+    <style type="text/css">
+
+        /* Main Content */
+        .potfolio_header{
+            max-width: 70%;
+            text-align: center;
+            margin: 48px auto;
+        }
+        .potfolio_header h2{
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .about_sec h3{
+            text-align: center;
+        }
+
+        .resume_exp{
+            text-align: center;
+            background-color: var(--clr-darkest);
+            color: var(--clr-lightest);
+            padding: 64px 0;
+        }
+        .work_experience{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .we_item{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 24px;
+        }
+        .we_item img{
+            width: 200px;
+        }
+        .we_item h4{
+            font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+        }
+
+        .potfolio_footer{
+            background-color: var(--clr-darkest);
+            color: var(--clr-lightest);
+            text-align: center;
+            margin-top: 64px;
+            padding: 48px;
+        }
+        .potfolio_footer strong{
+            font-variation-settings: "wght" 400, "wdth" 100, "ital" 0;
+            color: var(--clr-lightest);
+        }
+
+        .footer_nav ul{
+            --gap: 12px;
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--gap);
+            margin: 0 auto;
+        }
+        .footer_nav ul li:not(.footer_nav ul li:last-child){
+            border-right: solid 1px var(--clr-lightest);
+            padding-right: var(--gap);
+        }
+        .footer_nav a{
+            font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+            color: var(--clr-lightest);
+        }
+
+        /* General grid */
+        .grid_thirds_3fr{
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+        }
+        .grid_thirds_5fr{
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr;
+        }
+        .grid_thirds_3fr > *, .grid_thirds_5fr > *{
+            grid-column: 2/3;
+        }
+        .uber_grid{
+            display: grid;
+            grid-template-areas:
+                "head head head head"
+                "a b c d"
+                "e e f f";
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(auto-fill, auto);
+            gap: 24px;
+        }
+        .uber_grid > a{
+            position: relative;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            place-items: bottom;
+            padding: 24px;
+        }
+        .uber_grid > a > *{
+            width: 100%;
+            transition: all 300ms ease;
+        }
+        .uber_grid > a h4{
+            margin-bottom: 8px;
+            font-size: 32px;
+            font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+        }
+        .uber_grid > a h5{
+            font-size: 18px;
+            font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            line-height: 18px;
+        }
+        .uber_grid a:link{
+            transition: transform 300ms ease;
+        }
+        .uber_grid a:hover{
+            transform: scale(105%, 105%);
+        }
+        .uber_grid a:active > *{
+            color: var(--clr-lightest);
+        }
+        .uber_grid a::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: -1;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: all 300ms ease;
+        }
+        .uber_grid a:active::before{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .el_head{
+            grid-area: head;
+            text-align: center;
+        }
+
+        .el_a{grid-area: a;}
+        .el_b{grid-area: b;}
+        .el_c{grid-area: c;}
+        .el_d{grid-area: d;}
+        .el_e{grid-area: e;}
+        .el_f{grid-area: f;}
+
+        /* Tablet Overrides */
+        @media only screen and (max-width: 1025px){
+            .grid_thirds_5fr{
+                grid-template-columns: 1fr 8fr 1fr;
+            }
+
+            
+            .work_experience{
+                grid-auto-flow: row;
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .uber_grid{
+                grid-template-areas:
+                    "head head"
+                    "a b"
+                    "c d"
+                    "e f";
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .uber_grid > a h4{
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+            .uber_grid > a h5{
+                font-size: 14px;
+                letter-spacing: 3px;
+                margin-bottom: 12px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Borders -->
+    <div class="site_frame frame_left"></div>
+    <div class="site_frame frame_right"></div>
+
+    <!-- Header -->
+    <header class="potfolio_header">
+        <h1>Stephen Gerard</h1>
+        <h2>Digital Portfolio</h2>
+        <hr>
+    </header>
+
+    <!-- About -->
+    <section class="grid_thirds_3fr about_sec low_margin_large">
+        <h3 class="low_margin">About Me</h3>
+        <p>
+            Hi, my name is Steph! I am a video designer who has a great passion for the complexity of detail in media. Some of my absolute favorite things include art, animation, film, and being absolutely ridiculous. "inktrinket" is my brand and online alias.<br><br>
+
+            I have been designing videos for as long as I can remember. It all really started with me just hitting the record button with my friends and making some happy memories with each other. Now that I'm in college, my perspective and interests have expanded to much more than that, but at the same time, those initial interests are the very reason I'm so passionate about this line of work. Videos are about telling impactful stories, showcasing true talent, giving new meaning to media - and more. The amount of detail and creativity one can put into any given video project is truly remarkable; I don't think I can put enough emphasis on how important that is to me.<br><br>
+
+            As a video designer, I am always seeking out video editing and designing opportunities. I do commissions on the side to hone my skills and put them to use, so if you would like to commission me, please do not hesitate to do so. I would absolutely love to hear your video ideas!
+        </p>
+    </section>
+
+    <!-- Resume Experience -->
+    <section class="grid_thirds_5fr resume_exp low_margin_large">
+        <h3 class="low_margin_large">Résumé Experience</h3>
+        <div class="work_experience low_margin_large">
+            <div class="we_item">
+                <img src="img/icons/icon_tac.jpg" alt="Tinker & Create">
+                <div class="we_info">
+                    <h4>Tinker & Create</h4>
+                    <p>Instructor</p>
+                </div>
+            </div>
+            <div class="we_item">
+                <img src="img/icons/icon_rabbithole.jpg" alt="The Rabbit Hole Podcast">
+                <div class="we_info">
+                    <h4>The Rabbit Hole Podcast</h4>
+                    <p>Video Editor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <main class="grid_thirds_5fr">
+        <section class="uber_grid">
+            <h3 class="el_head low_margin">Past Projects</h3>
+            <a class="el_a" href="https://youtu.be/5XCX8yHuDmc?si=77Q2fBRHx-btGTW2" target="_blank">
+                <h4>flowers2023</h4>
+                <h5>Visual Demo</h5>
+                <img src="img/thumbs/inktrinket_-_flowers2023_epilepsy_warning_5XCX8yHuDmc_-_2037x1146_-_0m06s.png" alt="Flowers 2023">
+            </a>
+            <a class="el_b" href="https://youtu.be/liRyKcRLuxU?si=qQnuoYjdKSthjbzW" target="_blank">
+                <h4>recovery signal</h4>
+                <h5>Music Video</h5>
+                <img src="img/thumbs/maxresdefault2.jpg" alt="Recovery Signal Music Video">
+            </a>
+            <a class="el_c" href="https://youtu.be/wZdugQuDjoY?si=2jQiZU5l8VSt1X2H" target="_blank">
+                <h4>Skydeath Live</h4>
+                <h5>Visual Presentation</h5>
+                <img src="img/thumbs/skydeathlive_thumbnail.jpg" alt="Skydeath Live Presentation">
+            </a>
+            <a class="el_d" href="https://youtu.be/f9ZOBYzTpUQ?si=eY0FMg1RXvum0eKC" target="_blank">
+                <h4>OpenVR2Key</h4>
+                <h5>Tutorial Video</h5>
+                <img src="img/thumbs/steph_vindex_thumbnail.png" alt="OpenVR2Key Tutorial Video">
+            </a>
+            <a class="el_e" href="https://youtu.be/pr7Z7ntzoUY?si=wNmbrzJ8KvAaTn1P" target="_blank">
+                <h4>Skydeath Presentation</h4>
+                <h5>Visual Presentation</h5>
+                <img src="img/thumbs/thumbnail_day21.png" alt="Skydeath Presentation">
+            </a>
+            <a class="el_f" href="https://youtu.be/OM942qQ9aW4?si=o2hgOtKocHIKdl1i" target="_blank">
+                <h4>The MOB Attacks: Lethal Company</h4>
+                <h5>Gameplay Video</h5>
+                <img src="img/thumbs/TheMOBAttacks_LethalCompany_Part1.jpg" alt="The MOB Attacks: Lethal Company">
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer + Contact -->
+    <footer class="potfolio_footer">
+        <p class="low_margin">All works shown here were created by <strong>Stephen Gerard</strong>.</p>
+        <nav class="footer_nav">
+            <ul>
+                <li><a href="https://www.youtube.com/@inktrinket" target="_blank">
+                    YouTube
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/inktrinket/" target="_blank">
+                    Linkedin
+                </a></li>
+                <li><a href="https://twitter.com/inktrinket" target="_blank">
+                    Twitter
+                </a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Occupational Locations / Dream Mirror</title>
+<link href="styles_dm.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<style type="text/css">
+	
+    /* Color Overrides */
+    img:not(.title_img):not(#DREAM_IMAGE){
+        filter: hue-rotate(190deg);
+    }
+    #ACTIVE_PAGE{
+        color: #FF333F;
+    }
+    nav a{
+        color: #FF333F;
+    }
+    #DREAM_IMAGE{
+        border-color: #FF333F;
+    }
+    h1{
+        color: #FF333F;
+    }
+    h2{
+        color: #FF333F;
+    }
+    #DREAM_CONTENT h3{
+        color: #FF333F;
+    }
+    p{
+        color: #FF7F7F;
+    }
+    .option p,.option p strong{
+        color: #FF7F7F;
+    }
+    label{
+        color: #FF7F7F;
+    }
+	
+    
+    /* Overlay Images */
+    #DIMG_INS_BEING{
+        filter: hue-rotate(40deg);
+        position: absolute;
+        bottom: 20%;
+        left: 0%;
+        width: 30%;
+        height: auto;
+        transform: rotateY(180deg);
+    }
+    #DIMG_INS_OBJ{
+        filter: hue-rotate(40deg);
+        position: absolute;
+        top: 9%;
+        left: 20%;
+        width: 15%;
+        height: auto;
+    }
+    #DIMG_INS_FEEL{
+        filter: hue-rotate(40deg);
+        position: absolute;
+        top: 35%;
+        left: 41.5%;
+        width: 12%;
+        height: auto;
+        transform: rotateY(10deg);
+    }
+	
+    
+    /* Flourishes */
+    #FLOURISH_01{
+        position: absolute;
+        top: 11%;
+        left: 40%;
+        width: 15%;
+        height: auto;
+    }
+    #FLOURISH_02{
+        position: absolute;
+        bottom: 20%;
+        right: 5%;
+        width: 18%;
+        height: auto;
+    }
+
+
+    /* Mobile */
+    @media all and (max-width: 600px){
+
+        /* Flourishes */
+        #FLOURISH_01{
+            bottom: 30%;
+            right: 35%;
+            opacity: 0.4;
+        }
+        #FLOURISH_02{
+            top: 60%;
+            left: 50%;
+            opacity: 0.4;
+        }
+
+    }
+	
+</style>
+</head>
+
+<body>
+    
+    <div id="TO_TOP"></div>
+    
+    <div class="bg_01"></div>
+    <div class="bg_02"></div>
+    
+    <div class="title_gradient"></div>
+    
+    <div id="MAIN_CONTAINER">
+        <div id="TITLE_AREA">
+            <div class="title_place">
+                <img src="img/title_occ.gif" class="title_img" alt="Dream Mirror">
+            </div>
+        </div>
+        <nav id="TOP_NAV">
+            <img src="img/title_occ.gif" class="title_img_place" alt="Dream Mirror">
+            <a href="dom.html">Domestic</a>
+            <a href="ess.html">Essential</a>
+            <a href="occ.html" id="ACTIVE_PAGE">Occupational</a>
+            <a href="ent.html">Entertaining</a>
+            <a href="index.html" class="returnHome"></a>
+        </nav>
+        
+        <div id="GRID_MAIN">
+            <img src="img/flourish/occ/f_01.gif" id="FLOURISH_01" alt="Flourish">
+            <img src="img/flourish/occ/f_02.gif" id="FLOURISH_02" alt="Flourish">
+            
+            <header class="landingHeader">
+                <h1>Twice the Daily Grind</h1>
+            </header>
+            <section class="landingSect">
+                <p>Those who are already in the workforce already know how much dedication goes into most every job, especially if its specialized. Occupations are a key point of our society, as they allow us to apply ourselves and the skills we’ve learned up to that point to accomplish tasks that impact a larger whole. That said, jobs are, at their core, a state of mind, as each occupation has its own methodology, vernacular, purpose, meaning, and application in the minds of those who work within them. How could your occupations be shaping your thinking?</p>
+            </section>
+            
+            <main id="DREAM_MAIN">
+                <header class="dream_header alignRight">
+                    <h1>Office</h1>
+                </header>
+                
+                <div id="DREAM_IMAGE_CONTAINER">
+                    <div id="DREAM_IMAGE_POSITION">
+                        <img src="img/p_office.gif" id="DREAM_IMAGE" alt="Office">
+                    
+                        <div id="DIMG_INS_BEING"></div>
+                        <div id="DIMG_INS_OBJ"></div>
+                        <div id="DIMG_INS_FEEL"></div>
+                    </div>
+                </div>
+                    
+                <div id="DREAM_CONTENT">
+                    <h2>Your Dream Mirror</h2>
+                    
+                    <h3><em>Place</em></h3>
+                    <div class="option">
+                        <p>The <strong>office</strong> is a rather stereotypical location, as whenever anyone imagines one, they often immediately connect the location to working. Offices are also seen as orderly, intricate webs of people, acting as parts for a larger body. Thus, finding yourself within an office inside a dream usually denotes that you are trying to solve a problem going on in your waking life, and the reason this concept may manifest as an office is likely because of your way of thinking, which in this case would likely need to be analytical or logical</p>
+                    </div>
+                    
+                    <div id="DH_INS_BEING"></div>
+                    <div id="D_INS_BEING" class="option"></div>
+                    <div id="DH_INS_OBJ"></div>
+                    <div id="D_INS_OBJ" class="option"></div>
+                    <div id="DH_INS_FEEL"></div>
+                    <div id="D_INS_FEEL" class="option"></div>
+                </div>
+                
+                <div id="DREAM_OPTIONS">
+                    <div>
+                        <h3><strong><em>Who or what did you see?</em></strong></h3>
+                        
+                        <div class="dream_choice">
+                            <input type="radio" id="DREAM_01A" name="DREAM_BEING" value="Person">
+                            <label for="DREAM_01A">A person</label><br>
+
+                            <input type="radio" id="DREAM_01B" name="DREAM_BEING" value="Cat">
+                            <label for="DREAM_01B">A cat</label><br>
+
+                            <input type="radio" id="DREAM_01C" name="DREAM_BEING" value="Dog">
+                            <label for="DREAM_01C">A dog</label><br>
+
+                            <input type="radio" id="DREAM_01D" name="DREAM_BEING" value="Bird">
+                            <label for="DREAM_01D">A bird</label><br>
+
+                            <input type="radio" id="DREAM_01E" name="DREAM_BEING" value="Lion">
+                            <label for="DREAM_01E">A lion</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3><strong><em>What objects do you remember finding?</em></strong></h3>
+                        
+                        <div class="dream_choice">
+                            <input type="radio" id="DREAM_02A" name="DREAM_OBJ" value="Flower">
+                            <label for="DREAM_02A">A flower</label><br>
+
+                            <input type="radio" id="DREAM_02B" name="DREAM_OBJ" value="Book">
+                            <label for="DREAM_02B">A book</label><br>
+
+                            <input type="radio" id="DREAM_02C" name="DREAM_OBJ" value="Clock">
+                            <label for="DREAM_02C">A clock</label><br>
+
+                            <input type="radio" id="DREAM_02D" name="DREAM_OBJ" value="Lamp">
+                            <label for="DREAM_02D">A lamp</label><br>
+
+                            <input type="radio" id="DREAM_02E" name="DREAM_OBJ" value="Chair">
+                            <label for="DREAM_02E">A chair</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3><strong><em>How did you feel?</em></strong></h3>
+                        
+                        <div class="dream_choice">
+                            <input type="radio" id="DREAM_03A" name="DREAM_FEEL" value="Happy">
+                            <label for="DREAM_03A">Happy</label><br>
+
+                            <input type="radio" id="DREAM_03B" name="DREAM_FEEL" value="Sad">
+                            <label for="DREAM_03B">Sad</label><br>
+
+                            <input type="radio" id="DREAM_03C" name="DREAM_FEEL" value="Angry">
+                            <label for="DREAM_03C">Angry</label><br>
+
+                            <input type="radio" id="DREAM_03D" name="DREAM_FEEL" value="Afraid">
+                            <label for="DREAM_03D">Afraid</label><br>
+
+                            <input type="radio" id="DREAM_03E" name="DREAM_FEEL" value="Anxious">
+                            <label for="DREAM_03E">Anxious</label>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+        <footer>
+            <a href="#TO_TOP">Back to Top</a>
+        </footer>
+    </div>
+    
+    <script type="text/javascript" src="dream_system.js"></script>
+</body>
+</html>

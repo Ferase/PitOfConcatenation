@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/* this isnt good */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab:700,300");
+
+/* this is ok */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic,400);
+
+*{
+    margin: 0;
+    padding: 0;
+    width: 242%;
+    display: table;
+    margin: 0px auto;
+    left: 25%;
+    right: 25%;
+	unicode-bidi: bidi-override;
+	direction: ltr;
+    top: 120px;
+    left: 20px;
+    z-index: 9000;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    background-color: #F5F5F5;
+}
+
+div{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ccc;
+    float:left;
+    border-right:3px solid #ff0000;
+    margin-right:20px;
+}
+
+#gridContainer{
+    position: sticky;
+    display: grid;
+    grid-template-columns: 100vh 300px 75% 20em 12vw auto;
+    grid-template-rows: 1em 12vw 32% 200px 3em auto;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-template-areas:
+        "header header left left right right"
+        "header header left left right right"
+        "main main left left right right"
+        "main main left left right right"
+        "main main footer footer footer footer"
+        "main main footer footer footer footer";
+    grid-gap: 3vw;
+    padding: 0 0 50px 0;
+}
+
+.leftSide{
+    grid-area: left;
+    background: #a63b2e;
+    padding: 15em;
+}
+
+.rightSide{
+    grid-area: right;
+    background: #735623;
+    padding: 15em;
+}
+
+.header{
+    grid-area: header;
+    padding: 15em;
+    border-bottom: 1px solid black;
+    background: #ae0ae0;
+}
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    border-top: 1px solid black;
+    background: #979695;
+    padding: 15em;
+}
+
+.main{
+    grid-area: main;
+    width: 960px;
+    margin: 0 auto;
+}
+
+#gridContainer:nth-child(odd){
+    padding: 1em;
+    background: gold;
+    color: antiquewhite;
+    text-align: center;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1em 12vw 32% 200px 3em auto;
+    grid-template-rows: 100vh 300px 75% 20em 12vw auto;
+    grid-gap: 3vw;
+    padding: 0 0 50px 0;
+}
+
+form > div{
+    padding: 1em;
+    background: tomato;
+    color: antiquewhite;
+}
+
+form > div:nth-child(n3){
+    padding: 1em;
+    background: gold;
+    color: antiquewhite;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%,-50%);
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: bold;
+    padding-top: 100px;
+}
+
+h2{
+    position: sticky;
+    font-family:
+        'Papyrus',
+        'Times New Roman',
+        'Times Roman',
+        'serif';
+}
+
+p{
+    color:black;
+    width:300px;
+    margin-left:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    text-align:center;
+}
+p.filler {
+    display:inline-block;
+    padding-left:3px;
+    padding-right:3px;
+}
+
+p.filler:before {
+    content:"some text";
+}
