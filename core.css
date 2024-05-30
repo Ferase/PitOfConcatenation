@@ -3,8 +3,7 @@
 *{margin: 0; padding: 0;}
 *,::before,::after{box-sizing: border-box;}
 #main_wrapper{overflow: auto; position: relative;}
-a{text-decoration: none;}
-a:link,a:hover,a:visited,a:invalid{color: inherit;}
+a,a:link,a:hover,a:visited,a:invalid{text-decoration: none; color: inherit;}
 nav ul{list-style: none;}
 html{height: 100%;}
 body{min-height: 100%;}
@@ -40,7 +39,7 @@ html[data-theme="dark"] [data-invert-dark="true"]{
 
 /* 4K */
 @media only screen and (min-width: 2500px){ /* 2500px or bigger */
-    :root{
+    :root,::before,::after{
         --space-smallest: 1.35rem;
         --space-small: 1.85rem;
         --space-large: 2.35rem;
@@ -50,7 +49,7 @@ html[data-theme="dark"] [data-invert-dark="true"]{
 
 /* Tablet */
 @media only screen and (min-width: 1051px) and (max-width: 1366px) and (orientation: landscape){ /* between 1051px and 1366px */
-    :root{
+    :root,::before,::after{
         --space-smallest: 0.85rem;
         --space-small: 1.35rem;
         --space-large: 1.85rem;
@@ -62,7 +61,7 @@ html[data-theme="dark"] [data-invert-dark="true"]{
 
 /* Phone */
 @media only screen and (max-width: 1050px){ /* 1050px or smaller */
-    :root{
+    :root,::before,::after{
         --space-smallest: 0.75rem;
         --space-small: 1.25rem;
         --space-large: 1.75rem;
